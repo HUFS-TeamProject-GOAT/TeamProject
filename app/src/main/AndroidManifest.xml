@@ -24,6 +24,7 @@
         <activity android:name =".storyActivity" />
         <activity android:name =".languageActivity" />
         <activity android:name =".homeActivity" />
+        <activity android:name =".endingActivity" />
 
     </application>
 

@@ -4,51 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <ImageView
-        android:id="@+id/campusImage"
+        android:id="@+id/campus_Image"
         android:layout_width="429dp"
         android:layout_height="572dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/cpsImage"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/campus_img" />
+        app:srcCompat="@drawable/campus_image" />
 
     <ImageButton
         android:id="@+id/ctHallButton"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
+        android:layout_width="81dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="104dp"
         android:layout_marginTop="292dp"
+        android:contentDescription="@string/centtinalHall"
+        android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_more"
-        android:contentDescription="@string/centtinalHall" />
+        app:srcCompat="@android:drawable/ic_menu_more" />
 
     <ImageButton
         android:id="@+id/lbHallButton"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/liberalHall"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_more"
-        android:contentDescription="@string/liberalHall" />
+        android:background="@android:color/transparent"
+        app:srcCompat="@android:drawable/ic_menu_more" />
 
     <ImageButton
-        android:id="@+id/lgHallButton"
+        android:id="@+id/lakeButton"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="352dp"
-        android:layout_marginTop="120dp"
-        android:contentDescription="@string/languageHall"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="164dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/lakeButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_more" />
+
+    <ImageButton
+        android:id="@+id/stHallButton"
+        android:layout_width="81dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="220dp"
+        android:contentDescription="@string/studenthallButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
         app:srcCompat="@android:drawable/ic_menu_more" />
 
     <TextView
@@ -62,7 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campusImage"
+        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
     <TextView
         android:id="@+id/info_ctHall"
@@ -75,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campusImage"
+        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
     <TextView
         android:id="@+id/info_lbHall"
@@ -88,7 +102,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campusImage"
+        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/info_lake"
+        android:layout_width="416dp"
+        android:layout_height="160dp"
+        android:text="@string/info_lake"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
     <TextView
         android:id="@+id/info_lgHall"
@@ -101,22 +128,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campusImage"
+        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/egHallButton"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="248dp"
+        android:contentDescription="@string/engineeringHall"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/campusImage"
-        app:srcCompat="@android:drawable/ic_menu_more"
-        android:contentDescription="@string/engineeringHall" />
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:srcCompat="@android:drawable/ic_menu_more" />
 
     <Button
         android:id="@+id/in_ctHallButton"
+        android:layout_width="114dp"
+        android:layout_height="67dp"
+        android:text="@string/getinText"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <Button
+        android:id="@+id/in_lakeButton"
         android:layout_width="114dp"
         android:layout_height="67dp"
         android:text="@string/getinText"
@@ -140,13 +176,130 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
     <Button
-        android:id="@+id/in_lgHallButton"
+        android:id="@+id/in_stHallButton"
         android:layout_width="114dp"
         android:layout_height="67dp"
         android:text="@string/getinText"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ct_location_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="248dp"
+        android:contentDescription="@string/ct_location_black"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:srcCompat="@drawable/loacation_black" />
+
+    <ImageView
+        android:id="@+id/eg_location_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="208dp"
+        android:contentDescription="@string/eg_location_black"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:srcCompat="@drawable/loacation_black" />
+
+    <ImageView
+        android:id="@+id/st_location_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="168dp"
+        android:contentDescription="@string/st_location_black"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:srcCompat="@drawable/loacation_black" />
+
+    <ImageView
+        android:id="@+id/lb_location_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="272dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/lb_location_black"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:srcCompat="@drawable/loacation_black" />
+
+    <ImageView
+        android:id="@+id/lake_location_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="108dp"
+        android:contentDescription="@string/lake_location_black"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:srcCompat="@drawable/loacation_black" />
+
+    <ImageView
+        android:id="@+id/ct_location_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="248dp"
+        android:contentDescription="@string/ct_location_red"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/location_red"
+        tools:layout_editor_absoluteX="48dp" />
+    <ImageView
+        android:id="@+id/eg_location_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="208dp"
+        android:contentDescription="@string/eg_location_red"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/location_red"
+        tools:layout_editor_absoluteX="48dp" />
+    <ImageView
+        android:id="@+id/st_location_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="168dp"
+        android:contentDescription="@string/st_location_red"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/location_red"
+        tools:layout_editor_absoluteX="48dp" />
+    <ImageView
+        android:id="@+id/lb_location_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        android:layout_marginLeft="272dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/lb_location_red"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/location_red"
+        tools:layout_editor_absoluteX="48dp" />
+    <ImageView
+        android:id="@+id/lake_location_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/campus_Image"
+        app:layout_constraintLeft_toLeftOf="@+id/campus_Image"
+        android:layout_marginLeft="236dp"
+        android:layout_marginTop="108dp"
+        android:contentDescription="@string/lake_location_red"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/location_red"
+        tools:layout_editor_absoluteX="48dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

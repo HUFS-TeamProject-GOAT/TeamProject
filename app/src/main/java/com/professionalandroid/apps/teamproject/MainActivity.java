@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent =new Intent(getApplicationContext(),storyActivity.class);
                 intent.putExtra("userName",name);
                 startActivity(intent);
+
             }
         });
         languageButton.setOnClickListener(new View.OnClickListener() {
