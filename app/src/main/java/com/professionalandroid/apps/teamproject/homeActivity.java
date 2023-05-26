@@ -132,6 +132,8 @@ public class homeActivity extends AppCompatActivity {
                 in_lbHallButton.setVisibility(View.VISIBLE);
                 in_stHallButton.setVisibility(View.GONE);
 
+
+
             }
         });
         
@@ -159,6 +161,12 @@ public class homeActivity extends AppCompatActivity {
 
             }
         });
-
+        in_lbHallButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(getApplicationContext(),endingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

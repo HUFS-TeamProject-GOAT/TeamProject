@@ -16,10 +16,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         final EditText userName =(EditText) findViewById(R.id.userName);
         Button startButton = (Button) findViewById(R.id.startButton);
         ImageButton languageButton = (ImageButton) findViewById(R.id.homeImage);
         startButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 String name =userName.getText().toString();

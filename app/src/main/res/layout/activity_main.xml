@@ -48,12 +48,12 @@
 
     <ImageButton
         android:id="@+id/homeImage"
-        android:layout_width="95dp"
-        android:layout_height="0dp"
+        android:layout_width="112dp"
+        android:layout_height="101dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="56dp"
+        android:contentDescription="@string/homeImage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/language"
-        android:contentDescription="@string/homeImage" />
+        app:srcCompat="@drawable/global_image" />
 </androidx.constraintlayout.widget.ConstraintLayout>
