@@ -12,12 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamProject"
         tools:targetApi="31">
-        <activity
-            android:name=".translate"
-            android:exported="false" />
-        <activity
-            android:name=".quiz1"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -31,6 +26,9 @@
         <activity android:name =".languageActivity" />
         <activity android:name =".homeActivity" />
         <activity android:name =".endingActivity" />
+        <activity android:name =".eg1Activity" />
+        <activity android:name =".eg2Activity" />
+        <activity android:name =".eg3Activity" />
 
     </application>
 

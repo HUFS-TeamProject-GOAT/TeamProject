@@ -168,5 +168,26 @@ public class homeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        in_egHallButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(getApplicationContext(),eg1Activity.class);
+                startActivity(intent);
+            }
+        });
+        in_stHallButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(getApplicationContext(),eg1Activity.class);
+                startActivity(intent);
+            }
+        });
+        in_ctHallButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent =new Intent(getApplicationContext(),eg1Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
