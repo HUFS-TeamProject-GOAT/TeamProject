@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        final EditText userName =(EditText) findViewById(R.id.userName);
+       final EditText userName =(EditText) findViewById(R.id.userName);
         Button startButton = (Button) findViewById(R.id.startButton);
-        ImageButton languageButton = (ImageButton) findViewById(R.id.homeImage);
+        ImageButton languageButton = (ImageButton) findViewById(R.id.globalImage);
         startButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

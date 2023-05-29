@@ -26,9 +26,13 @@
         <activity android:name =".languageActivity" />
         <activity android:name =".homeActivity" />
         <activity android:name =".endingActivity" />
-        <activity android:name =".eg1Activity" />
-        <activity android:name =".eg2Activity" />
-        <activity android:name =".eg3Activity" />
+        <activity android:name =".ctHallActivity" />
+        <activity android:name =".egHallActivity" />
+        <activity android:name =".lakeActivity" />
+        <activity android:name =".stHallActivity" />
+        <activity android:name =".foodHallActivity" />
+        <activity android:name =".cthall_talk1Activity" />
+        <activity android:name =".quizexActivity" />
 
     </application>
 
