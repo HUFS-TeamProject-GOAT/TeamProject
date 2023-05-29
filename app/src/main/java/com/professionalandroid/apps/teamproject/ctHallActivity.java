@@ -75,23 +75,7 @@ public class ctHallActivity extends AppCompatActivity {
 
             }
         });
-        go_ctHall4btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ctHall2.setVisibility(View.INVISIBLE);
-                ctHall1.setVisibility(View.INVISIBLE);
-                ctHall3.setVisibility(View.INVISIBLE);
-                ctHall4.setVisibility(View.VISIBLE);
-                ctHall5.setVisibility(View.INVISIBLE);
 
-                go_ctHall3btn.setVisibility(View.INVISIBLE);
-                go_ctHall4btn.setVisibility(View.VISIBLE);
-                go_ctHall5btn.setVisibility(View.INVISIBLE);
-                go_ctHall2btn.setVisibility(View.INVISIBLE);
-                ctHall_last_btn.setVisibility(View.INVISIBLE);
-
-            }
-        });
         go_ctHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,11 +92,18 @@ public class ctHallActivity extends AppCompatActivity {
                 ctHall_last_btn.setVisibility(View.VISIBLE);
 
 
-
-                Intent intent =new Intent(getApplicationContext(),cthall_talk1Activity.class);
+                Intent intent =new Intent(getApplicationContext(),cthall_talk2Activity.class);
                 startActivity(intent);
             }
         });
+        ctHall_last_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 =new Intent(getApplicationContext(),cthall_talk3Activity.class);
+                startActivity(intent1);
+            }
+        });
+
 
     }
 }

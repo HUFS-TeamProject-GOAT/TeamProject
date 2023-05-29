@@ -31,7 +31,13 @@
         <activity android:name =".lakeActivity" />
         <activity android:name =".stHallActivity" />
         <activity android:name =".foodHallActivity" />
+
         <activity android:name =".cthall_talk1Activity" />
+        <activity android:name =".cthall_talk2Activity" />
+        <activity android:name =".cthall_talk3Activity" />
+
+        <activity android:name =".eghall_talk1Activity" />
+
         <activity android:name =".quizexActivity" />
 
     </application>

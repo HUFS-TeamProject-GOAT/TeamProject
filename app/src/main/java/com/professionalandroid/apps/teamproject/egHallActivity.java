@@ -39,6 +39,9 @@ public class egHallActivity extends AppCompatActivity {
         go_egHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),eghall_talk1Activity.class);
+                startActivity(intent);
+
                 egHall2.setVisibility(View.VISIBLE);
                 egHall1.setVisibility(View.INVISIBLE);
                 egHall3.setVisibility(View.INVISIBLE);
@@ -58,6 +61,26 @@ public class egHallActivity extends AppCompatActivity {
             public void onClick(View v) {
                 egHall2.setVisibility(View.INVISIBLE);
                 egHall1.setVisibility(View.INVISIBLE);
+                egHall3.setVisibility(View.VISIBLE);
+                egHall4.setVisibility(View.INVISIBLE);
+                egHall5.setVisibility(View.INVISIBLE);
+
+                go_egHall3btn.setVisibility(View.INVISIBLE);
+                go_egHall4btn.setVisibility(View.VISIBLE);
+                go_egHall5btn.setVisibility(View.INVISIBLE);
+                go_egHall2btn.setVisibility(View.INVISIBLE);
+                egHall_last_btn.setVisibility(View.INVISIBLE);
+
+            }
+        });
+        go_egHall4btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                startActivity(intent);
+
+                egHall2.setVisibility(View.INVISIBLE);
+                egHall1.setVisibility(View.INVISIBLE);
                 egHall3.setVisibility(View.INVISIBLE);
                 egHall4.setVisibility(View.VISIBLE);
                 egHall5.setVisibility(View.INVISIBLE);
@@ -70,26 +93,12 @@ public class egHallActivity extends AppCompatActivity {
 
             }
         });
-        go_egHall4btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                egHall2.setVisibility(View.INVISIBLE);
-                egHall1.setVisibility(View.INVISIBLE);
-                egHall3.setVisibility(View.INVISIBLE);
-                egHall4.setVisibility(View.VISIBLE);
-                egHall5.setVisibility(View.INVISIBLE);
-
-                go_egHall3btn.setVisibility(View.INVISIBLE);
-                go_egHall4btn.setVisibility(View.VISIBLE);
-                go_egHall5btn.setVisibility(View.INVISIBLE);
-                go_egHall2btn.setVisibility(View.INVISIBLE);
-                egHall_last_btn.setVisibility(View.INVISIBLE);
-
-            }
-        });
         go_egHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                startActivity(intent);
+
                 egHall2.setVisibility(View.INVISIBLE);
                 egHall1.setVisibility(View.INVISIBLE);
                 egHall3.setVisibility(View.INVISIBLE);
@@ -101,6 +110,15 @@ public class egHallActivity extends AppCompatActivity {
                 go_egHall5btn.setVisibility(View.INVISIBLE);
                 go_egHall2btn.setVisibility(View.INVISIBLE);
                 egHall_last_btn.setVisibility(View.VISIBLE);
+
+            }
+        });
+        egHall_last_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                startActivity(intent);
+               finish();
 
             }
         });

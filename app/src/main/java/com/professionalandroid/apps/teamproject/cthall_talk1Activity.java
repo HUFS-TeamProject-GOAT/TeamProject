@@ -48,12 +48,6 @@ public class cthall_talk1Activity extends AppCompatActivity {
         Button storyLine1_10Button = (Button) findViewById(R.id.ct_storyLine1_10Button);
         Button storyLine1_11_Button = (Button) findViewById(R.id.ct_storyLine1_11_Button);
 
-        Button storyLine2_1Button = (Button) findViewById(R.id.ct_storyLine2_1Button);
-        Button storyLine2_2Button = (Button) findViewById(R.id.ct_storyLine2_2Button);
-        Button storyLine2_3_Button = (Button) findViewById(R.id.ct_storyLine2_3_Button);
-        Button storyLine2_4Button = (Button) findViewById(R.id.ct_storyLine2_4Button);
-        Button storyLine2_5Button = (Button) findViewById(R.id.ct_storyLine2_5Button);
-        Button storyLine2_6_Button = (Button) findViewById(R.id.ct_storyLine2_6_Button);
 
         ImageView maincharacter = (ImageView) findViewById(R.id.maincharacter);
         ImageView hyerim = (ImageView) findViewById(R.id.hyerim);
@@ -71,12 +65,6 @@ public class cthall_talk1Activity extends AppCompatActivity {
         TextView story1_10 =(TextView) findViewById(R.id.ct_storyText1_10);
         TextView story1_11_ =(TextView) findViewById(R.id.ct_storyText1_11_);
 
-        TextView story2_1 =(TextView) findViewById(R.id.ct_storyText2_1);
-        TextView story2_2 =(TextView) findViewById(R.id.ct_storyText2_2);
-        TextView story2_3_ =(TextView) findViewById(R.id.ct_storyText2_3_);
-        TextView story2_4 =(TextView) findViewById(R.id.ct_storyText2_4);
-        TextView story2_5 =(TextView) findViewById(R.id.ct_storyText2_5);
-        TextView story2_6 =(TextView) findViewById(R.id.ct_storyText2_6_);
 
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -223,8 +211,8 @@ public class cthall_talk1Activity extends AppCompatActivity {
         storyLine1_9Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                hyerim.clearColorFilter();
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                maincharacter.clearColorFilter();
+                hyerim.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story1_9.setVisibility(View.INVISIBLE);
                 story1_10.setVisibility(View.VISIBLE);
@@ -232,7 +220,7 @@ public class cthall_talk1Activity extends AppCompatActivity {
                 storyLine1_10Button.setVisibility(View.VISIBLE);
 
                 userName.setVisibility(View.INVISIBLE);
-                name_hyerim.setVisibility(View.VISIBLE);
+                name_hyerim.setVisibility(View.INVISIBLE);
             }
         });
         storyLine1_10Button.setOnClickListener(new View.OnClickListener() {
@@ -240,7 +228,7 @@ public class cthall_talk1Activity extends AppCompatActivity {
             public void onClick(View v) {
                 hyerim.setVisibility(View.INVISIBLE);
                 minsu.setVisibility(View.VISIBLE);
-                maincharacter.clearColorFilter();
+                maincharacter.setVisibility(View.INVISIBLE);
                 hyerim.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story1_10.setVisibility(View.INVISIBLE);
@@ -257,16 +245,6 @@ public class cthall_talk1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
-                maincharacter.clearColorFilter();
-                hyerim.setVisibility(View.INVISIBLE);
-
-                story1_11_.setVisibility(View.INVISIBLE);
-                story2_1.setVisibility(View.VISIBLE);
-                storyLine1_11_Button.setVisibility(View.INVISIBLE);
-                storyLine1_2Button.setVisibility(View.VISIBLE);
-
-                userName.setVisibility(View.VISIBLE);
-                name_hyerim.setVisibility(View.INVISIBLE);
 
 
             }

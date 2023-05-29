@@ -39,6 +39,9 @@ public class stHallActivity extends AppCompatActivity {
         go_stHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                startActivity(intent);
+
                 stHall2.setVisibility(View.VISIBLE);
                 stHall1.setVisibility(View.INVISIBLE);
                 stHall3.setVisibility(View.INVISIBLE);
@@ -56,6 +59,31 @@ public class stHallActivity extends AppCompatActivity {
         go_stHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                startActivity(intent);
+
+                stHall2.setVisibility(View.INVISIBLE);
+                stHall1.setVisibility(View.INVISIBLE);
+                stHall3.setVisibility(View.VISIBLE);
+                stHall4.setVisibility(View.INVISIBLE);
+                stHall5.setVisibility(View.INVISIBLE);
+
+                go_stHall3btn.setVisibility(View.INVISIBLE);
+                go_stHall4btn.setVisibility(View.VISIBLE);
+                go_stHall5btn.setVisibility(View.INVISIBLE);
+                go_stHall2btn.setVisibility(View.INVISIBLE);
+                stHall_last_btn.setVisibility(View.INVISIBLE);
+
+            }
+        });
+        go_stHall4btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                startActivity(intent);
+
                 stHall2.setVisibility(View.INVISIBLE);
                 stHall1.setVisibility(View.INVISIBLE);
                 stHall3.setVisibility(View.INVISIBLE);
@@ -65,23 +93,6 @@ public class stHallActivity extends AppCompatActivity {
                 go_stHall3btn.setVisibility(View.INVISIBLE);
                 go_stHall4btn.setVisibility(View.INVISIBLE);
                 go_stHall5btn.setVisibility(View.VISIBLE);
-                go_stHall2btn.setVisibility(View.INVISIBLE);
-                stHall_last_btn.setVisibility(View.INVISIBLE);
-
-            }
-        });
-        go_stHall4btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stHall2.setVisibility(View.INVISIBLE);
-                stHall1.setVisibility(View.INVISIBLE);
-                stHall3.setVisibility(View.INVISIBLE);
-                stHall4.setVisibility(View.VISIBLE);
-                stHall5.setVisibility(View.INVISIBLE);
-
-                go_stHall3btn.setVisibility(View.INVISIBLE);
-                go_stHall4btn.setVisibility(View.VISIBLE);
-                go_stHall5btn.setVisibility(View.INVISIBLE);
                 go_stHall2btn.setVisibility(View.INVISIBLE);
                 stHall_last_btn.setVisibility(View.INVISIBLE);
 
@@ -101,6 +112,15 @@ public class stHallActivity extends AppCompatActivity {
                 go_stHall5btn.setVisibility(View.INVISIBLE);
                 go_stHall2btn.setVisibility(View.INVISIBLE);
                 stHall_last_btn.setVisibility(View.VISIBLE);
+
+            }
+        });
+        stHall_last_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });

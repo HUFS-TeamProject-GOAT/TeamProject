@@ -33,7 +33,7 @@ public class homeActivity extends AppCompatActivity {
         ImageView lb_location_red = (ImageView) findViewById(R.id.lb_location_red);
 
         ImageButton stHallButton = (ImageButton) findViewById(R.id.stHallButton);
-        TextView info_lgHall =(TextView) findViewById(R.id.info_lgHall);
+        TextView info_stHall =(TextView) findViewById(R.id.info_stHall);
         Button in_stHallButton =(Button) findViewById(R.id.in_stHallButton);
         ImageView st_location_red = (ImageView) findViewById(R.id.st_location_red);
 
@@ -55,7 +55,7 @@ public class homeActivity extends AppCompatActivity {
                 info_lake.setVisibility(View.GONE);
                 info_ctHall.setVisibility(View.GONE);
                 info_lbHall.setVisibility(View.GONE);
-                info_lgHall.setVisibility(View.GONE);
+                info_stHall.setVisibility(View.GONE);
                 info_foodHall.setVisibility(View.GONE);
                 info_egHall.setVisibility(View.VISIBLE);
 
@@ -79,7 +79,7 @@ public class homeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 info_ctHall.setVisibility(View.GONE);
                 info_lbHall.setVisibility(View.GONE);
-                info_lgHall.setVisibility(View.GONE);
+                info_stHall.setVisibility(View.GONE);
                 info_egHall.setVisibility(View.GONE);
                 info_foodHall.setVisibility(View.GONE);
                 info_lake.setVisibility(View.VISIBLE);
@@ -106,7 +106,7 @@ public class homeActivity extends AppCompatActivity {
                 info_lake.setVisibility(View.GONE);
                 info_egHall.setVisibility(View.GONE);
                 info_lbHall.setVisibility(View.GONE);
-                info_lgHall.setVisibility(View.GONE);
+                info_stHall.setVisibility(View.GONE);
                 info_foodHall.setVisibility(View.GONE);
                 info_ctHall.setVisibility(View.VISIBLE);
 
@@ -131,7 +131,7 @@ public class homeActivity extends AppCompatActivity {
                 info_lake.setVisibility(View.GONE);
                 info_egHall.setVisibility(View.GONE);
                 info_ctHall.setVisibility(View.GONE);
-                info_lgHall.setVisibility(View.GONE);
+                info_stHall.setVisibility(View.GONE);
                 info_foodHall.setVisibility(View.GONE);
                 info_lbHall.setVisibility(View.VISIBLE);
 
@@ -162,7 +162,7 @@ public class homeActivity extends AppCompatActivity {
                 info_lbHall.setVisibility(View.GONE);
                 info_ctHall.setVisibility(View.GONE);
                 info_foodHall.setVisibility(View.GONE);
-                info_lgHall.setVisibility(View.VISIBLE);
+                info_stHall.setVisibility(View.VISIBLE);
 
                 st_location_red.setVisibility(View.VISIBLE);
                 ct_location_red.setVisibility(View.INVISIBLE);
@@ -189,7 +189,7 @@ public class homeActivity extends AppCompatActivity {
                 info_lbHall.setVisibility(View.GONE);
                 info_ctHall.setVisibility(View.GONE);
                 info_foodHall.setVisibility(View.VISIBLE);
-                info_lgHall.setVisibility(View.GONE);
+                info_stHall.setVisibility(View.GONE);
 
                 st_location_red.setVisibility(View.INVISIBLE);
                 ct_location_red.setVisibility(View.INVISIBLE);

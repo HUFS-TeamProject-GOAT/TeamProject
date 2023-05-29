@@ -10,7 +10,7 @@
         android:layout_height="240dp"
         android:maxLines="3"
         android:text="@string/ct_storyLine2_1"
-        android:visibility="invisible"
+
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
@@ -23,7 +23,7 @@
         android:id="@+id/ct_storyText2_2"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
+        android:maxLines="4"
         android:text="@string/ct_storyLine2_2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
         android:id="@+id/ct_storyText2_3_"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
+        android:maxLines="4"
         android:text="@string/ct_storyLine2_3_"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -95,6 +95,15 @@
         android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteY="485dp" />
+    <Button
+        android:id="@+id/ct_skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/skipButtonText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ct_storyLine2_1Button"
@@ -103,7 +112,6 @@
         android:layout_marginTop="664dp"
         android:layout_marginEnd="24dp"
         android:text="Next"
-        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
@@ -123,7 +131,7 @@
         android:layout_marginTop="664dp"
         android:layout_marginEnd="24dp"
         android:visibility="invisible"
-        android:text="Next"
+        android:text="start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
@@ -153,8 +161,114 @@
         android:layout_marginTop="664dp"
         android:layout_marginEnd="24dp"
         android:visibility="invisible"
-        android:text="Next"
+        android:text="start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="4dp"
+        android:autofillHints="name"
+        android:inputType="text"
+        android:background="@null"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText2_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maincharacter" />
+
+    <TextView
+        android:id="@+id/name_professor"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="name"
+        android:text="교수"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText2_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
+        app:layout_constraintVertical_bias="0.533" />
+    <TextView
+        android:id="@+id/name_minsu"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="name"
+        android:text="민수"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText2_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
+        app:layout_constraintVertical_bias="0.533" />
+    <TextView
+        android:id="@+id/name_hyunggu"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="name"
+        android:text="형구"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText2_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <ImageView
+        android:id="@+id/maincharacter"
+        android:layout_width="258dp"
+        android:layout_height="292dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/professor"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302"
+        app:srcCompat="@drawable/maincharacter" />
+
+
+    <ImageView
+        android:id="@+id/professor"
+        android:layout_width="250dp"
+        android:layout_height="291dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/maincharacter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/professor" />
+
+    <ImageView
+        android:id="@+id/hyunggu"
+        android:layout_width="250dp"
+        android:layout_height="291dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/hyunggu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/hyunggu" />
+    <ImageView
+        android:id="@+id/minsu"
+        android:layout_width="250dp"
+        android:layout_height="291dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/minsu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/minsu" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
