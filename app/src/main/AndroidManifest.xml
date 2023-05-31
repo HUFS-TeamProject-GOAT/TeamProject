@@ -37,6 +37,16 @@
         <activity android:name =".cthall_talk3Activity" />
 
         <activity android:name =".eghall_talk1Activity" />
+        <activity android:name =".eghall_talk2Activity" />
+        <activity android:name =".eghall_talk3Activity" />
+        <activity android:name =".eghall_talk4Activity" />
+
+        <activity android:name =".sthall_talk1Activity" />
+        <activity android:name =".sthall_talk2Activity" />
+        <activity android:name =".sthall_talk3Activity" />
+        <activity android:name =".sthall_talk4Activity" />
+
+        <activity android:name =".lbhall_talkActivity" />
 
         <activity android:name =".quizexActivity" />
 

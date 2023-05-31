@@ -210,7 +210,7 @@ public class homeActivity extends AppCompatActivity {
         in_lbHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent =new Intent(getApplicationContext(),endingActivity.class);
+                Intent intent =new Intent(getApplicationContext(),lbhall_talkActivity.class);
                 startActivity(intent);
             }
         });

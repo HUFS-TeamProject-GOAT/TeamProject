@@ -76,7 +76,7 @@ public class egHallActivity extends AppCompatActivity {
         go_egHall4btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),eghall_talk2Activity.class);
                 startActivity(intent);
 
                 egHall2.setVisibility(View.INVISIBLE);
@@ -96,7 +96,7 @@ public class egHallActivity extends AppCompatActivity {
         go_egHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),eghall_talk3Activity.class);
                 startActivity(intent);
 
                 egHall2.setVisibility(View.INVISIBLE);

@@ -37,7 +37,7 @@
     <string name="ct_location_red">ct_location_red</string>
     <string name="foodhall">foodhall</string>
     <string name="storyLine1">지금까지는 학교에서 아는 얼굴들만 봐왔지만, 대학은 뭔가 다르겠지?\n
-		웹툰에서 보던 대학교는 그랬어! \n연애도 하고 성적도 잘 받는 그런 캠퍼스 라이프!  \n연애도 하고 성적도 잘 받는 그런 캠퍼스 라이프!
+		웹툰에서 보던 대학교는 그랬어! \n연애도 하고 성적도 잘 받는 그런 캠퍼스 라이프!
 		\n새로운 친구도 사귀고 유명해져서 \'인싸\'라는 게 되어볼테야!
 		\n저기에 민수가 보이네. 야 창민수!
     </string>
@@ -113,8 +113,8 @@
     <string name="eg_storyLine3_11">풀었다! 뭐 별거 아니네. 확실히 사람이 많다 보니까 이상한 사람도 있네.</string>
     <string name="eg_storyLine3_12">둘이 뭔가 있었구나?</string>
     <string name="eg_storyLine3_13">아냐! 그냥 혼잣말이었어! 다음 교양 수업 때문에 난 가볼게!</string>
-
     <string name="eg_storyLine3_14_">아직도 조형찬이 나한테 왜 적대심을 가지고 있는지는 알지 못했다.</string>
+
     <string name="eg_storyLine4_1">공학관을 나서려는데, 공학관 입구 앞 삼거리에서 레드불 행사가 진행중이었다.</string>
     <string name="eg_storyLine4_2">레드불 지급 행사 중입니다! 오셔서 레드불 음료 받아가세요!</string>
     <string name="eg_storyLine4_3_">방금 일 때문에 슬슬 짜증나던 차에 잘됐다! 저걸 마시면 좀 괜찮아지겠지. 행사하는 곳에 레드불을 받으러 가까이 갔다.</string>
@@ -202,6 +202,6 @@
     <string name="lb_storyLine1_3">	네 그렇습니다...! 무슨 일로 부르신건가요? </string>
     <string name="lb_storyLine1_4">요즘 자네 학과 교수도 그렇고, 저번 학생회관 일도 그렇고. 정말 대단한 친구라고 소문이 자자하더군!</string>
     <string name="lb_storyLine1_5">아닙니다! 도움이 될 수 있다면 최선을 다했을 뿐입니다!</string>
-    <string name="lb_storyLine1_6">하하! 정말 대견하고 공손한 친구로구만. 자네가 우리 학교에 공헌해준 것이 너무 고마워서 그러네. 자네가 앞으로 우리 학교에서 수업을 들으면서 어떤 과목이든 C 이하로 받으면,그 종이에 적힌 성적으로 바꿀 수 있게 해주겠네!그렇다고 학업을 게을리 하란 말은 아닐세! 앞으로도 우리 학교를 빛내주길 바라는 걸세!</string>
+    <string name="lb_storyLine1_6_">하하! 정말 대견하고 공손한 친구로구만. 자네가 우리 학교에 공헌해준 것이 너무 고마워서 그러네. 자네가 앞으로 우리 학교에서 수업을 들으면서 어떤 과목이든 C 이하로 받으면,그 종이에 적힌 성적으로 바꿀 수 있게 해주겠네!그렇다고 학업을 게을리 하란 말은 아닐세! 앞으로도 우리 학교를 빛내주길 바라는 걸세!</string>
 
 </resources>

@@ -39,7 +39,7 @@ public class stHallActivity extends AppCompatActivity {
         go_stHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),sthall_talk1Activity.class);
                 startActivity(intent);
 
                 stHall2.setVisibility(View.VISIBLE);
@@ -60,7 +60,7 @@ public class stHallActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),sthall_talk2Activity.class);
                 startActivity(intent);
 
                 stHall2.setVisibility(View.INVISIBLE);
@@ -81,7 +81,7 @@ public class stHallActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),sthall_talk3Activity.class);
                 startActivity(intent);
 
                 stHall2.setVisibility(View.INVISIBLE);
@@ -118,7 +118,7 @@ public class stHallActivity extends AppCompatActivity {
         stHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),sthall_talk4Activity.class);
                 startActivity(intent);
                 finish();
 

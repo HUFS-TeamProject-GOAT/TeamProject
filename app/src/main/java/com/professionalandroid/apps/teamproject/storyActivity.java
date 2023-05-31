@@ -36,18 +36,9 @@ public class storyActivity extends AppCompatActivity {
         Button story6Button = (Button) findViewById(R.id.storyLine6Button);
         Button story_endButton = (Button) findViewById(R.id.story_endButton);
 
-        Button ct_skipButton = (Button) findViewById(R.id.ct_skipButton);
-        Button ct_storyLine1_1Button = (Button) findViewById(R.id.ct_storyLine1_1Button);
-        Button ct_storyLine1_2Button = (Button) findViewById(R.id.ct_storyLine1_2Button);
-        Button ct_storyLine1_3Button = (Button) findViewById(R.id.ct_storyLine1_3Button);
-        Button ct_storyLine1_4Button = (Button) findViewById(R.id.ct_storyLine1_4Button);
-        Button ct_storyLine1_5Button = (Button) findViewById(R.id.ct_storyLine1_5Button);
-        Button ct_storyLine1_6Button = (Button) findViewById(R.id.ct_storyLine1_6Button);
-        Button ct_storyLine1_7_Button = (Button) findViewById(R.id.ct_storyLine1_7_Button);
 
         ImageView minsu = (ImageView) findViewById(R.id.minsu);
         ImageView maincharacter = (ImageView) findViewById(R.id.maincharacter);
-        ImageView hyerim = (ImageView) findViewById(R.id.hyerim);
 
         TextView story1 =(TextView) findViewById(R.id.storyText1);
         TextView story2 =(TextView) findViewById(R.id.storyText2);
@@ -57,17 +48,9 @@ public class storyActivity extends AppCompatActivity {
         TextView story6 =(TextView) findViewById(R.id.storyText6);
         TextView story7 =(TextView) findViewById(R.id.storyText7);
 
-        TextView ct_story1_1 =(TextView) findViewById(R.id.ct_storyText1_1);
-        TextView ct_story1_2 =(TextView) findViewById(R.id.ct_storyText1_2);
-        TextView ct_story1_3 =(TextView) findViewById(R.id.ct_storyText1_3);
-        TextView ct_story1_4 =(TextView) findViewById(R.id.ct_storyText1_4);
-        TextView ct_story1_5 =(TextView) findViewById(R.id.ct_storyText1_5);
-        TextView ct_story1_6 =(TextView) findViewById(R.id.ct_storyText1_6);
-        TextView ct_story1_7_ =(TextView) findViewById(R.id.ct_storyText1_7_);
 
 
         TextView name_minsu = (TextView) findViewById(R.id.name_minsu);
-        TextView name_hyerim = (TextView) findViewById(R.id.name_hyerim);
 
 
         skipButton.setOnClickListener(new View.OnClickListener() {
@@ -89,8 +72,8 @@ public class storyActivity extends AppCompatActivity {
         story1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-                minsu.setVisibility(View.VISIBLE);
+                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                maincharacter.setVisibility(View.VISIBLE);
 
                 story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.VISIBLE);
@@ -115,7 +98,7 @@ public class storyActivity extends AppCompatActivity {
         story2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.clearColorFilter();
+                maincharacter.setVisibility(View.VISIBLE);
                 minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story1.setVisibility(View.INVISIBLE);

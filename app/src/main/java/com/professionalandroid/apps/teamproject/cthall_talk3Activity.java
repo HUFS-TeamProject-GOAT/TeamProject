@@ -1,5 +1,7 @@
 package com.professionalandroid.apps.teamproject;
 
+import static com.professionalandroid.apps.teamproject.MainActivity.PREFS_NAME;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,10 +26,10 @@ public class cthall_talk3Activity extends AppCompatActivity {
         ColorMatrix darkMatrix = new ColorMatrix();
         darkMatrix.setSaturation(0);
 
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME,Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
         TextView userName =(TextView) findViewById(R.id.userName);
-        Intent intent =getIntent();
-        String name =intent.getStringExtra("userName");
-        userName.setText(name);
+        userName.setText(user_Name);
 
         TextView name_professor = (TextView) findViewById(R.id.name_professor);
         TextView name_minsu =(TextView) findViewById(R.id.name_minsu);
@@ -168,8 +170,8 @@ public class cthall_talk3Activity extends AppCompatActivity {
                 storyLine3_6Button.setVisibility(View.INVISIBLE);
                 storyLine3_7_Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.VISIBLE);
-                name_minsu.setVisibility(View.INVISIBLE);
+                userName.setVisibility(View.INVISIBLE);
+                name_minsu.setVisibility(View.VISIBLE);
             }
         });
         storyLine3_7_Button.setOnClickListener(new View.OnClickListener() {
