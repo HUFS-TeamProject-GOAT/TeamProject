@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -77,14 +78,6 @@ public class storyActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        story_endButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),homeActivity.class);
-                startActivity(intent);
-            }
-        });
-
 
         story1Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,19 +87,9 @@ public class storyActivity extends AppCompatActivity {
 
                 story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.VISIBLE);
-                story3.setVisibility(View.INVISIBLE);
-                story4.setVisibility(View.INVISIBLE);
-                story5.setVisibility(View.INVISIBLE);
-                story6.setVisibility(View.INVISIBLE);
-                story7.setVisibility(View.INVISIBLE);
 
                 story1Button.setVisibility(View.INVISIBLE);
                 story2Button.setVisibility(View.VISIBLE);
-                story3Button.setVisibility(View.INVISIBLE);
-                story4Button.setVisibility(View.INVISIBLE);
-                story5Button.setVisibility(View.INVISIBLE);
-                story6Button.setVisibility(View.INVISIBLE);
-                story_endButton.setVisibility(View.INVISIBLE);
 
                 name_minsu.setVisibility(View.VISIBLE);
                 userName.setVisibility(View.INVISIBLE);
@@ -118,21 +101,11 @@ public class storyActivity extends AppCompatActivity {
                 maincharacter.clearColorFilter();
                 minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
-                story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.INVISIBLE);
                 story3.setVisibility(View.VISIBLE);
-                story4.setVisibility(View.INVISIBLE);
-                story5.setVisibility(View.INVISIBLE);
-                story6.setVisibility(View.INVISIBLE);
-                story7.setVisibility(View.INVISIBLE);
 
-                story1Button.setVisibility(View.INVISIBLE);
                 story2Button.setVisibility(View.INVISIBLE);
                 story3Button.setVisibility(View.VISIBLE);
-                story4Button.setVisibility(View.INVISIBLE);
-                story5Button.setVisibility(View.INVISIBLE);
-                story6Button.setVisibility(View.INVISIBLE);
-                story_endButton.setVisibility(View.INVISIBLE);
 
                 name_minsu.setVisibility(View.INVISIBLE);
                 userName.setVisibility(View.VISIBLE);
@@ -144,21 +117,12 @@ public class storyActivity extends AppCompatActivity {
                 minsu.clearColorFilter();
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
-                story1.setVisibility(View.INVISIBLE);
-                story2.setVisibility(View.INVISIBLE);
                 story3.setVisibility(View.INVISIBLE);
                 story4.setVisibility(View.VISIBLE);
-                story5.setVisibility(View.INVISIBLE);
-                story6.setVisibility(View.INVISIBLE);
-                story7.setVisibility(View.INVISIBLE);
 
-                story1Button.setVisibility(View.INVISIBLE);
-                story2Button.setVisibility(View.INVISIBLE);
+
                 story3Button.setVisibility(View.INVISIBLE);
                 story4Button.setVisibility(View.VISIBLE);
-                story5Button.setVisibility(View.INVISIBLE);
-                story6Button.setVisibility(View.INVISIBLE);
-                story_endButton.setVisibility(View.INVISIBLE);
 
                 name_minsu.setVisibility(View.VISIBLE);
                 userName.setVisibility(View.INVISIBLE);
@@ -170,21 +134,11 @@ public class storyActivity extends AppCompatActivity {
                 maincharacter.clearColorFilter();
                 minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
-                story1.setVisibility(View.INVISIBLE);
-                story2.setVisibility(View.INVISIBLE);
-                story3.setVisibility(View.INVISIBLE);
                 story4.setVisibility(View.INVISIBLE);
                 story5.setVisibility(View.VISIBLE);
-                story6.setVisibility(View.INVISIBLE);
-                story7.setVisibility(View.INVISIBLE);
 
-                story1Button.setVisibility(View.INVISIBLE);
-                story2Button.setVisibility(View.INVISIBLE);
-                story3Button.setVisibility(View.INVISIBLE);
                 story4Button.setVisibility(View.INVISIBLE);
                 story5Button.setVisibility(View.VISIBLE);
-                story6Button.setVisibility(View.INVISIBLE);
-                story_endButton.setVisibility(View.INVISIBLE);
 
                 name_minsu.setVisibility(View.INVISIBLE);
                 userName.setVisibility(View.VISIBLE);
@@ -196,22 +150,12 @@ public class storyActivity extends AppCompatActivity {
                 minsu.clearColorFilter();
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
-
-                story1.setVisibility(View.INVISIBLE);
-                story2.setVisibility(View.INVISIBLE);
-                story3.setVisibility(View.INVISIBLE);
-                story4.setVisibility(View.INVISIBLE);
                 story5.setVisibility(View.INVISIBLE);
                 story6.setVisibility(View.VISIBLE);
-                story7.setVisibility(View.INVISIBLE);
 
-                story1Button.setVisibility(View.INVISIBLE);
-                story2Button.setVisibility(View.INVISIBLE);
-                story3Button.setVisibility(View.INVISIBLE);
-                story4Button.setVisibility(View.INVISIBLE);
                 story5Button.setVisibility(View.INVISIBLE);
                 story6Button.setVisibility(View.VISIBLE);
-                story_endButton.setVisibility(View.INVISIBLE);
+
 
                 name_minsu.setVisibility(View.VISIBLE);
                 userName.setVisibility(View.INVISIBLE);
@@ -225,19 +169,9 @@ public class storyActivity extends AppCompatActivity {
                 minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
 
-                story1.setVisibility(View.INVISIBLE);
-                story2.setVisibility(View.INVISIBLE);
-                story3.setVisibility(View.INVISIBLE);
-                story4.setVisibility(View.INVISIBLE);
-                story5.setVisibility(View.INVISIBLE);
                 story6.setVisibility(View.INVISIBLE);
                 story7.setVisibility(View.VISIBLE);
 
-                story1Button.setVisibility(View.INVISIBLE);
-                story2Button.setVisibility(View.INVISIBLE);
-                story3Button.setVisibility(View.INVISIBLE);
-                story4Button.setVisibility(View.INVISIBLE);
-                story5Button.setVisibility(View.INVISIBLE);
                 story6Button.setVisibility(View.INVISIBLE);
                 story_endButton.setVisibility(View.VISIBLE);
 
@@ -245,7 +179,25 @@ public class storyActivity extends AppCompatActivity {
                 userName.setVisibility(View.VISIBLE);
             }
         });
+        story_endButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),homeActivity.class);
+                startActivity(intent);
 
+                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                minsu.setVisibility(View.VISIBLE);
+
+                ct_story1_1.setVisibility(View.VISIBLE);
+
+                ct_storyLine1_1Button.setVisibility(View.VISIBLE);
+
+                name_minsu.setVisibility(View.VISIBLE);
+                userName.setVisibility(View.INVISIBLE);
+
+
+            }
+        });
     }
 
 }

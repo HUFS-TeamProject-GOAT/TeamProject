@@ -58,7 +58,7 @@ public class ctHallActivity extends AppCompatActivity {
         go_ctHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),cthall_talk1Activity.class);
+                Intent intent =new Intent(getApplicationContext(),storyActivity.class);
                 startActivity(intent);
 
                 ctHall2.setVisibility(View.INVISIBLE);
@@ -92,15 +92,15 @@ public class ctHallActivity extends AppCompatActivity {
                 ctHall_last_btn.setVisibility(View.VISIBLE);
 
 
-                Intent intent =new Intent(getApplicationContext(),cthall_talk2Activity.class);
+                Intent intent =new Intent(getApplicationContext(),storyActivity.class);
                 startActivity(intent);
             }
         });
         ctHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 =new Intent(getApplicationContext(),cthall_talk3Activity.class);
-                startActivity(intent1);
+                Intent intent =new Intent(getApplicationContext(),storyActivity.class);
+                startActivity(intent);
             }
         });
 
