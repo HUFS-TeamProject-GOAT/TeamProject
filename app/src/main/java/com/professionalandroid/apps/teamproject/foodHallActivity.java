@@ -40,7 +40,7 @@ public class foodHallActivity extends AppCompatActivity {
         go_foodHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), foodhall_talk1Activity.class);
                 startActivity(intent);
 
                 foodHall2.setVisibility(View.VISIBLE);
@@ -62,7 +62,7 @@ public class foodHallActivity extends AppCompatActivity {
         go_foodHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(),foodhall_talk2Activity.class);
                 startActivity(intent);
 
                 foodHall2.setVisibility(View.INVISIBLE);
@@ -144,7 +144,7 @@ public class foodHallActivity extends AppCompatActivity {
        foodHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(),foodhall_talk3Activity.class);
                 startActivity(intent);
                 finish();
             }

@@ -147,7 +147,6 @@
         android:id="@+id/st_storyText1_5_"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/st_storyLine1_5_"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"

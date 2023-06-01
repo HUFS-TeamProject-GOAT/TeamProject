@@ -81,13 +81,12 @@
         android:layout_width="86dp"
         android:layout_height="74dp"
         android:layout_marginEnd="204dp"
-        android:layout_marginBottom="420dp"
         android:backgroundTint="@android:color/transparent"
         android:scaleType="fitXY"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/thing" />
+        app:srcCompat="@drawable/thing"
+        tools:layout_editor_absoluteY="237dp" />
 
     <ImageButton
         android:id="@+id/go_foodHall4btn"
@@ -146,11 +145,11 @@
         style="@style/Widget.AppCompat.ImageButton"
         android:layout_width="97dp"
         android:layout_height="53dp"
-        android:layout_marginTop="676dp"
+        android:layout_marginTop="660dp"
         android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/go_home"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toStartOf="@+id/foodHall2"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/foodHall2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bottom" />

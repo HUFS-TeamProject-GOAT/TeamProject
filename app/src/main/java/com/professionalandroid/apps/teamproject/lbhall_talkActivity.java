@@ -38,7 +38,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
         TextView name_president = (TextView) findViewById(R.id.name_president);
 
         ImageView maincharacter = (ImageView) findViewById(R.id.maincharacter);
-        ImageView presidnet= (ImageView) findViewById(R.id.president);
+        ImageView president= (ImageView) findViewById(R.id.president);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
         Button storyLine1Button = (Button) findViewById(R.id.lb_storyLine1_1Button);
@@ -61,6 +61,19 @@ public class lbhall_talkActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                story1.setVisibility(View.INVISIBLE);
+                story2.setVisibility(View.INVISIBLE);
+                story3.setVisibility(View.INVISIBLE);
+                story4.setVisibility(View.INVISIBLE);
+                story5.setVisibility(View.INVISIBLE);
+                story6_.setVisibility(View.VISIBLE);
+
+                storyLine1Button.setVisibility(View.INVISIBLE);
+                storyLine2Button.setVisibility(View.INVISIBLE);
+                storyLine3Button.setVisibility(View.INVISIBLE);
+                storyLine4Button.setVisibility(View.INVISIBLE);
+                storyLine5Button.setVisibility(View.INVISIBLE);
+                storyLine6_Button.setVisibility(View.VISIBLE);
 
                 Intent intent = new Intent(getApplicationContext(), endingActivity.class);
                 startActivity(intent);
@@ -72,7 +85,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
         storyLine1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.setVisibility((View.VISIBLE));
+               president.setVisibility((View.VISIBLE));
 
                 story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.VISIBLE);
@@ -81,13 +94,14 @@ public class lbhall_talkActivity extends AppCompatActivity {
                 storyLine2Button.setVisibility(View.VISIBLE);
 
 
-                userName.setVisibility(View.VISIBLE);
+                name_president.setVisibility(View.VISIBLE);
             }
         });
         storyLine2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+               president.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                maincharacter.setVisibility(View.VISIBLE);
 
                 story2.setVisibility(View.INVISIBLE);
                 story3.setVisibility(View.VISIBLE);
@@ -97,12 +111,13 @@ public class lbhall_talkActivity extends AppCompatActivity {
 
 
                 userName.setVisibility(View.VISIBLE);
+                name_president.setVisibility(View.INVISIBLE);
             }
         });
         storyLine3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presidnet.setVisibility(View.VISIBLE);
+                president.clearColorFilter();
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
 
@@ -119,7 +134,9 @@ public class lbhall_talkActivity extends AppCompatActivity {
         storyLine4Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presidnet.clearColorFilter();
+                maincharacter.clearColorFilter();
+                president.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
 
                 story4.setVisibility(View.INVISIBLE);
                 story5.setVisibility(View.VISIBLE);
@@ -127,16 +144,15 @@ public class lbhall_talkActivity extends AppCompatActivity {
                 storyLine4Button.setVisibility(View.INVISIBLE);
                 storyLine5Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.INVISIBLE);
+                userName.setVisibility(View.VISIBLE);
                 name_president.setVisibility(View.INVISIBLE);
             }
         });
         storyLine5Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
-                startActivity(intent);
-                presidnet.clearColorFilter();
+
+                president.clearColorFilter();
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story5.setVisibility(View.INVISIBLE);
@@ -146,7 +162,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
                 storyLine6_Button.setVisibility(View.VISIBLE);
 
                 userName.setVisibility(View.INVISIBLE);
-                presidnet.setVisibility(View.VISIBLE);
+                name_president.setVisibility(View.VISIBLE);
             }
         });
         storyLine6_Button.setOnClickListener(new View.OnClickListener() {

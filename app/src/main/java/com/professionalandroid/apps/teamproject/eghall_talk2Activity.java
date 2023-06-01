@@ -82,6 +82,17 @@ public class eghall_talk2Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                skipButton.setVisibility(View.INVISIBLE);
+
+                maincharacter.setVisibility(View.VISIBLE);
+                maincharacter.clearColorFilter();
+                minsu.setVisibility(View.INVISIBLE);
+                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                userName.setVisibility(View.VISIBLE);
+                name_minsu.setVisibility(View.INVISIBLE);
+
+                skipButton.setVisibility(View.INVISIBLE);
+
                 story2_1.setVisibility(View.INVISIBLE);
                 story2_2.setVisibility(View.INVISIBLE);
                 story2_3.setVisibility(View.INVISIBLE);
@@ -112,6 +123,11 @@ public class eghall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 maincharacter.setVisibility((View.VISIBLE));
+                maincharacter.clearColorFilter();
+                minsu.setVisibility(View.INVISIBLE);
+                minsu.clearColorFilter();
+                userName.setVisibility(View.VISIBLE);
+                name_minsu.setVisibility(View.INVISIBLE);
 
                 story2_1.setVisibility(View.INVISIBLE);
                 story2_2.setVisibility(View.VISIBLE);
@@ -225,6 +241,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
         storyLine2_8Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                minsu.setVisibility(View.VISIBLE);
                 minsu.clearColorFilter();
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
@@ -273,8 +290,8 @@ public class eghall_talk2Activity extends AppCompatActivity {
         storyLine2_11Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                minsu.clearColorFilter();
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                maincharacter.clearColorFilter();
+                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story2_11.setVisibility(View.INVISIBLE);
                 story2_12.setVisibility(View.VISIBLE);
@@ -282,15 +299,15 @@ public class eghall_talk2Activity extends AppCompatActivity {
                 storyLine2_11Button.setVisibility(View.INVISIBLE);
                 storyLine2_12Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.INVISIBLE);
-                name_minsu.setVisibility(View.VISIBLE);
+                userName.setVisibility(View.VISIBLE);
+                name_minsu.setVisibility(View.INVISIBLE);
             }
         });
         storyLine2_12Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.clearColorFilter();
-                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                minsu.clearColorFilter();
+                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story2_12.setVisibility(View.INVISIBLE);
                 story2_13.setVisibility(View.VISIBLE);
@@ -298,8 +315,8 @@ public class eghall_talk2Activity extends AppCompatActivity {
                 storyLine2_12Button.setVisibility(View.INVISIBLE);
                 storyLine2_13Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.VISIBLE);
-                name_minsu.setVisibility(View.INVISIBLE);
+                userName.setVisibility(View.INVISIBLE);
+                name_minsu.setVisibility(View.VISIBLE);
             }
         });
         storyLine2_13Button.setOnClickListener(new View.OnClickListener() {
@@ -321,8 +338,8 @@ public class eghall_talk2Activity extends AppCompatActivity {
         storyLine2_14Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.clearColorFilter();
-                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                minsu.clearColorFilter();
+                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story2_14.setVisibility(View.INVISIBLE);
                 story2_15.setVisibility(View.VISIBLE);
@@ -330,8 +347,8 @@ public class eghall_talk2Activity extends AppCompatActivity {
                 storyLine2_14Button.setVisibility(View.INVISIBLE);
                 storyLine2_15Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.VISIBLE);
-                name_minsu.setVisibility(View.INVISIBLE);
+                userName.setVisibility(View.INVISIBLE);
+                name_minsu.setVisibility(View.VISIBLE);
             }
         });
         storyLine2_15Button.setOnClickListener(new View.OnClickListener() {

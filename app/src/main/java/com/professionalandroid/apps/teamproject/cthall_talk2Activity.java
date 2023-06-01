@@ -60,10 +60,28 @@ public class cthall_talk2Activity extends AppCompatActivity {
         TextView story2_6_ =(TextView) findViewById(R.id.ct_storyText2_6_);
 
         skipButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                skipButton.setVisibility(View.INVISIBLE);
+
+                professor.setVisibility(View.INVISIBLE);
+                maincharacter.setVisibility(View.VISIBLE);
+                maincharacter.clearColorFilter();
+                name_professor.setVisibility(View.INVISIBLE);
+                userName.setVisibility(View.VISIBLE);
+
                 Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
                 startActivity(intent);
+                story2_1.setVisibility(View.INVISIBLE);
+                story2_2.setVisibility(View.INVISIBLE);
+                story2_3_.setVisibility(View.INVISIBLE);
+                story2_4.setVisibility(View.VISIBLE);
+
+                storyLine2_1Button.setVisibility(View.INVISIBLE);
+                storyLine2_2Button.setVisibility(View.INVISIBLE);
+                storyLine2_3_Button.setVisibility(View.INVISIBLE);
+                storyLine2_4Button.setVisibility(View.VISIBLE);
             }
         });
 
@@ -105,6 +123,8 @@ public class cthall_talk2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 professor.setVisibility(View.INVISIBLE);
                 maincharacter.clearColorFilter();
+
+                skipButton.setVisibility(View.INVISIBLE);
 
                 Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
                 startActivity(intent);

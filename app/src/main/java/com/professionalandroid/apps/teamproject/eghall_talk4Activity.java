@@ -52,10 +52,20 @@ public class eghall_talk4Activity extends AppCompatActivity {
         TextView story3_ = (TextView) findViewById(R.id.eg_storyText4_3_);
         TextView story4_ = (TextView) findViewById(R.id.eg_storyText4_4_);
 
+        extra.setVisibility(View.VISIBLE);
+        extra.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                skipButton.setVisibility(View.INVISIBLE);
+
+                extra.setVisibility(View.INVISIBLE);
+                name_extra.setVisibility(View.INVISIBLE);
+                maincharacter.setVisibility(View.VISIBLE);
+                userName.setVisibility(View.VISIBLE);
+                maincharacter.clearColorFilter();
+
                 story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.INVISIBLE);
                 story3_.setVisibility(View.INVISIBLE);
@@ -77,7 +87,7 @@ public class eghall_talk4Activity extends AppCompatActivity {
         storyLine1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.setVisibility((View.VISIBLE));
+               extra.clearColorFilter();
 
                 story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.VISIBLE);
@@ -86,12 +96,14 @@ public class eghall_talk4Activity extends AppCompatActivity {
                 storyLine2Button.setVisibility(View.VISIBLE);
 
 
-                userName.setVisibility(View.VISIBLE);
+                name_extra.setVisibility(View.VISIBLE);
             }
         });
         storyLine2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                maincharacter.setVisibility(View.VISIBLE);
+                extra.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
 
                 story2.setVisibility(View.INVISIBLE);
@@ -100,7 +112,7 @@ public class eghall_talk4Activity extends AppCompatActivity {
                 storyLine2Button.setVisibility(View.INVISIBLE);
                 storyLine3_Button.setVisibility(View.VISIBLE);
 
-
+                name_extra.setVisibility(View.INVISIBLE);
                 userName.setVisibility(View.VISIBLE);
             }
         });
@@ -109,8 +121,10 @@ public class eghall_talk4Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
                 startActivity(intent);
-                extra.setVisibility(View.VISIBLE);
+                maincharacter.setVisibility(View.VISIBLE);
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
+                extra.setVisibility(View.INVISIBLE);
 
                 story3_.setVisibility(View.INVISIBLE);
                 story4_.setVisibility(View.VISIBLE);
@@ -118,8 +132,7 @@ public class eghall_talk4Activity extends AppCompatActivity {
                 storyLine3_Button.setVisibility(View.INVISIBLE);
                 storyLine4_Button.setVisibility(View.VISIBLE);
 
-                name_extra.setVisibility(View.VISIBLE);
-                userName.setVisibility(View.INVISIBLE);
+                userName.setVisibility(View.VISIBLE);
             }
         });
         storyLine4_Button.setOnClickListener(new View.OnClickListener() {

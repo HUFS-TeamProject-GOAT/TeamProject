@@ -116,7 +116,7 @@ public class egHallActivity extends AppCompatActivity {
         egHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),eghall_talk4Activity.class);
                 startActivity(intent);
                finish();
 

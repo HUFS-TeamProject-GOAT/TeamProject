@@ -58,9 +58,17 @@ public class sthall_talk3Activity extends AppCompatActivity {
         TextView story6_ = (TextView) findViewById(R.id.st_storyText3_6_);
 
 
+        professor.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                professor.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                maincharacter.setVisibility(View.VISIBLE);
+                userName.setVisibility(View.VISIBLE);
+                name_hyerim.setVisibility(View.INVISIBLE);
+                name_professor.setVisibility(View.INVISIBLE);
+
                 story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.INVISIBLE);
                 story3.setVisibility(View.INVISIBLE);
@@ -101,6 +109,8 @@ public class sthall_talk3Activity extends AppCompatActivity {
         storyLine2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                professor.clearColorFilter();
+                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
 
                 story2.setVisibility(View.INVISIBLE);
@@ -110,14 +120,15 @@ public class sthall_talk3Activity extends AppCompatActivity {
                 storyLine3Button.setVisibility(View.VISIBLE);
 
 
-                userName.setVisibility(View.VISIBLE);
+                userName.setVisibility(View.INVISIBLE);
+                name_professor.setVisibility(View.VISIBLE);
             }
         });
         storyLine3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                professor.setVisibility(View.VISIBLE);
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                professor.setVisibility(View.INVISIBLE);
+                hyerim.setVisibility(View.VISIBLE);
 
 
                 story3.setVisibility(View.INVISIBLE);
@@ -126,14 +137,15 @@ public class sthall_talk3Activity extends AppCompatActivity {
                 storyLine3Button.setVisibility(View.INVISIBLE);
                 storyLine4Button.setVisibility(View.VISIBLE);
 
-                name_professor.setVisibility(View.VISIBLE);
-                userName.setVisibility(View.INVISIBLE);
+                name_hyerim.setVisibility(View.VISIBLE);
+                name_professor.setVisibility(View.INVISIBLE);
             }
         });
         storyLine4Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                professor.clearColorFilter();
+                professor.setVisibility(View.VISIBLE);
+                hyerim.setVisibility(View.INVISIBLE);
 
                 story4.setVisibility(View.INVISIBLE);
                 story5_.setVisibility(View.VISIBLE);
@@ -141,8 +153,8 @@ public class sthall_talk3Activity extends AppCompatActivity {
                 storyLine4Button.setVisibility(View.INVISIBLE);
                 storyLine5_Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.INVISIBLE);
-                name_professor.setVisibility(View.INVISIBLE);
+                name_hyerim.setVisibility(View.INVISIBLE);
+                name_professor.setVisibility(View.VISIBLE);
             }
         });
         storyLine5_Button.setOnClickListener(new View.OnClickListener() {
@@ -150,8 +162,9 @@ public class sthall_talk3Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
                 startActivity(intent);
-                professor.clearColorFilter();
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                maincharacter.setVisibility(View.VISIBLE);
+               maincharacter.clearColorFilter();
+               professor.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story5_.setVisibility(View.INVISIBLE);
                 story6_.setVisibility(View.VISIBLE);
@@ -159,8 +172,8 @@ public class sthall_talk3Activity extends AppCompatActivity {
                 storyLine5_Button.setVisibility(View.INVISIBLE);
                 storyLine6_Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.INVISIBLE);
-                professor.setVisibility(View.VISIBLE);
+                userName.setVisibility(View.VISIBLE);
+                name_professor.setVisibility(View.INVISIBLE);
             }
         });
         storyLine6_Button.setOnClickListener(new View.OnClickListener() {

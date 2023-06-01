@@ -71,8 +71,36 @@ public class cthall_talk1Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                skipButton.setVisibility(View.INVISIBLE);
+
+                maincharacter.setVisibility(View.INVISIBLE);
+                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                hyerim.setVisibility(View.VISIBLE);
+                hyerim.clearColorFilter();
+
                 Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
                 startActivity(intent);
+                story1_1.setVisibility(View.INVISIBLE);
+                story1_2.setVisibility(View.INVISIBLE);
+                story1_3.setVisibility(View.INVISIBLE);
+                story1_4.setVisibility(View.INVISIBLE);
+                story1_5.setVisibility(View.INVISIBLE);
+                story1_6.setVisibility(View.INVISIBLE);
+                story1_7_.setVisibility(View.INVISIBLE);
+                story1_8.setVisibility(View.VISIBLE);
+
+                storyLine1_1Button.setVisibility(View.INVISIBLE);
+                storyLine1_2Button.setVisibility(View.INVISIBLE);
+                storyLine1_3Button.setVisibility(View.INVISIBLE);
+                storyLine1_4Button.setVisibility(View.INVISIBLE);
+                storyLine1_5Button.setVisibility(View.INVISIBLE);
+                storyLine1_6Button.setVisibility(View.INVISIBLE);
+                storyLine1_7_Button.setVisibility(View.INVISIBLE);
+                storyLine1_8Button.setVisibility(View.VISIBLE);
+
+                userName.setVisibility(View.INVISIBLE);
+                name_hyerim.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -150,6 +178,7 @@ public class cthall_talk1Activity extends AppCompatActivity {
                 hyerim.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
 
+
                 story1_5.setVisibility(View.INVISIBLE);
                 story1_6.setVisibility(View.VISIBLE);
 
@@ -182,6 +211,10 @@ public class cthall_talk1Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
                 startActivity(intent);
+                hyerim.setVisibility(View.VISIBLE);
+                maincharacter.setVisibility(View.INVISIBLE);
+
+                skipButton.setVisibility(View.INVISIBLE);
 
                 story1_7_.setVisibility(View.INVISIBLE);
                 story1_8.setVisibility(View.VISIBLE);
@@ -198,6 +231,7 @@ public class cthall_talk1Activity extends AppCompatActivity {
         storyLine1_8Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                maincharacter.setVisibility(View.VISIBLE);
                 maincharacter.clearColorFilter();
                 hyerim.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
@@ -221,7 +255,7 @@ public class cthall_talk1Activity extends AppCompatActivity {
                 storyLine1_9Button.setVisibility(View.INVISIBLE);
                 storyLine1_10Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.INVISIBLE);
+                userName.setVisibility(View.VISIBLE);
                 name_hyerim.setVisibility(View.INVISIBLE);
             }
         });

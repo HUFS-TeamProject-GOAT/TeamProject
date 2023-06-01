@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <ImageView
         android:id="@+id/campus_Image"
@@ -79,6 +80,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/info_ctHall"
         android:layout_width="416dp"
@@ -92,6 +94,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/info_lbHall"
         android:layout_width="416dp"
@@ -105,6 +108,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/info_lake"
         android:layout_width="416dp"
@@ -118,6 +122,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/info_stHall"
         android:layout_width="416dp"
@@ -131,6 +136,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/campus_Image"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/info_foodHall"
         android:layout_width="416dp"
@@ -177,6 +183,7 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
     <Button
         android:id="@+id/in_lakeButton"
         android:layout_width="114dp"
@@ -185,6 +192,7 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
     <Button
         android:id="@+id/in_egHallButton"
         android:layout_width="114dp"
@@ -193,6 +201,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
     <Button
         android:id="@+id/in_lbHallButton"
         android:layout_width="114dp"
@@ -201,6 +210,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
     <Button
         android:id="@+id/in_stHallButton"
         android:layout_width="114dp"
@@ -209,6 +219,7 @@
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
     <Button
         android:id="@+id/in_foodHallButton"
         android:layout_width="114dp"

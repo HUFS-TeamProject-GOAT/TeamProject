@@ -60,7 +60,7 @@ public class lakeActivity extends AppCompatActivity {
         lake_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),lake_talkActivity.class);
                 startActivity(intent);
             }
         });

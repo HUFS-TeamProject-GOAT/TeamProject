@@ -58,6 +58,7 @@ public class storyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         story_endButton.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +66,7 @@ public class storyActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -72,8 +74,8 @@ public class storyActivity extends AppCompatActivity {
         story1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-                maincharacter.setVisibility(View.VISIBLE);
+                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+                minsu.setVisibility(View.VISIBLE);
 
                 story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.VISIBLE);
@@ -98,7 +100,7 @@ public class storyActivity extends AppCompatActivity {
         story2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.setVisibility(View.VISIBLE);
+                maincharacter.clearColorFilter();
                 minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
                 story1.setVisibility(View.INVISIBLE);

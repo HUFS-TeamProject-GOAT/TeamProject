@@ -6,6 +6,18 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
+        android:id="@+id/extra2"
+        android:layout_width="258dp"
+        android:layout_height="292dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/maincharacter"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/professor2" />
+    <ImageView
         android:id="@+id/maincharacter"
         android:layout_width="258dp"
         android:layout_height="292dp"
@@ -15,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.302"
-
+        android:visibility="invisible"
         app:srcCompat="@drawable/maincharacter" />
 
     <ImageView
@@ -119,7 +131,7 @@
         android:visibility="invisible"
         app:srcCompat="@drawable/security" />
     <ImageView
-        android:id="@+id/extra1"
+        android:id="@+id/extra"
         android:layout_width="250dp"
         android:layout_height="291dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -130,19 +142,6 @@
         app:layout_constraintVertical_bias="0.302"
         android:visibility="invisible"
         app:srcCompat="@drawable/majorcol2" />
-    <ImageView
-        android:id="@+id/extra2"
-        android:layout_width="250dp"
-        android:layout_height="291dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/majorcol2" />
-
     <EditText
         android:id="@+id/userName"
         android:layout_width="122dp"
@@ -151,11 +150,12 @@
         android:autofillHints="name"
         android:inputType="text"
         android:background="@null"
-
+        android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/storyText1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/maincharacter" />
+
 
     <TextView
         android:id="@+id/name_minsu"
@@ -164,6 +164,19 @@
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
         android:text="민수"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/storyText1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
+        app:layout_constraintVertical_bias="0.533" />
+    <TextView
+        android:id="@+id/name_hyungchan"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="name"
+        android:text="형찬"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/storyText1"
@@ -212,6 +225,19 @@
         app:layout_constraintTop_toBottomOf="@+id/maincharacter"
         app:layout_constraintVertical_bias="0.533" />
     <TextView
+        android:id="@+id/name_security"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="name"
+        android:text="경비"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText1_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
+        app:layout_constraintVertical_bias="0.533" />
+    <TextView
         android:id="@+id/name_president"
         android:layout_width="122dp"
         android:layout_height="59dp"
@@ -238,7 +264,7 @@
         app:layout_constraintTop_toBottomOf="@+id/maincharacter"
         app:layout_constraintVertical_bias="0.533" />
     <TextView
-        android:id="@+id/name_extra1"
+        android:id="@+id/name_extra"
         android:layout_width="122dp"
         android:layout_height="59dp"
         android:layout_marginEnd="12dp"
@@ -246,30 +272,17 @@
         android:text="엑스트라1"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/eg_storyText1_1"
+        app:layout_constraintBottom_toTopOf="@+id/storyText1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/maincharacter"
         app:layout_constraintVertical_bias="0.533" />
 
     <TextView
-        android:id="@+id/name_extra2"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="엑스트라2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/eg_storyText1_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
-    <TextView
-        android:id="@+id/eg_storyText2_1"
+        android:id="@+id/food_storyText1_1"
         android:layout_width="404dp"
         android:layout_height="240dp"
         android:maxLines="3"
-        android:text="@string/eg_storyLine2_1"
+        android:text="@string/food_storyLine1_1"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
@@ -277,43 +290,14 @@
         android:layout_marginBottom="0dp"
         android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
+        tools:layout_editor_absoluteY="485dp"
+         />
     <TextView
-        android:id="@+id/eg_storyText2_2"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/eg_storyLine2_2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteY="485dp" />
-
-    <TextView
-        android:id="@+id/eg_storyText2_3"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/eg_storyLine2_3"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/eg_storyText2_4"
+        android:id="@+id/food_storyText1_2"
         android:layout_width="404dp"
         android:layout_height="240dp"
         android:maxLines="2"
-        android:text="@string/eg_storyLine2_4"
-        android:visibility="invisible"
+        android:text="@string/food_storyLine1_2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
@@ -321,75 +305,16 @@
         android:layout_marginBottom="0dp"
         android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/eg_storyText2_5"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:maxLines="3"
-        android:text="@string/eg_storyLine2_5"
         android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteY="485dp" />
 
     <TextView
-        android:id="@+id/eg_storyText2_6"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:maxLines="3"
-        android:text="@string/eg_storyLine2_6"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-
-    <TextView
-        android:id="@+id/eg_storyText2_7_"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:maxLines="3"
-        android:text="@string/eg_storyLine2_7_"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/eg_storyText2_8"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:maxLines="3"
-        android:text="@string/eg_storyLine2_8"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/eg_storyText2_9"
+        android:id="@+id/food_storyText1_3"
         android:layout_width="404dp"
         android:layout_height="240dp"
         android:maxLines="2"
-        android:text="@string/eg_storyLine2_9"
+        android:text="@string/food_storyLine1_3"
+        android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
@@ -397,15 +322,13 @@
         android:layout_marginBottom="0dp"
         android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="invisible"
         tools:layout_editor_absoluteY="485dp" />
-
     <TextView
-        android:id="@+id/eg_storyText2_10"
+        android:id="@+id/food_storyText1_4"
         android:layout_width="404dp"
         android:layout_height="240dp"
         android:maxLines="2"
-        android:text="@string/eg_storyLine2_10"
+        android:text="@string/food_storyLine1_4"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -416,11 +339,58 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteY="485dp" />
     <TextView
-        android:id="@+id/eg_storyText2_11"
+        android:id="@+id/food_storyText1_5"
+        android:layout_width="404dp"
+        android:layout_height="240dp"
+        android:maxLines="3"
+        android:text="@string/food_storyLine1_5"
+        android:visibility="invisible"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteY="485dp" />
+
+    <TextView
+        android:id="@+id/food_storyText1_6_"
+        android:layout_width="404dp"
+        android:layout_height="240dp"
+        android:maxLines="3"
+        android:text="@string/food_storyLine1_6_"
+        android:visibility="invisible"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteY="485dp" />
+
+    <TextView
+        android:id="@+id/food_storyText1_7"
+        android:layout_width="404dp"
+        android:layout_height="240dp"
+        android:maxLines="3"
+        android:text="@string/food_storyLine1_7"
+        android:visibility="invisible"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteY="485dp" />
+    <TextView
+        android:id="@+id/food_storyText1_8"
         android:layout_width="404dp"
         android:layout_height="240dp"
         android:maxLines="2"
-        android:text="@string/eg_storyLine2_11"
+        android:text="@string/food_storyLine1_8"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -431,11 +401,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteY="485dp" />
     <TextView
-        android:id="@+id/eg_storyText2_12"
+        android:id="@+id/food_storyText1_9_"
         android:layout_width="404dp"
         android:layout_height="240dp"
         android:maxLines="3"
-        android:text="@string/eg_storyLine2_12"
+        android:text="@string/food_storyLine1_9_"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -446,70 +416,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteY="485dp" />
 
-    <TextView
-        android:id="@+id/eg_storyText2_13"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:maxLines="3"
-        android:text="@string/eg_storyLine2_13"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-
-    <TextView
-        android:id="@+id/eg_storyText2_14"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:maxLines="3"
-        android:text="@string/eg_storyLine2_14"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/eg_storyText2_15"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:maxLines="2"
-        android:text="@string/eg_storyLine2_15"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/eg_storyText2_16_"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:maxLines="3"
-        android:text="@string/eg_storyLine2_16_"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
 
     <Button
-        android:id="@+id/eg_storyLine2_1Button"
+        android:id="@+id/food_storyLine1_1Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
@@ -518,28 +427,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/eg_storyLine2_2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/eg_storyLine2_3Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/eg_storyLine2_4Button"
+        android:id="@+id/food_storyLine1_2Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
@@ -549,17 +437,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/eg_storyLine2_5Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:text="Next"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/eg_storyLine2_6Button"
+        android:id="@+id/food_storyLine1_3Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
@@ -569,7 +447,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/eg_storyLine2_7_Button"
+        android:id="@+id/food_storyLine1_4Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:layout_marginEnd="24dp"
+        android:visibility="invisible"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/food_storyLine1_5Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:layout_marginEnd="24dp"
+        android:visibility="invisible"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/food_storyLine1_6_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
@@ -579,7 +477,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/eg_storyLine2_8Button"
+        android:id="@+id/food_storyLine1_7Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
@@ -589,7 +487,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/eg_storyLine2_9Button"
+        android:id="@+id/food_storyLine1_8Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
@@ -599,67 +497,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/eg_storyLine2_10Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/eg_storyLine2_11Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:text="Next"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/eg_storyLine2_12Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:text="Next"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/eg_storyLine2_13Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/eg_storyLine2_14Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/eg_storyLine2_15Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/eg_storyLine2_16_Button"
+        android:id="@+id/food_storyLine1_9_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
@@ -677,7 +515,5 @@
         android:text="@string/skipButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

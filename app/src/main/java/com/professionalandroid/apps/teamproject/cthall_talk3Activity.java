@@ -61,10 +61,32 @@ public class cthall_talk3Activity extends AppCompatActivity {
         TextView story3_7_ =(TextView) findViewById(R.id.ct_storyText3_7_);
 
         skipButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                skipButton.setVisibility(View.INVISIBLE);
+
+                minsu.setVisibility(View.INVISIBLE);
+                name_minsu.setVisibility(View.INVISIBLE);
+                professor.setVisibility(View.INVISIBLE);
+                name_professor.setVisibility(View.INVISIBLE);
+                maincharacter.setVisibility(View.VISIBLE);
+                userName.setVisibility(View.VISIBLE);
+
                 Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
                 startActivity(intent);
+
+                story3_1.setVisibility(View.INVISIBLE);
+                story3_2.setVisibility(View.INVISIBLE);
+                story3_3.setVisibility(View.INVISIBLE);
+                story3_4_.setVisibility(View.INVISIBLE);
+                story3_5.setVisibility(View.VISIBLE);
+
+                storyLine3_1Button.setVisibility(View.INVISIBLE);
+                storyLine3_2Button.setVisibility(View.INVISIBLE);
+                storyLine3_3Button.setVisibility(View.INVISIBLE);
+                storyLine3_4_Button.setVisibility(View.INVISIBLE);
+                storyLine3_5Button.setVisibility(View.VISIBLE);
             }
         });
 
@@ -129,6 +151,8 @@ public class cthall_talk3Activity extends AppCompatActivity {
                 professor.setVisibility(View.INVISIBLE);
                 maincharacter.setVisibility(View.VISIBLE);
 
+                skipButton.setVisibility(View.INVISIBLE);
+
                 story3_4_.setVisibility(View.INVISIBLE);
                 story3_5.setVisibility(View.VISIBLE);
 
@@ -154,7 +178,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
                 storyLine3_5Button.setVisibility(View.INVISIBLE);
                 storyLine3_6Button.setVisibility(View.VISIBLE);
 
-                name_professor.setVisibility(View.INVISIBLE);
+                userName.setVisibility(View.INVISIBLE);
                 name_minsu.setVisibility(View.VISIBLE);
             }
         });
@@ -170,8 +194,8 @@ public class cthall_talk3Activity extends AppCompatActivity {
                 storyLine3_6Button.setVisibility(View.INVISIBLE);
                 storyLine3_7_Button.setVisibility(View.VISIBLE);
 
-                userName.setVisibility(View.INVISIBLE);
-                name_minsu.setVisibility(View.VISIBLE);
+                userName.setVisibility(View.VISIBLE);
+                name_minsu.setVisibility(View.INVISIBLE);
             }
         });
         storyLine3_7_Button.setOnClickListener(new View.OnClickListener() {
@@ -179,6 +203,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

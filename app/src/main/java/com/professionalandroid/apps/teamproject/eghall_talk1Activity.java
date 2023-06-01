@@ -64,12 +64,16 @@ public class eghall_talk1Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                skipButton.setVisibility(View.INVISIBLE);
+
                 Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
                 startActivity(intent);
+
                 story1_1.setVisibility(View.INVISIBLE);
                 story1_2.setVisibility(View.INVISIBLE);
                 story1_3.setVisibility(View.INVISIBLE);
                 story1_4_.setVisibility(View.INVISIBLE);
+                story1_5.setVisibility(View.VISIBLE);
 
                 storyLine1_1Button.setVisibility(View.INVISIBLE);
                 storyLine1_2Button.setVisibility(View.INVISIBLE);
@@ -81,10 +85,9 @@ public class eghall_talk1Activity extends AppCompatActivity {
                 maincharacter.setVisibility(View.VISIBLE);
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
-                story1_4_.setVisibility(View.INVISIBLE);
-                story1_5.setVisibility(View.VISIBLE);
-
-
+                storyLine1_1Button.setVisibility(View.INVISIBLE);
+                storyLine1_2Button.setVisibility(View.INVISIBLE);
+                storyLine1_3Button.setVisibility(View.INVISIBLE);
                 storyLine1_4_Button.setVisibility(View.INVISIBLE);
                 storyLine1_5Button.setVisibility(View.VISIBLE);
 
@@ -99,6 +102,8 @@ public class eghall_talk1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 hyerim.setVisibility(View.VISIBLE);
+                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
 
                 story1_1.setVisibility(View.INVISIBLE);
                 story1_2.setVisibility(View.VISIBLE);
