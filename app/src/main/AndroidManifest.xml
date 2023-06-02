@@ -14,6 +14,30 @@
         tools:targetApi="31">
 
         <activity
+            android:name=".st_quiz_4_1"
+            android:exported="false" />
+        <activity
+            android:name=".st_quiz_4"
+            android:exported="false" />
+        <activity
+            android:name=".st_quiz_3_1"
+            android:exported="false" />
+        <activity
+            android:name=".st_quiz_3"
+            android:exported="false" />
+        <activity
+            android:name=".st_quiz_2_1"
+            android:exported="false" />
+        <activity
+            android:name=".st_quiz_2"
+            android:exported="false" />
+        <activity
+            android:name=".st_quiz_1_1"
+            android:exported="false" />
+        <activity
+            android:name=".st_quiz_1"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
