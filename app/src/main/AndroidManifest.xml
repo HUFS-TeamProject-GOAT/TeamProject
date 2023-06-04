@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamProject"
         tools:targetApi="31">
-
+        <activity
+            android:name=".st_quiz_1"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -22,39 +24,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name =".storyActivity" />
-        <activity android:name =".languageActivity" />
-        <activity android:name =".homeActivity" />
-        <activity android:name =".endingActivity" />
-        <activity android:name =".ctHallActivity" />
-        <activity android:name =".egHallActivity" />
-        <activity android:name =".lakeActivity" />
-        <activity android:name =".stHallActivity" />
-        <activity android:name =".foodHallActivity" />
-
-        <activity android:name =".cthall_talk1Activity" />
-        <activity android:name =".cthall_talk2Activity" />
-        <activity android:name =".cthall_talk3Activity" />
-
-        <activity android:name =".eghall_talk1Activity" />
-        <activity android:name =".eghall_talk2Activity" />
-        <activity android:name =".eghall_talk3Activity" />
-        <activity android:name =".eghall_talk4Activity" />
-
-        <activity android:name =".sthall_talk1Activity" />
-        <activity android:name =".sthall_talk2Activity" />
-        <activity android:name =".sthall_talk3Activity" />
-        <activity android:name =".sthall_talk4Activity" />
-
-        <activity android:name =".foodhall_talk1Activity" />
-        <activity android:name =".foodhall_talk2Activity" />
-        <activity android:name =".foodhall_talk3Activity" />
-
-        <activity android:name =".lake_talkActivity" />
-        <activity android:name =".lbhall_talkActivity" />
-
-        <activity android:name =".quizexActivity" />
-
+        <activity android:name=".storyActivity" />
+        <activity android:name=".languageActivity" />
+        <activity android:name=".homeActivity" />
+        <activity android:name=".endingActivity" />
+        <activity android:name=".ctHallActivity" />
+        <activity android:name=".egHallActivity" />
+        <activity android:name=".lakeActivity" />
+        <activity android:name=".stHallActivity" />
+        <activity android:name=".foodHallActivity" />
+        <activity android:name=".cthall_talk1Activity" />
+        <activity android:name=".cthall_talk2Activity" />
+        <activity android:name=".cthall_talk3Activity" />
+        <activity android:name=".eghall_talk1Activity" />
+        <activity android:name=".eghall_talk2Activity" />
+        <activity android:name=".eghall_talk3Activity" />
+        <activity android:name=".eghall_talk4Activity" />
+        <activity android:name=".sthall_talk1Activity" />
+        <activity android:name=".sthall_talk2Activity" />
+        <activity android:name=".sthall_talk3Activity" />
+        <activity android:name=".sthall_talk4Activity" />
+        <activity android:name=".foodhall_talk1Activity" />
+        <activity android:name=".foodhall_talk2Activity" />
+        <activity android:name=".foodhall_talk3Activity" />
+        <activity android:name=".lake_talkActivity" />
+        <activity android:name=".lbhall_talkActivity" />
+        <activity android:name=".quizexActivity" />
     </application>
 
 </manifest>

@@ -209,7 +209,7 @@ public class cthall_talk1Activity extends AppCompatActivity {
         storyLine1_7_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),st_quiz_1.class);
                 startActivity(intent);
                 hyerim.setVisibility(View.VISIBLE);
                 maincharacter.setVisibility(View.INVISIBLE);

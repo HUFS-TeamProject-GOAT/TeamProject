@@ -205,4 +205,6 @@
     <string name="lb_storyLine1_6_">하하! 정말 대견하고 공손한 친구로구만. 자네가 우리 학교에 공헌해준 것이 너무 고마워서 그러네. 자네가 앞으로 우리 학교에서 수업을 들으면서 어떤 과목이든 C 이하로 받으면,그 종이에 적힌 성적으로 바꿀 수 있게 해주겠네!그렇다고 학업을 게을리 하란 말은 아닐세! 앞으로도 우리 학교를 빛내주길 바라는 걸세!</string>
     <string name="go_home">홈으로 돌아가기</string>
 
+    <string name="score_format_1"> %d/20 </string>
+
 </resources>
