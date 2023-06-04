@@ -205,6 +205,20 @@
     <string name="lb_storyLine1_6_">하하! 정말 대견하고 공손한 친구로구만. 자네가 우리 학교에 공헌해준 것이 너무 고마워서 그러네. 자네가 앞으로 우리 학교에서 수업을 들으면서 어떤 과목이든 C 이하로 받으면,그 종이에 적힌 성적으로 바꿀 수 있게 해주겠네!그렇다고 학업을 게을리 하란 말은 아닐세! 앞으로도 우리 학교를 빛내주길 바라는 걸세!</string>
     <string name="go_home">홈으로 돌아가기</string>
 
+    // 동규 작성 quizLayout
+    <string name="hint"> 힌트 </string>
+    <string name="submit"> 제출 </string>
+    <string name="later"> 다음에 </string>
+    <string name="answer"> 정답을 입력해 주세요 </string>
+
     <string name="score_format_1"> %d/20 </string>
+    <string name="score_format_2"> %d/30 </string>
+    <string name="score_format_3"> %d/30 </string>
+    <string name="score_format_4"> %d/50 </string>
+
+    <string name="st_quiz_4_1">\t 상자 속에는 똑같아 보이는 제비가 101개 들어있다.\n \tO이 적힌 종이 50개, X가 적힌 종이 51개가 들어있다.\n \t제비를 원하는 만큼 뽑고, O와 X의 제비 갯수가 같다면 꺼낸 만큼의 간식을 준다고 한다!\n \t몇 개의 제비를 꺼내는 것이 가장 이득이 될까?</string>
+    <string name="st_quiz_4_2">\t 숫자가 쓰인 2개의 다이얼로 잠긴 상자가 있다.\n \t푸른 다이얼은 직접 돌릴 수 없지만, 붉은 다이얼을 돌리면 같은 양 만큼 돌아간다고 한다.\n \t몇 번 돌려보니 다음과 같이 돌아갔다.\n \t푸른 다이얼이 \'3641\' 순서로 돌아가면 상자가 열리게 되는데, 붉은 다이얼을 어떻게 돌려야 할까?</string>
+    <string name="st_quiz_4_3">\t 교수님에게는 보석 목걸이가 있다. 하지만 더 이상 착용할 일이 없다고 하시면서 팔기 위해 감정을 받았다고 한다.\n \t보석 하나하나에 값이 매겨져 있는데, 이 목걸이의 3곳을 자르면 보석 값의 총합이 같은 3개의 줄이 생긴다고 한다.\n \t어딜 자르면 그렇게 잘리게 될까?\n 번호 순서대로 입력해 주세요.</string>
+    <string name="st_quiz_4_4">\t 갑자기 학생회관의 전기가 끊겼다! \n \t관리측에서는 업자를 불렀다고 했지만, 일주일이 넘어야 도와줄 수 있다는 답변을 받았다.\n \t그래서 급한대로 지하 2층의 임시 발전기를 돌리려고 했으나, 오래된 도어락이 막고 있었다!\n \t관리측에게 비밀번호가 기록되어 있었는데, 하도 오래된 나머지 지워졌다고 한다.\n \t다음과 같이 눌러보니 옆의 램프가 반응한다.\n 이 도어락의 비밀번호는 무엇일까?</string>
 
 </resources>

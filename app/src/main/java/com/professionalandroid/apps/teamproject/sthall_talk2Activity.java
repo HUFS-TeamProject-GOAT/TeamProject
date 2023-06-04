@@ -83,7 +83,7 @@ public class sthall_talk2Activity extends AppCompatActivity {
                 story5.setVisibility(View.INVISIBLE);
                 story6_.setVisibility(View.INVISIBLE);
                 story7.setVisibility(View.VISIBLE);
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), st_quiz_2.class);
                 startActivity(intent);
 
                 storyLine1Button.setVisibility(View.INVISIBLE);
@@ -188,7 +188,7 @@ public class sthall_talk2Activity extends AppCompatActivity {
         storyLine6_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), st_quiz_2.class);
                 startActivity(intent);
                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 

@@ -14,15 +14,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class st_quiz_1 extends AppCompatActivity {
+
+public class st_quiz_4 extends AppCompatActivity {
     private ConstraintLayout layout1, layout2;
     private int score,count;
     private TextView scoreTextView;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score_4_1";
+    private static final String SHARED_PREFS_KEY = "quiz_score_4_4";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
-    private static final int SCORE_DEFAULT = 20;
+    private static final int SCORE_DEFAULT = 50;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
 
@@ -30,15 +31,15 @@ public class st_quiz_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_st_quiz4);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.st_quiz4_frontLayout);
+        layout2 = findViewById(R.id.st_quiz4_backLayout);
+        answerEditText = findViewById(R.id.st_4_answer);
+        Button submitButton = findViewById(R.id.st_4_submitButton);
+        Button hintButton = findViewById(R.id.st_4_hint);
+        Button laterButton = findViewById(R.id.st_4_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -55,10 +56,10 @@ public class st_quiz_1 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "100";
+            String correctAnswer = "0154";
             boolean isCorrect = userAnswer.equals(correctAnswer);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_1.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_4.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
@@ -115,9 +116,11 @@ public class st_quiz_1 extends AppCompatActivity {
                 setResult(RESULT_CANCELED, resultIntent);
             }
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_1.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_4.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage(" 숫자가 들어갈 자리는 제쳐 두고 어떤 숫자가 사용될지부터 먼저 생각해보자." +
+                    "\n 첫 번째 줄에서 알 수 있는 사실은 4개의 숫자가 4150이라는 사실." +
+                    "\n 그 중 위치까지 맞는 숫자는 2개, 잘 생각해 보자.");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 
@@ -137,7 +140,7 @@ public class st_quiz_1 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(st_quiz_1.this, stHallActivity.class);
+            Intent intent = new Intent(st_quiz_4.this, stHallActivity.class);
             startActivity(intent);
             finish();
         });
@@ -173,6 +176,6 @@ public class st_quiz_1 extends AppCompatActivity {
     }
 
     private void updateScoreText() {
-        scoreTextView.setText(getString(R.string.score_format_1, score));
+        scoreTextView.setText(getString(R.string.score_format_4, score));
     }
 }

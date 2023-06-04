@@ -14,15 +14,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class st_quiz_1 extends AppCompatActivity {
+public class st_quiz_2 extends AppCompatActivity {
     private ConstraintLayout layout1, layout2;
     private int score,count;
     private TextView scoreTextView;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score_4_1";
+    private static final String SHARED_PREFS_KEY = "quiz_score_4_2";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
-    private static final int SCORE_DEFAULT = 20;
+    private static final int SCORE_DEFAULT = 30;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
 
@@ -30,15 +30,15 @@ public class st_quiz_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_st_quiz2);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.st_quiz2_frontLayout);
+        layout2 = findViewById(R.id.st_quiz2_backLayout);
+        answerEditText = findViewById(R.id.st_2_answer);
+        Button submitButton = findViewById(R.id.st_2_submitButton);
+        Button hintButton = findViewById(R.id.st_2_hint);
+        Button laterButton = findViewById(R.id.st_2_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -55,10 +55,10 @@ public class st_quiz_1 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "100";
+            String correctAnswer = "2714";
             boolean isCorrect = userAnswer.equals(correctAnswer);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_1.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_2.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
@@ -115,9 +115,10 @@ public class st_quiz_1 extends AppCompatActivity {
                 setResult(RESULT_CANCELED, resultIntent);
             }
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_1.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_2.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage(" 붉은 다이얼과 푸른 다이얼은 같은 양만큼 돌아가지만," +
+                    "\n 한쪽은 숫자가 커지고 있는 반면 한쪽은 작아지고 있다.");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 
@@ -137,7 +138,7 @@ public class st_quiz_1 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(st_quiz_1.this, stHallActivity.class);
+            Intent intent = new Intent(st_quiz_2.this, stHallActivity.class);
             startActivity(intent);
             finish();
         });
@@ -173,6 +174,6 @@ public class st_quiz_1 extends AppCompatActivity {
     }
 
     private void updateScoreText() {
-        scoreTextView.setText(getString(R.string.score_format_1, score));
+        scoreTextView.setText(getString(R.string.score_format_2, score));
     }
 }

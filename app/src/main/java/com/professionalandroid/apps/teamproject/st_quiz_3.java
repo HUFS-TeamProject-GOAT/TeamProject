@@ -14,15 +14,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class st_quiz_1 extends AppCompatActivity {
+import java.util.Arrays;
+
+public class st_quiz_3 extends AppCompatActivity {
     private ConstraintLayout layout1, layout2;
     private int score,count;
     private TextView scoreTextView;
+    String combinedUserAnswer;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score_4_1";
+    private static final String SHARED_PREFS_KEY = "quiz_score_4_3";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
-    private static final int SCORE_DEFAULT = 20;
+    private static final int SCORE_DEFAULT = 30;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
 
@@ -30,15 +33,15 @@ public class st_quiz_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_st_quiz3);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.st_quiz3_frontLayout);
+        layout2 = findViewById(R.id.st_quiz3_backLayout);
+        answerEditText = findViewById(R.id.st_3_answer);
+        Button submitButton = findViewById(R.id.st_3_submitButton);
+        Button hintButton = findViewById(R.id.st_3_hint);
+        Button laterButton = findViewById(R.id.st_3_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -55,10 +58,17 @@ public class st_quiz_1 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "100";
-            boolean isCorrect = userAnswer.equals(correctAnswer);
+            String correctAnswer = "1510";
+            if (userAnswer.equals("1,5,10")) {
+                String[] userAnswerArray = userAnswer.split(",");
+                Arrays.sort(userAnswerArray);
+                combinedUserAnswer = String.join("", userAnswerArray);
+            } else {
+                combinedUserAnswer = userAnswer;
+            }
+            boolean isCorrect = correctAnswer.equals(combinedUserAnswer);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_1.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_3.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
@@ -109,15 +119,15 @@ public class st_quiz_1 extends AppCompatActivity {
                 saveScore(score);
                 saveCount(count);
 
-                Intent resultIntent = new Intent();
-                resultIntent.putExtra("score", score);
-                resultIntent.putExtra("count", count);
-                setResult(RESULT_CANCELED, resultIntent);
             }
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_1.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_3.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage(" 우선 모든 보석의 값을 더해 보자." +
+                    "\n 모든 보석에 매겨진 값을 더하면 7800이 된다. " +
+                    "\n 이를 3줄로 나누어야 하므로, 각 줄의 합계는 2600이 될 것이다." +
+                    "\n 1000이상의 값을 지닌 3개의 보석은 각각 다른 줄에 속한다. 또한 각 줄의 끝에 배치되어 있다." +
+                    "\n 이제 어느 방향으로 더해 나갈지만 생각하면 된다!");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 
@@ -137,7 +147,7 @@ public class st_quiz_1 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(st_quiz_1.this, stHallActivity.class);
+            Intent intent = new Intent(st_quiz_3.this, stHallActivity.class);
             startActivity(intent);
             finish();
         });
@@ -147,14 +157,14 @@ public class st_quiz_1 extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(SCORE_KEY, score);
-        outState.putInt("count", count);
+        outState.putInt(COUNT_KEY, count);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         score = savedInstanceState.getInt(SCORE_KEY);
-        count = savedInstanceState.getInt("count");
+        count = savedInstanceState.getInt(COUNT_KEY);
         updateScoreText();
     }
 
@@ -173,6 +183,6 @@ public class st_quiz_1 extends AppCompatActivity {
     }
 
     private void updateScoreText() {
-        scoreTextView.setText(getString(R.string.score_format_1, score));
+        scoreTextView.setText(getString(R.string.score_format_3, score));
     }
 }

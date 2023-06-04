@@ -80,7 +80,7 @@ public class sthall_talk1Activity extends AppCompatActivity {
                 story5_.setVisibility(View.VISIBLE);
 
 
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), st_quiz_1.class);
                 startActivity(intent);
 
                 storyLine1Button.setVisibility(View.INVISIBLE);
@@ -146,7 +146,7 @@ public class sthall_talk1Activity extends AppCompatActivity {
         storyLine4_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), st_quiz_1.class);
                 startActivity(intent);
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
                 hyerim.setVisibility(View.INVISIBLE);
