@@ -1,6 +1,8 @@
 package com.professionalandroid.apps.teamproject;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +18,10 @@ public class homeActivity extends AppCompatActivity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_home);
+
+        SharedPreferences gamechapter = getSharedPreferences("GameChapter", Context.MODE_PRIVATE);
+        int chapter = gamechapter.getInt("chapter",0);
+
 
         ImageButton egHallButton = (ImageButton) findViewById(R.id.egHallButton);
         TextView info_egHall =(TextView) findViewById(R.id.info_egHall);
@@ -210,8 +216,19 @@ public class homeActivity extends AppCompatActivity {
         in_lbHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent =new Intent(getApplicationContext(),lbhall_talkActivity.class);
-                startActivity(intent);
+                if(chapter==0) {
+                    Intent intent = new Intent(getApplicationContext(), lbhall_talkActivity.class);
+                    startActivity(intent);
+                }
+                else if(chapter == 1){
+                    Intent intent =new Intent(getApplicationContext(),stage_ct_quiz2.class);
+                }
+                else if(chapter == 2){
+                    Intent intent =new Intent(getApplicationContext(),stage_ct_quiz3.class);
+                }
+                else if(chapter == 3){
+                    Intent intent =new Intent(getApplicationContext(),stage_ct_quiz4.class);
+                }
             }
         });
         in_foodHallButton.setOnClickListener(new View.OnClickListener() {

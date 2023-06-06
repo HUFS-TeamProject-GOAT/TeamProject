@@ -15,6 +15,7 @@ public class ctHallActivity extends AppCompatActivity {
         super.onCreate(savedInstacestate);
         setContentView(R.layout.cthall);
 
+
         ImageButton go_home_btn = (ImageButton) findViewById(R.id.go_home_btn);
         ImageButton go_ctHall2btn = (ImageButton) findViewById(R.id.go_ctHall2btn);
         ImageButton go_ctHall3btn = (ImageButton) findViewById(R.id.go_ctHall3btn);

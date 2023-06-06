@@ -42,6 +42,7 @@ public class sthall_talk2Activity extends AppCompatActivity {
         ImageView minsu = (ImageView) findViewById(R.id.minsu);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine1Button = (Button) findViewById(R.id.st_storyLine2_1Button);
         Button storyLine2Button = (Button) findViewById(R.id.st_storyLine2_2Button);
         Button storyLine3Button = (Button) findViewById(R.id.st_storyLine2_3Button);
@@ -69,6 +70,7 @@ public class sthall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
                 minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
                 hyerim.setVisibility(View.INVISIBLE);
@@ -236,6 +238,12 @@ public class sthall_talk2Activity extends AppCompatActivity {
             }
         });
         storyLine9_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

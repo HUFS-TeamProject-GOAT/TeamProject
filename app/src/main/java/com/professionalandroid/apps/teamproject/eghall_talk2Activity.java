@@ -42,6 +42,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
         ImageView minsu = (ImageView) findViewById(R.id.minsu);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine2_1Button = (Button) findViewById(R.id.eg_storyLine2_1Button);
         Button storyLine2_2Button = (Button) findViewById(R.id.eg_storyLine2_2Button);
         Button storyLine2_3Button = (Button) findViewById(R.id.eg_storyLine2_3Button);
@@ -77,12 +78,14 @@ public class eghall_talk2Activity extends AppCompatActivity {
         TextView story2_15 =(TextView) findViewById(R.id.eg_storyText2_15);
         TextView story2_16_ =(TextView) findViewById(R.id.eg_storyText2_16_);
 
+        maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
 
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 maincharacter.setVisibility(View.VISIBLE);
                 maincharacter.clearColorFilter();
@@ -91,7 +94,6 @@ public class eghall_talk2Activity extends AppCompatActivity {
                 userName.setVisibility(View.VISIBLE);
                 name_minsu.setVisibility(View.INVISIBLE);
 
-                skipButton.setVisibility(View.INVISIBLE);
 
                 story2_1.setVisibility(View.INVISIBLE);
                 story2_2.setVisibility(View.INVISIBLE);
@@ -102,7 +104,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
                 story2_7_.setVisibility(View.INVISIBLE);
                 story2_8.setVisibility(View.VISIBLE);
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),stage_eg_quiz2.class);
                 startActivity(intent);
 
 
@@ -222,7 +224,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
         storyLine2_7_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),stage_eg_quiz2.class);
                 startActivity(intent);
 
                 maincharacter.clearColorFilter();
@@ -371,6 +373,12 @@ public class eghall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

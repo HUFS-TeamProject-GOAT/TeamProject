@@ -37,22 +37,14 @@ public class lake_talkActivity extends AppCompatActivity {
 
         TextView name_hyerim = (TextView) findViewById(R.id.name_hyerim);
         TextView name_minsu = (TextView) findViewById(R.id.name_minsu);
-        TextView name_hyungchan = (TextView) findViewById(R.id.name_hyungchan);
-        TextView name_hyunggu = (TextView) findViewById(R.id.name_hyunggu);
-        TextView name_professor = (TextView) findViewById(R.id.name_professor);
         TextView name_extra = (TextView) findViewById(R.id.name_extra);
-        TextView name_security = (TextView) findViewById(R.id.name_security);
-        TextView name_nutrician = (TextView) findViewById(R.id.name_nutrician);
+
 
         ImageView maincharacter = (ImageView) findViewById(R.id.maincharacter);
         ImageView hyerim = (ImageView) findViewById(R.id.hyerim);
         ImageView minsu = (ImageView) findViewById(R.id.minsu);
-        ImageView hyungchan = (ImageView) findViewById(R.id.hyungchan);
-        ImageView hyunggu = (ImageView) findViewById(R.id.hyunggu);
-        ImageView professor = (ImageView) findViewById(R.id.professor);
         ImageView extra = (ImageView) findViewById(R.id.extra);
-        ImageView security = (ImageView) findViewById(R.id.security);
-        ImageView nutrician = (ImageView) findViewById(R.id.nutrician);
+
 
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
@@ -108,7 +100,7 @@ public class lake_talkActivity extends AppCompatActivity {
                 story6.setVisibility(View.VISIBLE);
 
 
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), stage_eg_quiz2.class);
                 startActivity(intent);
 
                 storyLine1Button.setVisibility(View.INVISIBLE);
@@ -191,7 +183,7 @@ public class lake_talkActivity extends AppCompatActivity {
         storyLine5_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), stage_eg_quiz2.class);
                 startActivity(intent);
                 hyerim.setVisibility(View.INVISIBLE);
                 minsu.setVisibility(View.VISIBLE);

@@ -42,6 +42,7 @@ public class sthall_talk1Activity extends AppCompatActivity {
         ImageView minsu = (ImageView) findViewById(R.id.minsu);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine1Button = (Button) findViewById(R.id.st_storyLine1_1Button);
         Button storyLine2Button = (Button) findViewById(R.id.st_storyLine1_2Button);
         Button storyLine3Button = (Button) findViewById(R.id.st_storyLine1_3Button);
@@ -67,6 +68,7 @@ public class sthall_talk1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
                 minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
                 userName.setVisibility(View.VISIBLE);
@@ -80,7 +82,7 @@ public class sthall_talk1Activity extends AppCompatActivity {
                 story5_.setVisibility(View.VISIBLE);
 
 
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(),stage_eg_quiz1.class);
                 startActivity(intent);
 
                 storyLine1Button.setVisibility(View.INVISIBLE);
@@ -111,7 +113,7 @@ public class sthall_talk1Activity extends AppCompatActivity {
         storyLine2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.setVisibility((View.VISIBLE));
+                maincharacter.clearColorFilter();
                 minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
 
@@ -146,7 +148,7 @@ public class sthall_talk1Activity extends AppCompatActivity {
         storyLine4_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), stage_eg_quiz1.class);
                 startActivity(intent);
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
                 hyerim.setVisibility(View.INVISIBLE);
@@ -162,6 +164,13 @@ public class sthall_talk1Activity extends AppCompatActivity {
             }
         });
         storyLine5_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        skipButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

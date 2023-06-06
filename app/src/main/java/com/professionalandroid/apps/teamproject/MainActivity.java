@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         user_Name = settings.getString("user_Name","");
 
+        SharedPreferences gameChapter = getSharedPreferences("GameChapter", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = gameChapter.edit();
+
+
         startButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

@@ -35,13 +35,14 @@ public class sthall_talk3Activity extends AppCompatActivity {
         userName.setText(user_Name);
 
         TextView name_hyerim = (TextView) findViewById(R.id.name_hyerim);
-        TextView name_professor = (TextView) findViewById(R.id.name_professor);
+        TextView name_professor = (TextView) findViewById(R.id.name_security);
 
         ImageView maincharacter = (ImageView) findViewById(R.id.maincharacter);
         ImageView hyerim = (ImageView) findViewById(R.id.hyerim);
-        ImageView professor= (ImageView) findViewById(R.id.professor);
+        ImageView professor= (ImageView) findViewById(R.id.security);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine1Button = (Button) findViewById(R.id.st_storyLine3_1Button);
         Button storyLine2Button = (Button) findViewById(R.id.st_storyLine3_2Button);
         Button storyLine3Button = (Button) findViewById(R.id.st_storyLine3_3Button);
@@ -86,7 +87,8 @@ public class sthall_talk3Activity extends AppCompatActivity {
                 storyLine5_Button.setVisibility(View.INVISIBLE);
                 storyLine6_Button.setVisibility(View.VISIBLE);
 
-
+                skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
             }
         });
 
@@ -180,6 +182,12 @@ public class sthall_talk3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

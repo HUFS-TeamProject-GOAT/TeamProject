@@ -178,7 +178,6 @@ public class storyActivity extends AppCompatActivity {
         story5Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                minsu.clearColorFilter();
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
 
@@ -198,7 +197,7 @@ public class storyActivity extends AppCompatActivity {
                 story6Button.setVisibility(View.VISIBLE);
                 story_endButton.setVisibility(View.INVISIBLE);
 
-                name_minsu.setVisibility(View.VISIBLE);
+                name_minsu.setVisibility(View.INVISIBLE);
                 userName.setVisibility(View.INVISIBLE);
             }
         });

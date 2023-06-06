@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -25,9 +26,14 @@ public class sthall_talk4Activity extends AppCompatActivity {
         super.onCreate(bundle);
         setContentView(R.layout.activity_sthall_talk4);
 
+
+
         ColorMatrix darkMatrix = new ColorMatrix();
         darkMatrix.setSaturation(0);
 
+        LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+        View home = inflater.inflate(R.layout.activity_home,null);
+        Button in_button =home.findViewById(R.id.in_stHallButton);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
@@ -44,6 +50,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
         ImageView security = (ImageView) findViewById(R.id.security);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine1Button = (Button) findViewById(R.id.st_storyLine4_1Button);
         Button storyLine2Button = (Button) findViewById(R.id.st_storyLine4_2Button);
         Button storyLine3Button = (Button) findViewById(R.id.st_storyLine4_3Button);
@@ -80,11 +87,11 @@ public class sthall_talk4Activity extends AppCompatActivity {
         TextView story15_ = (TextView) findViewById(R.id.st_storyText4_15_);
 
 
-
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
                 hyerim.setVisibility(View.INVISIBLE);
                 security.setVisibility(View.INVISIBLE);
                 maincharacter.setVisibility(View.VISIBLE);
@@ -125,7 +132,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
         storyLine1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                maincharacter.setVisibility((View.VISIBLE));
+                maincharacter.setVisibility(View.VISIBLE);
 
                 story1.setVisibility(View.INVISIBLE);
                 story2.setVisibility(View.VISIBLE);
@@ -359,7 +366,17 @@ public class sthall_talk4Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+                in_button.setVisibility(View.INVISIBLE);
             }
+        });
+
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                in_button.setVisibility(View.INVISIBLE);
+            }
+
         });
 
 

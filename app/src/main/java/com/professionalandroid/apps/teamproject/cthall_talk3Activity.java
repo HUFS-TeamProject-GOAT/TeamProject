@@ -37,6 +37,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
 
 
         Button skipButton = (Button) findViewById(R.id.ct_skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.ct_skipButton1);
 
         Button storyLine3_1Button = (Button) findViewById(R.id.ct_storyLine3_1Button);
         Button storyLine3_2Button = (Button) findViewById(R.id.ct_storyLine3_2Button);
@@ -65,6 +66,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 minsu.setVisibility(View.INVISIBLE);
                 name_minsu.setVisibility(View.INVISIBLE);
@@ -73,7 +75,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
                 maincharacter.setVisibility(View.VISIBLE);
                 userName.setVisibility(View.VISIBLE);
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),stage_eg_quiz1.class);
                 startActivity(intent);
 
                 story3_1.setVisibility(View.INVISIBLE);
@@ -95,6 +97,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
         storyLine3_1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                maincharacter.setVisibility(View.INVISIBLE);
                minsu.setVisibility(View.VISIBLE);
                professor.setVisibility((View.INVISIBLE));
 
@@ -111,7 +114,8 @@ public class cthall_talk3Activity extends AppCompatActivity {
         storyLine3_2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                professor.setVisibility(View.INVISIBLE);
+                professor.setVisibility(View.VISIBLE);
+                professor.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
                 minsu.setVisibility(View.INVISIBLE);
 
 
@@ -129,6 +133,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
         storyLine3_3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                professor.clearColorFilter();
                 professor.setVisibility(View.VISIBLE);
                 minsu.setVisibility(View.INVISIBLE);
 
@@ -146,7 +151,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
         storyLine3_4_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),stage_eg_quiz1.class);
                 startActivity(intent);
                 professor.setVisibility(View.INVISIBLE);
                 maincharacter.setVisibility(View.VISIBLE);
@@ -206,6 +211,15 @@ public class cthall_talk3Activity extends AppCompatActivity {
                 finish();
             }
         });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),homeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
 
     }

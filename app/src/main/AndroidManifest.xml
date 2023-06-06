@@ -32,6 +32,22 @@
         <activity android:name =".stHallActivity" />
         <activity android:name =".foodHallActivity" />
 
+        <activity android:name =".stage_ct_quiz1" />
+        <activity android:name =".stage_ct_quiz2" />
+        <activity android:name =".stage_ct_quiz3" />
+        <activity android:name =".stage_ct_quiz4" />
+
+        <activity android:name =".st_quiz_1_1" />
+        <activity android:name =".stage_eg_quiz1" />
+        <activity android:name =".stage_eg_quiz2" />
+        <activity android:name =".stage_eg_quiz3" />
+        <activity android:name =".stage_eg_quiz4" />
+
+        <activity android:name =".stage_food_quiz1" />
+        <activity android:name =".stage_food_quiz2" />
+        <activity android:name =".stage_food_quiz3" />
+        <activity android:name =".stage_food_quiz4" />
+
         <activity android:name =".cthall_talk1Activity" />
         <activity android:name =".cthall_talk2Activity" />
         <activity android:name =".cthall_talk3Activity" />

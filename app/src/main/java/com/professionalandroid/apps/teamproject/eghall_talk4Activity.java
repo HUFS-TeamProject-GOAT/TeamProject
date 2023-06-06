@@ -40,6 +40,7 @@ public class eghall_talk4Activity extends AppCompatActivity {
         ImageView extra = (ImageView) findViewById(R.id.extra);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine1Button = (Button) findViewById(R.id.eg_storyLine4_1Button);
         Button storyLine2Button = (Button) findViewById(R.id.eg_storyLine4_2Button);
         Button storyLine3_Button = (Button) findViewById(R.id.eg_storyLine4_3_Button);
@@ -59,6 +60,7 @@ public class eghall_talk4Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 extra.setVisibility(View.INVISIBLE);
                 name_extra.setVisibility(View.INVISIBLE);
@@ -72,7 +74,7 @@ public class eghall_talk4Activity extends AppCompatActivity {
                 story4_.setVisibility(View.VISIBLE);
 
 
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), stage_eg_quiz4.class);
                 startActivity(intent);
 
                 storyLine1Button.setVisibility(View.INVISIBLE);
@@ -119,7 +121,7 @@ public class eghall_talk4Activity extends AppCompatActivity {
         storyLine3_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), stage_eg_quiz4.class);
                 startActivity(intent);
                 maincharacter.setVisibility(View.VISIBLE);
                 maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
@@ -139,6 +141,12 @@ public class eghall_talk4Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

@@ -38,6 +38,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
 
 
         Button skipButton = (Button) findViewById(R.id.ct_skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.ct_skipButton1);
 
         Button storyLine2_1Button = (Button) findViewById(R.id.ct_storyLine2_1Button);
         Button storyLine2_2Button = (Button) findViewById(R.id.ct_storyLine2_2Button);
@@ -64,6 +65,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 professor.setVisibility(View.INVISIBLE);
                 maincharacter.setVisibility(View.VISIBLE);
@@ -71,7 +73,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
                 name_professor.setVisibility(View.INVISIBLE);
                 userName.setVisibility(View.VISIBLE);
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),stage_eg_quiz2.class);
                 startActivity(intent);
                 story2_1.setVisibility(View.INVISIBLE);
                 story2_2.setVisibility(View.INVISIBLE);
@@ -126,7 +128,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
 
                 skipButton.setVisibility(View.INVISIBLE);
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),stage_eg_quiz2.class);
                 startActivity(intent);
 
                 story2_3_.setVisibility(View.INVISIBLE);
@@ -180,6 +182,13 @@ public class cthall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
+            }
+        });
+
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
