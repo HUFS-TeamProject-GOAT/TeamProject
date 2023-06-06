@@ -5,6 +5,9 @@ plugins {
 android {
     namespace 'com.professionalandroid.apps.teamproject'
     compileSdk 33
+    viewBinding {
+        enabled = true
+    }
 
     defaultConfig {
         applicationId "com.professionalandroid.apps.teamproject"

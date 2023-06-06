@@ -86,10 +86,10 @@ public class st_quiz_2 extends AppCompatActivity {
                     if (score < 0) {
                         score = 0;
                     }
-                    updateScoreText();
 
                     saveCount(count);
                     saveScore(score);
+                    updateScoreText();
                     layout1.setVisibility(View.VISIBLE);
                     layout2.setVisibility(View.INVISIBLE);
                 }
@@ -100,7 +100,7 @@ public class st_quiz_2 extends AppCompatActivity {
 
         hintButton.setOnClickListener(v -> {
             if (count == 0) {
-                score += 1;
+                score -= 1;
                 if (score <= 0) {
                     score = 0;
                 }

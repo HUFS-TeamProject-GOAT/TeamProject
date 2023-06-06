@@ -42,6 +42,10 @@ public class st_quiz_4 extends AppCompatActivity {
         Button laterButton = findViewById(R.id.st_4_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPreferences.edit();
+//        editor.putInt(SCORE_KEY, 50);
+//        editor.putInt(COUNT_KEY, 0);
+//        editor.apply();
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
         count = sharedPreferences.getInt(COUNT_KEY, COUNT_DEFAULT);
 
@@ -87,10 +91,9 @@ public class st_quiz_4 extends AppCompatActivity {
                     if (score < 0) {
                         score = 0;
                     }
-                    updateScoreText();
-
                     saveCount(count);
                     saveScore(score);
+                    updateScoreText();
                     layout1.setVisibility(View.VISIBLE);
                     layout2.setVisibility(View.INVISIBLE);
                 }
@@ -101,7 +104,7 @@ public class st_quiz_4 extends AppCompatActivity {
 
         hintButton.setOnClickListener(v -> {
             if (count == 0) {
-                score += 1;
+                score -= 1;
                 if (score <= 0) {
                     score = 0;
                 }
@@ -109,6 +112,7 @@ public class st_quiz_4 extends AppCompatActivity {
 
                 saveScore(score);
                 saveCount(count);
+                updateScoreText();
 
                 Intent resultIntent = new Intent();
                 resultIntent.putExtra("score", score);
