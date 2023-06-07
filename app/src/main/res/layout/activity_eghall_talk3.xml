@@ -6,109 +6,34 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-<ImageView
+    <ImageView
         android:id="@+id/maincharacter"
-        android:layout_width="258dp"
-        android:layout_height="292dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/maincharacter"
+        android:layout_width="228dp"
+        android:layout_height="210dp"
+        app:layout_constraintBottom_toTopOf="@id/userName"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.302"
-        android:visibility="invisible"
         app:srcCompat="@drawable/maincharacter" />
-
 
 
     <ImageView
         android:id="@+id/hyerim"
-        android:layout_width="250dp"
-        android:layout_height="291dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="220dp"
+        android:layout_height="210dp"
+        app:layout_constraintBottom_toTopOf="@id/name_hyerim"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302"
         android:visibility="invisible"
         app:srcCompat="@drawable/hyerim" />
-
     <ImageView
         android:id="@+id/hyungchan"
-        android:layout_width="250dp"
-        android:layout_height="291dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toTopOf="@id/name_hyungchan"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/hyungchan" />
-    <ImageView
-        android:id="@+id/professor"
-        android:layout_width="250dp"
-        android:layout_height="291dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302"
         android:visibility="invisible"
         app:srcCompat="@drawable/hyungchan" />
 
-
-    <ImageView
-        android:id="@+id/nutrician"
-        android:layout_width="246dp"
-        android:layout_height="248dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349"
-        app:srcCompat="@drawable/nutrician" />
-
-    <ImageView
-        android:id="@+id/security"
-        android:layout_width="250dp"
-        android:layout_height="291dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/security" />
-    <ImageView
-        android:id="@+id/extra1"
-        android:layout_width="250dp"
-        android:layout_height="291dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/majorcol2" />
-    <ImageView
-        android:id="@+id/extra2"
-        android:layout_width="250dp"
-        android:layout_height="291dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.302"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/majorcol2" />
 
     <EditText
         android:id="@+id/userName"
@@ -118,11 +43,22 @@
         android:autofillHints="name"
         android:inputType="text"
         android:background="@null"
-        android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/storyText1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter" />
+        app:layout_constraintBottom_toTopOf="@+id/eg_storyText3_1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/name_hyerim"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="name"
+        android:text="록시"
+        android:gravity="right"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/eg_storyText3_1"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/name_hyungchan"
@@ -130,113 +66,20 @@
         android:layout_height="59dp"
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
-        android:text="형찬"
+        android:text="퐁코"
+        android:gravity="right"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/storyText1"
+        app:layout_constraintBottom_toTopOf="@+id/eg_storyText3_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
-    <TextView
-        android:id="@+id/name_hyerim"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="혜림"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/storyText1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
-    <TextView
-        android:id="@+id/name_professor"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="교수"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/storyText1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintTop_toBottomOf="@+id/maincharacter" />
 
 
-    <TextView
-        android:id="@+id/name_hyunggu"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="형구"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/ct_storyText1_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
-    <TextView
-        android:id="@+id/name_president"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="학회장"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/ct_storyText1_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
-    <TextView
-        android:id="@+id/name_nutrician"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="영양사"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/storyText1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
-    <TextView
-        android:id="@+id/name_extra1"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="엑스트라1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/eg_storyText1_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
-
-    <TextView
-        android:id="@+id/name_extra2"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="엑스트라2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/eg_storyText1_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
 
     <TextView
         android:id="@+id/eg_storyText3_1"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/eg_storyLine3_1"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -250,7 +93,6 @@
         android:id="@+id/eg_storyText3_2"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/eg_storyLine3_2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -266,7 +108,6 @@
         android:id="@+id/eg_storyText3_3"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/eg_storyLine3_3"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -281,7 +122,6 @@
         android:id="@+id/eg_storyText3_4"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/eg_storyLine3_4"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -296,7 +136,6 @@
         android:id="@+id/eg_storyText3_5"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/eg_storyLine3_5"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -312,7 +151,6 @@
         android:id="@+id/eg_storyText3_6"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/eg_storyLine3_6"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -328,7 +166,6 @@
         android:id="@+id/eg_storyText3_7"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/eg_storyLine3_7"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -343,7 +180,6 @@
         android:id="@+id/eg_storyText3_8"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/eg_storyLine3_8"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -358,7 +194,6 @@
         android:id="@+id/eg_storyText3_9"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/eg_storyLine3_9"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -374,7 +209,6 @@
         android:id="@+id/eg_storyText3_10_"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/eg_storyLine3_10_"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -389,7 +223,6 @@
         android:id="@+id/eg_storyText3_11"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/eg_storyLine3_11"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -404,7 +237,6 @@
         android:id="@+id/eg_storyText3_12"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/eg_storyLine3_12"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -420,7 +252,6 @@
         android:id="@+id/eg_storyText3_13"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/eg_storyLine3_13"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -436,7 +267,6 @@
         android:id="@+id/eg_storyText3_14_"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/eg_storyLine3_14_"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -595,9 +425,19 @@
         android:id="@+id/skipButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/skipButtonText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/skipButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/skipButtonText"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

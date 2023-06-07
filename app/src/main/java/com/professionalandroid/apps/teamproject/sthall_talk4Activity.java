@@ -105,7 +105,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
                 story10.setVisibility(View.VISIBLE);
 
 
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), st_quiz_4.class);
                 startActivity(intent);
 
                 storyLine1Button.setVisibility(View.INVISIBLE);
@@ -254,7 +254,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
         storyLine9_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),st_quiz_4.class);
                 startActivity(intent);
 
                 maincharacter.setVisibility(View.VISIBLE);

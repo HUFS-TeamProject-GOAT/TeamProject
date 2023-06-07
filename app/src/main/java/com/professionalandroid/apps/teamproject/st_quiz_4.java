@@ -180,6 +180,6 @@ public class st_quiz_4 extends AppCompatActivity {
     }
 
     private void updateScoreText() {
-        scoreTextView.setText(getString(R.string.score_format_4, score));
+        scoreTextView.setText(getString(R.string.score_format_4_4, score));
     }
 }

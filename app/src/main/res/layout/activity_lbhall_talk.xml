@@ -15,9 +15,8 @@
         android:background="@null"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/storyText1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter" />
+        app:layout_constraintBottom_toTopOf="@+id/lb_storyText1_1"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/name_president"
@@ -25,38 +24,31 @@
         android:layout_height="59dp"
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
-        android:text="학회장"
+        android:text="학장"
+        android:gravity="right"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/storyText1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintBottom_toTopOf="@+id/lb_storyText1_1"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/maincharacter"
-        android:layout_width="258dp"
-        android:layout_height="292dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/maincharacter"
+        android:layout_width="228dp"
+        android:layout_height="210dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/userName"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.302"
-        android:visibility="invisible"
         app:srcCompat="@drawable/maincharacter" />
 
     <ImageView
         android:id="@+id/president"
-        android:layout_width="246dp"
-        android:layout_height="248dp"
+        android:layout_width="220dp"
+        android:layout_height="252dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/name_president"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@id/maincharacter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349"
         app:srcCompat="@drawable/president" />
 
 
@@ -64,7 +56,6 @@
         android:id="@+id/lb_storyText1_1"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/lb_storyLine1_1"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +69,6 @@
         android:id="@+id/lb_storyText1_2"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/lb_storyLine1_2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +84,6 @@
         android:id="@+id/lb_storyText1_3"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/lb_storyLine1_3"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -109,7 +98,6 @@
         android:id="@+id/lb_storyText1_4"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="2"
         android:text="@string/lb_storyLine1_4"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -124,7 +112,6 @@
         android:id="@+id/lb_storyText1_5"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/lb_storyLine1_5"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -139,7 +126,6 @@
         android:id="@+id/lb_storyText1_6_"
         android:layout_width="404dp"
         android:layout_height="240dp"
-        android:maxLines="3"
         android:text="@string/lb_storyLine1_6_"
         android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -157,7 +143,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="664dp"
         android:layout_marginEnd="24dp"
-
         android:text="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -216,8 +201,8 @@
         android:id="@+id/skipButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/skipButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

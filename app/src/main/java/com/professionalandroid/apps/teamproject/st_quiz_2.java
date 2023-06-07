@@ -174,6 +174,6 @@ public class st_quiz_2 extends AppCompatActivity {
     }
 
     private void updateScoreText() {
-        scoreTextView.setText(getString(R.string.score_format_2, score));
+        scoreTextView.setText(getString(R.string.score_format_4_2, score));
     }
 }
