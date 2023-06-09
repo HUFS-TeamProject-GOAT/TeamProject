@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -79,6 +80,11 @@ public class eg_quiz_3 extends AppCompatActivity {
                 if (isCorrect) {
                     saveScore(score);
                     saveCount(count);
+
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished", true);
+                    setResult(Activity.RESULT_OK, intent);
+                    finish();
 
                     finish();
                 } else {

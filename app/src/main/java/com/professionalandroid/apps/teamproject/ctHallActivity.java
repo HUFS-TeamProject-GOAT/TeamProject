@@ -11,24 +11,23 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ctHallActivity extends AppCompatActivity {
+
+    private int currentIndex = 0;
+    private final int[] imageBackground = {R.drawable.cthall1, R.drawable.cthall2, R.drawable.cthall3, R.drawable.cthall4, R.drawable.cthall5};
+
+    private ImageView ct_Background;
     protected void onCreate(Bundle savedInstacestate) {
         super.onCreate(savedInstacestate);
         setContentView(R.layout.cthall);
 
+        ct_Background = findViewById(R.id.ct_Background);
         ImageButton go_home_btn = (ImageButton) findViewById(R.id.go_home_btn);
         ImageButton go_ctHall2btn = (ImageButton) findViewById(R.id.go_ctHall2btn);
         ImageButton go_ctHall3btn = (ImageButton) findViewById(R.id.go_ctHall3btn);
         ImageButton go_ctHall4btn = (ImageButton) findViewById(R.id.go_ctHall4btn);
         ImageButton go_ctHall5btn = (ImageButton) findViewById(R.id.go_ctHall5btn);
         ImageButton ctHall_last_btn = (ImageButton) findViewById(R.id.ctHall_last_btn);
-
-
-
-        ImageView ctHall5 = (ImageView) findViewById(R.id.ctHall5);
-        ImageView ctHall4 = (ImageView) findViewById(R.id.ctHall4);
-        ImageView ctHall3 = (ImageView) findViewById(R.id.ctHall3);
-        ImageView ctHall2 = (ImageView) findViewById(R.id.ctHall2);
-        ImageView ctHall1 = (ImageView) findViewById(R.id.ctHall1);
+        showNextBackground();
 
 
         go_home_btn.setOnClickListener(new View.OnClickListener() {
@@ -41,11 +40,8 @@ public class ctHallActivity extends AppCompatActivity {
         go_ctHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ctHall2.setVisibility(View.VISIBLE);
-                ctHall1.setVisibility(View.INVISIBLE);
-                ctHall3.setVisibility(View.INVISIBLE);
-                ctHall4.setVisibility(View.INVISIBLE);
-                ctHall5.setVisibility(View.INVISIBLE);
+                currentIndex++;
+                showNextBackground();
 
                 go_ctHall3btn.setVisibility(View.VISIBLE);
                 go_ctHall4btn.setVisibility(View.INVISIBLE);
@@ -58,14 +54,12 @@ public class ctHallActivity extends AppCompatActivity {
         go_ctHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                currentIndex++;
+                showNextBackground();
+
                 Intent intent =new Intent(getApplicationContext(),cthall_talk1Activity.class);
                 startActivity(intent);
 
-                ctHall2.setVisibility(View.INVISIBLE);
-                ctHall1.setVisibility(View.INVISIBLE);
-                ctHall3.setVisibility(View.INVISIBLE);
-                ctHall4.setVisibility(View.VISIBLE);
-                ctHall5.setVisibility(View.INVISIBLE);
 
                 go_ctHall3btn.setVisibility(View.INVISIBLE);
                 go_ctHall4btn.setVisibility(View.INVISIBLE);
@@ -79,11 +73,8 @@ public class ctHallActivity extends AppCompatActivity {
         go_ctHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ctHall2.setVisibility(View.INVISIBLE);
-                ctHall1.setVisibility(View.INVISIBLE);
-                ctHall3.setVisibility(View.INVISIBLE);
-                ctHall4.setVisibility(View.INVISIBLE);
-                ctHall5.setVisibility(View.VISIBLE);
+                currentIndex++;
+                showNextBackground();
 
                 go_ctHall3btn.setVisibility(View.INVISIBLE);
                 go_ctHall4btn.setVisibility(View.INVISIBLE);
@@ -99,11 +90,27 @@ public class ctHallActivity extends AppCompatActivity {
         ctHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                currentIndex++;
+                showNextBackground();
                 Intent intent1 =new Intent(getApplicationContext(),cthall_talk3Activity.class);
                 startActivity(intent1);
             }
         });
 
+    }
 
+    private void showNextBackground() {
+        if (currentIndex == 0) {
+            ct_Background.setImageResource(imageBackground[0]);
+        }
+        else if (currentIndex == 1) {
+            ct_Background.setImageResource(imageBackground[1]);
+        }
+        else if (currentIndex == 2) {
+            ct_Background.setImageResource(imageBackground[3]);
+        }
+        else if (currentIndex == 3) {
+            ct_Background.setImageResource(imageBackground[4]);
+        }
     }
 }

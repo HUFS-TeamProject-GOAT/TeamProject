@@ -2,178 +2,86 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <TextView
-        android:id="@+id/ct_storyText3_1"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/ct_storyLine3_1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/ct_storyText3_2"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/ct_storyLine3_2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteY="485dp" />
-
-    <TextView
-        android:id="@+id/ct_storyText3_3"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/ct_storyLine3_3"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/ct_storyText3_4_"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/ct_storyLine3_4_"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/ct_storyText3_5"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/ct_storyLine3_5"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/ct_storyText3_6"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/ct_storyLine3_6"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
-    <TextView
-        android:id="@+id/ct_storyText3_7_"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
-        android:text="@string/ct_storyLine3_7_"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteY="485dp" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <Button
-        android:id="@+id/ct_storyLine3_1Button"
+        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="164dp"
+        android:text="next"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/ct_storyLine3_2Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:text="Next"
+
+
+    <TextView
+        android:id="@+id/ct_storyText"
+        android:layout_width="404dp"
+        android:layout_height="240dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="69dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:autofillHints="name"
+        android:background="@null"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/name_hyerim"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="name"
+        android:gravity="right"
+        android:text="록시"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/ct_storyLine3_3Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ct_imageView2"
+        android:layout_width="208dp"
+        android:layout_height="210dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/name_hyerim"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ct_imageView1"
+        android:layout_width="228dp"
+        android:layout_height="210dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/userName"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/name_minsu"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="name"
+        android:gravity="right"
+        android:text="케인"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
-        android:text="start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/ct_storyLine3_4_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/ct_storyLine3_5Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/ct_storyLine3_6Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="Next"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/ct_storyLine3_7_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:layout_marginEnd="24dp"
-        android:visibility="invisible"
-        android:text="다음 챕터로"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/ct_skipButton"
@@ -184,85 +92,6 @@
         android:text="@string/skipButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/ct_skipButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/skipButtonText"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <EditText
-        android:id="@+id/userName"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="4dp"
-        android:autofillHints="name"
-        android:inputType="text"
-        android:background="@null"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/ct_storyText3_1"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/name_professor"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="교수"
-        android:gravity="right"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/ct_storyText3_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-    <TextView
-        android:id="@+id/name_minsu"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
-        android:autofillHints="name"
-        android:text="케인"
-        android:gravity="right"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/ct_storyText3_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <ImageView
-        android:id="@+id/maincharacter"
-        android:layout_width="228dp"
-        android:layout_height="210dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@id/userName"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.302"
-        app:srcCompat="@drawable/maincharacter" />
-
-
-    <ImageView
-        android:id="@+id/professor"
-        android:layout_width="160dp"
-        android:layout_height="210dp"
-        app:layout_constraintBottom_toTopOf="@id/name_professor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/professor" />
-
-    <ImageView
-        android:id="@+id/minsu"
-        android:layout_width="208dp"
-        android:layout_height="210dp"
-        app:layout_constraintBottom_toTopOf="@id/name_minsu"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/minsu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
