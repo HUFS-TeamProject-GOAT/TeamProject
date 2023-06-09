@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -31,15 +30,15 @@ public class ct_quiz_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_ct_quiz1);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.ct_quiz1_frontLayout);
+        layout2 = findViewById(R.id.ct_quiz1_backLayout);
+        answerEditText = findViewById(R.id.ct_1_answer);
+        Button submitButton = findViewById(R.id.ct_1_submitButton);
+        Button hintButton = findViewById(R.id.ct_1_hint);
+        Button laterButton = findViewById(R.id.ct_1_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -56,7 +55,7 @@ public class ct_quiz_1 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "100";
+            String correctAnswer = "1";
             boolean isCorrect = userAnswer.equals(correctAnswer);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_1.this);
@@ -81,11 +80,7 @@ public class ct_quiz_1 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
-                    Intent intent = new Intent();
-                    intent.putExtra("quizFinished", true);
-                    setResult(Activity.RESULT_OK, intent);
                     finish();
-
                 } else {
                     score -= 2;
                     if (score < 0) {
@@ -114,6 +109,11 @@ public class ct_quiz_1 extends AppCompatActivity {
 
                 saveScore(score);
                 saveCount(count);
+
+                Intent resultIntent = new Intent();
+                resultIntent.putExtra("score", score);
+                resultIntent.putExtra("count", count);
+                setResult(RESULT_CANCELED, resultIntent);
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_1.this);

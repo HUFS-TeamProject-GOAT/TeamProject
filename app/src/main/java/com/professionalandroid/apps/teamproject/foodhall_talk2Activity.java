@@ -1,214 +1,193 @@
 package com.professionalandroid.apps.teamproject;
 
-
-
 import static com.professionalandroid.apps.teamproject.MainActivity.PREFS_NAME;
-
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class foodhall_talk2Activity extends AppCompatActivity {
+
+    private static final int YOUR_REQUEST_CODE = 1;
+
+    private final int[] storyTexts = {
+            R.string.food_storyLine2_1, R.string.food_storyLine2_2_, R.string.food_storyLine2_3,
+            R.string.food_storyLine2_4, R.string.food_storyLine2_5, R.string.food_storyLine2_6, R.string.food_storyLine2_7_
+    };
+
+    private final int[] imageResources1 = {R.drawable.maincharacter, android.R.color.transparent};
+    private final int[] imageResources2 = {R.drawable.minsu, R.drawable.hyerim, android.R.color.transparent};
+
+    private boolean quizFinished = false;
+    private TextView food_storyText;
+
+    private TextView userName;
+    private TextView hyerim;
+    private ImageView food_imageView1;
+    private ImageView food_imageView2;
+
+    private int story;
+    private static final String STORY_STATUS_KEY = "storyStatus3_2"; // 스토리 상태를 저장하기 위해 만든 key
+
+
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_foodhall_talk2);
 
+
+        findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNextStoryText();
+            }
+        });
+
+        food_storyText = findViewById(R.id.food_storyText);
+        food_imageView1 = findViewById(R.id.food_imageView1);
+        food_imageView2 = findViewById(R.id.food_imageView2);
+
+
         ColorMatrix darkMatrix = new ColorMatrix();
         darkMatrix.setSaturation(0);
 
-
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
-        TextView userName = (TextView) findViewById(R.id.userName);
+
+        userName = (TextView) findViewById(R.id.userName);
+        hyerim = (TextView) findViewById(R.id.name_hyerim);
         userName.setText(user_Name);
 
-        TextView name_hyerim = (TextView) findViewById(R.id.name_hyerim);
-        TextView name_minsu = (TextView) findViewById(R.id.name_minsu);
-        TextView name_nutrician = (TextView) findViewById(R.id.name_nutrician);
+        SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = settings1.edit();
+//        editor.remove(STORY_STATUS_KEY);
+//        editor.putInt(STORY_STATUS_KEY, 0);
+//        editor.apply();
 
-        ImageView maincharacter = (ImageView) findViewById(R.id.maincharacter);
-        ImageView hyerim = (ImageView) findViewById(R.id.hyerim);
-        ImageView minsu = (ImageView) findViewById(R.id.minsu);
-        ImageView nutrician = (ImageView) findViewById(R.id.nutrician);
-
-
-        Button skipButton = (Button) findViewById(R.id.skipButton);
-        Button storyLine1Button = (Button) findViewById(R.id.food_storyLine2_1Button);
-        Button storyLine2_Button = (Button) findViewById(R.id.food_storyLine2_2_Button);
-        Button storyLine3Button = (Button) findViewById(R.id.food_storyLine2_3Button);
-        Button storyLine4Button = (Button) findViewById(R.id.food_storyLine2_4Button);
-        Button storyLine5Button = (Button) findViewById(R.id.food_storyLine2_5Button);
-        Button storyLine6Button = (Button) findViewById(R.id.food_storyLine2_6Button);
-        Button storyLine7_Button = (Button) findViewById(R.id.food_storyLine2_7_Button);
+        story = settings1.getInt(STORY_STATUS_KEY, 0);
+        saveLayout(story);
 
 
-        TextView story1 = (TextView) findViewById(R.id.food_storyText2_1);
-        TextView story2_ = (TextView) findViewById(R.id.food_storyText2_2_);
-        TextView story3 = (TextView) findViewById(R.id.food_storyText2_3);
-        TextView story4 = (TextView) findViewById(R.id.food_storyText2_4);
-        TextView story5 = (TextView) findViewById(R.id.food_storyText2_5);
-        TextView story6_ = (TextView) findViewById(R.id.food_storyText2_6);
-        TextView story7 = (TextView) findViewById(R.id.food_storyText2_7_);
+        System.out.println("stroyStatus3_1: " + story);
 
 
-        nutrician.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+        Button skipButton = (Button) findViewById(R.id.food_skipButton);
+        showNextStoryText();
+    }
+    public void saveLayout(int story){
+        SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings1.edit();
+        editor.putInt(STORY_STATUS_KEY, story);
+        editor.apply();
+    }
 
-        skipButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                skipButton.setVisibility(View.INVISIBLE);
+    private void showNextStoryText() {
+        if (story == 0) {
+            saveLayout(story);
+            food_storyText.setText(storyTexts[story]);
+            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView2.setImageResource(imageResources2[2]);
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
+        }
+        else if (story == 1) {
+            if (!quizFinished) {
+                saveLayout(story);
+                Intent intent = new Intent(getApplicationContext(), fd_quiz_2.class);
+                startActivityForResult(intent, YOUR_REQUEST_CODE);
 
-                nutrician.setVisibility(View.INVISIBLE);
-                maincharacter.setVisibility(View.VISIBLE);
-                minsu.setVisibility(View.VISIBLE);
-                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-                userName.setVisibility(View.INVISIBLE);
-                name_nutrician.setVisibility(View.INVISIBLE);
-
-                story1.setVisibility(View.INVISIBLE);
-                story2_.setVisibility(View.INVISIBLE);
-                story3.setVisibility(View.VISIBLE);
-
-
-
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
-                startActivity(intent);
-
-                storyLine1Button.setVisibility(View.INVISIBLE);
-                storyLine2_Button.setVisibility(View.INVISIBLE);
-                storyLine3Button.setVisibility(View.VISIBLE);
-
+            } else {
+                story++;
+                showNextStoryText();
+                saveLayout(story);
+                System.out.println("stroyStatus1_1_quiz: " + story);
             }
-        });
+        }else if (story == 2) {
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[0]);
+            food_imageView2.setImageResource(imageResources2[2]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
+        }else if (story == 3) {
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[0]);
+            food_imageView2.setImageResource(imageResources2[2]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
+        }else if (story == 4) {
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView2.setImageResource(imageResources2[1]);
+            subVisiblelity();
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
+        }else if (story == 5) {
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[0]);
+            food_imageView2.setImageResource(imageResources2[2]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
+        }else if (story == 6) {
 
+            if (!quizFinished) {
+                saveLayout(story);
+                Intent intent = new Intent(getApplicationContext(), fd_quiz_2.class);
+                startActivityForResult(intent, YOUR_REQUEST_CODE);
 
-        storyLine1Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               nutrician.clearColorFilter();
-
-                story1.setVisibility(View.INVISIBLE);
-                story2_.setVisibility(View.VISIBLE);
-
-                storyLine1Button.setVisibility(View.INVISIBLE);
-                storyLine2_Button.setVisibility(View.VISIBLE);
-
-
-                name_nutrician.setVisibility(View.VISIBLE);
+            } else {
+                story++;
+                showNextStoryText();
+                saveLayout(story);
+                System.out.println("stroyStatus1_1_quiz: " + story);
             }
-        });
-        storyLine2_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
-                startActivity(intent);
-                nutrician.setVisibility(View.INVISIBLE);
-                maincharacter.setVisibility(View.VISIBLE);
+        }
+        else {
+            saveLayout(story);
+            findViewById(R.id.nextButton).setVisibility(View.GONE);
+            finish();
+        }
+    }
+    protected void mainVisiblelity(){
+        userName.setVisibility(View.VISIBLE);
+        hyerim.setVisibility(View.GONE);
+    }
+    protected void subVisiblelity(){
+        userName.setVisibility(View.GONE);
+        hyerim.setVisibility(View.VISIBLE);
+    }
 
-                story2_.setVisibility(View.INVISIBLE);
-                story3.setVisibility(View.VISIBLE);
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(STORY_STATUS_KEY, story);
+    }
 
-                storyLine2_Button.setVisibility(View.INVISIBLE);
-                storyLine3Button.setVisibility(View.VISIBLE);
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        story = savedInstanceState.getInt(STORY_STATUS_KEY);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-
-                userName.setVisibility(View.VISIBLE);
-                name_nutrician.setVisibility(View.INVISIBLE);
+        if (requestCode == YOUR_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            quizFinished = data.getBooleanExtra("quizFinished", false);
+            if (quizFinished) {
+                showNextStoryText();
             }
-        });
-        storyLine3Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                minsu.setVisibility(View.VISIBLE);
-               minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
-
-                story3.setVisibility(View.INVISIBLE);
-                story4.setVisibility(View.VISIBLE);
-
-                storyLine3Button.setVisibility(View.INVISIBLE);
-                storyLine4Button.setVisibility(View.VISIBLE);
-
-                name_minsu.setVisibility(View.VISIBLE);
-                userName.setVisibility(View.INVISIBLE);
-            }
-        });
-        storyLine4Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                maincharacter.clearColorFilter();
-                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
-
-                story4.setVisibility(View.INVISIBLE);
-                story5.setVisibility(View.VISIBLE);
-
-                storyLine4Button.setVisibility(View.INVISIBLE);
-                storyLine5Button.setVisibility(View.VISIBLE);
-
-                userName.setVisibility(View.VISIBLE);
-                name_minsu.setVisibility(View.INVISIBLE);
-            }
-        });
-        storyLine5Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                minsu.clearColorFilter();
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
-                story5.setVisibility(View.INVISIBLE);
-                story6_.setVisibility(View.VISIBLE);
-
-                storyLine5Button.setVisibility(View.INVISIBLE);
-                storyLine6Button.setVisibility(View.VISIBLE);
-
-                userName.setVisibility(View.INVISIBLE);
-                name_minsu.setVisibility(View.VISIBLE);
-            }
-        });
-
-        storyLine6Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                maincharacter.clearColorFilter();
-                minsu.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
-
-                story6_.setVisibility(View.INVISIBLE);
-                story7.setVisibility(View.VISIBLE);
-
-                storyLine6Button.setVisibility(View.INVISIBLE);
-                storyLine7_Button.setVisibility(View.VISIBLE);
-
-                name_minsu.setVisibility(View.INVISIBLE);
-                userName.setVisibility(View.VISIBLE);
-            }
-        });
-
-        storyLine7_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               finish();
-            }
-        });
-
-
+        }
     }
 
 }

@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="튜토리얼"
+            android:text="유리창디자인"
             android:textSize="48sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
@@ -84,7 +84,11 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="@string/st_quiz_4_1"
+            android:text="공학관을 나서는데 레드불에서 행사를 진행하고 있었다.
+학우 10명을 선정해 눈을 감게 하고 모자를 씌운 다음 이렇게 지시했다.
+이제 눈을 뜨고 주변 사람들의 모자를 보세요.
+        빨간 황소뿔이 달린 모자를 쓴 사람을 4명 이상 발견한 사람에게는 신제품 수박맛 레드불을, 아니면 일반 레드 불을 드리겠습니다!
+    행사에 참여한 10명 중 일부는 수박맛 레드불을 받았다고 하는데, 그 일부는 몇 명이었을까?"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -111,17 +115,18 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="353dp"
-            android:layout_height="295dp"
+            android:layout_width="362dp"
+            android:layout_height="254dp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="29dp"
+            android:contentDescription="TODO"
             android:gravity="center_horizontal"
+            android:src="@drawable/redbull"
             app:layout_constraintBottom_toTopOf="@+id/eg_4_answer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quiz_2_4"
-            android:contentDescription="TODO" />
+            app:layout_constraintTop_toBottomOf="@+id/quiz_2_4" />
 
         <EditText
             android:id="@+id/eg_4_answer"

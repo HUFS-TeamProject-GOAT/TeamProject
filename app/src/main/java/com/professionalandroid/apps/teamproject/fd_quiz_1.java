@@ -31,15 +31,15 @@ public class fd_quiz_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_fd_quiz1);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.fd_quiz1_frontLayout);
+        layout2 = findViewById(R.id.fd_quiz1_backLayout);
+        answerEditText = findViewById(R.id.fd_1_answer);
+        Button submitButton = findViewById(R.id.fd_1_submitButton);
+        Button hintButton = findViewById(R.id.fd_1_hint);
+        Button laterButton = findViewById(R.id.fd_1_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -56,7 +56,7 @@ public class fd_quiz_1 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "1";
+            String correctAnswer = "3";
             boolean isCorrect = userAnswer.equals(correctAnswer);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_1.this);
@@ -82,9 +82,10 @@ public class fd_quiz_1 extends AppCompatActivity {
                     saveCount(count);
 
                     Intent intent = new Intent();
-                    intent.putExtra("quizFinished", true);
-                    setResult(Activity.RESULT_OK, intent);
+                    intent.putExtra("quizFinished",true);
+                    setResult(Activity.RESULT_OK,intent);
                     finish();
+
 
                 } else {
                     score -= 2;
@@ -123,7 +124,7 @@ public class fd_quiz_1 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_1.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage("우선 모자를 쓰지 않은 날에 비 그림을 넣어보자. 모자를 쓰지 않은 날에 비 그림을 넣어 버리면, 흐림 그림을 어디에도 넣을 수 없게 된다. 지난 일주일 사이에는 이틀 연속으로 흐렸던 날이 없는 모양이다. 잘생각해 보자!");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

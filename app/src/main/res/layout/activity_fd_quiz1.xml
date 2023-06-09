@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="제목"
+            android:text="괴짜 박형구"
             android:textSize="48sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
@@ -84,7 +84,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="@string/st_quiz_4_1"
+            android:text="박형구는 모자를 쓰는 데에 아래와 같은 이상한 습관이 있다고 한다.
+비가 오는 날에는 모자를 쓰지 않는다.
+흐린 날에는 안 쓰지만, 이틀 연속으로 흐리다면 이틀째에는 쓴다. 아래의 ?를 채워 완성해보자."
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +122,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quiz_3_1"
+            android:src="@drawable/rain"
+            app:layout_constraintTop_toBottomOf="@+id/quiz_4_1"
             android:contentDescription="TODO" />
 
         <EditText

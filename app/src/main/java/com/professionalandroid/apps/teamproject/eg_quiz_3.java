@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -20,7 +19,7 @@ public class eg_quiz_3 extends AppCompatActivity {
     private int score,count;
     private TextView scoreTextView;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score";
+    private static final String SHARED_PREFS_KEY = "quiz_score_2_3";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
     private static final int SCORE_DEFAULT = 10;
@@ -31,15 +30,15 @@ public class eg_quiz_3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_eg_quiz3);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.eg_quiz3_frontLayout);
+        layout2 = findViewById(R.id.eg_quiz3_backLayout);
+        answerEditText = findViewById(R.id.eg_3_answer);
+        Button submitButton = findViewById(R.id.eg_3_submitButton);
+        Button hintButton = findViewById(R.id.eg_3_hint);
+        Button laterButton = findViewById(R.id.eg_3_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -56,7 +55,7 @@ public class eg_quiz_3 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "1";
+            String correctAnswer = "6:4";
             boolean isCorrect = userAnswer.equals(correctAnswer);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_3.this);
@@ -81,11 +80,7 @@ public class eg_quiz_3 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
-                    Intent intent = new Intent();
-                    intent.putExtra("quizFinished", true);
-                    setResult(Activity.RESULT_OK, intent);
                     finish();
-
                 } else {
                     score -= 2;
                     if (score < 0) {
@@ -123,7 +118,7 @@ public class eg_quiz_3 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_3.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage("창틀의 나사를 기준으로 생각해보자. 창틀의 나사를 기준으로 가로 세로로 선을 그어 보면, 그림을 10개 로 등분할 수 있다. 이제 생각하기 편해졌을 것이다.");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 
@@ -167,7 +162,7 @@ public class eg_quiz_3 extends AppCompatActivity {
     private void saveScore(int score) {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(SCORE_KEY+6, score);
+        editor.putInt(SCORE_KEY, score);
         editor.apply();
     }
 

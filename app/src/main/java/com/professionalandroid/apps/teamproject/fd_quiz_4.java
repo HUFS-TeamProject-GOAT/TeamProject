@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -31,15 +30,15 @@ public class fd_quiz_4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_fd_quiz4);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.fd_quiz4_frontLayout);
+        layout2 = findViewById(R.id.fd_quiz4_backLayout);
+        answerEditText = findViewById(R.id.fd_4_answer);
+        Button submitButton = findViewById(R.id.fd_4_submitButton);
+        Button hintButton = findViewById(R.id.fd_4_hint);
+        Button laterButton = findViewById(R.id.fd_4_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -56,7 +55,7 @@ public class fd_quiz_4 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "1";
+            String correctAnswer = "15";
             boolean isCorrect = userAnswer.equals(correctAnswer);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_4.this);
@@ -81,9 +80,6 @@ public class fd_quiz_4 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
-                    Intent intent = new Intent();
-                    intent.putExtra("quizFinished", true);
-                    setResult(Activity.RESULT_OK, intent);
                     finish();
                 } else {
                     score -= 2;
@@ -122,7 +118,7 @@ public class fd_quiz_4 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_4.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage("가장 작은 팬케이크를 붉은 접시에 올려놓고, 중간 크기의 팬케이크를 가운데 접시에 올려놓아 보자. 그리고 가장 작은 팬케이크를 중간 크기의 팬케이크에 올려놓으면, 가장 큰 팬케이크를 붉은 접시에 올려놓을 수 있다.");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

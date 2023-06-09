@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="튜토리얼"
+            android:text="유리창 디자인"
             android:textSize="48sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
@@ -84,7 +84,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="@string/st_quiz_4_1"
+            android:text="곽병춘은 신혜림과 함께 공학관에 들어섰는데, 마침 공학관 입구의 유리문을 교체하고 있었다.
+신혜림이 곽병춘에게 물어보았다. 저렇게 곡선으로 이루어진 디자인에 맞닿은 면에는 반드시 다른 색을 칠한다고 해보자!
+
+    그럼 최소 몇 가지의 색을 사용해야 할까? 선과 선이 맞닿은 면이 아니라면 같은 색을 몇 번이고 사용해도 좋아!"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -111,17 +114,18 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="353dp"
-            android:layout_height="295dp"
+            android:layout_width="355dp"
+            android:layout_height="246dp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="29dp"
+            android:contentDescription="TODO"
             android:gravity="center_horizontal"
+            android:src="@drawable/window"
             app:layout_constraintBottom_toTopOf="@+id/eg_1_answer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quiz_2_1"
-            android:contentDescription="TODO" />
+            app:layout_constraintTop_toBottomOf="@+id/quiz_2_1" />
 
         <EditText
             android:id="@+id/eg_1_answer"

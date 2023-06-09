@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="튜토리얼"
+            android:text="팬케잌 옮기기"
             android:textSize="48sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
@@ -84,7 +84,10 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="@string/st_quiz_4_1"
+            android:text="왼쪽 접시에 담긴 팬케이크를 모두 오른쪽 붉은 접시로 옮겨야 한다.
+단 아래의 규칙을 지킬 컷.
+* 한 번에 하나씩만 옮긴다.
+* 옮기려는 접시에 이미 놓여 있는 팬케이크보다 큰 팬케이크는 그 위에 올려놓을 수 없다. * 가운데 접시도 활용 할 수 있으며, 팬케이크는 몇 번을 움직여도 좋다."
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -111,17 +114,18 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="353dp"
-            android:layout_height="295dp"
+            android:layout_width="358dp"
+            android:layout_height="268dp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="29dp"
+            android:contentDescription="TODO"
             android:gravity="center_horizontal"
+            android:src="@drawable/hanoi"
             app:layout_constraintBottom_toTopOf="@+id/fd_4_answer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quiz_3_4"
-            android:contentDescription="TODO" />
+            app:layout_constraintTop_toBottomOf="@+id/quiz_3_4" />
 
         <EditText
             android:id="@+id/fd_4_answer"

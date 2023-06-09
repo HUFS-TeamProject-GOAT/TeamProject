@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -31,15 +30,16 @@ public class eg_quiz_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_eg_quiz2);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.eg_quiz2_frontLayout);
+        layout2 = findViewById(R.id.eg_quiz2_backLayout);
+        answerEditText = findViewById(R.id.eg_2_answer);
+
+        Button submitButton = findViewById(R.id.eg_2_submitButton);
+        Button hintButton = findViewById(R.id.eg_2_hint);
+        Button laterButton = findViewById(R.id.eg_2_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -81,11 +81,7 @@ public class eg_quiz_2 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
-                    Intent intent = new Intent();
-                    intent.putExtra("quizFinished", true);
-                    setResult(Activity.RESULT_OK, intent);
                     finish();
-
                 } else {
                     score -= 2;
                     if (score < 0) {
@@ -123,7 +119,7 @@ public class eg_quiz_2 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_2.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage("사물함의 손잡이, 트로피를 유심히 보자!");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

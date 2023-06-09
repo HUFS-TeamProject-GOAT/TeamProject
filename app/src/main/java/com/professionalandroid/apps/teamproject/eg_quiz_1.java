@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -23,23 +22,29 @@ public class eg_quiz_1 extends AppCompatActivity {
     private static final String SHARED_PREFS_KEY = "quiz_score_2_1";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
-    private static final int SCORE_DEFAULT = 10;
+
+    private static final int SCORE_DEFAULT = 20;
     private static final int COUNT_DEFAULT = 0;
+
+    // 점수 저장 객체와 의 key 값 지정
+    // SCORE_KEY: score 점수 저장하는 preference 객체
+    // COUNT_KEY: hint 사용 여부를 확인하는 preference 객체
+    // 이 문제의 score 총점 20점
     private EditText answerEditText;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_eg_quiz1);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.eg_quiz1_frontLayout);
+        layout2 = findViewById(R.id.eg_quiz1_backLayout);
+        answerEditText = findViewById(R.id.eg_1_answer);
+        Button submitButton = findViewById(R.id.eg_1_submitButton);
+        Button hintButton = findViewById(R.id.eg_1_hint);
+        Button laterButton = findViewById(R.id.eg_1_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -53,15 +58,20 @@ public class eg_quiz_1 extends AppCompatActivity {
             layout1.setVisibility(View.INVISIBLE);
             layout2.setVisibility(View.VISIBLE);
         });
+        // layout1을 눌렀을 때, 문제화면을 보여주는 코드.
 
+
+        //제출버튼
         submitButton.setOnClickListener(v -> {
-            String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "1";
-            boolean isCorrect = userAnswer.equals(correctAnswer);
+
+            String userAnswer = answerEditText.getText().toString(); //  User가 EditText에 입력한 값 로드.
+            String correctAnswer = "3"; // 문제 정답.
+            boolean isCorrect = userAnswer.equals(correctAnswer); // 정답여부 판별.
+
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_1.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
-            builder.setPositiveButton("확인", null);
+            builder.setPositiveButton("확인", null);  // // AlertDialog에 "확인" 버튼을 추가합니다.
             AlertDialog dialog = builder.create();
 
             if (isCorrect) {
@@ -72,7 +82,9 @@ public class eg_quiz_1 extends AppCompatActivity {
                 dialog.setMessage("틀렸습니다! 다시 한 번 생각해 보세요");
             }
 
-            dialog.setOnShowListener(dialogInterface -> getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#70FFFFFF"))));
+
+            dialog.setOnShowListener(dialogInterface ->
+                    getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#70FFFFFF"))));
 
             dialog.setOnDismissListener(dialogInterface -> {
                 getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
@@ -80,36 +92,35 @@ public class eg_quiz_1 extends AppCompatActivity {
                 if (isCorrect) {
                     saveScore(score);
                     saveCount(count);
-
-                    Intent intent = new Intent();
-                    intent.putExtra("quizFinished", true);
-                    setResult(Activity.RESULT_OK, intent);
                     finish();
-
-                } else {
+                }
+                else {
                     score -= 2;
+
                     if (score < 0) {
                         score = 0;
                     }
+
                     saveCount(count);
                     saveScore(score);
                     updateScoreText();
                     layout1.setVisibility(View.VISIBLE);
                     layout2.setVisibility(View.INVISIBLE);
-
-
                 }
             });
-
             dialog.show();
         });
 
+
+        // hint button
         hintButton.setOnClickListener(v -> {
+
             if (count == 0) {
                 score -= 1;
+
                 if (score <= 0) {
                     score = 0;
-                }
+                } // score값
                 count++;
 
                 saveScore(score);
@@ -123,7 +134,7 @@ public class eg_quiz_1 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_1.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage("구석 부분부터 표시를 해 보자. 대부분의 면은 2색만 사용해도 문제없이 칠할 수 있다. 하지만 왼쪽 아래 부분에는 1색이 더 필요하다는 사실!");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

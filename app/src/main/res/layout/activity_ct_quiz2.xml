@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/eg_quiz2_frontLayout">
+        android:id="@+id/ct_quiz2_frontLayout">
 
 
         <TextView
@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="튜토리얼"
+            android:text="내가 몇층을 가려 했더라?"
             android:textSize="48sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
@@ -84,7 +84,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="@string/ct_quiz_1_2"
+            android:text="백년관에 수업을 들으러 가던 중 공대여신 신혜림을 만났다!
+그런데 신혜림이 바닥의 타일 문양을 구경하다가 자기가 가야 할 강의실이 몇 층인지 까먹었다고 한다. 분명 바닥의 문양과 관련이 있다는 것 만은 기억하고 있다. 신혜림은 몇 층에 가려고 했을까?"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +122,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz_1_2"
-            android:contentDescription="TODO" />
+            android:contentDescription="TODO"
+            android:src="@drawable/elev"/>
 
         <EditText
             android:id="@+id/ct_2_answer"
