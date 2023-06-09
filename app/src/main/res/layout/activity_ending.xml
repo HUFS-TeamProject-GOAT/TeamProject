@@ -16,14 +16,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/userName"
         android:layout_width="202dp"
         android:layout_height="106dp"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toStartOf="@+id/rankText"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@null"/>
+
+    <TextView
+    android:id="@+id/rank"
+    android:layout_width="137dp"
+    android:layout_height="118dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+    app:layout_constraintBottom_toTopOf="@+id/show_detail_button"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/rankText"
+    app:layout_constraintVertical_bias="0.5" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/MainButton"
+        app:layout_constraintTop_toBottomOf="@+id/rank"
+        app:layout_constraintVertical_bias="0.5"
+        android:visibility="invisible"
+        />
 
     <Button
         android:id="@+id/show_detail_button"
@@ -46,4 +70,5 @@
         android:text="처음으로"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

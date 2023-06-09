@@ -34,27 +34,17 @@ public class foodhall_talk2Activity extends AppCompatActivity {
         TextView userName = (TextView) findViewById(R.id.userName);
         userName.setText(user_Name);
 
-        TextView name_hyerim = (TextView) findViewById(R.id.name_hyerim);
+
         TextView name_minsu = (TextView) findViewById(R.id.name_minsu);
-        TextView name_hyungchan = (TextView) findViewById(R.id.name_hyungchan);
-        TextView name_hyunggu = (TextView) findViewById(R.id.name_hyunggu);
-        TextView name_professor = (TextView) findViewById(R.id.name_professor);
-        TextView name_extra = (TextView) findViewById(R.id.name_extra);
-        TextView name_security = (TextView) findViewById(R.id.name_security);
         TextView name_nutrician = (TextView) findViewById(R.id.name_nutrician);
 
         ImageView maincharacter = (ImageView) findViewById(R.id.maincharacter);
-        ImageView hyerim = (ImageView) findViewById(R.id.hyerim);
         ImageView minsu = (ImageView) findViewById(R.id.minsu);
-        ImageView hyungchan = (ImageView) findViewById(R.id.hyungchan);
-        ImageView hyunggu = (ImageView) findViewById(R.id.hyunggu);
-        ImageView professor = (ImageView) findViewById(R.id.professor);
-        ImageView extra = (ImageView) findViewById(R.id.extra);
-        ImageView security = (ImageView) findViewById(R.id.security);
         ImageView nutrician = (ImageView) findViewById(R.id.nutrician);
 
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine1Button = (Button) findViewById(R.id.food_storyLine2_1Button);
         Button storyLine2_Button = (Button) findViewById(R.id.food_storyLine2_2_Button);
         Button storyLine3Button = (Button) findViewById(R.id.food_storyLine2_3Button);
@@ -79,6 +69,7 @@ public class foodhall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 nutrician.setVisibility(View.INVISIBLE);
                 maincharacter.setVisibility(View.VISIBLE);
@@ -215,6 +206,12 @@ public class foodhall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

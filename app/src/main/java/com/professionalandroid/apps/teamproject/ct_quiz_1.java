@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -19,10 +20,10 @@ public class ct_quiz_1 extends AppCompatActivity {
     private int score,count;
     private TextView scoreTextView;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score_1_1";
+    private static final String SHARED_PREFS_KEY = "quiz_score1_1";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
-    private static final int SCORE_DEFAULT = 10;
+    private static final int SCORE_DEFAULT = 20;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
 
@@ -30,17 +31,21 @@ public class ct_quiz_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_ct_quiz1);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.ct_quiz1_frontLayout);
+        layout2 = findViewById(R.id.ct_quiz1_backLayout);
+        answerEditText = findViewById(R.id.ct_1_answer);
+        Button submitButton = findViewById(R.id.ct_1_submitButton);
+        Button hintButton = findViewById(R.id.ct_1_hint);
+        Button laterButton = findViewById(R.id.ct_1_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(SCORE_KEY, 20);
+        editor.putInt(COUNT_KEY,0);
+        editor.apply();
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
         count = sharedPreferences.getInt(COUNT_KEY, COUNT_DEFAULT);
 
@@ -66,6 +71,7 @@ public class ct_quiz_1 extends AppCompatActivity {
             if (isCorrect) {
                 dialog.setTitle("정답");
                 dialog.setMessage("정답입니다!");
+
             } else {
                 dialog.setTitle("실패");
                 dialog.setMessage("틀렸습니다! 다시 한 번 생각해 보세요");
@@ -79,7 +85,9 @@ public class ct_quiz_1 extends AppCompatActivity {
                 if (isCorrect) {
                     saveScore(score);
                     saveCount(count);
-
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished", true);  // Intent 인스턴스에 putExtra 메서드 호출
+                    setResult(Activity.RESULT_OK, intent);
                     finish();
                 } else {
                     score -= 2;
@@ -147,7 +155,7 @@ public class ct_quiz_1 extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(SCORE_KEY, score);
+        outState.putInt(SCORE_KEY+2, score);
         outState.putInt("count", count);
     }
 

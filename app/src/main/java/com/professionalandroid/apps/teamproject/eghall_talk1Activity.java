@@ -42,6 +42,7 @@ public class eghall_talk1Activity extends AppCompatActivity {
         ImageView minsu = (ImageView) findViewById(R.id.minsu);
 
         Button skipButton = (Button) findViewById(R.id.eg_skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.eg_skipButton1);
         Button storyLine1_1Button = (Button) findViewById(R.id.eg_storyLine1_1Button);
         Button storyLine1_2Button = (Button) findViewById(R.id.eg_storyLine1_2Button);
         Button storyLine1_3Button = (Button) findViewById(R.id.eg_storyLine1_3Button);
@@ -65,6 +66,7 @@ public class eghall_talk1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
                 startActivity(intent);
@@ -152,7 +154,7 @@ public class eghall_talk1Activity extends AppCompatActivity {
         storyLine1_4_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(), eg_quiz_3.class);
                 startActivity(intent);
                 hyerim.clearColorFilter();
                 hyerim.setVisibility(View.VISIBLE);
@@ -209,6 +211,12 @@ public class eghall_talk1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

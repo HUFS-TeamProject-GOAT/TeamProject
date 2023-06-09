@@ -42,6 +42,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
         ImageView minsu = (ImageView) findViewById(R.id.minsu);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine2_1Button = (Button) findViewById(R.id.eg_storyLine2_1Button);
         Button storyLine2_2Button = (Button) findViewById(R.id.eg_storyLine2_2Button);
         Button storyLine2_3Button = (Button) findViewById(R.id.eg_storyLine2_3Button);
@@ -83,6 +84,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 maincharacter.setVisibility(View.VISIBLE);
                 maincharacter.clearColorFilter();
@@ -371,6 +373,12 @@ public class eghall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

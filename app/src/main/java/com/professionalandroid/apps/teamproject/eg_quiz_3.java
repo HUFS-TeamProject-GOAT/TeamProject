@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -41,6 +42,11 @@ public class eg_quiz_3 extends AppCompatActivity {
         Button laterButton = findViewById(R.id.st_1_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
+        //동규 수정
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(SCORE_KEY +2, 20);
+        editor.apply();
+        //
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
         count = sharedPreferences.getInt(COUNT_KEY, COUNT_DEFAULT);
 
@@ -79,7 +85,9 @@ public class eg_quiz_3 extends AppCompatActivity {
                 if (isCorrect) {
                     saveScore(score);
                     saveCount(count);
-
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished", true);  // Intent 인스턴스에 putExtra 메서드 호출
+                    setResult(Activity.RESULT_OK, intent);
                     finish();
                 } else {
                     score -= 2;

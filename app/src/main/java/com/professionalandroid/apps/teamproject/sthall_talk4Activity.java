@@ -44,6 +44,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
         ImageView security = (ImageView) findViewById(R.id.security);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine1Button = (Button) findViewById(R.id.st_storyLine4_1Button);
         Button storyLine2Button = (Button) findViewById(R.id.st_storyLine4_2Button);
         Button storyLine3Button = (Button) findViewById(R.id.st_storyLine4_3Button);
@@ -85,6 +86,8 @@ public class sthall_talk4Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
+
                 hyerim.setVisibility(View.INVISIBLE);
                 security.setVisibility(View.INVISIBLE);
                 maincharacter.setVisibility(View.VISIBLE);
@@ -356,6 +359,12 @@ public class sthall_talk4Activity extends AppCompatActivity {
             }
         });
         storyLine15_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

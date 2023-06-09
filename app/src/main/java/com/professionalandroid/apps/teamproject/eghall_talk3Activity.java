@@ -42,6 +42,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
         ImageView hyungchan = (ImageView) findViewById(R.id.hyungchan);
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.skipButton1);
         Button storyLine1Button = (Button) findViewById(R.id.eg_storyLine3_1Button);
         Button storyLine2Button = (Button) findViewById(R.id.eg_storyLine3_2Button);
         Button storyLine3Button = (Button) findViewById(R.id.eg_storyLine3_3Button);
@@ -79,6 +80,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 hyungchan.setVisibility(View.INVISIBLE);
                 name_hyungchan.setVisibility(View.INVISIBLE);
@@ -331,6 +333,12 @@ public class eghall_talk3Activity extends AppCompatActivity {
             }
         });
         storyLine14_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

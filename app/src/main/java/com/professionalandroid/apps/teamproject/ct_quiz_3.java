@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -19,7 +20,7 @@ public class ct_quiz_3 extends AppCompatActivity {
     private int score,count;
     private TextView scoreTextView;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score_1_3";
+    private static final String SHARED_PREFS_KEY = "quiz_score1_3";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
     private static final int SCORE_DEFAULT = 20;
@@ -79,7 +80,9 @@ public class ct_quiz_3 extends AppCompatActivity {
                 if (isCorrect) {
                     saveScore(score);
                     saveCount(count);
-
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished", true);  // Intent 인스턴스에 putExtra 메서드 호출
+                    setResult(Activity.RESULT_OK, intent);
                     finish();
                 } else {
                     score -= 2;
@@ -162,7 +165,7 @@ public class ct_quiz_3 extends AppCompatActivity {
     private void saveScore(int score) {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(SCORE_KEY, score);
+        editor.putInt(SCORE_KEY+3, score);
         editor.apply();
     }
 

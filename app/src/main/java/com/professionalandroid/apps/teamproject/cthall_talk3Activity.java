@@ -37,6 +37,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
 
 
         Button skipButton = (Button) findViewById(R.id.ct_skipButton);
+        Button skipButton1 = (Button) findViewById(R.id.ct_skipButton1);
 
         Button storyLine3_1Button = (Button) findViewById(R.id.ct_storyLine3_1Button);
         Button storyLine3_2Button = (Button) findViewById(R.id.ct_storyLine3_2Button);
@@ -65,6 +66,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
+                skipButton1.setVisibility(View.VISIBLE);
 
                 minsu.setVisibility(View.INVISIBLE);
                 name_minsu.setVisibility(View.INVISIBLE);
@@ -199,6 +201,14 @@ public class cthall_talk3Activity extends AppCompatActivity {
             }
         });
         storyLine3_7_Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),homeActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        skipButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
