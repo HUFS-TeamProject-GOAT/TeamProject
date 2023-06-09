@@ -86,7 +86,6 @@ public class eg_quiz_4 extends AppCompatActivity {
                     setResult(Activity.RESULT_OK, intent);
                     finish();
 
-                    finish();
                 } else {
                     score -= 2;
                     if (score < 0) {

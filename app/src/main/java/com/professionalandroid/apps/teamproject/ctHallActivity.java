@@ -92,8 +92,9 @@ public class ctHallActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentIndex++;
                 showNextBackground();
-                Intent intent1 =new Intent(getApplicationContext(),cthall_talk3Activity.class);
-                startActivity(intent1);
+                Intent intent =new Intent(getApplicationContext(),cthall_talk3Activity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

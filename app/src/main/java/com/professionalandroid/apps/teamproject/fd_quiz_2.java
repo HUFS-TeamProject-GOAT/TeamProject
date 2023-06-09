@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -80,6 +81,9 @@ public class fd_quiz_2 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished", true);
+                    setResult(Activity.RESULT_OK, intent);
                     finish();
                 } else {
                     score -= 2;
@@ -162,7 +166,7 @@ public class fd_quiz_2 extends AppCompatActivity {
     private void saveScore(int score) {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(SCORE_KEY, score);
+        editor.putInt(SCORE_KEY+8, score);
         editor.apply();
     }
 

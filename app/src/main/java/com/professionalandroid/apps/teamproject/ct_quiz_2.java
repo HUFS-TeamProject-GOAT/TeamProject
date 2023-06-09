@@ -85,6 +85,7 @@ public class ct_quiz_2 extends AppCompatActivity {
                     intent.putExtra("quizFinished", true);
                     setResult(Activity.RESULT_OK, intent);
                     finish();
+
                 } else {
                     score -= 2;
                     if (score < 0) {

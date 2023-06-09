@@ -20,7 +20,7 @@ public class eg_quiz_3 extends AppCompatActivity {
     private int score,count;
     private TextView scoreTextView;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score_2_3";
+    private static final String SHARED_PREFS_KEY = "quiz_score";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
     private static final int SCORE_DEFAULT = 10;
@@ -86,7 +86,6 @@ public class eg_quiz_3 extends AppCompatActivity {
                     setResult(Activity.RESULT_OK, intent);
                     finish();
 
-                    finish();
                 } else {
                     score -= 2;
                     if (score < 0) {
@@ -168,7 +167,7 @@ public class eg_quiz_3 extends AppCompatActivity {
     private void saveScore(int score) {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(SCORE_KEY, score);
+        editor.putInt(SCORE_KEY+6, score);
         editor.apply();
     }
 
