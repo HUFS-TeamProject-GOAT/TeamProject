@@ -120,7 +120,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz_4_4"
-            android:contentDescription="TODO" />
+            android:contentDescription="TODO"
+            android:src="@drawable/lock"/>
 
         <EditText
             android:id="@+id/st_4_answer"

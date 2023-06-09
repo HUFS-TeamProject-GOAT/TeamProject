@@ -71,7 +71,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
                 name_professor.setVisibility(View.INVISIBLE);
                 userName.setVisibility(View.VISIBLE);
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),ct_quiz_3.class);
                 startActivity(intent);
                 story2_1.setVisibility(View.INVISIBLE);
                 story2_2.setVisibility(View.INVISIBLE);
@@ -126,7 +126,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
 
                 skipButton.setVisibility(View.INVISIBLE);
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),ct_quiz_3.class);
                 startActivity(intent);
 
                 story2_3_.setVisibility(View.INVISIBLE);

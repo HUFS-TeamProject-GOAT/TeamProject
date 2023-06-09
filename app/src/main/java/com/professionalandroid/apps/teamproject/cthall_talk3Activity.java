@@ -73,7 +73,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
                 maincharacter.setVisibility(View.VISIBLE);
                 userName.setVisibility(View.VISIBLE);
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),ct_quiz_4.class);
                 startActivity(intent);
 
                 story3_1.setVisibility(View.INVISIBLE);
@@ -146,7 +146,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
         storyLine3_4_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),ct_quiz_4.class);
                 startActivity(intent);
                 professor.setVisibility(View.INVISIBLE);
                 maincharacter.setVisibility(View.VISIBLE);

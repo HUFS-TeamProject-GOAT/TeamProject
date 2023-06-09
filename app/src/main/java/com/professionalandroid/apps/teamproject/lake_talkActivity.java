@@ -108,7 +108,7 @@ public class lake_talkActivity extends AppCompatActivity {
                 story6.setVisibility(View.VISIBLE);
 
 
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ct_quiz_4.class);
                 startActivity(intent);
 
                 storyLine1Button.setVisibility(View.INVISIBLE);
@@ -191,7 +191,7 @@ public class lake_talkActivity extends AppCompatActivity {
         storyLine5_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), fd_quiz_4.class);
                 startActivity(intent);
                 hyerim.setVisibility(View.INVISIBLE);
                 minsu.setVisibility(View.VISIBLE);

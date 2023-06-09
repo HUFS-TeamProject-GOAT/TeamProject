@@ -98,7 +98,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
                 story10_.setVisibility(View.INVISIBLE);
                 story11.setVisibility(View.VISIBLE);
 
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
+                Intent intent = new Intent(getApplicationContext(), eg_quiz_3.class);
                 startActivity(intent);
 
                 storyLine1Button.setVisibility(View.INVISIBLE);
@@ -267,7 +267,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
         storyLine10_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),eg_quiz_3.class);
                 startActivity(intent);
 
                 story10_.setVisibility(View.INVISIBLE);

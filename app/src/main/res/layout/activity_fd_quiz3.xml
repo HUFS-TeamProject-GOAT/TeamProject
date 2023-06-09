@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="튜토리얼"
+            android:text="신혜림의 목걸이"
             android:textSize="48sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
@@ -84,7 +84,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="@string/st_quiz_4_1"
+            android:text="7개의 고리로 이루어진 체인 8개가 있다.
+1개의 고리를 열고 닫는 데에는 200원의 비용이 든다.
+그림처럼 8곳을 모두 연결하려면 당연히 1600원이 들겠지만, 사실 이보다 더 싸게 만들 수 있는 방법이 있다. 그 방법에 따르면 얼마의 비용이 들까?"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +123,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz_3_3"
-            android:contentDescription="TODO" />
+            android:contentDescription="TODO"
+            android:src="@drawable/neck"/>
 
         <EditText
             android:id="@+id/fd_3_answer"

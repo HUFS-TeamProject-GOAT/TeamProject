@@ -102,7 +102,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
                 story2_7_.setVisibility(View.INVISIBLE);
                 story2_8.setVisibility(View.VISIBLE);
 
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),eg_quiz_2.class);
                 startActivity(intent);
 
 
@@ -222,7 +222,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
         storyLine2_7_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(getApplicationContext(),quizexActivity.class);
+                Intent intent =new Intent(getApplicationContext(),eg_quiz_2.class);
                 startActivity(intent);
 
                 maincharacter.clearColorFilter();

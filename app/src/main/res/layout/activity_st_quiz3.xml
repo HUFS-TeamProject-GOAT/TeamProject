@@ -121,7 +121,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz_4_3"
-            android:contentDescription="TODO" />
+            android:contentDescription="TODO"
+            android:src="@drawable/jewl"/>
 
         <EditText
             android:id="@+id/st_3_answer"

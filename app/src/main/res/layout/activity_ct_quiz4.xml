@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="튜토리얼"
+            android:text="종이컵 쌓기"
             android:textSize="48sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
@@ -73,7 +73,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/eg_quiz1_backLayout"
+        android:id="@+id/ct_quiz4_backLayout"
         android:visibility="invisible">
 
 
@@ -84,7 +84,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="@string/st_quiz_4_1"
+            android:text="교수님이 옆 자리의 학우들과 어색함을 풀기 위해 아이스 브레이킹을 하자며 종이컵을 나누어주셨다.
+자르지 않고 오직 쌓기로만 각자 조에서 멋진 작품을 만들기로 했다.
+교수님이 모든 조의 작품을 보고는 한 조가 교수의 규칙을 무시했다며 실망하신 듯한 얼굴을 하셨다. 어떤 조가 규칙을 무시한 걸까?
+
+여러개의 종이컵이 있다. 종이컵들을 쌓아 몇 가지의 디자인을 보였는데, 그중 하나는 물리적으로 쌓을 수 없는 형태이다.
+교수님은 1번~5번 중 어떤 디자인을 보고 실망하신 것일까?"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +126,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz_1_4"
-            android:contentDescription="TODO" />
+            android:contentDescription="TODO"
+            android:src="@drawable/cup"/>
 
         <EditText
             android:id="@+id/ct_4_answer"

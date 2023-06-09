@@ -1,33 +1,33 @@
 package com.professionalandroid.apps.teamproject;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class foodHallActivity extends AppCompatActivity {
-    protected void onCreate(Bundle bundle) {
-        super.onCreate(bundle);
+
+    private int currentIndex = 0;
+    private final int[] imageBackground = {R.drawable.foodhall1, R.drawable.foodhall2, R.drawable.foodhall3, R.drawable.foodhall4, R.drawable.foodhall5};
+    private ImageView food_Background;
+    protected void onCreate(Bundle savedInstacestate) {
+        super.onCreate(savedInstacestate);
         setContentView(R.layout.foodhall);
 
+        food_Background = findViewById(R.id.food_Background);
         ImageButton go_home_btn = (ImageButton) findViewById(R.id.go_home_btn);
         ImageButton go_foodHall2btn = (ImageButton) findViewById(R.id.go_foodHall2btn);
         ImageButton go_foodHall3btn = (ImageButton) findViewById(R.id.go_foodHall3btn);
         ImageButton go_foodHall4btn = (ImageButton) findViewById(R.id.go_foodHall4btn);
         ImageButton go_foodHall5btn = (ImageButton) findViewById(R.id.go_foodHall5btn);
-        ImageButton go_foodHall6btn = (ImageButton) findViewById(R.id.go_foodHall6btn);
         ImageButton foodHall_last_btn = (ImageButton) findViewById(R.id.foodHall_last_btn);
-
-
-        ImageView foodHall6 = (ImageView) findViewById(R.id.foodHall6);
-        ImageView foodHall5 = (ImageView) findViewById(R.id.foodHall5);
-        ImageView foodHall4 = (ImageView) findViewById(R.id.foodHall4);
-        ImageView foodHall3 = (ImageView) findViewById(R.id.foodHall3);
-        ImageView foodHall2 = (ImageView) findViewById(R.id.foodHall2);
-        ImageView foodHall1 = (ImageView) findViewById(R.id.foodHall1);
+        showNextBackground();
 
 
         go_home_btn.setOnClickListener(new View.OnClickListener() {
@@ -40,21 +40,13 @@ public class foodHallActivity extends AppCompatActivity {
         go_foodHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), foodhall_talk1Activity.class);
-                startActivity(intent);
-
-                foodHall2.setVisibility(View.VISIBLE);
-                foodHall1.setVisibility(View.INVISIBLE);
-                foodHall3.setVisibility(View.INVISIBLE);
-                foodHall4.setVisibility(View.INVISIBLE);
-                foodHall5.setVisibility(View.INVISIBLE);
-                foodHall6.setVisibility(View.INVISIBLE);
+                currentIndex++;
+                showNextBackground();
 
                 go_foodHall3btn.setVisibility(View.VISIBLE);
                 go_foodHall4btn.setVisibility(View.INVISIBLE);
                 go_foodHall5btn.setVisibility(View.INVISIBLE);
                 go_foodHall2btn.setVisibility(View.INVISIBLE);
-                go_foodHall6btn.setVisibility(View.INVISIBLE);
                 foodHall_last_btn.setVisibility(View.INVISIBLE);
 
             }
@@ -62,93 +54,65 @@ public class foodHallActivity extends AppCompatActivity {
         go_foodHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),foodhall_talk2Activity.class);
+                currentIndex++;
+                showNextBackground();
+
+                Intent intent =new Intent(getApplicationContext(),foodhall_talk1Activity.class);
                 startActivity(intent);
-
-                foodHall2.setVisibility(View.INVISIBLE);
-                foodHall1.setVisibility(View.INVISIBLE);
-                foodHall3.setVisibility(View.VISIBLE);
-                foodHall4.setVisibility(View.INVISIBLE);
-                foodHall5.setVisibility(View.INVISIBLE);
-                foodHall6.setVisibility(View.INVISIBLE);
-
-                go_foodHall3btn.setVisibility(View.INVISIBLE);
-                go_foodHall4btn.setVisibility(View.VISIBLE);
-                go_foodHall5btn.setVisibility(View.INVISIBLE);
-                go_foodHall2btn.setVisibility(View.INVISIBLE);
-                go_foodHall6btn.setVisibility(View.INVISIBLE);
-                foodHall_last_btn.setVisibility(View.INVISIBLE);
-
-            }
-        });
-        go_foodHall4btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                foodHall2.setVisibility(View.INVISIBLE);
-                foodHall1.setVisibility(View.INVISIBLE);
-                foodHall3.setVisibility(View.INVISIBLE);
-                foodHall4.setVisibility(View.VISIBLE);
-                foodHall5.setVisibility(View.INVISIBLE);
-                foodHall6.setVisibility(View.INVISIBLE);
 
 
                 go_foodHall3btn.setVisibility(View.INVISIBLE);
                 go_foodHall4btn.setVisibility(View.INVISIBLE);
                 go_foodHall5btn.setVisibility(View.VISIBLE);
                 go_foodHall2btn.setVisibility(View.INVISIBLE);
-                go_foodHall6btn.setVisibility(View.INVISIBLE);
                 foodHall_last_btn.setVisibility(View.INVISIBLE);
 
             }
         });
+
         go_foodHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                foodHall2.setVisibility(View.INVISIBLE);
-                foodHall1.setVisibility(View.INVISIBLE);
-                foodHall3.setVisibility(View.INVISIBLE);
-                foodHall4.setVisibility(View.INVISIBLE);
-                foodHall5.setVisibility(View.VISIBLE);
-                foodHall6.setVisibility(View.INVISIBLE);
-
+                currentIndex++;
+                showNextBackground();
 
                 go_foodHall3btn.setVisibility(View.INVISIBLE);
                 go_foodHall4btn.setVisibility(View.INVISIBLE);
                 go_foodHall5btn.setVisibility(View.INVISIBLE);
                 go_foodHall2btn.setVisibility(View.INVISIBLE);
-                go_foodHall6btn.setVisibility(View.VISIBLE);
-                foodHall_last_btn.setVisibility(View.INVISIBLE);
-
-            }
-        });
-        go_foodHall6btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                foodHall2.setVisibility(View.INVISIBLE);
-                foodHall1.setVisibility(View.INVISIBLE);
-                foodHall3.setVisibility(View.INVISIBLE);
-                foodHall4.setVisibility(View.INVISIBLE);
-                foodHall5.setVisibility(View.INVISIBLE);
-                foodHall6.setVisibility(View.VISIBLE);
-
-
-                go_foodHall3btn.setVisibility(View.INVISIBLE);
-                go_foodHall4btn.setVisibility(View.INVISIBLE);
-                go_foodHall5btn.setVisibility(View.INVISIBLE);
-                go_foodHall2btn.setVisibility(View.INVISIBLE);
-                go_foodHall6btn.setVisibility(View.INVISIBLE);
                 foodHall_last_btn.setVisibility(View.VISIBLE);
 
+
+                Intent intent =new Intent(getApplicationContext(),foodhall_talk2Activity.class);
+                startActivity(intent);
             }
         });
-       foodHall_last_btn.setOnClickListener(new View.OnClickListener() {
+        foodHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),foodhall_talk3Activity.class);
-                startActivity(intent);
+                currentIndex++;
+                showNextBackground();
+                Intent intent1 =new Intent(getApplicationContext(),foodhall_talk3Activity.class);
+                startActivity(intent1);
                 finish();
             }
         });
 
+
+    }
+
+    private void showNextBackground() {
+        if (currentIndex == 0) {
+            food_Background.setImageResource(imageBackground[0]);
+        }
+        else if (currentIndex == 1) {
+            food_Background.setImageResource(imageBackground[1]);
+        }
+        else if (currentIndex == 2) {
+            food_Background.setImageResource(imageBackground[3]);
+        }
+        else if (currentIndex == 3) {
+            food_Background.setImageResource(imageBackground[4]);
+        }
     }
 }

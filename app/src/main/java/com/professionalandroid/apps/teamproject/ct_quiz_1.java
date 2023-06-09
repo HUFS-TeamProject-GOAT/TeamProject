@@ -30,15 +30,15 @@ public class ct_quiz_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_ct_quiz1);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.ct_quiz1_frontLayout);
+        layout2 = findViewById(R.id.ct_quiz1_backLayout);
+        answerEditText = findViewById(R.id.ct_1_answer);
+        Button submitButton = findViewById(R.id.ct_1_submitButton);
+        Button hintButton = findViewById(R.id.ct_1_hint);
+        Button laterButton = findViewById(R.id.ct_1_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);

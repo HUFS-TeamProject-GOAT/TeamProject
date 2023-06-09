@@ -30,15 +30,15 @@ public class ct_quiz_3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_quiz1);
+        setContentView(R.layout.activity_ct_quiz3);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.st_quiz1_frontLayout);
-        layout2 = findViewById(R.id.st_quiz1_backLayout);
-        answerEditText = findViewById(R.id.st_1_answer);
-        Button submitButton = findViewById(R.id.st_1_submitButton);
-        Button hintButton = findViewById(R.id.st_1_hint);
-        Button laterButton = findViewById(R.id.st_1_nextTime);
+        layout1 = findViewById(R.id.ct_quiz3_frontLayout);
+        layout2 = findViewById(R.id.ct_quiz3_backLayout);
+        answerEditText = findViewById(R.id.ct_3_answer);
+        Button submitButton = findViewById(R.id.ct_3_submitButton);
+        Button hintButton = findViewById(R.id.ct_3_hint);
+        Button laterButton = findViewById(R.id.ct_3_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -118,7 +118,10 @@ public class ct_quiz_3 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_3.this);
             builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setMessage("우선 모자를 쓴 태민군은 B.\n" +
+                    "C와 F는 아무리 봐도 남자이므로 여자친구는 A일 것이다.\n" +
+                    "혜성 커플은 통로 쪽 자리이므로 서로 마주 보고 앉아 있을 것이다. B가 태민군이므로, 혜성 부부는 C와 G가 된다.\n" +
+                    "그럼 동규군은 어디에 있을까? 꽤 많은 힌트를 제공했다!");
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 
