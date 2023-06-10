@@ -4,144 +4,199 @@ package com.professionalandroid.apps.teamproject;
 
 import static com.professionalandroid.apps.teamproject.MainActivity.PREFS_NAME;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class eghall_talk4Activity extends AppCompatActivity {
+
+    private static final int YOUR_REQUEST_CODE = 1;
+
+    private final int[] storyTexts = {R.string.eg_storyLine4_1, R.string.eg_storyLine4_2, R.string.eg_storyLine4_3_, R.string.eg_storyLine4_4_};
+    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyerim, R.drawable.professor};
+    private final int[] textResources = {R.layout.activity_eghall_talk4, R.id.maincharacter, R.id.name_minsu, R.id.name_hyerim, R.id.name_professor};
+
+    private boolean quizFinished = false;
+    private TextView eg_storyText;
+
+    private TextView userName;
+    private TextView subName;
+    private ImageView eg_imageView1;
+    private ImageView eg_imageView2;
+
+    private int story;
+    private static final String STORY_STATUS_KEY = "storyStatus2_4"; // 스토리 상태를 저장하기 위해 만든 key
+
+//    protected void onPause() { //앱 pause -> 상태 저장
+//        super.onPause();
+//        saveLayout(story);
+//    }
+
+
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_eghall_talk4);
 
+
+        findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showNextStoryText();
+            }
+        });
+        eg_storyText = findViewById(R.id.eg_storyText);
+        eg_imageView1 = findViewById(R.id.eg_imageView1);
+        eg_imageView2 = findViewById(R.id.eg_imageView2);
+
+
         ColorMatrix darkMatrix = new ColorMatrix();
         darkMatrix.setSaturation(0);
 
-
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
-        TextView userName = (TextView) findViewById(R.id.userName);
+        userName = (TextView) findViewById(R.id.userName);
+        subName = (TextView) findViewById(R.id.name_hyerim); // subName으로 변경
         userName.setText(user_Name);
 
-        TextView name_extra = (TextView) findViewById(R.id.name_extra);
+        SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings1.edit();
+        editor.remove(STORY_STATUS_KEY);
+        editor.putInt(STORY_STATUS_KEY, 0);
+        editor.apply();
+        story = settings1.getInt(STORY_STATUS_KEY, 0);
+        saveLayout(story);
 
-        ImageView maincharacter = (ImageView) findViewById(R.id.maincharacter);
-        ImageView extra = (ImageView) findViewById(R.id.extra);
-
-        Button skipButton = (Button) findViewById(R.id.skipButton);
-        Button storyLine1Button = (Button) findViewById(R.id.eg_storyLine4_1Button);
-        Button storyLine2Button = (Button) findViewById(R.id.eg_storyLine4_2Button);
-        Button storyLine3_Button = (Button) findViewById(R.id.eg_storyLine4_3_Button);
-        Button storyLine4_Button = (Button) findViewById(R.id.eg_storyLine4_4_Button);
-
+        showNextStoryText();
 
 
-        TextView story1 = (TextView) findViewById(R.id.eg_storyText4_1);
-        TextView story2 = (TextView) findViewById(R.id.eg_storyText4_2);
-        TextView story3_ = (TextView) findViewById(R.id.eg_storyText4_3_);
-        TextView story4_ = (TextView) findViewById(R.id.eg_storyText4_4_);
 
-        extra.setVisibility(View.VISIBLE);
-        extra.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
 
+        Button skipButton = (Button) findViewById(R.id.eg_skipButton);
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 skipButton.setVisibility(View.INVISIBLE);
-
-                extra.setVisibility(View.INVISIBLE);
-                name_extra.setVisibility(View.INVISIBLE);
-                maincharacter.setVisibility(View.VISIBLE);
-                userName.setVisibility(View.VISIBLE);
-                maincharacter.clearColorFilter();
-
-                story1.setVisibility(View.INVISIBLE);
-                story2.setVisibility(View.INVISIBLE);
-                story3_.setVisibility(View.INVISIBLE);
-                story4_.setVisibility(View.VISIBLE);
-
-
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
-                startActivity(intent);
-
-                storyLine1Button.setVisibility(View.INVISIBLE);
-                storyLine2Button.setVisibility(View.INVISIBLE);
-                storyLine3_Button.setVisibility(View.INVISIBLE);
-                storyLine4_Button.setVisibility(View.VISIBLE);
+                story = 3;
+                showNextStoryText();
 
             }
         });
+    }
+    public void saveLayout(int story){
+        SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings1.edit();
+        editor.putInt(STORY_STATUS_KEY, story);
+        editor.apply();
+    }
 
-
-        storyLine1Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               extra.clearColorFilter();
-
-                story1.setVisibility(View.INVISIBLE);
-                story2.setVisibility(View.VISIBLE);
-
-                storyLine1Button.setVisibility(View.INVISIBLE);
-                storyLine2Button.setVisibility(View.VISIBLE);
-
-
-                name_extra.setVisibility(View.VISIBLE);
+    private void showNextStoryText() {
+        if (story == 0) {
+            saveLayout(story);
+            eg_storyText.setText(storyTexts[story]);
+            dark_character(eg_imageView1,imageResources[1],userName,textResources[1]);
+            story++;
+        }
+        else if (story == 1) {
+            eg_storyText.setText(storyTexts[story]);
+            clear_character(eg_imageView2,imageResources[4],subName,textResources[4]);
+            story++;
+        }else if (story == 2) {
+            eg_storyText.setText(storyTexts[story]);
+            dark_character(eg_imageView2,imageResources[4],subName,textResources[4]);
+            story++;
+        }else if (story == 3) {
+            if (!quizFinished) {
+                saveLayout(story);
+                Intent intent = new Intent(getApplicationContext(), eg_quiz_4.class);
+                startActivityForResult(intent, YOUR_REQUEST_CODE);
+            } else {
+                story++;
+                showNextStoryText();
+                saveLayout(story);
+                System.out.println("storyStatus2_4_quiz: " + story);
             }
-        });
-        storyLine2Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                maincharacter.setVisibility(View.VISIBLE);
-                extra.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+        }else if (story == 4) {
+            eg_storyText.setText(storyTexts[story-1]);
+            clear_character(eg_imageView1,imageResources[1],userName,textResources[1]);
+            story++;
+        }
+        else {
+            saveLayout(story);
+            findViewById(R.id.nextButton).setVisibility(View.GONE);
+            finish();
+        }
+    }
+    protected void dark_character(ImageView image,int imageResources,TextView name,int textResources){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
+        image.setImageResource(imageResources);
+        image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+        if (textResources == R.id.maincharacter) {
+            name.setText(user_Name);
+        } else if (textResources == R.id.name_minsu) {
+            name.setText("케인");
+        } else if (textResources == R.id.name_hyerim) {
+            name.setText("록시");
+        } else if (textResources == R.id.name_professor) {
+            name.setText("카멜롯");
+        }
+        name.setTextColor(Color.GRAY);
+    }
+    protected void clear_character(ImageView image,int imageResources,TextView name,int textResources){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
+        image.setImageResource(imageResources);
+        image.clearColorFilter();
+        if (textResources == R.id.maincharacter) {
+            name.setText(user_Name);
+        } else if (textResources == R.id.name_minsu) {
+            name.setText("케인");
+        } else if (textResources == R.id.name_hyerim) {
+            name.setText("록시");
+        } else if (textResources == R.id.name_professor) {
+            name.setText("카멜롯");
+        }
+        name.setTextColor(Color.BLACK);
+    }
+    //
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(STORY_STATUS_KEY, story);
+    }
 
-                story2.setVisibility(View.INVISIBLE);
-                story3_.setVisibility(View.VISIBLE);
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        story = savedInstanceState.getInt(STORY_STATUS_KEY);
+    }
 
-                storyLine2Button.setVisibility(View.INVISIBLE);
-                storyLine3_Button.setVisibility(View.VISIBLE);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-                name_extra.setVisibility(View.INVISIBLE);
-                userName.setVisibility(View.VISIBLE);
+        if (requestCode == YOUR_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            quizFinished = data.getBooleanExtra("quizFinished", false);
+            if (quizFinished) {
+                showNextStoryText();
             }
-        });
-        storyLine3_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), quizexActivity.class);
-                startActivity(intent);
-                maincharacter.setVisibility(View.VISIBLE);
-                maincharacter.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
-                extra.setVisibility(View.INVISIBLE);
-
-                story3_.setVisibility(View.INVISIBLE);
-                story4_.setVisibility(View.VISIBLE);
-
-                storyLine3_Button.setVisibility(View.INVISIBLE);
-                storyLine4_Button.setVisibility(View.VISIBLE);
-
-                userName.setVisibility(View.VISIBLE);
-            }
-        });
-        storyLine4_Button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              finish();
-            }
-        });
-
+        }
     }
 
 }

@@ -23,7 +23,7 @@ public class fd_quiz_1 extends AppCompatActivity {
     private static final String SHARED_PREFS_KEY = "quiz_score_3_1";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
-    private static final int SCORE_DEFAULT = 10;
+    private static final int SCORE_DEFAULT = 30;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
 
@@ -85,8 +85,6 @@ public class fd_quiz_1 extends AppCompatActivity {
                     intent.putExtra("quizFinished",true);
                     setResult(Activity.RESULT_OK,intent);
                     finish();
-
-
                 } else {
                     score -= 2;
                     if (score < 0) {

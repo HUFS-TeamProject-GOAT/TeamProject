@@ -215,21 +215,23 @@
     <string name="submit"> 제출 </string>
     <string name="later"> 다음에 </string>
     <string name="answer"> 정답을 입력해 주세요 </string>
+    <string name="main"> 주인공 </string>
+    <string name="sub"> 서브 </string>
 
-    <string name="score_format_1_1"> %d/20 </string>
-    <string name="score_format_1_2"> %d/30 </string>
-    <string name="score_format_1_3"> %d/30 </string>
-    <string name="score_format_1_4"> %d/50 </string>
+    <string name="score_format_1_1"> %d/10 </string>
+    <string name="score_format_1_2"> %d/20 </string>
+    <string name="score_format_1_3"> %d/20 </string>
+    <string name="score_format_1_4"> %d/10 </string>
 
-    <string name="score_format_2_1"> %d/20 </string>
-    <string name="score_format_2_2"> %d/30 </string>
+    <string name="score_format_2_1"> %d/15 </string>
+    <string name="score_format_2_2"> %d/15 </string>
     <string name="score_format_2_3"> %d/30 </string>
-    <string name="score_format_2_4"> %d/50 </string>
+    <string name="score_format_2_4"> %d/25 </string>
 
-    <string name="score_format_3_1"> %d/20 </string>
+    <string name="score_format_3_1"> %d/30 </string>
     <string name="score_format_3_2"> %d/30 </string>
-    <string name="score_format_3_3"> %d/30 </string>
-    <string name="score_format_3_4"> %d/50 </string>
+    <string name="score_format_3_3"> %d/25 </string>
+    <string name="score_format_3_4"> %d/20 </string>
 
     <string name="score_format_4_1"> %d/20 </string>
     <string name="score_format_4_2"> %d/30 </string>

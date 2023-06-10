@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -55,7 +56,7 @@ public class eg_quiz_4 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "6명";
+            String correctAnswer = "6";
             boolean isCorrect = userAnswer.equals(correctAnswer);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_4.this);
@@ -80,6 +81,9 @@ public class eg_quiz_4 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished",true);
+                    setResult(Activity.RESULT_OK,intent);
                     finish();
                 } else {
                     score -= 2;

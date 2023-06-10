@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -55,8 +56,14 @@ public class ct_quiz_3 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "1";
-            boolean isCorrect = userAnswer.equals(correctAnswer);
+            String correctAnswer = "E";
+            boolean isCorrect;
+            if (userAnswer.equalsIgnoreCase(correctAnswer)) { // 대소문자 무시
+                isCorrect = true;
+            }
+            else{
+                isCorrect = false;
+            }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_3.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
@@ -80,6 +87,9 @@ public class ct_quiz_3 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished",true);
+                    setResult(Activity.RESULT_OK,intent);
                     finish();
                 } else {
                     score -= 2;

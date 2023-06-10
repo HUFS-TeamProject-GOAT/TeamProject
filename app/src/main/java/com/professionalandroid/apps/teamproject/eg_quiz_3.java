@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -55,8 +56,9 @@ public class eg_quiz_3 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "6:4";
-            boolean isCorrect = userAnswer.equals(correctAnswer);
+            String correctAnswer = "64";//6:4
+            String userAnswer1 = userAnswer.replaceAll("[^0~9]",""); //숫자만 남게 만듬
+            boolean isCorrect = userAnswer1.equals(correctAnswer);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_3.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
@@ -80,6 +82,9 @@ public class eg_quiz_3 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished",true);
+                    setResult(Activity.RESULT_OK,intent);
                     finish();
                 } else {
                     score -= 2;

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -22,7 +23,7 @@ public class eg_quiz_2 extends AppCompatActivity {
     private static final String SHARED_PREFS_KEY = "quiz_score_2_2";
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
-    private static final int SCORE_DEFAULT = 10;
+    private static final int SCORE_DEFAULT = 15;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
 
@@ -81,6 +82,9 @@ public class eg_quiz_2 extends AppCompatActivity {
                     saveScore(score);
                     saveCount(count);
 
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished",true);
+                    setResult(Activity.RESULT_OK,intent);
                     finish();
                 } else {
                     score -= 2;

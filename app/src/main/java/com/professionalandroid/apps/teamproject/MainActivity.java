@@ -1,16 +1,22 @@
 package com.professionalandroid.apps.teamproject;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,24 +32,47 @@ public class MainActivity extends AppCompatActivity {
 
 
         userName = (EditText)findViewById(R.id.userName);
+        userName.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    // 키보드 내리기
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+
+                    // 입력 포커스 제거
+                    v.clearFocus();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
         Button startButton = (Button) findViewById(R.id.startButton);
         ImageButton languageButton = (ImageButton) findViewById(R.id.globalImage);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         user_Name = settings.getString("user_Name","");
 
+
+
         startButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                SharedPreferences settings = getSharedPreferences(PREFS_NAME,Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = settings.edit();
                 user_Name = userName.getText().toString();
-                editor.putString("user_Name",user_Name);
-                editor.apply();
-                Intent intent =new Intent(getApplicationContext(),storyActivity.class);
-                intent.putExtra("userName",user_Name);
-                startActivity(intent);
+                if (user_Name.isEmpty()) { // 닉네임이 비어있는 경우
+                    showAlertDialog("닉네임을 입력해주세요");
+                } else {
+                    SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString("user_Name", user_Name);
+                    editor.apply();
+                    Intent intent = new Intent(getApplicationContext(), storyActivity.class);
+                    intent.putExtra("userName", user_Name);
+                    startActivity(intent);
+                }
             }
         });
         languageButton.setOnClickListener(new View.OnClickListener() {
@@ -53,5 +82,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
+    private void showAlertDialog(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(message)
+                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
 }

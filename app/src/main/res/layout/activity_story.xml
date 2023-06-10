@@ -1,180 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <ImageView
-            android:id="@+id/maincharacter"
-            android:layout_width="258dp"
-            android:layout_height="292dp"
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="next"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/maincharacter"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/maincharacter" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageView
-            android:id="@+id/minsu"
-            android:layout_width="246dp"
-            android:layout_height="248dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.349"
-            app:srcCompat="@drawable/minsu" />
-
-        <ImageView
-            android:id="@+id/hyerim"
-            android:layout_width="250dp"
-            android:layout_height="291dp"
-            android:visibility="invisible"
+        <TextView
+            android:id="@+id/ct_storyText"
+            android:layout_width="333dp"
+            android:layout_height="207dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/hyerim" />
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/hyunggu"
-            android:layout_width="250dp"
-            android:layout_height="291dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/hyunggu" />
-
-        <ImageView
-            android:id="@+id/president"
-            android:layout_width="250dp"
-            android:layout_height="291dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/president" />
-
-        <ImageView
-            android:id="@+id/hyungchan"
-            android:layout_width="250dp"
-            android:layout_height="291dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/hyungchan" />
-
-        <ImageView
-            android:id="@+id/professor"
-            android:layout_width="250dp"
-            android:layout_height="291dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/professor" />
-
-
-        <ImageView
-            android:id="@+id/nutrician"
-            android:layout_width="246dp"
-            android:layout_height="248dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.349"
-            app:srcCompat="@drawable/nutrician" />
-
-        <ImageView
-            android:id="@+id/security"
-            android:layout_width="250dp"
-            android:layout_height="291dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/security" />
-
-        <ImageView
-            android:id="@+id/extra1"
-            android:layout_width="250dp"
-            android:layout_height="291dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/majorcol2" />
-
-        <ImageView
-            android:id="@+id/extra2"
-            android:layout_width="250dp"
-            android:layout_height="291dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toEndOf="@id/maincharacter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/majorcol2" />
-
-        <EditText
+        <TextView
             android:id="@+id/userName"
             android:layout_width="122dp"
             android:layout_height="59dp"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="16dp"
             android:autofillHints="name"
             android:background="@null"
-            android:inputType="text"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter" />
-
-        <TextView
-            android:id="@+id/name_minsu"
-            android:layout_width="122dp"
-            android:layout_height="59dp"
-            android:layout_marginEnd="12dp"
-            android:autofillHints="name"
-            android:text="민수"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-            app:layout_constraintVertical_bias="0.533" />
+            app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/name_hyerim"
@@ -182,277 +47,46 @@
             android:layout_height="59dp"
             android:layout_marginEnd="12dp"
             android:autofillHints="name"
-            android:text="혜림"
+            android:gravity="right"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-            app:layout_constraintVertical_bias="0.533" />
+            app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
-            android:id="@+id/name_professor"
+            android:id="@+id/name_minsu"
             android:layout_width="122dp"
             android:layout_height="59dp"
             android:layout_marginEnd="12dp"
             android:autofillHints="name"
-            android:text="교수"
+            android:gravity="right"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
+            app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/ct_imageView2"
+            android:layout_width="208dp"
+            android:layout_height="210dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/name_hyerim"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-            app:layout_constraintVertical_bias="0.533" />
+            android:contentDescription="@string/sub" />
 
-
-        <TextView
-            android:id="@+id/name_hyunggu"
-            android:layout_width="122dp"
-            android:layout_height="59dp"
-            android:layout_marginEnd="12dp"
-            android:autofillHints="name"
-            android:text="형구"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-            app:layout_constraintVertical_bias="0.533" />
-
-        <TextView
-            android:id="@+id/name_president"
-            android:layout_width="122dp"
-            android:layout_height="59dp"
-            android:layout_marginEnd="12dp"
-            android:autofillHints="name"
-            android:text="학회장"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-            app:layout_constraintVertical_bias="0.533" />
-
-        <TextView
-            android:id="@+id/name_nutrician"
-            android:layout_width="122dp"
-            android:layout_height="59dp"
-            android:layout_marginEnd="12dp"
-            android:autofillHints="name"
-            android:text="영양사"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-            app:layout_constraintVertical_bias="0.533" />
-
-        <TextView
-            android:id="@+id/name_extra1"
-            android:layout_width="122dp"
-            android:layout_height="59dp"
-            android:layout_marginEnd="12dp"
-            android:autofillHints="name"
-            android:text="엑스트라1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-            app:layout_constraintVertical_bias="0.533" />
-
-        <TextView
-            android:id="@+id/name_extra2"
-            android:layout_width="122dp"
-            android:layout_height="59dp"
-            android:layout_marginEnd="12dp"
-            android:autofillHints="name"
-            android:text="엑스트라2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/storyText1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/maincharacter"
-            app:layout_constraintVertical_bias="0.533" />
-
-
-        <TextView
-            android:id="@+id/storyText1"
-            android:layout_width="404dp"
-            android:layout_height="240dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="0dp"
-            android:maxLines="8"
-            android:text="@string/storyLine1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.571"
-
+        <ImageView
+            android:id="@+id/ct_imageView1"
+            android:layout_width="228dp"
+            android:layout_height="210dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/userName"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="485dp" />
-
-        <TextView
-            android:id="@+id/storyText2"
-            android:layout_width="404dp"
-            android:layout_height="240dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="488dp"
-            android:maxLines="5"
-            android:text="@string/storyLine2"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:visibility="invisible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/storyText3"
-            android:layout_width="404dp"
-            android:layout_height="240dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="488dp"
-            android:maxLines="3"
-            android:text="@string/storyLine3"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:visibility="invisible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/storyText4"
-            android:layout_width="404dp"
-            android:layout_height="240dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="488dp"
-            android:maxLines="5"
-            android:text="@string/storyLine4"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:visibility="invisible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/storyText5"
-            android:layout_width="404dp"
-            android:layout_height="240dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="488dp"
-            android:maxLines="8"
-            android:text="@string/storyLine5"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:visibility="invisible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/storyText6"
-            android:layout_width="404dp"
-            android:layout_height="240dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="488dp"
-            android:maxLines="5"
-            android:text="@string/storyLine6"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:visibility="invisible"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/storyText7"
-            android:layout_width="390dp"
-            android:layout_height="245dp"
-            android:maxLines="1"
-            android:text="@string/storyLine7"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/storyText1"
-            app:layout_constraintEnd_toEndOf="@+id/storyText1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/storyText1" />
-
+            android:contentDescription="@string/main" />
 
         <Button
-            android:id="@+id/storyLine1Button"
+            android:id="@+id/ct_skipButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="664dp"
-            android:layout_marginEnd="24dp"
-            android:text="Next"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/storyLine2Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="664dp"
-            android:layout_marginEnd="24dp"
-            android:text="Next"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/storyLine3Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="664dp"
-            android:layout_marginEnd="24dp"
-            android:text="Next"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/storyLine4Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="664dp"
-            android:layout_marginEnd="24dp"
-            android:text="Next"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/storyLine5Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="664dp"
-            android:layout_marginEnd="24dp"
-            android:text="Next"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/storyLine6Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="664dp"
-            android:layout_marginEnd="24dp"
-            android:text="Next"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/story_endButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="664dp"
-            android:layout_marginEnd="24dp"
-            android:text="Start"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/skipButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/skipButtonText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

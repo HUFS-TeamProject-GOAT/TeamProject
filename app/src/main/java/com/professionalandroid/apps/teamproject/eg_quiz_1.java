@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -23,7 +24,7 @@ public class eg_quiz_1 extends AppCompatActivity {
     private static final String SCORE_KEY = "score";
     private static final String COUNT_KEY = "count";
 
-    private static final int SCORE_DEFAULT = 20;
+    private static final int SCORE_DEFAULT = 15;
     private static final int COUNT_DEFAULT = 0;
 
     // 점수 저장 객체와 의 key 값 지정
@@ -92,6 +93,10 @@ public class eg_quiz_1 extends AppCompatActivity {
                 if (isCorrect) {
                     saveScore(score);
                     saveCount(count);
+
+                    Intent intent = new Intent();
+                    intent.putExtra("quizFinished",true);
+                    setResult(Activity.RESULT_OK,intent);
                     finish();
                 }
                 else {
