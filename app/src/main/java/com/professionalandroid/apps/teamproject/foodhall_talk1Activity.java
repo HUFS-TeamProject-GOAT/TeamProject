@@ -31,7 +31,8 @@ public class foodhall_talk1Activity extends AppCompatActivity {
     private TextView food_storyText;
 
     private TextView userName;
-    private TextView hyerim;
+    private TextView hyerim,minsu;
+
     private ImageView food_imageView1;
     private ImageView food_imageView2;
 
@@ -65,6 +66,7 @@ public class foodhall_talk1Activity extends AppCompatActivity {
 
         userName = (TextView) findViewById(R.id.userName);
         hyerim = (TextView) findViewById(R.id.name_hyerim);
+        minsu = findViewById(R.id.name_minsu);
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
@@ -107,21 +109,22 @@ public class foodhall_talk1Activity extends AppCompatActivity {
             food_imageView1.setImageResource(imageResources1[1]);
             food_imageView2.setImageResource(imageResources2[2]);
 
-            mainVisiblelity();
+            //subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 2) {
             food_storyText.setText(storyTexts[story]);
             food_imageView1.setImageResource(imageResources1[0]);
             food_imageView2.setImageResource(imageResources2[3]);
-            subVisiblelity();
+            mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
+
         }else if (story == 3) {
             food_storyText.setText(storyTexts[story]);
             food_imageView1.setImageResource(imageResources1[1]);
             food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
+            //mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 4) {
@@ -135,7 +138,7 @@ public class foodhall_talk1Activity extends AppCompatActivity {
             food_storyText.setText(storyTexts[story]);
             food_imageView1.setImageResource(imageResources1[1]);
             food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
+            //mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 6) {
@@ -163,7 +166,7 @@ public class foodhall_talk1Activity extends AppCompatActivity {
             food_storyText.setText(storyTexts[story-1]);
             food_imageView1.setImageResource(imageResources1[1]);
             food_imageView2.setImageResource(imageResources2[1]);
-            mainVisiblelity();
+            subVisiblelity2();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
@@ -184,11 +187,18 @@ public class foodhall_talk1Activity extends AppCompatActivity {
     }
     protected void mainVisiblelity(){
         userName.setVisibility(View.VISIBLE);
-        hyerim.setVisibility(View.GONE);
+        hyerim.setVisibility(View.INVISIBLE);
+        minsu.setVisibility(View.INVISIBLE);
     }
     protected void subVisiblelity(){
-        userName.setVisibility(View.GONE);
+        userName.setVisibility(View.INVISIBLE);
         hyerim.setVisibility(View.VISIBLE);
+        minsu.setVisibility(View.INVISIBLE);
+    }
+    protected void subVisiblelity2(){
+        userName.setVisibility(View.INVISIBLE);
+        minsu.setVisibility(View.VISIBLE);
+        hyerim.setVisibility(View.INVISIBLE);
     }
 
     @Override
