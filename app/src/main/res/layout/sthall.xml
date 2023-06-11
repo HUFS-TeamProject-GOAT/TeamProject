@@ -1,57 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-    <ImageView
-        android:id="@+id/stHall1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/sthall1"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/stHall2"
+        android:id="@+id/st_Background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="background"
         android:scaleType="fitXY"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/sthall2"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <ImageView
-        android:id="@+id/stHall3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/sthall3"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <ImageView
-        android:id="@+id/stHall4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/sthall4"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <ImageView
-        android:id="@+id/stHall5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:visibility="invisible"
-        app:srcCompat="@drawable/sthall5"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/go_stHall2btn"
@@ -59,11 +22,12 @@
         android:layout_height="65dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="368dp"
-        android:backgroundTint="@android:color/transparent"
-        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/thing" />
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/thing"
+        />
 
     <ImageButton
         android:id="@+id/go_stHall3btn"
@@ -84,11 +48,11 @@
         android:layout_height="65dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="264dp"
-        android:backgroundTint="@android:color/transparent"
-        android:scaleType="fitXY"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/thing" />
 
     <ImageButton
@@ -97,24 +61,24 @@
         android:layout_height="65dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="456dp"
-        android:backgroundTint="@android:color/transparent"
-        android:scaleType="fitXY"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/top" />
 
     <ImageButton
         android:id="@+id/stHall_last_btn"
-        android:layout_width="120dp"
-        android:layout_height="82dp"
-        android:layout_marginEnd="244dp"
-        android:layout_marginBottom="540dp"
-        android:backgroundTint="@android:color/transparent"
-        android:scaleType="fitXY"
+        android:layout_width="142dp"
+        android:layout_height="94dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="360dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/thing" />
 
     <ImageButton
@@ -128,7 +92,7 @@
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bottom" />
-
-
+        app:srcCompat="@drawable/bottom"
+        android:contentDescription="홈으로 이동"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

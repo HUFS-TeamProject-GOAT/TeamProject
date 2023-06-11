@@ -25,7 +25,7 @@
     <string name="homeImage">homeImage</string>
     <string name="skipButtonText">Skip\n</string>
     <string name="getinText">입장하기</string>
-    <string name="rank">의 계급은</string>
+    <string name="rank">%s의 계급은</string>
 
 
     <string name="lakeButton">lakeButton\n</string>

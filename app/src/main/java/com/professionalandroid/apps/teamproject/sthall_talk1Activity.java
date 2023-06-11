@@ -95,39 +95,34 @@ public class sthall_talk1Activity extends AppCompatActivity {
     }
 
     private void showNextStoryText() {
-        ColorMatrix darkMatrix = new ColorMatrix();
-        darkMatrix.setSaturation(0);
         if (story == 0) {
             saveLayout(story);
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
+            dark_main();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 1) {
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
-            mainVisiblelity();
+            dark_main();
+            clear_minsu();
+            subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 2) {
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
-            subVisiblelity();
+            clear_main();
+            dark_minsu();
+            subsubVisiblelity();
+            mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 3) {
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
+            dark_main();
+            clear_hyerim();
             subVisiblelity();
+            subsubVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 4) {//문제나오는곳
@@ -143,10 +138,9 @@ public class sthall_talk1Activity extends AppCompatActivity {
             }
         }else if (story == 5) {
             st_storyText.setText(storyTexts[story-1]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
-            subVisiblelity();
+            dark_main();
+            dark_minsu();
+            mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
@@ -162,7 +156,44 @@ public class sthall_talk1Activity extends AppCompatActivity {
     }
     protected void subVisiblelity(){
         userName.setVisibility(View.INVISIBLE);
+        minsu.setVisibility(View.VISIBLE);
+    }
+    protected void subsubVisiblelity(){
+        minsu.setVisibility(View.INVISIBLE);
         hyerim.setVisibility(View.VISIBLE);
+    }
+    protected void dark_main(){
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
+        st_imageView1.setImageResource(imageResources1[0]);
+        st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
+    }
+    protected void clear_main(){
+        st_imageView1.setImageResource(imageResources1[0]);
+        st_imageView1.clearColorFilter();
+    }
+    protected void dark_hyerim(){
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
+        st_imageView2.setImageResource(imageResources2[1]);
+        st_imageView2.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
+    }
+    protected void clear_hyerim(){
+        st_imageView2.setImageResource(imageResources2[1]);
+        st_imageView2.clearColorFilter();
+    }
+    protected void dark_minsu(){
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
+        st_imageView2.setImageResource(imageResources2[0]);
+        st_imageView2.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
+    }
+    protected void clear_minsu(){
+        st_imageView2.setImageResource(imageResources2[0]);
+        st_imageView2.clearColorFilter();
     }
 
     @Override

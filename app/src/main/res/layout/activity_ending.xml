@@ -9,22 +9,13 @@
         android:id="@+id/rankText"
         android:layout_width="202dp"
         android:layout_height="106dp"
-        android:text="@string/rank"
+        android:text="@+id/rank"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="202dp"
-        android:layout_height="106dp"
-        android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintEnd_toStartOf="@+id/rankText"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@null"/>
 
     <TextView
     android:id="@+id/rank"

@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
+import android.text.LoginFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -50,7 +51,7 @@ public class sthall_talk2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(R.layout.activity_sthall_talk1);
+        setContentView(R.layout.activity_sthall_talk2);
         findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,49 +99,42 @@ public class sthall_talk2Activity extends AppCompatActivity {
         if (story == 0) {
             saveLayout(story);
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
+           dark_main();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 1) {
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
+            clear_main();
+            dark_minsu();
             mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 2) {
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
+            dark_main();
+            clear_minsu();
             subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 3) {
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
-            subVisiblelity();
+            dark_main();
+            clear_hyerim();
+            subsubVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
-        }else if (story == 4) {//문제나오는곳
+        }else if (story == 4) {
             st_storyText.setText(storyTexts[story]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
-            subVisiblelity();
+            clear_main();
+            dark_hyerim();
+            mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 5) {
-            st_storyText.setText(storyTexts[story-1]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
+            st_storyText.setText(storyTexts[story]);
+            dark_main();
+            clear_minsu();
             subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
@@ -148,7 +142,7 @@ public class sthall_talk2Activity extends AppCompatActivity {
         else if (story == 6) {
             if (!quizFinished) {
                 saveLayout(story);
-                Intent intent = new Intent(getApplicationContext(), st_quiz_1.class);
+                Intent intent = new Intent(getApplicationContext(), st_quiz_2.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {
                 story++;
@@ -159,28 +153,27 @@ public class sthall_talk2Activity extends AppCompatActivity {
         }
         else if (story == 7) {
             st_storyText.setText(storyTexts[story-1]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
-            subVisiblelity();
+            dark_main();
+            dark_minsu();
+            subsubVisiblelity();
+            mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 8) {
             st_storyText.setText(storyTexts[story-1]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
+            dark_main();
+            clear_minsu();
             subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 9) {
             st_storyText.setText(storyTexts[story-1]);
-            st_imageView1.setImageResource(imageResources1[0]);
-            st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-            st_imageView2.setImageResource(imageResources2[0]);
-            subVisiblelity();
+            clear_main();
+            dark_minsu();
+            mainVisiblelity();
+            minsu.setVisibility(View.INVISIBLE);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
@@ -190,14 +183,58 @@ public class sthall_talk2Activity extends AppCompatActivity {
             finish();
         }
     }
+
+
     protected void mainVisiblelity(){
         userName.setVisibility(View.VISIBLE);
         hyerim.setVisibility(View.INVISIBLE);
     }
     protected void subVisiblelity(){
         userName.setVisibility(View.INVISIBLE);
+        minsu.setVisibility(View.VISIBLE);
+    }
+    protected void subsubVisiblelity(){
+        minsu.setVisibility(View.INVISIBLE);
         hyerim.setVisibility(View.VISIBLE);
     }
+    protected void dark_main(){
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
+        st_imageView1.setImageResource(imageResources1[0]);
+        st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
+    }
+
+
+    protected void clear_main(){
+        st_imageView1.setImageResource(imageResources1[0]);
+        st_imageView1.clearColorFilter();
+    }
+    protected void dark_hyerim(){
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
+        st_imageView2.setImageResource(imageResources2[1]);
+        st_imageView2.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
+    }
+    protected void clear_hyerim(){
+        st_imageView2.setImageResource(imageResources2[1]);
+        st_imageView2.clearColorFilter();
+    }
+    protected void dark_minsu(){
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
+        st_imageView2.setImageResource(imageResources2[0]);
+        st_imageView2.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+
+    }
+    protected void clear_minsu(){
+        st_imageView2.setImageResource(imageResources2[0]);
+        st_imageView2.clearColorFilter();
+    }
+
+
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
