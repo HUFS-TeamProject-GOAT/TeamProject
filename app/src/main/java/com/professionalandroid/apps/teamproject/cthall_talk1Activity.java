@@ -39,10 +39,6 @@ public class cthall_talk1Activity extends AppCompatActivity {
     private int story;
     private static final String STORY_STATUS_KEY = "storyStatus1_2"; // 스토리 상태를 저장하기 위해 만든 key
 
-//    protected void onPause() { //앱 pause -> 상태 저장
-//        super.onPause();
-//        saveLayout(story);
-//    }
 
 
     @Override
