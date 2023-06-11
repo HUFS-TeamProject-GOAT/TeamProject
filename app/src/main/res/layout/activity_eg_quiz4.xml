@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="유리창디자인"
+            android:text="카멜롯의 게임"
             android:textSize="48sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"

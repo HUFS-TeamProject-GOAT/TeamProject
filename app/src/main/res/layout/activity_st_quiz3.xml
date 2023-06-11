@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="교수님의 흥미로운 고민"
+            android:text="장물아비의 보석 감정"
             android:textSize="40sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"

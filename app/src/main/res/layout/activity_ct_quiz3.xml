@@ -19,7 +19,7 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="누가 내자리 빼앗았어"
+            android:text="카멜롯의 쪽지"
             android:textSize="40sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"

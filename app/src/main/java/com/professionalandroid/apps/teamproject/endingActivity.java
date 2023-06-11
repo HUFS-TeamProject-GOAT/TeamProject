@@ -25,6 +25,7 @@ import java.util.List;
 
 public class endingActivity extends AppCompatActivity {
 
+    int [] values = new int[16];
     private static final String SHARED_PREFS_KEY = "quiz_score";
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
@@ -35,17 +36,19 @@ public class endingActivity extends AppCompatActivity {
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
-        TextView userName =(TextView) findViewById(R.id.userName);
-        userName.setText(user_Name);
+        String rankString = getString(R.string.rank, user_Name);
+        rankText.setText(rankString);
 
 
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
-        int[] values = new int[17];
+        for (int i = 0; i < values.length; i++) {
+            SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
+            values[i] = sharedPreferences.getInt("score"+i, 0);
+        }
         int totalScore=0;
         for (int i = 0; i < values.length; i++) {
-            values[i] = sharedPreferences.getInt("score" + i, 0);
-            totalScore+=values[i];
+            totalScore +=values[i];
         }
+
         String rank = calculateScore(totalScore);
         TextView Rank = (TextView) findViewById(R.id.rank);
         Rank.setText(rank);
@@ -73,7 +76,6 @@ public class endingActivity extends AppCompatActivity {
 
                 MainButton.setVisibility(View.INVISIBLE);
                 detailButton.setVisibility(View.INVISIBLE);
-                userName.setVisibility(View.INVISIBLE);
                 Rank.setVisibility(View.INVISIBLE);
                 rankText.setVisibility(View.INVISIBLE);
             }

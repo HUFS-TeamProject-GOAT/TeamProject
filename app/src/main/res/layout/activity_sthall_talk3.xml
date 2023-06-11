@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-
-    <Button
-        android:id="@+id/nextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="next"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/st_storyText"
@@ -38,12 +25,11 @@
         android:autofillHints="name"
         android:background="@null"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
+        app:layout_constraintBottom_toTopOf="@+id/st_storyText"
         app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
-        android:id="@+id/name_hyerim"
-        android:layout_width="122dp"
+        android:id="@+id/name_professor2"
+        android:layout_width="wrap_content"
         android:layout_height="59dp"
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
@@ -51,12 +37,11 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/st_storyText"
         app:layout_constraintEnd_toEndOf="parent" />
-
     <TextView
         android:id="@+id/name_minsu"
         android:layout_width="122dp"
         android:layout_height="59dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="16dp"
         android:autofillHints="name"
         android:gravity="right"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -68,9 +53,8 @@
         android:layout_width="208dp"
         android:layout_height="210dp"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/name_hyerim"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="@string/sub" />
+        app:layout_constraintBottom_toTopOf="@+id/name_professor2"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/st_imageView1"
@@ -78,11 +62,11 @@
         android:layout_height="210dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/userName"
-        app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/main" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <Button
-        android:id="@+id/st_skipButton"
+        android:id="@+id/skipButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -90,6 +74,17 @@
         android:text="@string/skipButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="next"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

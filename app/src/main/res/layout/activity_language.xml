@@ -12,6 +12,7 @@
         android:layout_height="71dp"
         android:text="@string/language_Setting"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,30 +26,17 @@
         android:text="@string/korean"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/englishButton"
-        app:layout_constraintHorizontal_bias="0.319"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/englishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="304dp"
+        android:layout_marginBottom="312dp"
         android:text="@string/english"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/koreanButton"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/JapaneseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/japanese"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/languageTitle"
-        app:layout_constraintVertical_bias="0.617" />
 
     <Button
         android:id="@+id/backButton"

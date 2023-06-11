@@ -20,8 +20,8 @@ public class eg_quiz_1 extends AppCompatActivity {
     private int score,count;
     private TextView scoreTextView;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score_2_1";
-    private static final String SCORE_KEY = "score";
+    private static final String SHARED_PREFS_KEY = "quiz_score";
+    private static final String SCORE_KEY = "score"+4;
     private static final String COUNT_KEY = "count";
 
     private static final int SCORE_DEFAULT = 15;

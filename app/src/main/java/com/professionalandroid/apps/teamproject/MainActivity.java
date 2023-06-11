@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.media.MediaPlayer;
 
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static final  String PREFS_NAME = "MyPREFS";
 
     private Button btn;
+    public MediaPlayer mediaPlayer;
     EditText userName;
     String user_Name;
     @Override
@@ -30,24 +32,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //BGM 재생
+        mediaPlayer = MediaPlayer.create(this, R.raw.bgm);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
 
         userName = (EditText)findViewById(R.id.userName);
-        userName.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    // 키보드 내리기
-                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
-
-                    // 입력 포커스 제거
-                    v.clearFocus();
-                    return true;
-                }
-                return false;
-            }
-        });
-
 
         Button startButton = (Button) findViewById(R.id.startButton);
         ImageButton languageButton = (ImageButton) findViewById(R.id.globalImage);

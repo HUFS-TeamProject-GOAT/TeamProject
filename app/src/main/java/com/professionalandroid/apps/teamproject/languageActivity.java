@@ -27,7 +27,15 @@ public class languageActivity extends AppCompatActivity {
         koreanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setLocale("kr");
+                Locale locale = new Locale("ko");
+                Configuration config = getResources().getConfiguration();
+                if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 ) {
+                    config.setLocale(locale);
+                }
+                else {
+                    config.locale = locale;
+                }
+                getResources().updateConfiguration(config, getResources().getDisplayMetrics());
                 recreate();
             }
         });
@@ -35,7 +43,15 @@ public class languageActivity extends AppCompatActivity {
         englishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setLocale("en");
+                Locale locale = new Locale("en");
+                Configuration config = getResources().getConfiguration();
+                if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 ) {
+                    config.setLocale(locale);
+                }
+                else {
+                    config.locale = locale;
+                }
+                getResources().updateConfiguration(config, getResources().getDisplayMetrics());
                 recreate();
             }
         });
@@ -48,24 +64,5 @@ public class languageActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
-
-    private void setLocale(String languageCode) {
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-
-        Resources resources = getResources();
-        Configuration config = resources.getConfiguration();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            config.setLocale(locale);
-        } else {
-            config.locale = locale;
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            config.setLayoutDirection(locale);
-        }
-
-        resources.updateConfiguration(config, resources.getDisplayMetrics());
     }
 }

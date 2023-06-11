@@ -183,7 +183,7 @@ public class lake_talkActivity extends AppCompatActivity {
         storyLine5_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ct_quiz_1.class);
+                Intent intent = new Intent(getApplicationContext(), ct_quiz_2.class);
                 startActivity(intent);
                 hyerim.setVisibility(View.INVISIBLE);
                 minsu.setVisibility(View.VISIBLE);

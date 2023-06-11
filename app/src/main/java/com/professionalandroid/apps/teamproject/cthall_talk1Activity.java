@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
@@ -88,7 +87,7 @@ public class cthall_talk1Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(quizFinished = false) {
+                if(!quizFinished) {
                     skipButton.setVisibility(View.INVISIBLE);
                     story = 7;
                 }else {

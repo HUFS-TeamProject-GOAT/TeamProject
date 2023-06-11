@@ -88,8 +88,13 @@ public class eghall_talk1Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                skipButton.setVisibility(View.INVISIBLE);
-                story = 4;
+                if(!quizFinished) {
+                    skipButton.setVisibility(View.INVISIBLE);
+                    story = 4;
+                }else {
+                    skipButton.setVisibility(View.INVISIBLE);
+                    story = 8;
+                }
                 showNextStoryText();
 
             }
@@ -144,7 +149,7 @@ public class eghall_talk1Activity extends AppCompatActivity {
             dark_character(eg_imageView2,imageResources[3],subName,textResources[3]);
             clear_character(eg_imageView1,imageResources[1],userName,textResources[1]);
             story++;
-        }else if (story == 7) {  //문제가 나오는 곳
+        }else if (story == 7) {
             eg_storyText.setText(storyTexts[story-1]);
             clear_character(eg_imageView2,imageResources[2],subName,textResources[2]);
             dark_character(eg_imageView1,imageResources[1],userName,textResources[1]);

@@ -20,10 +20,10 @@ public class eg_quiz_3 extends AppCompatActivity {
     private int score,count;
     private TextView scoreTextView;
 
-    private static final String SHARED_PREFS_KEY = "quiz_score_2_3";
-    private static final String SCORE_KEY = "score";
+    private static final String SHARED_PREFS_KEY = "quiz_score";
+    private static final String SCORE_KEY = "score"+6;
     private static final String COUNT_KEY = "count";
-    private static final int SCORE_DEFAULT = 10;
+    private static final int SCORE_DEFAULT = 30;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
 
@@ -57,8 +57,8 @@ public class eg_quiz_3 extends AppCompatActivity {
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
             String correctAnswer = "64";//6:4
-            String userAnswer1 = userAnswer.replaceAll("[^0~9]",""); //숫자만 남게 만듬
-            boolean isCorrect = userAnswer1.equals(correctAnswer);
+            String processedAnswer = userAnswer.replace(":", "");
+            boolean isCorrect = processedAnswer.equals(correctAnswer);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_3.this);
             builder.setIcon(R.mipmap.ic_launcher_round);

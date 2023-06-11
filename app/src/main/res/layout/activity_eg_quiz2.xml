@@ -19,8 +19,8 @@
             android:layout_marginTop="70dp"
             android:layout_marginEnd="175dp"
             android:layout_marginBottom="200dp"
-            android:text="멍청해보여도 애는 착해"
-            android:textSize="48sp"
+            android:text="케인의 지갑은 어딨을까?"
+            android:textSize="38sp"
             android:gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/scoreTextView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -175,24 +175,20 @@
 
             </LinearLayout>
 
+            <EditText
+                android:id="@+id/eg_2_answer"
+                android:layout_width="190dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="100dp"
+                android:gravity="center_horizontal"
+                android:hint="@string/answer"
+                android:maxLength="3"
+                android:textSize="20sp" />
+
         </LinearLayout>
 
-
-        <EditText
-            android:id="@+id/eg_2_answer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="100dp"
-            android:gravity="center_horizontal"
-            android:hint="@string/answer"
-            android:textSize="20sp"
-            android:maxLength="3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <Button
             android:id="@+id/eg_2_hint"

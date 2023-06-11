@@ -88,8 +88,13 @@ public class eghall_talk2Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                skipButton.setVisibility(View.INVISIBLE);
-                story = 7;
+                if(!quizFinished) {
+                    skipButton.setVisibility(View.INVISIBLE);
+                    story = 7;
+                }else {
+                    skipButton.setVisibility(View.INVISIBLE);
+                    story = 17;
+                }
                 showNextStoryText();
 
             }
