@@ -22,7 +22,7 @@ public class lake_talkActivity extends AppCompatActivity {
             R.string.lake_storyLine1_1, R.string.lake_storyLine1_2,
             R.string.lake_storyLine1_3, R.string.lake_storyLine1_4,
             R.string.lake_storyLine1_5_, R.string.lake_storyLine1_6,
-            R.string.lake_storyLine1_7, R.string.lake_storyLine1_8
+            R.string.lake_storyLine1_7, R.string.lake_storyLine1_8,R.string.lake_storyLine1_9_
     };
 
     private final int[] imageResources1 = {R.drawable.maincharacter, android.R.color.transparent};
@@ -70,16 +70,16 @@ public class lake_talkActivity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = settings1.edit();
-//        editor.remove(STORY_STATUS_KEY);
-//        editor.putInt(STORY_STATUS_KEY, 0);
-//        editor.apply();
+        SharedPreferences.Editor editor = settings1.edit();
+        editor.remove(STORY_STATUS_KEY);
+        editor.putInt(STORY_STATUS_KEY, 0);
+        editor.apply();
 
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
 
-        System.out.println("stroyStatus3_1: " + story);
+        System.out.println("stroyStatus4_4: " + story);
 
 
         Button skipButton = (Button) findViewById(R.id.food_skipButton);
@@ -99,7 +99,7 @@ public class lake_talkActivity extends AppCompatActivity {
             food_imageView1.setImageResource(imageResources1[1]);
             food_imageView2.setImageResource(imageResources2[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
+            System.out.println("stroyStatus4_4: " + story);
         }
         else if (story == 1) {
             food_storyText.setText(storyTexts[story]);
@@ -107,21 +107,23 @@ public class lake_talkActivity extends AppCompatActivity {
             food_imageView2.setImageResource(imageResources2[2]);
             mainVisiblelity();
             story++;
-            System.out.println("stroyStatus1_1: " + story);
+            System.out.println("stroyStatus4_4 " + story);
         }else if (story == 2) {
             food_storyText.setText(storyTexts[story]);
             food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[1]);
+            food_imageView2.setImageResource(imageResources2[0]);
             subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
+
         }else if (story == 3) {
             food_storyText.setText(storyTexts[story]);
             food_imageView1.setImageResource(imageResources1[0]);
             food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
+            subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
+
         }else if (story == 4) {
             food_storyText.setText(storyTexts[story]);
             food_imageView1.setImageResource(imageResources1[1]);
@@ -130,16 +132,9 @@ public class lake_talkActivity extends AppCompatActivity {
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 5) {
-            food_storyText.setText(storyTexts[story]);
-            food_imageView1.setImageResource(imageResources1[0]);
-            food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
-            story++;
-            System.out.println("stroyStatus1_1: " + story);
-        }else if (story == 6) {
             if (!quizFinished) {
                 saveLayout(story);
-                Intent intent = new Intent(getApplicationContext(), fd_quiz_1.class);
+                Intent intent = new Intent(getApplicationContext(), fd_quiz_4.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
 
             } else {
@@ -148,32 +143,44 @@ public class lake_talkActivity extends AppCompatActivity {
                 saveLayout(story);
                 System.out.println("stroyStatus1_1_quiz: " + story);
             }
+        }else if (story == 6) {
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView2.setImageResource(imageResources2[0]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
         }
-        else if (story == 7) {  //문제가 나오는 곳
+        else if (story == 7) {
+
 
             food_storyText.setText(storyTexts[story-1]);
             food_imageView1.setImageResource(imageResources1[0]);
             food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
+            subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
-        }else if (story == 8) {
+        }
+        else if (story == 8) {
+
+
             food_storyText.setText(storyTexts[story-1]);
-            food_imageView1.setImageResource(imageResources1[0]);
-            food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
+            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView2.setImageResource(imageResources2[1]);
+            subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 9) {
 
             food_storyText.setText(storyTexts[story-1]);
-            food_imageView1.setImageResource(imageResources1[0]);
+            food_imageView1.setImageResource(imageResources1[1]);
             food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
+            subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
+
         else {
             saveLayout(story);
             findViewById(R.id.nextButton).setVisibility(View.GONE);

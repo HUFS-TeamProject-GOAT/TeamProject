@@ -24,7 +24,7 @@ public class foodhall_talk2Activity extends AppCompatActivity {
     };
 
     private final int[] imageResources1 = {R.drawable.maincharacter, android.R.color.transparent};
-    private final int[] imageResources2 = {R.drawable.minsu, R.drawable.hyerim, android.R.color.transparent};
+    private final int[] imageResources2 = { R.drawable.minsu,R.drawable.nutrician, android.R.color.transparent};
 
     private boolean quizFinished = false;
     private TextView food_storyText;
@@ -67,10 +67,10 @@ public class foodhall_talk2Activity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = settings1.edit();
-//        editor.remove(STORY_STATUS_KEY);
-//        editor.putInt(STORY_STATUS_KEY, 0);
-//        editor.apply();
+        SharedPreferences.Editor editor = settings1.edit();
+        editor.remove(STORY_STATUS_KEY);
+        editor.putInt(STORY_STATUS_KEY, 0);
+        editor.apply();
 
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
@@ -99,6 +99,13 @@ public class foodhall_talk2Activity extends AppCompatActivity {
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 1) {
+            food_storyText.setText(storyTexts[story]);
+            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView2.setImageResource(imageResources2[1]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
+        }else if (story == 2) {
             if (!quizFinished) {
                 saveLayout(story);
                 Intent intent = new Intent(getApplicationContext(), fd_quiz_2.class);
@@ -110,16 +117,10 @@ public class foodhall_talk2Activity extends AppCompatActivity {
                 saveLayout(story);
                 System.out.println("stroyStatus1_1_quiz: " + story);
             }
-        }else if (story == 2) {
-            food_storyText.setText(storyTexts[story-1]);
-            food_imageView1.setImageResource(imageResources1[0]);
-            food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
-            story++;
-            System.out.println("stroyStatus1_1: " + story);
+
         }else if (story == 3) {
             food_storyText.setText(storyTexts[story-1]);
-            food_imageView1.setImageResource(imageResources1[0]);
+            food_imageView1.setImageResource(imageResources1[1]);
             food_imageView2.setImageResource(imageResources2[2]);
             mainVisiblelity();
             story++;
@@ -127,7 +128,7 @@ public class foodhall_talk2Activity extends AppCompatActivity {
         }else if (story == 4) {
             food_storyText.setText(storyTexts[story-1]);
             food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[1]);
+            food_imageView2.setImageResource(imageResources2[0]);
             subVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
@@ -138,20 +139,25 @@ public class foodhall_talk2Activity extends AppCompatActivity {
             mainVisiblelity();
             story++;
             System.out.println("stroyStatus1_1: " + story);
-        }else if (story == 6) {
-
-            if (!quizFinished) {
-                saveLayout(story);
-                Intent intent = new Intent(getApplicationContext(), fd_quiz_2.class);
-                startActivityForResult(intent, YOUR_REQUEST_CODE);
-
-            } else {
-                story++;
-                showNextStoryText();
-                saveLayout(story);
-                System.out.println("stroyStatus1_1_quiz: " + story);
-            }
         }
+        else if (story == 6) {
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView2.setImageResource(imageResources2[0]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
+        }
+
+        else if (story == 7) {
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[0]);
+            food_imageView2.setImageResource(imageResources2[2]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus1_1: " + story);
+        }
+
         else {
             saveLayout(story);
             findViewById(R.id.nextButton).setVisibility(View.GONE);

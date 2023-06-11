@@ -68,10 +68,10 @@ public class foodhall_talk3Activity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = settings1.edit();
-//        editor.remove(STORY_STATUS_KEY);
-//        editor.putInt(STORY_STATUS_KEY, 0);
-//        editor.apply();
+        SharedPreferences.Editor editor = settings1.edit();
+        editor.remove(STORY_STATUS_KEY);
+        editor.putInt(STORY_STATUS_KEY, 0);
+        editor.apply();
 
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
@@ -104,14 +104,14 @@ public class foodhall_talk3Activity extends AppCompatActivity {
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
             food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[2]);
+            food_imageView2.setImageResource(imageResources2[1]);
             story++;
             System.out.println("stroyStatus3_3: " + story);
 
         }else if (story == 2) {
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
-            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView1.setImageResource(imageResources1[0]);
             food_imageView2.setImageResource(imageResources2[2]);
             story++;
             System.out.println("stroyStatus3_3: " + story);
@@ -120,14 +120,14 @@ public class foodhall_talk3Activity extends AppCompatActivity {
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
             food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[2]);
+            food_imageView2.setImageResource(imageResources2[0]);
             story++;
             System.out.println("stroyStatus3_3: " + story);
         }else if (story == 4) {
 
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
-            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView1.setImageResource(imageResources1[0]);
             food_imageView2.setImageResource(imageResources2[2]);
             story++;
         }else if (story == 5) {
@@ -147,26 +147,32 @@ public class foodhall_talk3Activity extends AppCompatActivity {
         }else if (story == 6) {
 
             food_storyText.setText(storyTexts[story-1]);
-            food_imageView1.setImageResource(imageResources1[0]);
-            food_imageView2.setImageResource(imageResources2[2]);
+            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView2.setImageResource(imageResources2[1]);
             mainVisiblelity();
             story++;
             System.out.println("stroyStatus3_3: " + story);
 
         }  else if (story == 7) {
 
-            if (!quizFinished) {
-                saveLayout(story);
-                Intent intent = new Intent(getApplicationContext(), fd_quiz_3.class);
-                startActivityForResult(intent, YOUR_REQUEST_CODE);
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[0]);
+            food_imageView2.setImageResource(imageResources2[2]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus3_3: " + story);
 
-            } else {
-                story++;
-                showNextStoryText();
-                saveLayout(story);
-                System.out.println("stroyStatus3_3_quiz: " + story);
-            }
-        } else {
+        }
+        else if (story == 8) {
+
+            food_storyText.setText(storyTexts[story-1]);
+            food_imageView1.setImageResource(imageResources1[1]);
+            food_imageView2.setImageResource(imageResources2[1]);
+            mainVisiblelity();
+            story++;
+            System.out.println("stroyStatus3_3: " + story);
+
+        }else {
             saveLayout(story);
             findViewById(R.id.nextButton).setVisibility(View.GONE);
             finish();

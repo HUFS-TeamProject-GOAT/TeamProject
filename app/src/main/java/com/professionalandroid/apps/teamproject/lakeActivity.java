@@ -55,6 +55,7 @@ public class lakeActivity extends AppCompatActivity {
                 go_lake2btn.setVisibility(View.INVISIBLE);
                 lake_last_btn.setVisibility(View.VISIBLE);
 
+
             }
         });
         lake_last_btn.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +63,8 @@ public class lakeActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent =new Intent(getApplicationContext(),lake_talkActivity.class);
                 startActivity(intent);
+                finish();
+
             }
         });
 
