@@ -34,13 +34,13 @@ public class endingActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        detailButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intent =new Intent(getApplicationContext(), detail_info_Activity.class);
-                startActivity(intent);
-            }
-        });
+//        detailButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v){
+//                Intent intent =new Intent(getApplicationContext(), detail_info_Activity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 }
