@@ -70,7 +70,7 @@
     <string name="ct_storyLine2_3_">좋습니다. 저희는 사람이 많을수록 원정이 원활해질테니까요.\n내 이름은 카멜롯입니다. 앞으로 잘 부탁하지요.\n여기 이 쪽지를 가지고 그 집에서 생활하면 될 겁니다.</string>
     <string name="ct_storyLine2_4">여기가 우리가 배정받은 집인 모양이야. 동거인이 있는 모양이군.</string>
     <string name="ct_storyLine2_5">안녕, 내 이름은 빅보이라고 해.	 같이 잘 살아남아보자고.</string>
-    <string name="ct_storyLine2_6_">우리는 @userName, 케인이야. 잘 부탁해.</string>
+    <string name="ct_storyLine2_6_">우리는 %s, 케인이야. 잘 부탁해.</string>
 
     <string name="ct_storyLine3_1">자, 주변 환경을 탐색하며 쓸만한 자원을 수집해옵시다.\n각 조마다 이 통들을 드릴테니 쓸모가 있어 보이는 물건은 죄다 담아서 와주시기 바랍니다.</string>
     <string name="ct_storyLine3_2">(모든 조가 5통을 꽉 채워 돌아왔다.)\n이걸 어떻게 쌓아둘까? 꽤 많이 모은 것 같네.\n이 라디오는 큰 수확일지도 몰라.</string>
@@ -91,7 +91,7 @@
     <string name="eg_storyLine2_1">어느덧 조난 생활도 한 달이 되어간다. 규칙에 따라 숙소를 다른 숙소로 옮긴다.\n배정받은 새 방으로 짐을 옮기던 중 일어난 일이다.</string>
     <string name="eg_storyLine2_2">야 케인! 이게 다 뭐야!</string>
     <string name="eg_storyLine2_3">아뿔싸, 케인이 자기 짐을 전부 널브려 놓은 것이다! 땅바닥에 짐을 담아둔 박스 여럿이 놓여있다.\n마침 우리 숙소에 들른 록시는 상황을 이해하지 못한 듯 하다.</string>
-    <string name="eg_storyLine2_4">아 @userName! 나 한번만 도와주라! 내 지갑 찾는 거 한 번만 도와줘!</string>
+    <string name="eg_storyLine2_4">아 %s! 나 한번만 도와주라! 내 지갑 찾는 거 한 번만 도와줘!</string>
     <string name="eg_storyLine2_5">그 안에 뭐가 있길래 이렇게 다 뿌려놓은거야! 뭐 보석이라도 주워둔거냐?</string>
     <string name="eg_storyLine2_6">아니야! 이 중에 지갑이 들어있는 상자가 있을거거든?\n그 안에 우리 가족의 증명사진이 들어있어!\n도와주면 나중에 내 저녁 너한테 줄게!</string>
     <string name="eg_storyLine2_7_">어휴 진짜... 도와줄테니까 빨리 상자 다 까봐!</string>
@@ -196,14 +196,14 @@
     <string name="st_storyLine4_8">어? 이거 눌러보니까 램프가 켜지는데요?\n정말 뭔가 규칙같은게 있는 건가?</string>
     <string name="st_storyLine4_9_">음... 뭔지 알 것 같은데? 내가 해볼게.</string>
     <string name="st_storyLine4_10">도어락이 익숙한 멜로디와 함께 열렸다.\n우웅 소리와 함께 임시 발전기가 가동됐고, 얼음 심장 건물과 마을에도 전기도 들아왔다!\n마을 사람들이 환호했다.</string>
-    <string name="st_storyLine4_11">이야 @userName! 이걸 어떻게 맞춘거야? 무지 똑똑하구만!\n나중에 마을에 돌아가면 이대로 카멜롯에게 보고해도 괜찮지?</string>
+    <string name="st_storyLine4_11">이야 %s! 이걸 어떻게 맞춘거야? 무지 똑똑하구만!\n나중에 마을에 돌아가면 이대로 카멜롯에게 보고해도 괜찮지?</string>
     <string name="st_storyLine4_12">모두가 힘을 합쳤고, 무엇보다 이걸 발견한건 록시에요!\n 전 돕기만 했을 뿐입니다.</string>
     <string name="st_storyLine4_13">너 정말 뭐든 다 해결하는구나... 이젠 좀 무서워지려고 하기도 해 ㅋㅋㅋㅋ</string>
     <string name="st_storyLine4_14">너 뭐냐?? 사람의 지능이 아닌거 같아!</string>
     <string name="st_storyLine4_15_">케인의 마지막 한 마디에 그 자리에 있던 모두가 깔깔거리며 웃었다.</string>
 
     <string name="lb_storyLine1_1">학장님이 나를 찾았다고 한다.\n긴장한 마음으로 학장님의 방에 들어섰다.</string>
-    <string name="lb_storyLine1_2">이야 @userName, 자네로구만.\n이번 성과는 대단했어.</string>
+    <string name="lb_storyLine1_2">이야 %s, 자네로구만.\n이번 성과는 대단했어.</string>
     <string name="lb_storyLine1_3">아닙니다, 선생님.\n저와 케인을 거두어주셨기에 가능했던 일이었습니다.</string>
     <string name="lb_storyLine1_4">자네라면, 내 뒤를 이어 우리 마을 사람들을 이끌 수 있으리라 믿네.\n나같은 늙은이는 이제 물러나도 괜찮을 테지.</string>
     <string name="lb_storyLine1_5">아닙니다. 아직 많이 부족합니다.\n하지만 선생님의 뒤를 이어야한다면, 제가 그렇게 하겠습니다.</string>

@@ -43,6 +43,9 @@ public class ctHallActivity extends AppCompatActivity {
                 currentIndex++;
                 showNextBackground();
 
+                Intent intent =new Intent(getApplicationContext(),cthall_talk2Activity.class);
+                startActivity(intent);
+
                 go_ctHall3btn.setVisibility(View.VISIBLE);
                 go_ctHall4btn.setVisibility(View.INVISIBLE);
                 go_ctHall5btn.setVisibility(View.INVISIBLE);
@@ -57,7 +60,7 @@ public class ctHallActivity extends AppCompatActivity {
                 currentIndex++;
                 showNextBackground();
 
-                Intent intent =new Intent(getApplicationContext(),cthall_talk1Activity.class);
+                Intent intent =new Intent(getApplicationContext(),cthall_talk2Activity.class);
                 startActivity(intent);
 
 
@@ -70,6 +73,21 @@ public class ctHallActivity extends AppCompatActivity {
             }
         });
 
+        go_ctHall4btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                currentIndex++;
+                showNextBackground();
+
+                go_ctHall3btn.setVisibility(View.INVISIBLE);
+                go_ctHall4btn.setVisibility(View.INVISIBLE);
+                go_ctHall5btn.setVisibility(View.VISIBLE);
+                go_ctHall2btn.setVisibility(View.INVISIBLE);
+                ctHall_last_btn.setVisibility(View.INVISIBLE);
+
+
+            }
+        });
         go_ctHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,8 +101,6 @@ public class ctHallActivity extends AppCompatActivity {
                 ctHall_last_btn.setVisibility(View.VISIBLE);
 
 
-                Intent intent =new Intent(getApplicationContext(),cthall_talk2Activity.class);
-                startActivity(intent);
             }
         });
         ctHall_last_btn.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +108,7 @@ public class ctHallActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentIndex++;
                 showNextBackground();
-                Intent intent1 =new Intent(getApplicationContext(),cthall_talk3Activity.class);
+                Intent intent1 =new Intent(getApplicationContext(),cthall_talk2Activity.class);
                 startActivity(intent1);
             }
         });

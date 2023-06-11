@@ -58,7 +58,6 @@
         android:layout_marginEnd="16dp"
         android:autofillHints="name"
         android:gravity="right"
-        android:text="학장"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/lb_storyText"

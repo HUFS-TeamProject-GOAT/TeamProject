@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
@@ -25,17 +26,16 @@ public class lbhall_talkActivity extends AppCompatActivity {
     private static final int YOUR_REQUEST_CODE = 1;
 
     private final int[] storyTexts = {R.string.lb_storyLine1_1, R.string.lb_storyLine1_2, R.string.lb_storyLine1_3, R.string.lb_storyLine1_4, R.string.lb_storyLine1_5,R.string.lb_storyLine1_6_ };
-    private final int[] imageResources1 = {R.drawable.maincharacter, android.R.color.transparent};
-    private final int[] imageResources2 = {R.drawable.president, R.drawable.hyerim, android.R.color.transparent};
+    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.president};
+    private final int[] textResources = {R.layout.activity_lbhall_talk, R.id.maincharacter, R.id.name_president};
 
     private boolean quizFinished = false;
-    private TextView st_storyText;
+    private TextView lb_storyText;
 
     private TextView userName;
-    private TextView hyerim;
-    private TextView president;
-    private ImageView st_imageView1;
-    private ImageView st_imageView2;
+    private TextView subName;
+    private ImageView lb_imageView1;
+    private ImageView lb_imageView2;
 
     private int story;
     private static final String STORY_STATUS_KEY = "storyStatus1_1"; // 스토리 상태를 저장하기 위해 만든 key
@@ -72,14 +72,14 @@ public class lbhall_talkActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        st_storyText = findViewById(R.id.lb_storyText);
-        st_imageView1 = findViewById(R.id.lb_imageView1);
-        st_imageView2 = findViewById(R.id.lb_imageView2);
+        lb_storyText = findViewById(R.id.lb_storyText);
+        lb_imageView1 = findViewById(R.id.lb_imageView1);
+        lb_imageView2 = findViewById(R.id.lb_imageView2);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
         userName = (TextView) findViewById(R.id.userName);
-        president = (TextView) findViewById(R.id.name_president);
+        subName = (TextView) findViewById(R.id.name_president);
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
@@ -107,46 +107,44 @@ public class lbhall_talkActivity extends AppCompatActivity {
     private void showNextStoryText() {
         if (story == 0) {
             saveLayout(story);
-            st_storyText.setText(storyTexts[story]);
-            dark_main();
+            lb_storyText.setText(storyTexts[story]);
+            dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 1) {
-            st_storyText.setText(storyTexts[story]);
-            dark_main();
-            clear_president();
-            subVisiblelity();
+            SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            String user_Name = settings.getString("user_Name", "");
+            String storyText = getString(R.string.lb_storyLine1_2, user_Name);
+            lb_storyText.setText(storyText);
+            dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
+            clear_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 2) {
-            st_storyText.setText(storyTexts[story]);
-            clear_main();
-            dark_president();
-            mainVisiblelity();
+            lb_storyText.setText(storyTexts[story]);
+            clear_character(lb_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 3) {
-            st_storyText.setText(storyTexts[story]);
-            dark_main();
-            clear_president();
-            subVisiblelity();
+            lb_storyText.setText(storyTexts[story]);
+            dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
+            clear_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 4) {
-            st_storyText.setText(storyTexts[story]);
-            clear_main();
-            dark_president();
-            mainVisiblelity();
+            lb_storyText.setText(storyTexts[story]);
+            clear_character(lb_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 5) {
-            st_storyText.setText(storyTexts[story]);
-            dark_main();
-            clear_president();
-            subVisiblelity();
+            lb_storyText.setText(storyTexts[story]);
+            dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
+            clear_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             findViewById(R.id.nextButton).setVisibility(View.GONE);
             findViewById(R.id.endingButton).setVisibility(View.VISIBLE);
             story++;
@@ -158,36 +156,31 @@ public class lbhall_talkActivity extends AppCompatActivity {
 
 
     }
-    protected void mainVisiblelity(){
-        userName.setVisibility(View.VISIBLE);
-        president.setVisibility(View.INVISIBLE);
-    }
-    protected void subVisiblelity(){
-        userName.setVisibility(View.INVISIBLE);
-        president.setVisibility(View.VISIBLE);
-    }
-    protected void dark_main(){
+    protected void dark_character(ImageView image,int imageResources,TextView name,int textResources){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
         ColorMatrix darkMatrix = new ColorMatrix();
         darkMatrix.setSaturation(0);
-        st_imageView1.setImageResource(imageResources1[0]);
-        st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
+        image.setImageResource(imageResources);
+        image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+        if (textResources == R.id.maincharacter) {
+            name.setText(user_Name);
+        }else if (textResources == R.id.name_president) {
+            name.setText("학장");
+        }
+        name.setTextColor(Color.GRAY);
     }
-    protected void clear_main(){
-        st_imageView1.setImageResource(imageResources1[0]);
-        st_imageView1.clearColorFilter();
-    }
-
-    protected void dark_president(){
-        ColorMatrix darkMatrix = new ColorMatrix();
-        darkMatrix.setSaturation(0);
-        st_imageView2.setImageResource(imageResources2[0]);
-        st_imageView2.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
-    }
-    protected void clear_president(){
-        st_imageView2.setImageResource(imageResources2[0]);
-        st_imageView2.clearColorFilter();
+    protected void clear_character(ImageView image,int imageResources,TextView name,int textResources){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
+        image.setImageResource(imageResources);
+        image.clearColorFilter();
+        if (textResources == R.id.maincharacter) {
+            name.setText(user_Name);
+        } else if (textResources == R.id.name_president) {
+            name.setText("학장");
+        }
+        name.setTextColor(Color.BLACK);
     }
 
     @Override

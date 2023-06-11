@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
@@ -25,15 +26,16 @@ public class sthall_talk1Activity extends AppCompatActivity {
     private static final int YOUR_REQUEST_CODE = 1;
 
     private final int[] storyTexts = {R.string.st_storyLine1_1, R.string.st_storyLine1_2, R.string.st_storyLine1_3, R.string.st_storyLine1_4_, R.string.st_storyLine1_5_ };
-    private final int[] imageResources1 = {R.drawable.maincharacter, android.R.color.transparent};
-    private final int[] imageResources2 = {R.drawable.minsu, R.drawable.hyerim, android.R.color.transparent};
+    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyerim};
+    private final int[] textResources = {R.layout.activity_sthall_talk1, R.id.maincharacter, R.id.name_minsu, R.id.name_hyerim};
 
     private boolean quizFinished = false;
     private TextView st_storyText;
 
     private TextView userName;
-    private TextView hyerim;
-    private TextView minsu;
+
+    private TextView subName;
+
     private ImageView st_imageView1;
     private ImageView st_imageView2;
 
@@ -63,12 +65,13 @@ public class sthall_talk1Activity extends AppCompatActivity {
         st_imageView1 = findViewById(R.id.st_imageView1);
         st_imageView2 = findViewById(R.id.st_imageView2);
 
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
         userName = (TextView) findViewById(R.id.userName);
-        hyerim = (TextView) findViewById(R.id.name_hyerim);
-        minsu = (TextView) findViewById(R.id.name_minsu);
+        subName = (TextView) findViewById(R.id.name_hyerim);
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
@@ -86,7 +89,22 @@ public class sthall_talk1Activity extends AppCompatActivity {
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
         showNextStoryText();
+        skipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(quizFinished = false) {
+                    skipButton.setVisibility(View.INVISIBLE);
+                    story = 5;
+                }else {
+                    skipButton.setVisibility(View.INVISIBLE);
+                    story = 6;
+                }
+                showNextStoryText();
+
+            }
+        });
     }
+
     public void saveLayout(int story){
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = settings1.edit();
@@ -98,31 +116,26 @@ public class sthall_talk1Activity extends AppCompatActivity {
         if (story == 0) {
             saveLayout(story);
             st_storyText.setText(storyTexts[story]);
-            dark_main();
+            dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 1) {
             st_storyText.setText(storyTexts[story]);
-            dark_main();
-            clear_minsu();
-            subVisiblelity();
+            dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
+            clear_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 2) {
             st_storyText.setText(storyTexts[story]);
-            clear_main();
-            dark_minsu();
-            subsubVisiblelity();
-            mainVisiblelity();
+            clear_character(st_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 3) {
             st_storyText.setText(storyTexts[story]);
-            dark_main();
-            clear_hyerim();
-            subVisiblelity();
-            subsubVisiblelity();
+            dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
+            clear_character(st_imageView2,imageResources[3],subName,textResources[3]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 4) {//문제나오는곳
@@ -138,9 +151,8 @@ public class sthall_talk1Activity extends AppCompatActivity {
             }
         }else if (story == 5) {
             st_storyText.setText(storyTexts[story-1]);
-            dark_main();
-            dark_minsu();
-            mainVisiblelity();
+            dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }
@@ -150,52 +162,36 @@ public class sthall_talk1Activity extends AppCompatActivity {
             finish();
         }
     }
-    protected void mainVisiblelity(){
-        userName.setVisibility(View.VISIBLE);
-        hyerim.setVisibility(View.INVISIBLE);
-    }
-    protected void subVisiblelity(){
-        userName.setVisibility(View.INVISIBLE);
-        minsu.setVisibility(View.VISIBLE);
-    }
-    protected void subsubVisiblelity(){
-        minsu.setVisibility(View.INVISIBLE);
-        hyerim.setVisibility(View.VISIBLE);
-    }
-    protected void dark_main(){
+    protected void dark_character(ImageView image,int imageResources,TextView name,int textResources){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
         ColorMatrix darkMatrix = new ColorMatrix();
         darkMatrix.setSaturation(0);
-        st_imageView1.setImageResource(imageResources1[0]);
-        st_imageView1.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
+        image.setImageResource(imageResources);
+        image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+        if (textResources == R.id.maincharacter) {
+            name.setText(user_Name);
+        } else if (textResources == R.id.name_minsu) {
+            name.setText("케인");
+        } else if (textResources == R.id.name_hyerim) {
+            name.setText("록시");
+        }
+        name.setTextColor(Color.GRAY);
     }
-    protected void clear_main(){
-        st_imageView1.setImageResource(imageResources1[0]);
-        st_imageView1.clearColorFilter();
+    protected void clear_character(ImageView image,int imageResources,TextView name,int textResources){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
+        image.setImageResource(imageResources);
+        image.clearColorFilter();
+        if (textResources == R.id.maincharacter) {
+            name.setText(user_Name);
+        } else if (textResources == R.id.name_minsu) {
+            name.setText("케인");
+        } else if (textResources == R.id.name_hyerim) {
+            name.setText("록시");
+        }
+        name.setTextColor(Color.BLACK);
     }
-    protected void dark_hyerim(){
-        ColorMatrix darkMatrix = new ColorMatrix();
-        darkMatrix.setSaturation(0);
-        st_imageView2.setImageResource(imageResources2[1]);
-        st_imageView2.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
-    }
-    protected void clear_hyerim(){
-        st_imageView2.setImageResource(imageResources2[1]);
-        st_imageView2.clearColorFilter();
-    }
-    protected void dark_minsu(){
-        ColorMatrix darkMatrix = new ColorMatrix();
-        darkMatrix.setSaturation(0);
-        st_imageView2.setImageResource(imageResources2[0]);
-        st_imageView2.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-
-    }
-    protected void clear_minsu(){
-        st_imageView2.setImageResource(imageResources2[0]);
-        st_imageView2.clearColorFilter();
-    }
-
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -9,21 +10,21 @@
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="next"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/ct_storyText"
-        android:layout_width="404dp"
-        android:layout_height="240dp"
+        android:layout_width="333dp"
+        android:layout_height="207dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="68dp"
         android:layout_marginEnd="69dp"
+        android:layout_marginBottom="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,9 +48,18 @@
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
         android:gravity="right"
-        android:text="록시"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/name_minsu"
+        android:layout_width="122dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="12dp"
+        android:autofillHints="name"
+        android:gravity="right"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -59,7 +69,8 @@
         android:layout_height="210dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/name_hyerim"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="string/sub" />
 
     <ImageView
         android:id="@+id/ct_imageView1"
@@ -67,21 +78,8 @@
         android:layout_height="210dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/userName"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <TextView
-        android:id="@+id/name_minsu"
-        android:layout_width="122dp"
-        android:layout_height="59dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints="name"
-        android:gravity="right"
-        android:text="케인"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/ct_storyText"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="string/main" />
 
     <Button
         android:id="@+id/ct_skipButton"
@@ -92,7 +90,6 @@
         android:text="@string/skipButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
