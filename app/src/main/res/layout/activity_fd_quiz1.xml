@@ -79,18 +79,17 @@
 
         <TextView
             android:id="@+id/quiz_3_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="344dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="박형구는 모자를 쓰는 데에 아래와 같은 이상한 습관이 있다고 한다.
-비가 오는 날에는 모자를 쓰지 않는다.
-흐린 날에는 안 쓰지만, 이틀 연속으로 흐리다면 이틀째에는 쓴다. 아래의 ?를 채워 완성해보자."
+            android:text="@string/fd_quiz_3_1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz3_1_title" />
 

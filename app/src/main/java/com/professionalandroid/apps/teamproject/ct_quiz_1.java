@@ -67,7 +67,7 @@ public class ct_quiz_1 extends AppCompatActivity {
 
             if (isCorrect) {
                 dialog.setTitle("정답");
-                dialog.setMessage("정답입니다! 이제 다양한 문제 풀러 가봅시다!");
+                dialog.setMessage("정답입니다! 이제 문제 풀러 가봅시다!");
             } else {
                 dialog.setTitle("실패");
                 dialog.setMessage("틀렸습니다! 다시 한 번 생각해 보세요");
@@ -144,7 +144,7 @@ public class ct_quiz_1 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(ct_quiz_1.this, ct_quiz_1.class);
+            Intent intent = new Intent(ct_quiz_1.this, homeActivity.class);
             startActivity(intent);
             finish();
         });

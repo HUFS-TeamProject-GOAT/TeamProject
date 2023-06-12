@@ -79,17 +79,17 @@
 
         <TextView
             android:id="@+id/quiz_1_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="346dp"
+            android:layout_height="156dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="백년관에 수업을 들으러 가던 중 공대여신 신혜림을 만났다!
-그런데 신혜림이 바닥의 타일 문양을 구경하다가 자기가 가야 할 강의실이 몇 층인지 까먹었다고 한다. 분명 바닥의 문양과 관련이 있다는 것 만은 기억하고 있다. 신혜림은 몇 층에 가려고 했을까?"
+            android:text="@string/ct_quiz_1_2"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz1_2_title" />
 
@@ -112,18 +112,18 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="353dp"
-            android:layout_height="295dp"
+            android:layout_width="365dp"
+            android:layout_height="312dp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="29dp"
+            android:contentDescription="TODO"
             android:gravity="center_horizontal"
+            android:src="@drawable/elev"
             app:layout_constraintBottom_toTopOf="@+id/ct_2_answer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/quiz_1_2"
-            android:contentDescription="TODO"
-            android:src="@drawable/elev"/>
+            app:layout_constraintTop_toBottomOf="@+id/quiz_1_2" />
 
         <EditText
             android:id="@+id/ct_2_answer"

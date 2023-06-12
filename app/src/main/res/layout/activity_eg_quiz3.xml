@@ -79,18 +79,17 @@
 
         <TextView
             android:id="@+id/quiz_2_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="344dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="28dp"
             android:gravity="center_horizontal"
-            android:text="곽병춘이 과방에 들어가서 자신의 사물함을 열려고 한 순간, 자물쇠가 걸려있는 것을 확인했다.
-바로 그 옆에는 나와 똑같이 시골 출신인 조광옥이라는 학우가 있었다. 조광옥이 나를 적대심 가득한 눈빛으로 노려보고 그림 하나를 건네며 말했다. 신혜림이랑 친해보인다? 멀리서 보니까 되게 똑똑한 척 하던데.
-    그럼 이 그림으로 그 자물쇠도 풀어봐, 어차피 못풀겠지만."
+            android:text="@string/eg_quiz_2_3"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz2_3_title" />
 
@@ -113,8 +112,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="355dp"
-            android:layout_height="271dp"
+            android:layout_width="347dp"
+            android:layout_height="317dp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="29dp"
             android:contentDescription="TODO"

@@ -237,6 +237,7 @@
     <string name="score_format_4_3"> %d/30 </string>
     <string name="score_format_4_4"> %d/50 </string>
 
+     // 호준 수정 요망
     <string name="ct_quiz_1_1">\t 문제를 틀릴 때 마다 -2점 \n힌트를 보게 되면 -1점(이후 감점 없이 계속 볼 수 있다.)\n "다음에" 버튼을 누르면 나중에 문제를 풀 수 있다.\n 답을 입력하고 "제출"을 누르면 정답일시 점수 저장\n 답이 오답일 시 다시 문제로 돌아온다. \n 준비가 되었으면 "제출"을 눌러서 튜토리얼을 완료하자.</string>
     <string name="ct_quiz_1_1_title">튜토리얼 </string>
     <string name="ct_quiz_1_1_hint">여기는 힌트 칸 입니다!</string>
