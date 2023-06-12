@@ -49,9 +49,10 @@
         android:gravity="right"
         android:text="록시"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/food_storyText"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
 
     <ImageView

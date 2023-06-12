@@ -5,7 +5,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,14 +26,14 @@ public class foodhall_talk3Activity extends AppCompatActivity {
             R.string.food_storyLine3_7, R.string.food_storyLine3_8_
     };
 
-    private final int[] imageResources1 = {R.drawable.maincharacter, android.R.color.transparent};
-    private final int[] imageResources2 = {R.drawable.minsu, R.drawable.hyerim, android.R.color.transparent};
+    private final int[] imageResources1 = {android.R.color.transparent, R.drawable.maincharacter, R.drawable.minsu, R.drawable.hyerim};
+    private final int[] textResources= {R.layout.activity_foodhall_talk3,R.id.maincharacter,R.id.name_minsu, R.id.name_hyerim};
 
     private boolean quizFinished = false;
     private TextView food_storyText;
 
     private TextView userName;
-    private TextView hyerim;
+    private TextView subName;
     private ImageView food_imageView1;
     private ImageView food_imageView2;
 
@@ -64,7 +66,7 @@ public class foodhall_talk3Activity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
 
         userName = (TextView) findViewById(R.id.userName);
-        hyerim = (TextView) findViewById(R.id.name_hyerim);
+        subName = (TextView) findViewById(R.id.name_hyerim);
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
@@ -94,8 +96,11 @@ public class foodhall_talk3Activity extends AppCompatActivity {
         if (story == 0) {
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
-            food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[2]);
+
+            dark_character(food_imageView2,imageResources1[3],subName,textResources[3]);
+            dark_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+
+
             story++;
             System.out.println("stroyStatus3_3: " + story);
         }
@@ -103,32 +108,38 @@ public class foodhall_talk3Activity extends AppCompatActivity {
 
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
-            food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[1]);
+
+            clear_character(food_imageView2,imageResources1[3],subName,textResources[3]);
+            dark_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+
+
             story++;
             System.out.println("stroyStatus3_3: " + story);
 
         }else if (story == 2) {
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
-            food_imageView1.setImageResource(imageResources1[0]);
-            food_imageView2.setImageResource(imageResources2[2]);
+            dark_character(food_imageView2,imageResources1[3],subName,textResources[3]);
+            clear_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+
             story++;
             System.out.println("stroyStatus3_3: " + story);
 
         }else if (story == 3) {
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
-            food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[0]);
+            clear_character(food_imageView2,imageResources1[2],subName,textResources[2]);
+            dark_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+
             story++;
             System.out.println("stroyStatus3_3: " + story);
         }else if (story == 4) {
 
             saveLayout(story);
             food_storyText.setText(storyTexts[story]);
-            food_imageView1.setImageResource(imageResources1[0]);
-            food_imageView2.setImageResource(imageResources2[2]);
+            dark_character(food_imageView2,imageResources1[3],subName,textResources[3]);
+            clear_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+
             story++;
         }else if (story == 5) {
 
@@ -147,18 +158,20 @@ public class foodhall_talk3Activity extends AppCompatActivity {
         }else if (story == 6) {
 
             food_storyText.setText(storyTexts[story-1]);
-            food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[1]);
-            mainVisiblelity();
+            clear_character(food_imageView2,imageResources1[3],subName,textResources[3]);
+            dark_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+
             story++;
             System.out.println("stroyStatus3_3: " + story);
 
         }  else if (story == 7) {
 
             food_storyText.setText(storyTexts[story-1]);
-            food_imageView1.setImageResource(imageResources1[0]);
-            food_imageView2.setImageResource(imageResources2[2]);
-            mainVisiblelity();
+
+            dark_character(food_imageView2,imageResources1[3],subName,textResources[3]);
+            clear_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+
+
             story++;
             System.out.println("stroyStatus3_3: " + story);
 
@@ -166,9 +179,9 @@ public class foodhall_talk3Activity extends AppCompatActivity {
         else if (story == 8) {
 
             food_storyText.setText(storyTexts[story-1]);
-            food_imageView1.setImageResource(imageResources1[1]);
-            food_imageView2.setImageResource(imageResources2[1]);
-            mainVisiblelity();
+            clear_character(food_imageView2,imageResources1[3],subName,textResources[3]);
+            dark_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+
             story++;
             System.out.println("stroyStatus3_3: " + story);
 
@@ -178,14 +191,45 @@ public class foodhall_talk3Activity extends AppCompatActivity {
             finish();
         }
     }
-    protected void mainVisiblelity(){
-        userName.setVisibility(View.VISIBLE);
-        hyerim.setVisibility(View.GONE);
+
+    protected void dark_character(ImageView image,int imageResources,TextView name,int textResources){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
+        ColorMatrix darkMatrix = new ColorMatrix();
+        darkMatrix.setSaturation(0);
+        image.setImageResource(imageResources);
+        image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
+        if (textResources == R.id.maincharacter) {
+            name.setText(user_Name);
+        } else if (textResources == R.id.name_minsu) {
+            name.setText("케인");
+        } else if (textResources == R.id.name_hyerim) {
+            name.setText("록시");
+        }
+        else if (textResources == R.id.name_extra) {
+            name.setText("asdf");
+        }
+
+        name.setTextColor(Color.GRAY);
     }
-    protected void subVisiblelity(){
-        userName.setVisibility(View.GONE);
-        hyerim.setVisibility(View.VISIBLE);
+    protected void clear_character(ImageView image,int imageResources,TextView name,int textResources){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
+        image.setImageResource(imageResources);
+        image.clearColorFilter();
+        if (textResources == R.id.maincharacter) {
+            name.setText(user_Name);
+        } else if (textResources == R.id.name_minsu) {
+            name.setText("케인");
+        } else if (textResources == R.id.name_hyerim) {
+            name.setText("록시");
+        }
+        else if (textResources == R.id.name_extra) {
+            name.setText("asdf");
+        }
+        name.setTextColor(Color.BLACK);
     }
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {

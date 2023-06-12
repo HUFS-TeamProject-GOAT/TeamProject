@@ -111,7 +111,7 @@ public class foodhall_talk1Activity extends AppCompatActivity {
             saveLayout(story);
 
             food_storyText.setText(storyTexts[story]);
-
+            dark_character(food_imageView2,imageResources1[4],subName,textResources[4]);
             dark_character(food_imageView1,imageResources1[1],userName,textResources[1]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
@@ -119,8 +119,8 @@ public class foodhall_talk1Activity extends AppCompatActivity {
         else if (story == 1) {
             food_storyText.setText(storyTexts[story]);
 
-            dark_character(food_imageView1,imageResources1[1],userName,textResources[1]);
-            clear_character(food_imageView2,imageResources1[4],subName,textResources[3]);
+            //dark_character(food_imageView1,imageResources1[1],userName,textResources[1]);
+            clear_character(food_imageView2,imageResources1[4],subName,textResources[4]);
             story++;
             System.out.println("stroyStatus1_1: " + story);
         }else if (story == 2) {
