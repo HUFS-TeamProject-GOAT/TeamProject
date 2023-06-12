@@ -9,19 +9,21 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class lakeActivity extends AppCompatActivity {
+
+    private int currentIndex = 0;
+    private final int[] imageBackground = {R.drawable.lake1, R.drawable.lake2, R.drawable.lake3};
+    private ImageView lake_Background;
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.lake);
 
+        lake_Background = findViewById(R.id.lake_Background);
         ImageButton go_home_btn = (ImageButton) findViewById(R.id.go_home_btn);
         ImageButton go_lake2btn = (ImageButton) findViewById(R.id.go_lake2btn);
         ImageButton go_lake3btn = (ImageButton) findViewById(R.id.go_lake3btn);
         ImageButton lake_last_btn = (ImageButton) findViewById(R.id.lake_last_btn);
+        showNextBackground();
 
-
-        ImageView lake3 = (ImageView) findViewById(R.id.lake3);
-        ImageView lake2 = (ImageView) findViewById(R.id.lake2);
-        ImageView lake1 = (ImageView) findViewById(R.id.lake1);
 
 
         go_home_btn.setOnClickListener(new View.OnClickListener() {
@@ -29,14 +31,14 @@ public class lakeActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         go_lake2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lake2.setVisibility(View.VISIBLE);
-                lake1.setVisibility(View.INVISIBLE);
-                lake3.setVisibility(View.INVISIBLE);
+                currentIndex++;
+                showNextBackground();
 
                 go_lake3btn.setVisibility(View.VISIBLE);
                 go_lake2btn.setVisibility(View.INVISIBLE);
@@ -47,9 +49,8 @@ public class lakeActivity extends AppCompatActivity {
         go_lake3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lake2.setVisibility(View.INVISIBLE);
-                lake1.setVisibility(View.INVISIBLE);
-                lake3.setVisibility(View.VISIBLE);
+                currentIndex++;
+                showNextBackground();
 
                 go_lake3btn.setVisibility(View.INVISIBLE);
                 go_lake2btn.setVisibility(View.INVISIBLE);
@@ -60,10 +61,24 @@ public class lakeActivity extends AppCompatActivity {
         lake_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                currentIndex++;
+                showNextBackground();
                 Intent intent =new Intent(getApplicationContext(),lake_talkActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
+    }
+    private void showNextBackground() {
+        if (currentIndex == 0) {
+            lake_Background.setImageResource(imageBackground[0]);
+        }
+        else if (currentIndex == 1) {
+            lake_Background.setImageResource(imageBackground[1]);
+        }
+        else if (currentIndex == 2) {
+            lake_Background.setImageResource(imageBackground[2]);
+        }
     }
 }

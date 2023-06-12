@@ -27,7 +27,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
 
     private final int[] storyTexts = {R.string.lb_storyLine1_1, R.string.lb_storyLine1_2, R.string.lb_storyLine1_3, R.string.lb_storyLine1_4, R.string.lb_storyLine1_5,R.string.lb_storyLine1_6_ };
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.president};
-    private final int[] textResources = {R.layout.activity_lbhall_talk, R.id.maincharacter, R.id.name_president};
+    private final int[] textResources = {R.layout.activity_lbhall_talk, R.id.userName, R.id.name_president};
 
     private boolean quizFinished = false;
     private TextView lb_storyText;
@@ -38,7 +38,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
     private ImageView lb_imageView2;
 
     private int story;
-    private static final String STORY_STATUS_KEY = "storyStatus1_1"; // 스토리 상태를 저장하기 위해 만든 key
+    private static final String STORY_STATUS_KEY = "storyStatus"+16; // 스토리 상태를 저장하기 위해 만든 key
 
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
@@ -70,6 +70,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent =new Intent(getApplicationContext(),endingActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         lb_storyText = findViewById(R.id.lb_storyText);
@@ -91,9 +92,6 @@ public class lbhall_talkActivity extends AppCompatActivity {
         saveLayout(story);
 
 
-        System.out.println("stroyStatus1_1: " + story);
-
-
 
         showNextStoryText();
     }
@@ -105,41 +103,36 @@ public class lbhall_talkActivity extends AppCompatActivity {
     }
 
     private void showNextStoryText() {
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String user_Name = settings.getString("user_Name", "");
         if (story == 0) {
             saveLayout(story);
             lb_storyText.setText(storyTexts[story]);
             dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 1) {
-            SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-            String user_Name = settings.getString("user_Name", "");
             String storyText = getString(R.string.lb_storyLine1_2, user_Name);
             lb_storyText.setText(storyText);
             dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }else if (story == 2) {
             lb_storyText.setText(storyTexts[story]);
             clear_character(lb_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }else if (story == 3) {
             lb_storyText.setText(storyTexts[story]);
             dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 4) {
             lb_storyText.setText(storyTexts[story]);
             clear_character(lb_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 5) {
             lb_storyText.setText(storyTexts[story]);
@@ -148,7 +141,6 @@ public class lbhall_talkActivity extends AppCompatActivity {
             findViewById(R.id.nextButton).setVisibility(View.GONE);
             findViewById(R.id.endingButton).setVisibility(View.VISIBLE);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else {
             saveLayout(story);
@@ -163,10 +155,10 @@ public class lbhall_talkActivity extends AppCompatActivity {
         darkMatrix.setSaturation(0);
         image.setImageResource(imageResources);
         image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         }else if (textResources == R.id.name_president) {
-            name.setText("학장");
+            name.setText("");
         }
         name.setTextColor(Color.GRAY);
     }
@@ -175,10 +167,10 @@ public class lbhall_talkActivity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
         image.setImageResource(imageResources);
         image.clearColorFilter();
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_president) {
-            name.setText("학장");
+            name.setText("솔론");
         }
         name.setTextColor(Color.BLACK);
     }

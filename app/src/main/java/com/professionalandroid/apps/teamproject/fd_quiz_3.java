@@ -121,10 +121,8 @@ public class fd_quiz_3 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_3.this);
-            builder.setTitle("힌트");
-            builder.setMessage("1개의 체인을 이루고 있는 링의 개수가 키포인트.\n" +
-                    "체인의 양쪽 끝만 열어야 한다고 생각하고 있는 건 아니지~?\n" +
-                    "체인 중 하난를 골라 모든 링을 연 다음, 남은 7개의 체인을 연결한해봐!");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.fd_quiz_3_3_hint));
 
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();

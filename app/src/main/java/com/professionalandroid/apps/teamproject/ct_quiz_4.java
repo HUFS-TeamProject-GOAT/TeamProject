@@ -120,8 +120,8 @@ public class ct_quiz_4 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_4.this);
-            builder.setTitle("힌트");
-            builder.setMessage("2차원의 그림에서는 가능하지만 실제로 종이컵을 쌓아보면 불가능한 디자인이 하나있다. 잘 찾아보자!");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.ct_quiz_1_4_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

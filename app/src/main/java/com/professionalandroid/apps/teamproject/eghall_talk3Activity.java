@@ -26,7 +26,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
 
     private final int[] storyTexts = {R.string.eg_storyLine3_1, R.string.eg_storyLine3_2, R.string.eg_storyLine3_3, R.string.eg_storyLine3_4,R.string.eg_storyLine3_5, R.string.eg_storyLine3_6, R.string.eg_storyLine3_7, R.string.eg_storyLine3_8, R.string.eg_storyLine3_9, R.string.eg_storyLine3_10_, R.string.eg_storyLine3_11, R.string.eg_storyLine3_12, R.string.eg_storyLine3_13, R.string.eg_storyLine3_14_};
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyerim, R.drawable.hyunggu};
-    private final int[] textResources = {R.layout.activity_eghall_talk1, R.id.maincharacter, R.id.name_minsu, R.id.name_hyerim, R.drawable.hyunggu};
+    private final int[] textResources = {R.layout.activity_eghall_talk1, R.id.userName, R.id.name_minsu, R.id.name_hyerim, R.drawable.hyunggu};
 
     private boolean quizFinished = false;
     private TextView eg_storyText;
@@ -37,7 +37,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
     private ImageView eg_imageView2;
 
     private int story;
-    private static final String STORY_STATUS_KEY = "storyStatus2_3"; // 스토리 상태를 저장하기 위해 만든 key
+    private static final String STORY_STATUS_KEY = "storyStatus"+6; // 스토리 상태를 저장하기 위해 만든 key
 
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
@@ -68,14 +68,15 @@ public class eghall_talk3Activity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
         userName = (TextView) findViewById(R.id.userName);
-        subName = (TextView) findViewById(R.id.name_hyerim); // subName으로 변경
+        subName = (TextView) findViewById(R.id.name_hyerim);
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = settings1.edit();
-        editor.remove(STORY_STATUS_KEY);
-        editor.putInt(STORY_STATUS_KEY, 0);
-        editor.apply();
+        // 초기화
+//        SharedPreferences.Editor editor = settings1.edit();
+//        editor.remove(STORY_STATUS_KEY);
+//        editor.putInt(STORY_STATUS_KEY, 0);
+//        editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
@@ -89,10 +90,9 @@ public class eghall_talk3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!quizFinished) {
-                    skipButton.setVisibility(View.INVISIBLE);
                     story = 10;
                 }else {
-                    skipButton.setVisibility(View.INVISIBLE);
+                    skipButton.setVisibility(View.GONE);
                     story = 15;
                 }
                 showNextStoryText();
@@ -204,7 +204,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
         darkMatrix.setSaturation(0);
         image.setImageResource(imageResources);
         image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
@@ -220,7 +220,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
         image.setImageResource(imageResources);
         image.clearColorFilter();
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");

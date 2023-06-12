@@ -138,8 +138,8 @@ public class eg_quiz_1 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_1.this);
-            builder.setTitle("힌트");
-            builder.setMessage("구석 부분부터 표시를 해 보자. 대부분의 면은 2색만 사용해도 문제없이 칠할 수 있다. 하지만 왼쪽 아래 부분에는 1색이 더 필요하다는 사실!");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.eg_quiz_2_1_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

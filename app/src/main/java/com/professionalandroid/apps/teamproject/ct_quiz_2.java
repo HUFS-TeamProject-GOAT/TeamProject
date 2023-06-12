@@ -122,8 +122,8 @@ public class ct_quiz_2 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_2.this);
-            builder.setTitle("힌트");
-            builder.setMessage("안쪽에 있는 정삼각형을 180도로 돌려보면 어떨까?");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.ct_quiz_1_2_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

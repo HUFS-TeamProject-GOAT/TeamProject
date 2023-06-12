@@ -125,10 +125,8 @@ public class st_quiz_4 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_4.this);
-            builder.setTitle("힌트");
-            builder.setMessage(" 숫자가 들어갈 자리는 제쳐 두고 어떤 숫자가 사용될지부터 먼저 생각해보자." +
-                    "\n 첫 번째 줄에서 알 수 있는 사실은 4개의 숫자가 4150이라는 사실." +
-                    "\n 그 중 위치까지 맞는 숫자는 2개, 잘 생각해 보자.");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.st_quiz_4_4_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

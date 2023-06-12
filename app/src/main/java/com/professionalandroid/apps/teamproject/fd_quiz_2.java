@@ -121,8 +121,8 @@ public class fd_quiz_2 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_2.this);
-            builder.setTitle("힌트");
-            builder.setMessage("제일 처음에 골라야 할 사람은 선 중 한명이다. 반시계 방향으로 세어 보자. 가장 처음에 빠지는 사람은 5시 방향에 있는 악이다.");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.fd_quiz_3_2_hint));
 
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();

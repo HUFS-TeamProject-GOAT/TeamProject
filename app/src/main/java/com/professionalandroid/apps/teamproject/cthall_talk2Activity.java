@@ -24,8 +24,8 @@ public class cthall_talk2Activity extends AppCompatActivity {
     private static final int YOUR_REQUEST_CODE = 1;
 
     private final int[] storyTexts = {R.string.ct_storyLine2_1, R.string.ct_storyLine2_2, R.string.ct_storyLine2_3_, R.string.ct_storyLine2_4, R.string.ct_storyLine2_5, R.string.ct_storyLine2_6_};
-    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyunggu,R.drawable.professor};
-    private final int[] textResources = {R.layout.activity_cthall_talk2, R.id.maincharacter, R.id.name_minsu, R.id.name_hyunggu, R.id.name_professor};
+    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyunggu,R.drawable.professor2};
+    private final int[] textResources = {R.layout.activity_cthall_talk2, R.id.userName, R.id.name_minsu, R.id.name_hyunggu, R.id.name_professor2};
 
     private boolean quizFinished = false;
     private TextView ct_storyText;
@@ -36,7 +36,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
     private ImageView ct_imageView2;
 
     private int story;
-    private static final String STORY_STATUS_KEY = "storyStatus1_3"; // 스토리 상태를 저장하기 위해 만든 key
+    private static final String STORY_STATUS_KEY = "storyStatus"+2; // 스토리 상태를 저장하기 위해 만든 key
 
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
@@ -85,10 +85,9 @@ public class cthall_talk2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!quizFinished) {
-                    skipButton.setVisibility(View.INVISIBLE);
                     story = 3;
                 }else {
-                    skipButton.setVisibility(View.INVISIBLE);
+                    skipButton.setVisibility(View.GONE);
                     story = 7;
                 }
                 showNextStoryText();
@@ -156,13 +155,13 @@ public class cthall_talk2Activity extends AppCompatActivity {
         darkMatrix.setSaturation(0);
         image.setImageResource(imageResources);
         image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
         } else if (textResources == R.id.name_hyunggu) {
             name.setText("빅보이");
-        } else if (textResources == R.id.name_professor) {
+        } else if (textResources == R.id.name_professor2) {
             name.setText("카멜롯");
         }
         name.setTextColor(Color.GRAY);
@@ -172,13 +171,13 @@ public class cthall_talk2Activity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
         image.setImageResource(imageResources);
         image.clearColorFilter();
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
         } else if (textResources == R.id.name_hyunggu) {
             name.setText("빅보이");
-        } else if (textResources == R.id.name_professor) {
+        } else if (textResources == R.id.name_professor2) {
             name.setText("카멜롯");
         }
         name.setTextColor(Color.BLACK);

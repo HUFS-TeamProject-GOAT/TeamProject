@@ -121,8 +121,8 @@ public class st_quiz_1 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_1.this);
-            builder.setTitle("힌트");
-            builder.setMessage("많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.st_quiz_4_1_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

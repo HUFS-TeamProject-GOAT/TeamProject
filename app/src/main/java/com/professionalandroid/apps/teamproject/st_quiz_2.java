@@ -120,9 +120,8 @@ public class st_quiz_2 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_2.this);
-            builder.setTitle("힌트");
-            builder.setMessage(" 붉은 다이얼과 푸른 다이얼은 같은 양만큼 돌아가지만," +
-                    "\n 한쪽은 숫자가 커지고 있는 반면 한쪽은 작아지고 있다.");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.st_quiz_4_2_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

@@ -35,6 +35,7 @@ public class stHallActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         go_stHall2btn.setOnClickListener(new View.OnClickListener() {

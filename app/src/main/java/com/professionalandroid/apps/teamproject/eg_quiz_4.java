@@ -121,9 +121,8 @@ public class eg_quiz_4 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_4.this);
-            builder.setTitle("힌트");
-            builder.setMessage("일부는 황소뿔 모자를 받았다고 한다. 즉, 황소뿔 모자를 쓴 아이는 4명 이상이었다는 뜻이다.\n" +
-                    "또한 못 받은 학우도 있다는 뜻이다. 만약 모든 학우들이 황소뿔 모자를 쓰고 있다면, 모두가 황소뿔 모자를 쓴 학우를 4명 이상 봤을 것이다.");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.eg_quiz_2_4_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

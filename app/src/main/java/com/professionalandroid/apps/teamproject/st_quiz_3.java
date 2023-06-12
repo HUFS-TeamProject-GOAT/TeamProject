@@ -127,12 +127,8 @@ public class st_quiz_3 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_3.this);
-            builder.setTitle("힌트");
-            builder.setMessage(" 우선 모든 보석의 값을 더해 보자." +
-                    "\n 모든 보석에 매겨진 값을 더하면 7800이 된다. " +
-                    "\n 이를 3줄로 나누어야 하므로, 각 줄의 합계는 2600이 될 것이다." +
-                    "\n 1000이상의 값을 지닌 3개의 보석은 각각 다른 줄에 속한다. 또한 각 줄의 끝에 배치되어 있다." +
-                    "\n 이제 어느 방향으로 더해 나갈지만 생각하면 된다!");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.st_quiz_4_3_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

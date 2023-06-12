@@ -122,7 +122,7 @@ public class fd_quiz_1 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_1.this);
             builder.setTitle("힌트");
-            builder.setMessage("우선 모자를 쓰지 않은 날에 비 그림을 넣어보자. 모자를 쓰지 않은 날에 비 그림을 넣어 버리면, 흐림 그림을 어디에도 넣을 수 없게 된다. 지난 일주일 사이에는 이틀 연속으로 흐렸던 날이 없는 모양이다. 잘생각해 보자!");
+            builder.setMessage(getString(R.string.fd_quiz_3_1_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

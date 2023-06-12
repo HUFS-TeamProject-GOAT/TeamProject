@@ -33,6 +33,7 @@ public class egHallActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         go_egHall2btn.setOnClickListener(new View.OnClickListener() {
@@ -122,9 +123,11 @@ public class egHallActivity extends AppCompatActivity {
             eg_Background.setImageResource(imageBackground[1]);
         }
         else if (currentIndex == 2) {
-            eg_Background.setImageResource(imageBackground[3]);
+            eg_Background.setImageResource(imageBackground[2]);
         }
         else if (currentIndex == 3) {
+            eg_Background.setImageResource(imageBackground[3]);
+        }else if (currentIndex == 4) {
             eg_Background.setImageResource(imageBackground[4]);
         }
     }

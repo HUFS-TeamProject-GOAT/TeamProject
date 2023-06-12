@@ -122,8 +122,8 @@ public class eg_quiz_2 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_2.this);
-            builder.setTitle("힌트");
-            builder.setMessage("사물함의 손잡이, 트로피를 유심히 보자!");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.eg_quiz_2_2_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

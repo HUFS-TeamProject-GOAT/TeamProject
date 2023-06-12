@@ -3,7 +3,7 @@
     <string name="info_lake">생명의 샘 </string>
     <string name="egHall_explain"> 진눈개비 마을</string>
     <string name="ctHall_explain"> 서리눈사람 마을</string>
-    <string name="lbHall_explain"> 학장님의 방</string>
+    <string name="lbHall_explain"> 솔론의 방</string>
     <string name="lgHall_explain"> 얼음심장 </string>
     <string name="foodhall_explain">배급소</string>
     <string name="cpsImage">campusImage</string>
@@ -201,7 +201,7 @@
     <string name="st_storyLine4_14">너 뭐냐?? 사람의 지능이 아닌거 같아!</string>
     <string name="st_storyLine4_15_">케인의 마지막 한 마디에 그 자리에 있던 모두가 깔깔거리며 웃었다.</string>
 
-    <string name="lb_storyLine1_1">학장님이 나를 찾았다고 한다.\n긴장한 마음으로 학장님의 방에 들어섰다.</string>
+    <string name="lb_storyLine1_1">솔론님이 나를 찾았다고 한다.\n긴장한 마음으로 솔론님의 방에 들어섰다.</string>
     <string name="lb_storyLine1_2">이야 %s, 자네로구만.\n이번 성과는 대단했어.</string>
     <string name="lb_storyLine1_3">아닙니다, 선생님.\n저와 케인을 거두어주셨기에 가능했던 일이었습니다.</string>
     <string name="lb_storyLine1_4">자네라면, 내 뒤를 이어 우리 마을 사람들을 이끌 수 있으리라 믿네.\n나같은 늙은이는 이제 물러나도 괜찮을 테지.</string>
@@ -275,7 +275,7 @@
 
     <string name="fd_quiz_3_1">\t 보류</string>
     <string name="fd_quiz_3_1_title">보류</string>
-    <string name="fd_quiz_3_1_hint"></string>
+    <string name="fd_quiz_3_1_hint">-</string>
 
     <string name="fd_quiz_3_2">\t 어느 날, 주민 12명이 모여 보드게임을 한다.\n시민 카드와 악당 카드가 6장씩 섞여있다.\n자신을 첫 번째로 지정하고 6번째에 해당하는 사람은 제외된다.\n이를 몇 번 반복했더니 시민만이 6명 남았다.\n누구부터 세기 시작했을까? 방향은 한 방향으로만 셀 수 있다.</string>
     <string name="fd_quiz_3_2_title">시민만 남도록</string>

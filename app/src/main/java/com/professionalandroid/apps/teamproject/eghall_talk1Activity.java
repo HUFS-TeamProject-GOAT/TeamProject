@@ -26,7 +26,7 @@ public class eghall_talk1Activity extends AppCompatActivity {
 
     private final int[] storyTexts = {R.string.eg_storyLine1_1, R.string.eg_storyLine1_2, R.string.eg_storyLine1_3, R.string.eg_storyLine1_4_,R.string.eg_storyLine1_5, R.string.eg_storyLine1_6, R.string.eg_storyLine1_7_};
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyerim};
-    private final int[] textResources = {R.layout.activity_eghall_talk1, R.id.maincharacter, R.id.name_minsu, R.id.name_hyerim};
+    private final int[] textResources = {R.layout.activity_eghall_talk1, R.id.userName, R.id.name_minsu, R.id.name_hyerim};
 
     private boolean quizFinished = false;
     private TextView eg_storyText;
@@ -37,7 +37,7 @@ public class eghall_talk1Activity extends AppCompatActivity {
     private ImageView eg_imageView2;
 
     private int story;
-    private static final String STORY_STATUS_KEY = "storyStatus2_1"; // 스토리 상태를 저장하기 위해 만든 key
+    private static final String STORY_STATUS_KEY = "storyStatus"+4; // 스토리 상태를 저장하기 위해 만든 key
 
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
@@ -72,10 +72,11 @@ public class eghall_talk1Activity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = settings1.edit();
-        editor.remove(STORY_STATUS_KEY);
-        editor.putInt(STORY_STATUS_KEY, 0);
-        editor.apply();
+        // 초기화
+//        SharedPreferences.Editor editor = settings1.edit();
+//        editor.remove(STORY_STATUS_KEY);
+//        editor.putInt(STORY_STATUS_KEY, 0);
+//        editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
@@ -89,10 +90,9 @@ public class eghall_talk1Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!quizFinished) {
-                    skipButton.setVisibility(View.INVISIBLE);
                     story = 4;
                 }else {
-                    skipButton.setVisibility(View.INVISIBLE);
+                    skipButton.setVisibility(View.GONE);
                     story = 8;
                 }
                 showNextStoryText();
@@ -168,7 +168,7 @@ public class eghall_talk1Activity extends AppCompatActivity {
         darkMatrix.setSaturation(0);
         image.setImageResource(imageResources);
         image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
@@ -182,7 +182,7 @@ public class eghall_talk1Activity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
         image.setImageResource(imageResources);
         image.clearColorFilter();
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");

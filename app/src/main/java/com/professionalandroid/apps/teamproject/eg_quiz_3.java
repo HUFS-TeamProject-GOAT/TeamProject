@@ -122,8 +122,8 @@ public class eg_quiz_3 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_3.this);
-            builder.setTitle("힌트");
-            builder.setMessage("창틀의 나사를 기준으로 생각해보자. 창틀의 나사를 기준으로 가로 세로로 선을 그어 보면, 그림을 10개 로 등분할 수 있다. 이제 생각하기 편해졌을 것이다.");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.eg_quiz_2_3_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

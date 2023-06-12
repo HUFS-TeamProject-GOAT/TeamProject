@@ -32,6 +32,7 @@ public class foodHallActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         go_foodHall2btn.setOnClickListener(new View.OnClickListener() {
@@ -106,9 +107,11 @@ public class foodHallActivity extends AppCompatActivity {
             food_Background.setImageResource(imageBackground[1]);
         }
         else if (currentIndex == 2) {
-            food_Background.setImageResource(imageBackground[3]);
+            food_Background.setImageResource(imageBackground[2]);
         }
         else if (currentIndex == 3) {
+            food_Background.setImageResource(imageBackground[3]);
+        }else if (currentIndex == 4) {
             food_Background.setImageResource(imageBackground[4]);
         }
     }

@@ -24,8 +24,8 @@ public class cthall_talk3Activity extends AppCompatActivity {
     private static final int YOUR_REQUEST_CODE = 1;
 
     private final int[] storyTexts = {R.string.ct_storyLine3_1, R.string.ct_storyLine3_2, R.string.ct_storyLine3_3, R.string.ct_storyLine3_4_, R.string.ct_storyLine3_5, R.string.ct_storyLine3_6, R.string.ct_storyLine3_7_};
-    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.professor};
-    private final int[] textResources = {R.layout.activity_cthall_talk3, R.id.maincharacter, R.id.name_minsu, R.id.name_professor};
+    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.professor2};
+    private final int[] textResources = {R.layout.activity_cthall_talk3, R.id.userName, R.id.name_minsu, R.id.name_professor2};
 
     private boolean quizFinished = false;
     private TextView ct_storyText;
@@ -36,7 +36,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
     private ImageView ct_imageView2;
 
     private int story;
-    private static final String STORY_STATUS_KEY = "storyStatus1_4"; // 스토리 상태를 저장하기 위해 만든 key
+    private static final String STORY_STATUS_KEY = "storyStatus"+3; // 스토리 상태를 저장하기 위해 만든 key
 
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
@@ -67,7 +67,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
         userName = (TextView) findViewById(R.id.userName);
-        subName = (TextView) findViewById(R.id.name_minsu); // subName으로 변경
+        subName = (TextView) findViewById(R.id.name_minsu);
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
@@ -84,10 +84,9 @@ public class cthall_talk3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!quizFinished) {
-                    skipButton.setVisibility(View.INVISIBLE);
                     story = 4;
                 }else {
-                    skipButton.setVisibility(View.INVISIBLE);
+                    skipButton.setVisibility(View.GONE);
                     story = 8;
                 }
                 showNextStoryText();
@@ -159,11 +158,11 @@ public class cthall_talk3Activity extends AppCompatActivity {
         darkMatrix.setSaturation(0);
         image.setImageResource(imageResources);
         image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
-        } else if (textResources == R.id.name_professor) {
+        } else if (textResources == R.id.name_professor2) {
             name.setText("카멜롯");
         }
         name.setTextColor(Color.GRAY);
@@ -173,11 +172,11 @@ public class cthall_talk3Activity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
         image.setImageResource(imageResources);
         image.clearColorFilter();
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
-        } else if (textResources == R.id.name_professor) {
+        } else if (textResources == R.id.name_professor2) {
             name.setText("카멜롯");
         }
         name.setTextColor(Color.BLACK);

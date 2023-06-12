@@ -123,8 +123,8 @@ public class ct_quiz_1 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_1.this);
-            builder.setTitle("힌트");
-            builder.setMessage("여기는 힌트를 보여주는 칸입니다.");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.ct_quiz_1_1_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

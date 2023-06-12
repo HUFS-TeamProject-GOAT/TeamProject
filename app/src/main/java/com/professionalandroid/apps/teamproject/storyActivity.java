@@ -26,7 +26,7 @@ public class storyActivity extends AppCompatActivity {
 
     private final int[] storyTexts = {R.string.storyLine1, R.string.storyLine2, R.string.storyLine3, R.string.storyLine4,R.string.storyLine5, R.string.storyLine6, R.string.storyLine7};
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu};
-    private final int[] textResources = {R.layout.activity_cthall_talk1, R.id.maincharacter, R.id.name_minsu};
+    private final int[] textResources = {R.layout.activity_cthall_talk1, R.id.userName, R.id.name_minsu};
 
     private boolean quizFinished = false;
     private TextView ct_storyText;
@@ -37,7 +37,7 @@ public class storyActivity extends AppCompatActivity {
     private ImageView ct_imageView2;
 
     private int story;
-    private static final String STORY_STATUS_KEY = "storyStatus1_1"; // 스토리 상태를 저장하기 위해 만든 key
+    private static final String STORY_STATUS_KEY = "storyStatus"+0; // 스토리 상태를 저장하기 위해 만든 key
 
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
@@ -72,6 +72,7 @@ public class storyActivity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
+        // 초기화
         SharedPreferences.Editor editor = settings1.edit();
         editor.remove(STORY_STATUS_KEY);
         editor.putInt(STORY_STATUS_KEY, 0);
@@ -88,7 +89,7 @@ public class storyActivity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                skipButton.setVisibility(View.INVISIBLE);
+                skipButton.setVisibility(View.GONE);
                 story = 7;
                 showNextStoryText();
 
@@ -137,7 +138,7 @@ public class storyActivity extends AppCompatActivity {
             ct_storyText.setText(storyTexts[story]);
             clear_character(ct_imageView1,imageResources[1],userName,textResources[1]);
             story++;
-        }else if (story == 7) {  //문제가 나오는 곳
+        }else if (story == 7) {  // quiz
             if (!quizFinished) {
                 saveLayout(story);
                 Intent intent = new Intent(getApplicationContext(), ct_quiz_1.class);
@@ -149,7 +150,6 @@ public class storyActivity extends AppCompatActivity {
                 System.out.println("storyStatus1_1_quiz: " + story);
             }
         } else {
-            findViewById(R.id.nextButton).setVisibility(View.GONE);
             Intent intent = new Intent(getApplicationContext(), homeActivity.class);
             startActivity(intent);
             finish();
@@ -162,7 +162,7 @@ public class storyActivity extends AppCompatActivity {
         darkMatrix.setSaturation(0);
         image.setImageResource(imageResources);
         image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
@@ -174,7 +174,7 @@ public class storyActivity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
         image.setImageResource(imageResources);
         image.clearColorFilter();
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");

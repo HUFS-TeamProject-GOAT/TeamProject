@@ -121,8 +121,8 @@ public class fd_quiz_4 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_4.this);
-            builder.setTitle("힌트");
-            builder.setMessage("가장 작은 팬케이크를 붉은 접시에 올려놓고, 중간 크기의 팬케이크를 가운데 접시에 올려놓아 보자. 그리고 가장 작은 팬케이크를 중간 크기의 팬케이크에 올려놓으면, 가장 큰 팬케이크를 붉은 접시에 올려놓을 수 있다.");
+            builder.setTitle(getString(R.string.hint));
+            builder.setMessage(getString(R.string.fd_quiz_3_4_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 

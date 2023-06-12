@@ -28,7 +28,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
     private final int[] storyTexts = {R.string.st_storyLine4_1, R.string.st_storyLine4_2, R.string.st_storyLine4_3, R.string.st_storyLine4_4, R.string.st_storyLine4_5,R.string.st_storyLine4_6,R.string.st_storyLine4_7,R.string.st_storyLine4_8,R.string.st_storyLine4_9_,R.string.st_storyLine4_10,R.string.st_storyLine4_11,R.string.st_storyLine4_12,R.string.st_storyLine4_13,R.string.st_storyLine4_14,R.string.st_storyLine4_15_};
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyerim, R.drawable.security};
 
-    private final int[] textResources = {R.layout.activity_sthall_talk4, R.id.maincharacter, R.id.name_minsu, R.id.name_hyerim, R.id.name_security};
+    private final int[] textResources = {R.layout.activity_sthall_talk4, R.id.userName, R.id.name_minsu, R.id.name_hyerim, R.id.name_security};
 
 
     private boolean quizFinished = false;
@@ -38,13 +38,12 @@ public class sthall_talk4Activity extends AppCompatActivity {
 
     private TextView subName;
 
-    private TextView security;
     private ImageView st_imageView1;
     private ImageView st_imageView2;
 
 
     private int story;
-    private static final String STORY_STATUS_KEY = "storyStatus1_1"; // 스토리 상태를 저장하기 위해 만든 key
+    private static final String STORY_STATUS_KEY = "storyStatus"+15; // 스토리 상태를 저장하기 위해 만든 key
 
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
@@ -71,32 +70,28 @@ public class sthall_talk4Activity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
         userName = (TextView) findViewById(R.id.userName);
         subName = (TextView) findViewById(R.id.name_hyerim);
-        security = (TextView) findViewById(R.id.name_security);
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = settings1.edit();
-        editor.remove(STORY_STATUS_KEY);
-        editor.putInt(STORY_STATUS_KEY, 0);
-        editor.apply();
+        // 초기화
+//        SharedPreferences.Editor editor = settings1.edit();
+//        editor.remove(STORY_STATUS_KEY);
+//        editor.putInt(STORY_STATUS_KEY, 0);
+//        editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
-
-        System.out.println("stroyStatus1_1: " + story);
-
+        showNextStoryText();
 
 
         Button skipButton = (Button) findViewById(R.id.skipButton);
-        showNextStoryText();
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(quizFinished = false) {
-                    skipButton.setVisibility(View.INVISIBLE);
+                if(!quizFinished) {
                     story = 9;
                 }else {
-                    skipButton.setVisibility(View.INVISIBLE);
+                    skipButton.setVisibility(View.GONE);
                     story = 16;
                 }
                 showNextStoryText();
@@ -119,59 +114,50 @@ public class sthall_talk4Activity extends AppCompatActivity {
             st_storyText.setText(storyTexts[story]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 1) {
             st_storyText.setText(storyTexts[story]);
             clear_character(st_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(st_imageView2,imageResources[3],subName,textResources[3]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }else if (story == 2) {
             st_storyText.setText(storyTexts[story]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[3],subName,textResources[3]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }else if (story == 3) {
             st_storyText.setText(storyTexts[story]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(st_imageView2,imageResources[3],subName,textResources[3]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }else if (story == 4) {
             st_storyText.setText(storyTexts[story]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }else if (story == 5) {
             st_storyText.setText(storyTexts[story]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 6) {
             st_storyText.setText(storyTexts[story]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[3],subName,textResources[3]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 7) {
             st_storyText.setText(storyTexts[story]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 8) {
             st_storyText.setText(storyTexts[story]);
             clear_character(st_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 9) {
             if (!quizFinished) {
@@ -182,7 +168,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
                 story++;
                 showNextStoryText();
                 saveLayout(story);
-                System.out.println("stroyStatus1_1_quiz: " + story);
+                System.out.println("stroyStatus4_4_quiz: " + story);
             }
         }
         else if (story == 10) {
@@ -190,42 +176,36 @@ public class sthall_talk4Activity extends AppCompatActivity {
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(st_imageView2,imageResources[3],subName,textResources[3]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 11) {
             st_storyText.setText(storyTexts[story-1]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[4],subName,textResources[4]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 12) {
             st_storyText.setText(storyTexts[story-1]);
             clear_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[4],subName,textResources[4]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 13) {
             st_storyText.setText(storyTexts[story-1]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[3],subName,textResources[3]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 14) {
             st_storyText.setText(storyTexts[story-1]);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else if (story == 15) {
             st_storyText.setText(storyTexts[story-1]);
             clear_character(st_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(st_imageView2,imageResources[2],subName,textResources[2]);
             story++;
-            System.out.println("stroyStatus1_1: " + story);
         }
         else {
             saveLayout(story);
@@ -241,7 +221,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
         darkMatrix.setSaturation(0);
         image.setImageResource(imageResources);
         image.setColorFilter(new ColorMatrixColorFilter(darkMatrix));
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
@@ -249,7 +229,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
             name.setText("록시");
         }
         else if (textResources == R.id.name_security) {
-            name.setText("경비");
+            name.setText("이케나스");
         }
         name.setTextColor(Color.GRAY);
     }
@@ -258,7 +238,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
         String user_Name = settings.getString("user_Name", "");
         image.setImageResource(imageResources);
         image.clearColorFilter();
-        if (textResources == R.id.maincharacter) {
+        if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
             name.setText("케인");
@@ -266,7 +246,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
             name.setText("록시");
         }
         else if (textResources == R.id.name_security) {
-            name.setText("경비");
+            name.setText("이케나스");
         }
         name.setTextColor(Color.BLACK);
     }
