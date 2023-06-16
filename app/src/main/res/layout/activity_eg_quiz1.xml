@@ -85,6 +85,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="28dp"
+            android:autoSizeTextType="uniform"
             android:gravity="center_horizontal"
             android:text="@string/eg_quiz_2_1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -112,8 +113,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="358dp"
-            android:layout_height="338dp"
+            android:layout_width="338dp"
+            android:layout_height="291dp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="29dp"
             android:contentDescription="TODO"

@@ -53,9 +53,11 @@ public class eg_quiz_2 extends AppCompatActivity {
         layout1.setOnClickListener(view -> {
             layout1.setVisibility(View.INVISIBLE);
             layout2.setVisibility(View.VISIBLE);
+            answerEditText.setVisibility(View.VISIBLE);
         });
 
         submitButton.setOnClickListener(v -> {
+
             String userAnswer = answerEditText.getText().toString();
             String correctAnswer = "1";
             boolean isCorrect = userAnswer.equals(correctAnswer);

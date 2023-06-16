@@ -78,6 +78,7 @@ public class cthall_talk1Activity extends AppCompatActivity {
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
+
         showNextStoryText();
 
 

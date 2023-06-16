@@ -78,6 +78,7 @@
 
 
         <TextView
+            android:autoSizeTextType="uniform"
             android:id="@+id/quiz_2_3"
             android:layout_width="344dp"
             android:layout_height="120dp"

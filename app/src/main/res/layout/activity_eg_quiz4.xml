@@ -78,6 +78,7 @@
 
 
         <TextView
+            android:autoSizeTextType="uniform"
             android:id="@+id/quiz_2_4"
             android:layout_width="355dp"
             android:layout_height="124dp"
@@ -102,6 +103,7 @@
             android:layout_marginEnd="134dp"
             android:layout_marginBottom="8dp"
             android:gravity="center"
+            android:autoSizeTextType="uniform"
             android:text="Stage 2-4"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/quiz_2_4"
@@ -111,8 +113,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="423dp"
-            android:layout_height="398dp"
+            android:layout_width="318dp"
+            android:layout_height="343dp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="29dp"
             android:contentDescription="TODO"
