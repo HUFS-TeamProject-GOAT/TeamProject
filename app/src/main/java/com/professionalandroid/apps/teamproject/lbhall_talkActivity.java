@@ -102,9 +102,10 @@ public class lbhall_talkActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    private void showNextStoryText() {
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        String user_Name = settings.getString("user_Name", "");
+
+
+        private void showNextStoryText() {
+
         if (story == 0) {
             saveLayout(story);
             lb_storyText.setText(storyTexts[story]);
@@ -112,6 +113,8 @@ public class lbhall_talkActivity extends AppCompatActivity {
             story++;
         }
         else if (story == 1) {
+            SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            String user_Name = settings.getString("user_Name", "");
             String storyText = getString(R.string.lb_storyLine1_2, user_Name);
             lb_storyText.setText(storyText);
             dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);

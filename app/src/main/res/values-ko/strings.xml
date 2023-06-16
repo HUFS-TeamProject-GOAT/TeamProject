@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">TeamProject</string>
-    <string name="info_lake">생명의 샘 </string>
+
     <string name="egHall_explain"> 진눈개비 마을</string>
     <string name="ctHall_explain"> 서리눈사람 마을</string>
-    <string name="lbHall_explain"> 학장님의 방</string>
+    <string name="lbHall_explain"> 솔론의 방</string>
     <string name="lgHall_explain"> 얼음심장 </string>
     <string name="foodhall_explain">배급소</string>
-    <string name="cpsImage">campusImage</string>
+    <string name="lake_explain">생명의 샘</string>
+
+    <string name="cpsImage" translatable="false">campusImage</string>
     <string name="centtinalHall">centtinalHall</string>
     <string name="liberalHall">liberalHall</string>
     <string name="languageHall">languageHall</string>
@@ -21,27 +23,27 @@
     <string name="enterName">이름을 입력하세요</string>
     <string name="start">시작하기</string>
     <string name="gameTitle">게임제목</string>
-    <string name="homeImage">homeImage</string>
+    <string name="homeImage" translatable="false">homeImage</string>
     <string name="skipButtonText">Skip\n</string>
     <string name="getinText">입장하기</string>
     <string name="rank">%s의 계급은</string>
 
 
-    <string name="lakeButton">lakeButton\n</string>
-    <string name="studenthallButton">studentHallButton\n</string>
+    <string name="lakeButton" translatable="false">lakeButton\n</string>
+    <string name="studenthallButton" translatable="false">studentHallButton\n</string>
 
-    <string name="ct_location_black">ct_location_black</string>
-    <string name="eg_location_black">eg_location_black</string>
-    <string name="st_location_black">st_location_black</string>
-    <string name="lb_location_black">lb_location_black</string>
-    <string name="lake_location_black">lake_location_black</string>
-    <string name="lb_location_red">lb_location_red</string>
-    <string name="eg_location_red">eg_location_red</string>
-    <string name="st_location_red">st_location_red</string>
-    <string name="lake_location_red">lake_location_red</string>
-    <string name="ct_location_red">ct_location_red</string>
+    <string name="ct_location_black" translatable="false">ct_location_black</string>
+    <string name="eg_location_black" translatable="false">eg_location_black</string>
+    <string name="st_location_black" translatable="false">st_location_black</string>
+    <string name="lb_location_black" translatable="false">lb_location_black</string>
+    <string name="lake_location_black" translatable="false">lake_location_black</string>
+    <string name="lb_location_red" translatable="false">lb_location_red</string>
+    <string name="eg_location_red" translatable="false">eg_location_red</string>
+    <string name="st_location_red" translatable="false">st_location_red</string>
+    <string name="lake_location_red" translatable="false">lake_location_red</string>
+    <string name="ct_location_red" translatable="false">ct_location_red</string>
 
-    <string name="foodhall">foodhall</string>
+    <string name="foodhall" translatable="false">foodhall</string>
 
     <string name="storyLine1">영하 40도의 혹한이 찾아와 전 세계가 얼어붙었다.\n모든 세계의 문명도 혹한에 의해 꽁꽁 얼어붙었고, 살아남은 나와 케인은 무리를 지었다.\n하지만 우리에게도 남은 물자가 거의 고갈되어 갔고, 살아남기 위해 무언가 해야만 했다.
     </string>
@@ -68,7 +70,7 @@
     <string name="ct_storyLine2_2">안녕하십니까 선생님, 이곳 마을에 생존자가 꽤 많네요. 저희도 여기서 뭔가 도움을 드릴 일이 없을까요?\n여기서 생활하며 함께 생존하는 게 어떻겠습니까?</string>
     <string name="ct_storyLine2_3_">좋습니다. 저희는 사람이 많을수록 원정이 원활해질테니까요.\n내 이름은 카멜롯입니다. 앞으로 잘 부탁하지요.\n여기 이 쪽지를 가지고 그 집에서 생활하면 될 겁니다.</string>
     <string name="ct_storyLine2_4">여기가 우리가 배정받은 집인 모양이야. 동거인이 있는 모양이군.</string>
-    <string name="ct_storyLine2_5">안녕, 내 이름은 빅보이라고 해.	 같이 잘 살아남아보자고.</string>
+    <string name="ct_storyLine2_5">안녕, 내 이름은 빅보이라고 해.    같이 잘 살아남아보자고.</string>
     <string name="ct_storyLine2_6_">우리는 %s, 케인이야. 잘 부탁해.</string>
 
     <string name="ct_storyLine3_1">자, 주변 환경을 탐색하며 쓸만한 자원을 수집해옵시다.\n각 조마다 이 통들을 드릴테니 쓸모가 있어 보이는 물건은 죄다 담아서 와주시기 바랍니다.</string>
@@ -166,7 +168,7 @@
     <string name="st_storyLine1_2">야야 얘들아! 저 사람이 도박을 하자던데! 좀 특이해!\n한번 해보자!</string>
     <string name="st_storyLine1_3">넌 뭐든 준다고만 하면 눈이 돌아가는구나?</string>
     <string name="st_storyLine1_4_">그래도 일단 해볼까? 뭔가 쓸만한 걸 얻을 수 있을 지 몰라.</string>
-    <string name="st_storyLine1_5_">남성의 얼굴이 새파래졌다. 상자에 남아있던 제비가 X였기 때문이다.\n조용히 석탄 10개를 줄테니 이것만 가지고 가면 안되겠느냐고 했다.\n안되지, 우리는 위험을 감수하고 승부한건데.</string>
+    <string name="st_storyLine1_5_">남성의 얼굴이 새파래졌다. 상자에 남아있던 제비가 X였기 때문이다.\n조용히 석탄 20개를 줄테니 이것만 가지고 가면 안되겠느냐고 했다.\n안되지, 우리는 위험을 감수하고 승부한건데.</string>
 
     <string name="st_storyLine2_1">얼음 심장 건물에 들어가려는데, 입구가 잠겨있었다. 입구 옆에는 2개의 다이얼이 달린 상자가 있었다.</string>
     <string name="st_storyLine2_2">왜인지는 모르겠지만 여기에 이 문을 열 수 있는 열쇠가 있을 것만 같은 느낌이 들어...</string>
@@ -201,7 +203,7 @@
     <string name="st_storyLine4_14">너 뭐냐?? 사람의 지능이 아닌거 같아!</string>
     <string name="st_storyLine4_15_">케인의 마지막 한 마디에 그 자리에 있던 모두가 깔깔거리며 웃었다.</string>
 
-    <string name="lb_storyLine1_1">학장님이 나를 찾았다고 한다.\n긴장한 마음으로 학장님의 방에 들어섰다.</string>
+    <string name="lb_storyLine1_1">솔론님이 나를 찾았다고 한다.\n긴장한 마음으로 솔론님의 방에 들어섰다.</string>
     <string name="lb_storyLine1_2">이야 %s, 자네로구만.\n이번 성과는 대단했어.</string>
     <string name="lb_storyLine1_3">아닙니다, 선생님.\n저와 케인을 거두어주셨기에 가능했던 일이었습니다.</string>
     <string name="lb_storyLine1_4">자네라면, 내 뒤를 이어 우리 마을 사람들을 이끌 수 있으리라 믿네.\n나같은 늙은이는 이제 물러나도 괜찮을 테지.</string>
@@ -214,94 +216,86 @@
     <string name="submit"> 제출 </string>
     <string name="later"> 다음에 </string>
     <string name="answer"> 정답을 입력해 주세요 </string>
-    <string name="main"> 주인공 </string>
-    <string name="sub"> 서브 </string>
+    <string name="main" translatable="false"> 주인공 </string>
+    <string name="sub" translatable="false"> 서브 </string>
 
-    <string name="score_format_1_1"> %d/10 </string>
-    <string name="score_format_1_2"> %d/20 </string>
-    <string name="score_format_1_3"> %d/20 </string>
-    <string name="score_format_1_4"> %d/10 </string>
+    <string name="score_format_1_1" translatable="false"> %d/10 </string>
+    <string name="score_format_1_2" translatable="false"> %d/20 </string>
+    <string name="score_format_1_3" translatable="false"> %d/20 </string>
+    <string name="score_format_1_4" translatable="false"> %d/10 </string>
 
-    <string name="score_format_2_1"> %d/15 </string>
-    <string name="score_format_2_2"> %d/15 </string>
-    <string name="score_format_2_3"> %d/30 </string>
-    <string name="score_format_2_4"> %d/25 </string>
+    <string name="score_format_2_1" translatable="false"> %d/15 </string>
+    <string name="score_format_2_2" translatable="false"> %d/15 </string>
+    <string name="score_format_2_3" translatable="false"> %d/30 </string>
+    <string name="score_format_2_4" translatable="false"> %d/25 </string>
 
-    <string name="score_format_3_1"> %d/30 </string>
-    <string name="score_format_3_2"> %d/30 </string>
-    <string name="score_format_3_3"> %d/25 </string>
-    <string name="score_format_3_4"> %d/20 </string>
+    <string name="score_format_3_1" translatable="false"> %d/30 </string>
+    <string name="score_format_3_2" translatable="false"> %d/30 </string>
+    <string name="score_format_3_3" translatable="false"> %d/25 </string>
+    <string name="score_format_3_4" translatable="false"> %d/20 </string>
 
-    <string name="score_format_4_1"> %d/20 </string>
-    <string name="score_format_4_2"> %d/30 </string>
-    <string name="score_format_4_3"> %d/30 </string>
-    <string name="score_format_4_4"> %d/50 </string>
+    <string name="score_format_4_1" translatable="false"> %d/20 </string>
+    <string name="score_format_4_2" translatable="false"> %d/30 </string>
+    <string name="score_format_4_3" translatable="false"> %d/30 </string>
+    <string name="score_format_4_4" translatable="false"> %d/50 </string>
 
-     // 호준 수정 요망
-    <string name="ct_quiz_1_1">\t 문제를 틀릴 때 마다 -2점 \n힌트를 보게 되면 -1점(이후 감점 없이 계속 볼 수 있다.)\n "다음에" 버튼을 누르면 나중에 문제를 풀 수 있다.\n 답을 입력하고 "제출"을 누르면 정답일시 점수 저장\n 답이 오답일 시 다시 문제로 돌아온다. \n 준비가 되었으면 "제출"을 눌러서 튜토리얼을 완료하자.</string>
+    <string name="ct_quiz_1_1">문제를 틀릴 때 마다 -2점 \n힌트를 보게 되면 -1점(이후 감점 없이 계속 볼 수 있다.)\n 다음에 버튼을 누르면 나중에 문제를 풀 수 있다.\n 답을 입력하고 제출을 누르면 정답일시 점수 저장\n 답이 오답일 시 다시 문제로 돌아온다. \n 준비가 되었으면 제출을 눌러서 튜토리얼을 완료하자.</string>
     <string name="ct_quiz_1_1_title">튜토리얼 </string>
     <string name="ct_quiz_1_1_hint">여기는 힌트 칸 입니다!</string>
 
-    <string name="ct_quiz_1_2">\t "눈보라가 다가오고있어!\n저 눈보라가 통과하는 동안 쓸 연료가 이 지하실 안에 있는 모양이다.\n그런데 문이 숫자를 입력하는 자물쇠로 잠겨있어.\n이 문양과 무슨 연관이 있는걸까?"</string>
+    <string name="ct_quiz_1_2">눈보라가 다가오고있어!\n저 눈보라가 통과하는 동안 쓸 연료가 이 지하실 안에 있는 모양인데 잠겨있어.\n큰 삼각형은 작은 삼각형의 몇 배일까?</string>
     <string name="ct_quiz_1_2_title">지하실의 좌물쇠</string>
     <string name="ct_quiz_1_2_hint">안쪽에 있는 정삼각형을 180도로 돌려보면 어떨까?</string>
 
-    <string name="ct_quiz_1_3">\t 카멜롯에게 그림이 그려진 쪽지를 받았다.\n아무래도 숙소의 위치를 암시하는 듯 하다.\n나와 케인이 쓸 숙소는 어디일까?</string>
-    <string name="ct_quiz_1_3_title">카멜롯의 쪽지</string>
-    <string name="ct_quiz_1_3_hint">우선 모자를 쓴 태민군은 B.\n" +
-                    "C와 F는 아무리 봐도 남자이므로 여자친구는 A일 것이다.\n" +
-                    "혜성 커플은 통로 쪽 자리이므로 서로 마주 보고 앉아 있을 것이다. B가 태민군이므로, 혜성 부부는 C와 G가 된다.\n" +
-                    "그럼 동규군은 어디에 있을까? 꽤 많은 힌트를 제공했다!</string>
+    <string name="ct_quiz_1_3">카멜롯에게 숙소의 위치를 암시하는 듯한 쪽지를 받았다.\n부부는 마주 보거나 옆자리에 앉는다.\n* 복도 측 자리에 부부 1이 있다.\n* 모자 쓴 남성의 옆에 부부 3의 아내가 있다.\n* 부부 2는 서로 마주보는 위치다.\n남은 부부의 아내가 우리 집의 위치다. 어딜까?</string>
+    <string name="ct_quiz_1_3_title">숙소의 위치와 쪽지</string>
+    <string name="ct_quiz_1_3_hint">우선 모자를 쓴 남성은 B.\n +\n                    C와 F는 아무리 봐도 남자이므로 아내는 A일 것이다.\n +\n                    부부 1은 통로 쪽 자리이므로 서로 마주 보고 앉아 있을 것이다. B가 부부 3이므로, 부부 2는 C와 G가 된다.\n +\n                    그럼 나머지 부부는 어디에 있을까? 꽤 많은 힌트를 제공했다!</string>
 
-    <string name="ct_quiz_1_4">\t 원정을 다녀오고 서로 노획물을 쌓아두었다.\n그런데 어떤 조가 눈속임을 사용한 듯 하다.\n물리적으로 가득찬 통으로는 배치할 수 없는 구조일텐데.\n몇 조가 부정행위를 저지른걸까?</string>
+    <string name="ct_quiz_1_4">원정을 다녀오고 서로 노획물을 쌓아두었다.\n그런데 어떤 조가 눈속임을 사용한 듯 하다.\n물리적으로 가득찬 통으로 배치할 수 없는 구조인데.\n어떤 조가 부정행위를 저지른걸까?</string>
     <string name="ct_quiz_1_4_title">범인을 찾아라!</string>
-    <string name="ct_quiz_1_4_hint">2차원의 그림에서는 가능하지만 실제로 종이컵을 쌓아보면 불가능한 디자인이 하나있다. 잘 찾아보자!</string>
+    <string name="ct_quiz_1_4_hint">2차원의 그림에서는 가능하지만 실제로 종이컵을 쌓아보면 불가능한 디자인이 하나 있다.\n잘 찾아보자!</string>
 
-    <string name="eg_quiz_2_1">\t 곡선의 디자인이 그려진 유리창이 보인다.\n곡선으로 맞닿은 면에는 반드시 다른 색을 칠한다고 하자.\n최소한 몇 가지의 색이 필요할까?\n맞닿은 면만 아니라면 사용했던 색을 또 써도 좋다.</string>
+    <string name="eg_quiz_2_1">곡선의 디자인이 그려진 유리창이 보인다.\n곡선으로 맞닿은 면에는 반드시 다른 색을 칠한다고 하면, 최소 몇 가지의 색이 필요할까?\n맞닿은 면만 아니라면 사용한 색을 또 써도 좋다.</string>
     <string name="eg_quiz_2_1_title">유리창 디자인</string>
-    <string name="eg_quiz_2_1_hint">구석 부분부터 표시를 해 보자. 대부분의 면은 2색만 사용해도 문제없이 칠할 수 있다. 하지만 왼쪽 아래 부분에는 1색이 더 필요하다는 사실!</string>
+    <string name="eg_quiz_2_1_hint">구석 부분부터 표시를 해 보자.\n대부분의 면은 2색만 사용해도 문제없이 칠할 수 있다.\n하지만 왼쪽 아래 부분에는 1색이 더 필요하다는 사실!</string>
 
-    <string name="eg_quiz_2_2">\t 이 네 상자 중 케인의 지갑이 담긴 상자가 있다.\n이 그림이 그 상자를 찾는 단서라고 한다.\n어떤 상자에 케인의 지갑이 들었을까?</string>
-    <string name="eg_quiz_2_2_title">케인의 지갑은 어딨을까?</string>
-    <string name="eg_quiz_2_2_hint">사물함의 손잡이, 트로피를 유심히 보자!</string>
+    <string name="eg_quiz_2_2">이 네 상자 중 1번 그림이 명암 반전된 사진이 붙은 상자가 케인의 지갑이 담긴 상자다 .\n어떤 상자에 케인의 지갑이 들었을까?</string>
+    <string name="eg_quiz_2_2_title">케인의 지갑은 어디에?</string>
+    <string name="eg_quiz_2_2_hint">사물함의 손잡이, 트로피를 유심히 보자!\n자세히 보면 조금씩 다르다!</string>
 
-    <string name="eg_quiz_2_3">\t 웬 이상한 꼬마 녀석이 우리 숙소를 잠궈버렸다!\n이 그림이 단서가 되는 듯 하다.\n이 자물쇠의 비밀번호는 뭘까?</string>
+    <string name="eg_quiz_2_3">웬 이상한 꼬마 녀석이 우리 숙소를 잠궈버렸다!\n흰색과 파란색의 비율이 단서가 되는 듯 하다.\n이 자물쇠의 비밀번호는 뭘까?</string>
     <string name="eg_quiz_2_3_title">풍코의 좌물쇠</string>
-    <string name="eg_quiz_2_3_hint">창틀의 나사를 기준으로 생각해보자. 창틀의 나사를 기준으로 가로 세로로 선을 그어 보면, 그림을 10개 로 등분할 수 있다. 이제 생각하기 편해졌을 것이다.</string>
+    <string name="eg_quiz_2_3_hint">창틀의 나사를 기준으로 생각해보자.\n창틀의 나사를 기준으로 가로 세로로 선을 그어보면, 그림을 10개로 등분할 수 있다.\n이제 생각하기 편해졌을 것이다.</string>
 
-    <string name="eg_quiz_2_4">\t 카멜롯이 흥미로운 게임을 제안했다.\n빨간 모자를 쓴 사람 4명 이상을 발견하면 고급 초콜릿, 아니면 특식 티켓을 주겠다고 한다.\n참여한 10명 중 일부가 고급 초콜릿을 받았다.\n그 일부는 몇 명일까?</string>
+    <string name="eg_quiz_2_4">카멜롯이 빨간 모자를 쓴 사람 4명 이상을 발견하면 고급 초콜릿, 아니면 특식 티켓을 주겠다고 한다.\n참여한 10명 중 일부가 고급 초콜릿을 받았는데, 그 일부는 몇 명일까?</string>
     <string name="eg_quiz_2_4_title">카멜롯의 게임</string>
-    <string name="eg_quiz_2_4_hint">일부는 황소뿔 모자를 받았다고 한다. 즉, 황소뿔 모자를 쓴 아이는 4명 이상이었다는 뜻이다.\n" +
-                    "또한 못 받은 학우도 있다는 뜻이다. 만약 모든 학우들이 황소뿔 모자를 쓰고 있다면, 모두가 황소뿔 모자를 쓴 학우를 4명 이상 봤을 것이다.</string>
+    <string name="eg_quiz_2_4_hint">일부는 고급 초콜릿을 받았다고 한다. 즉, 빨간 모자를 쓴 아이는 4명 이상이었다는 뜻이다.\n +\n                    또한 못 받은 참가자도 있다는 뜻이다. 만약 모든 학우들이 빨간 모자를 쓰고 있다면, 모두가 빨간 모자를 쓴 참가자를 4명 이상 봤을 것이다.</string>
 
     <string name="fd_quiz_3_1">\t 보류</string>
     <string name="fd_quiz_3_1_title">보류</string>
-    <string name="fd_quiz_3_1_hint"></string>
+    <string name="fd_quiz_3_1_hint">-</string>
 
-    <string name="fd_quiz_3_2">\t 어느 날, 주민 12명이 모여 보드게임을 한다.\n시민 카드와 악당 카드가 6장씩 섞여있다.\n자신을 첫 번째로 지정하고 6번째에 해당하는 사람은 제외된다.\n이를 몇 번 반복했더니 시민만이 6명 남았다.\n누구부터 세기 시작했을까? 방향은 한 방향으로만 셀 수 있다.</string>
+    <string name="fd_quiz_3_2">어느 날, 주민 12명이 모여 보드게임을 한다.\n시민 카드와 악당 카드가 6장씩 섞여있다.\n자신을 첫 번째로 지정하고 6번째에 해당하는 사람은 제외하기를 몇 번 반복하니 시민만 6명 남았다.\n누구부터 세기 시작했을까? 방향은 한 방향으로만 셀 수 있다.</string>
     <string name="fd_quiz_3_2_title">시민만 남도록</string>
-    <string name="fd_quiz_3_2_hint">제일 처음에 골라야 할 사람은 선 중 한명이다. 반시계 방향으로 세어 보자. 가장 처음에 빠지는 사람은 5시 방향에 있는 악이다.</string>
+    <string name="fd_quiz_3_2_hint">제일 처음에 골라야 할 사람은 시민 중 한명이다.\n반시계 방향으로 세어 보자.\n가장 처음에 빠져야 하는 사람은 5시 방향에 있는 악당이다.</string>
 
-    <string name="fd_quiz_3_3">\t 7개의 고리로 이루어진 체인 8개가 있다.\n1개의 고리를 열고 닫는 데에는 빵 1개의 비용이 든다.\n그림처럼 8곳을 모두 연결하려면 당연히 8개가 필요하지만, 사실 이보다 더 싸게 만들 수 있는 방법이 있다.\n그 방법에 따르면 얼마의 비용이 들까?</string>
+    <string name="fd_quiz_3_3">7개의 고리로 이루어진 체인 8개가 있다.\n1개의 고리를 열고 닫는 데에는 빵 1개의 비용이 든다.\n그림처럼 8곳을 연결하려면 당연히 8개가 필요하지만, 사실 이보다 더 싸게 만들 수 있는 방법이 있다.\n그 방법에 따르면 얼마의 비용이 들까?</string>
     <string name="fd_quiz_3_3_title">록시의 목걸이</string>
-    <string name="fd_quiz_3_3_hint">1개의 체인을 이루고 있는 링의 개수가 키포인트.\n" +
-                    "체인의 양쪽 끝만 열어야 한다고 생각하고 있는 건 아니지~?\n" +
-                    "체인 중 하난를 골라 모든 링을 연 다음, 남은 7개의 체인을 연결한해봐!</string>
+    <string name="fd_quiz_3_3_hint">1개의 체인을 이루고 있는 고리의 개수가 주목해야 할 점.\n +\n                    체인의 양쪽 끝만 열어야 한다고 생각하고 있다면 오산.\n +\n                    체인 중 하나를 골라 모든 고리를 연 다음, 남은 7개의 체인을 연결해보자.</string>
 
-    <string name="fd_quiz_3_4">\t 왼쪽 접시의 팬케이크를 오른쪽의 붉은 접시로 옮겨야 한다.\n한 번에 하나의 팬케이크를 옮길 수 있다고 하니 잘 옮겨보자.</string>
+    <string name="fd_quiz_3_4">왼쪽 접시의 팬케이크를 오른쪽의 붉은 접시로 옮겨야 한다.\n한 번에 하나의 팬케이크를 옮길 수 있다고 하니 잘 옮겨보자.</string>
     <string name="fd_quiz_3_4_title">팬케이크 옮기기</string>
-    <string name="fd_quiz_3_4_hint">가장 작은 팬케이크를 붉은 접시에 올려놓고, 중간 크기의 팬케이크를 가운데 접시에 올려놓아 보자. 그리고 가장 작은 팬케이크를 중간 크기의 팬케이크에 올려놓으면, 가장 큰 팬케이크를 붉은 접시에 올려놓을 수 있다.</string>
+    <string name="fd_quiz_3_4_hint">가장 작은 팬케이크를 붉은 접시에 올려놓고, 중간 크기의 팬케이크를 가운데 접시에 올려놓아 보자.\n그리고 가장 작은 팬케이크를 중간 크기의 팬케이크에 올려놓으면, 가장 큰 팬케이크를 붉은 접시에 올려놓을 수 있다.</string>
 
-    <string name="st_quiz_4_1">\t 상자 속에 똑같아 보이는 제비 101개가 있다.\nO가 적힌 제비 50개, X가 적힌 제비 51개다.\n제비를 원하는 만큼 뽑고, 뽑은 O와 X의 갯수가 같으면 그만큼 석탄을 준다고 한다.\n몇 개의 제비를 꺼내는 것이 가장 이득이 될까?</string>
+    <string name="st_quiz_4_1">상자 속에 똑같아 보이는 제비 101개가 있다.\nO가 적힌 제비 50개, X가 적힌 제비 51개다.\n제비를 원하는 만큼 뽑고, 뽑은 O와 X의 갯수가 같으면 그만큼 석탄을 준다고 한다.\n몇 개의 제비를 꺼내는 것이 가장 이득이 될까?</string>
     <string name="st_quiz_4_1_title">의문의 제비뽑기</string>
-    <string name="st_quiz_4_1_hint">많이 뽑을 수록 확률이 낮아질까? 높아질까? 쉽게 생각해봐~</string>
+    <string name="st_quiz_4_1_hint">많이 뽑을수록 확률이 낮아질까? 높아질까?\n쉽게 생각해보자.</string>
 
-    <string name="st_quiz_4_2">\t 2개의 다이얼로 잠긴 상자가 있다.\n푸른 다이얼은 직접 돌릴 수 없지만, 붉은 다이얼을 돌리면 같은 양만큼 돌아간다.\n몇 번 돌려보니 다음과 같이 돌아갔다.\n푸른 다이얼이 \'3, 6, 4, 1\' 순서로 돌아가려면 붉은 다이얼을 어떻게 돌려야할까?</string>
+    <string name="st_quiz_4_2">2개의 다이얼로 잠긴 상자가 있다.\n푸른 다이얼은 직접 돌릴 수 없지만, 붉은 다이얼을 돌리면 같은 양만큼 돌아간다.\n몇 번 돌려보니 다음과 같이 돌아갔다.\n푸른 다이얼이 \'3, 6, 4, 1\' 순서로 돌아가려면 붉은 다이얼을 어떻게 돌려야할까?</string>
     <string name="st_quiz_4_2_title">수상한 다이얼 상자</string>
-    <string name="st_quiz_4_2_hint">붉은 다이얼과 푸른 다이얼은 같은 양만큼 돌아가지만," +
-                    "\n 한쪽은 숫자가 커지고 있는 반면 한쪽은 작아지고 있다.</string>
+    <string name="st_quiz_4_2_hint">붉은 다이얼과 푸른 다이얼은 같은 양만큼 돌아가지만, 한쪽은 숫자가 커지고 있는 반면 한쪽은 작아지고 있다.</string>
 
-    <string name="st_quiz_4_3">\t 장물아비가 목걸이의 감정가를 걸고 내기하자고 한다.\n보석 제각각 값이 다른데, 3곳을 자르면 그 3줄의 감정가 합이 같다고 한다.\n어디를 잘라야 할까?</string>
+    <string name="st_quiz_4_3">장물아비가 목걸이의 감정가를 걸고 내기하자고 한다.\n보석 제각각 값이 다른데, 3곳을 자르면 그 3줄의 감정가 합이 같다고 한다.\n어디를 잘라야 할까?</string>
     <string name="st_quiz_4_3_title">장물아비의 보석 감정</string>
     <string name="st_quiz_4_3_hint">우선 모든 보석의 값을 더해 보자." +
                     "\n 모든 보석에 매겨진 값을 더하면 7800이 된다. " +
@@ -309,10 +303,11 @@
                     "\n 1000이상의 값을 지닌 3개의 보석은 각각 다른 줄에 속한다. 또한 각 줄의 끝에 배치되어 있다." +
                     "\n 이제 어느 방향으로 더해 나갈지만 생각하면 된다!</string>
 
-    <string name="st_quiz_4_4">\t 웬 발전기처럼 보이는 물건이다.\n그런데 도어락으로 잠겨있어 사용할 수 없는 듯 하다.\n이리저리 눌러보는 데, 옆의 램프가 반응한다.\n이 도어락의 비밀번호는 무엇일까?</string>
+    <string name="st_quiz_4_4">웬 발전기처럼 보이는 물건이 도어락으로 잠겨있어 사용할 수 없는 듯 하다.\n이리저리 눌러보는데, 옆의 램프가 반응한다.\n이 도어락의 비밀번호는 무엇일까?</string>
     <string name="st_quiz_4_4_title">오래된 도어락</string>
-    <string name="st_quiz_4_4_hint">숫자가 들어갈 자리는 제쳐 두고 어떤 숫자가 사용될지부터 먼저 생각해보자." +
+    <string name="st_quiz_4_4_hint">숫자가 들어갈 자리는 제쳐 두고 어떤 숫자가 사용될 지 먼저 생각해보자." +
                     "\n 첫 번째 줄에서 알 수 있는 사실은 4개의 숫자가 4150이라는 사실." +
                     "\n 그 중 위치까지 맞는 숫자는 2개, 잘 생각해 보자.</string>
 
+    <string name="go_home" translatable="false">Home</string>
 </resources>

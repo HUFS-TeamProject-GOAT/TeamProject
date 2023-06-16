@@ -73,7 +73,6 @@ public class sthall_talk4Activity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-        // 초기화
         SharedPreferences.Editor editor = settings1.edit();
         editor.remove(STORY_STATUS_KEY);
         editor.putInt(STORY_STATUS_KEY, 0);
@@ -162,7 +161,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
         else if (story == 9) {
             if (!quizFinished) {
                 saveLayout(story);
-                Intent intent = new Intent(getApplicationContext(), st_quiz_4.class);
+                Intent intent = new Intent(getApplicationContext(), st_quiz_2.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {
                 story++;
@@ -178,7 +177,10 @@ public class sthall_talk4Activity extends AppCompatActivity {
             story++;
         }
         else if (story == 11) {
-            st_storyText.setText(storyTexts[story-1]);
+            SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            String user_Name = settings.getString("user_Name", "");
+            String storyText = getString(R.string.st_storyLine4_11, user_Name);
+            st_storyText.setText(storyText);
             dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(st_imageView2,imageResources[4],subName,textResources[4]);
             story++;

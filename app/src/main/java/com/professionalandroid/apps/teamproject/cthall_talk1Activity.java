@@ -72,9 +72,9 @@ public class cthall_talk1Activity extends AppCompatActivity {
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = settings1.edit();
-        editor.remove(STORY_STATUS_KEY);
-        editor.putInt(STORY_STATUS_KEY, 0);
-        editor.apply();
+       editor.remove(STORY_STATUS_KEY);
+       editor.putInt(STORY_STATUS_KEY, 0);
+       editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 

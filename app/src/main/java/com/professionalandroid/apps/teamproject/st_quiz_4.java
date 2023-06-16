@@ -43,10 +43,10 @@ public class st_quiz_4 extends AppCompatActivity {
         Button laterButton = findViewById(R.id.st_4_nextTime);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
-//        SharedPreferences.Editor editor = sharedPreferences.edit();
-//        editor.putInt(SCORE_KEY, 50);
-//        editor.putInt(COUNT_KEY, 0);
-//        editor.apply();
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(SCORE_KEY, 50);
+        editor.putInt(COUNT_KEY, 0);
+        editor.apply();
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
         count = sharedPreferences.getInt(COUNT_KEY, COUNT_DEFAULT);
 
@@ -125,7 +125,7 @@ public class st_quiz_4 extends AppCompatActivity {
             }
 
             AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_4.this);
-            builder.setTitle(getString(R.string.hint));
+            builder.setTitle(getString(R.string.st_quiz_4_4_title));
             builder.setMessage(getString(R.string.st_quiz_4_4_hint));
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
@@ -146,7 +146,7 @@ public class st_quiz_4 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(st_quiz_4.this, stHallActivity.class);
+            Intent intent = new Intent(st_quiz_4.this, homeActivity.class);
             startActivity(intent);
             finish();
         });

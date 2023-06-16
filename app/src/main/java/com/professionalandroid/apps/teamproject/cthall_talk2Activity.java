@@ -135,10 +135,14 @@ public class cthall_talk2Activity extends AppCompatActivity {
             clear_character(ct_imageView2,imageResources[2],subName,textResources[2]);
             story++;
         }else if (story == 5) {
+            ct_storyText.setText(storyTexts[story-1]);
             clear_character(ct_imageView2,imageResources[3],subName,textResources[3]);
             story++;
         }else if (story == 6) {
-            ct_storyText.setText(storyTexts[story-1]);
+            SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            String user_Name = settings.getString("user_Name", "");
+            String storyText = getString(R.string.ct_storyLine2_6_, user_Name);
+            ct_storyText.setText(storyText);
             clear_character(ct_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(ct_imageView2,imageResources[3],subName,textResources[3]);
             story++;
