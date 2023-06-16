@@ -31,12 +31,12 @@ public class lake_talkActivity extends AppCompatActivity {
     private final int[] textResources= {R.layout.activity_foodhall_talk2,R.id.userName,R.id.name_minsu, R.id.name_hyerim};
 
     private boolean quizFinished = false;
-    private TextView food_storyText;
+    private TextView lake_storyText;
 
     private TextView userName;
     private TextView subName;
-    private ImageView food_imageView1;
-    private ImageView food_imageView2;
+    private ImageView lake_imageView1;
+    private ImageView lake_imageView2;
 
     private int story;
     private static final String STORY_STATUS_KEY = "storyStatus"+11; // 스토리 상태를 저장하기 위해 만든 key
@@ -56,9 +56,9 @@ public class lake_talkActivity extends AppCompatActivity {
             }
         });
 
-        food_storyText = findViewById(R.id.food_storyText);
-        food_imageView1 = findViewById(R.id.food_imageView1);
-        food_imageView2 = findViewById(R.id.food_imageView2);
+        lake_storyText = findViewById(R.id.lake_storyText);
+        lake_imageView1 = findViewById(R.id.lake_imageView1);
+        lake_imageView2 = findViewById(R.id.lake_imageView2);
 
 
         ColorMatrix darkMatrix = new ColorMatrix();
@@ -84,7 +84,7 @@ public class lake_talkActivity extends AppCompatActivity {
 
         showNextStoryText();
 
-        Button skipButton = (Button) findViewById(R.id.food_skipButton);
+        Button skipButton = (Button) findViewById(R.id.lake_skipButton);
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,45 +109,47 @@ public class lake_talkActivity extends AppCompatActivity {
     private void showNextStoryText() {
         if (story == 0) {
             saveLayout(story);
-            food_storyText.setText(storyTexts[story]);
+            lake_storyText.setText(storyTexts[story]);
 
-            dark_character(food_imageView2,imageResources[3],subName,textResources[3]);
-            dark_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(lake_imageView2,imageResources[3],subName,textResources[3]);
+            dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
 
 
 
             story++;
         }
         else if (story == 1) {
-            food_storyText.setText(storyTexts[story]);
+            lake_storyText.setText(storyTexts[story]);
 
-            dark_character(food_imageView2,imageResources[3],subName,textResources[3]);
-            clear_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(lake_imageView2,imageResources[3],subName,textResources[3]);
+            clear_character(lake_imageView1,imageResources[1],userName,textResources[1]);
 
             story++;
         }else if (story == 2) {
-            food_storyText.setText(storyTexts[story]);
+            lake_storyText.setText(storyTexts[story]);
 
-            clear_character(food_imageView2,imageResources[2],subName,textResources[2]);
-            dark_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            clear_character(lake_imageView2,imageResources[2],subName,textResources[2]);
+            dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
             story++;
 
         }else if (story == 3) {
-            food_storyText.setText(storyTexts[story]);
+            lake_storyText.setText(storyTexts[story]);
 
-            dark_character(food_imageView2,imageResources[2],subName,textResources[2]);
-            clear_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(lake_imageView2,imageResources[2],subName,textResources[2]);
+            clear_character(lake_imageView1,imageResources[1],userName,textResources[1]);
             story++;
 
         }else if (story == 4) {
-            food_storyText.setText(storyTexts[story]);
-            clear_character(food_imageView2,imageResources[3],subName,textResources[3]);
-            dark_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            lake_storyText.setText(storyTexts[story]);
+            clear_character(lake_imageView2,imageResources[3],subName,textResources[3]);
+            dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
 
             story++;
         }else if (story == 5) {
             if (!quizFinished) {
                 saveLayout(story);
+                dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
+                clear_character(lake_imageView2,imageResources[3],subName,textResources[3]);
                 Intent intent = new Intent(getApplicationContext(), fd_quiz_4.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
 
@@ -158,35 +160,35 @@ public class lake_talkActivity extends AppCompatActivity {
                 System.out.println("stroyStatus3_4_quiz: " + story);
             }
         }else if (story == 6) {
-            food_storyText.setText(storyTexts[story-1]);
+            lake_storyText.setText(storyTexts[story-1]);
 
-            clear_character(food_imageView2,imageResources[2],subName,textResources[2]);
-            dark_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            clear_character(lake_imageView2,imageResources[2],subName,textResources[2]);
+            dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
             story++;
         }
         else if (story == 7) {
 
 
-            food_storyText.setText(storyTexts[story-1]);
+            lake_storyText.setText(storyTexts[story-1]);
 
-            dark_character(food_imageView2,imageResources[2],subName,textResources[2]);
-            clear_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(lake_imageView2,imageResources[2],subName,textResources[2]);
+            clear_character(lake_imageView1,imageResources[1],userName,textResources[1]);
             story++;
         }
         else if (story == 8) {
 
 
-            food_storyText.setText(storyTexts[story-1]);
-            clear_character(food_imageView2,imageResources[3],subName,textResources[3]);
-            dark_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            lake_storyText.setText(storyTexts[story-1]);
+            clear_character(lake_imageView2,imageResources[3],subName,textResources[3]);
+            dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
             story++;
         }
         else if (story == 9) {
 
-            food_storyText.setText(storyTexts[story-1]);
+            lake_storyText.setText(storyTexts[story-1]);
 
-            dark_character(food_imageView2,imageResources[3],subName,textResources[3]);
-            dark_character(food_imageView1,imageResources[1],userName,textResources[1]);
+            dark_character(lake_imageView2,imageResources[3],subName,textResources[3]);
+            dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
             story++;
         }
 

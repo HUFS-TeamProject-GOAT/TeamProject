@@ -142,6 +142,8 @@ public class cthall_talk1Activity extends AppCompatActivity {
         }else if (story == 7) {  //문제가 나오는 곳
             if (!quizFinished) {
                 saveLayout(story);
+                clear_character(ct_imageView2,imageResources[3],subName,textResources[3]);
+                ct_storyText.setText(storyTexts[story-1]);
                 Intent intent = new Intent(getApplicationContext(), ct_quiz_2.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {

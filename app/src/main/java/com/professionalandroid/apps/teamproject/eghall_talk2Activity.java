@@ -146,6 +146,9 @@ public class eghall_talk2Activity extends AppCompatActivity {
             if (!quizFinished) {
                 saveLayout(story);
                 Intent intent = new Intent(getApplicationContext(), eg_quiz_2.class);
+                clear_character(eg_imageView1,imageResources[1],userName,textResources[1]);
+                dark_character(eg_imageView2,imageResources[2],subName,textResources[2]);
+                eg_storyText.setText(storyTexts[story-1]);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {
                 story++;

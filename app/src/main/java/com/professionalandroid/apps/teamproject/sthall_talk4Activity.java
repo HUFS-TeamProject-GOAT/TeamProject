@@ -162,6 +162,9 @@ public class sthall_talk4Activity extends AppCompatActivity {
         else if (story == 9) {
             if (!quizFinished) {
                 saveLayout(story);
+                clear_character(st_imageView1,imageResources[1],userName,textResources[1]);
+                dark_character(st_imageView2,imageResources[2],subName,textResources[2]);
+                st_storyText.setText(storyTexts[story-1]);
                 Intent intent = new Intent(getApplicationContext(), st_quiz_4.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {

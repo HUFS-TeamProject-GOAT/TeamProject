@@ -140,6 +140,9 @@ public class sthall_talk3Activity extends AppCompatActivity {
         }else if (story == 5) {
             if (!quizFinished) {
                 saveLayout(story);
+                dark_character(st_imageView1,imageResources[1],userName,textResources[1]);
+                clear_character(st_imageView2,imageResources[4],subName,textResources[4]);
+                st_storyText.setText(storyTexts[story-1]);
                 Intent intent = new Intent(getApplicationContext(), st_quiz_3.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {
