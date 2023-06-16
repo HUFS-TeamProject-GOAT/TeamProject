@@ -71,9 +71,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/eg_quiz4_backLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/eg_quiz4_backLayout"
         android:visibility="invisible">
 
 
@@ -88,7 +88,6 @@
             android:gravity="center_horizontal"
             android:text="@string/eg_quiz_2_4"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz2_4_title" />
@@ -111,8 +110,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="423dp"
-            android:layout_height="398dp"
+            android:layout_width="367dp"
+            android:layout_height="330dp"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="29dp"
             android:contentDescription="TODO"
@@ -120,7 +119,7 @@
             android:src="@drawable/redbull"
             app:layout_constraintBottom_toTopOf="@+id/eg_4_answer"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/quiz_2_4" />
 
@@ -133,8 +132,8 @@
             android:layout_marginEnd="100dp"
             android:gravity="center_horizontal"
             android:hint="@string/answer"
-            android:textSize="20sp"
             android:maxLength="3"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
@@ -146,8 +145,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
-            android:textSize="20sp"
             android:text="@string/hint"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

@@ -56,9 +56,9 @@ public class lake_talkActivity extends AppCompatActivity {
             }
         });
 
-        food_storyText = findViewById(R.id.food_storyText);
-        food_imageView1 = findViewById(R.id.food_imageView1);
-        food_imageView2 = findViewById(R.id.food_imageView2);
+        food_storyText = findViewById(R.id.lake_storyText);
+        food_imageView1 = findViewById(R.id.lake_imageView1);
+        food_imageView2 = findViewById(R.id.lake_imageView2);
 
 
         ColorMatrix darkMatrix = new ColorMatrix();
@@ -84,7 +84,7 @@ public class lake_talkActivity extends AppCompatActivity {
 
         showNextStoryText();
 
-        Button skipButton = (Button) findViewById(R.id.food_skipButton);
+        Button skipButton = (Button) findViewById(R.id.lake_skipButton);
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,7 +148,7 @@ public class lake_talkActivity extends AppCompatActivity {
         }else if (story == 5) {
             if (!quizFinished) {
                 saveLayout(story);
-                Intent intent = new Intent(getApplicationContext(), fd_quiz_4.class);
+                Intent intent = new Intent(getApplicationContext(), fd_quiz_2.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
 
             } else {

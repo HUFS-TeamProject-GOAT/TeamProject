@@ -12,39 +12,38 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
 public class homeActivity extends AppCompatActivity {
+
+    private final int[] ex_Texts = {R.string.ctHall_explain, R.string.egHall_explain, R.string.foodhall_explain, R.string.lake_explain, R.string.lgHall_explain, R.string.lbHall_explain};
+
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_home);
-
+        TextView explain_Text = (TextView) findViewById(R.id.explain_text);
         ImageButton egHallButton = (ImageButton) findViewById(R.id.egHallButton);
-        TextView info_egHall =(TextView) findViewById(R.id.info_egHall);
         Button in_egHallButton =(Button) findViewById(R.id.in_egHallButton);
         ImageView eg_location_red = (ImageView) findViewById(R.id.eg_location_red);
 
         ImageButton ctHallButton = (ImageButton) findViewById(R.id.ctHallButton);
-        TextView info_ctHall =(TextView) findViewById(R.id.info_ctHall);
         Button in_ctHallButton =(Button) findViewById(R.id.in_ctHallButton);
         ImageView ct_location_red = (ImageView) findViewById(R.id.ct_location_red);
 
         ImageButton lbHallButton = (ImageButton) findViewById(R.id.lbHallButton);
-        TextView info_lbHall =(TextView) findViewById(R.id.info_lbHall);
         Button in_lbHallButton =(Button) findViewById(R.id.in_lbHallButton);
         ImageView lb_location_red = (ImageView) findViewById(R.id.lb_location_red);
 
         ImageButton stHallButton = (ImageButton) findViewById(R.id.stHallButton);
-        TextView info_stHall =(TextView) findViewById(R.id.info_stHall);
         Button in_stHallButton =(Button) findViewById(R.id.in_stHallButton);
         ImageView st_location_red = (ImageView) findViewById(R.id.st_location_red);
 
 
         ImageButton foodHallButton = (ImageButton) findViewById(R.id.foodHallButton);
-        TextView info_foodHall =(TextView) findViewById(R.id.info_foodHall);
         Button in_foodHallButton =(Button) findViewById(R.id.in_foodHallButton);
         ImageView foodHall_location_red = (ImageView) findViewById(R.id.foodHall_location_red);
 
         ImageButton lakeButton = (ImageButton) findViewById(R.id.lakeButton);
-        TextView info_lake =(TextView) findViewById(R.id.info_lake);
         Button in_lakeButton =(Button) findViewById(R.id.in_lakeButton);
         ImageView lake_location_red = (ImageView) findViewById(R.id.lake_location_red);
         
@@ -52,12 +51,9 @@ public class homeActivity extends AppCompatActivity {
         egHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                info_lake.setVisibility(View.GONE);
-                info_ctHall.setVisibility(View.GONE);
-                info_lbHall.setVisibility(View.GONE);
-                info_stHall.setVisibility(View.GONE);
-                info_foodHall.setVisibility(View.GONE);
-                info_egHall.setVisibility(View.VISIBLE);
+                explain_Text.setVisibility(View.VISIBLE);
+                explain_Text.setText(ex_Texts[1]);
+
 
                 eg_location_red.setVisibility(View.VISIBLE);
                 ct_location_red.setVisibility(View.INVISIBLE);
@@ -77,12 +73,8 @@ public class homeActivity extends AppCompatActivity {
         lakeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                info_ctHall.setVisibility(View.GONE);
-                info_lbHall.setVisibility(View.GONE);
-                info_stHall.setVisibility(View.GONE);
-                info_egHall.setVisibility(View.GONE);
-                info_foodHall.setVisibility(View.GONE);
-                info_lake.setVisibility(View.VISIBLE);
+                explain_Text.setVisibility(View.VISIBLE);
+                explain_Text.setText(ex_Texts[3]);
 
                 eg_location_red.setVisibility(View.INVISIBLE);
                 lake_location_red.setVisibility(View.VISIBLE);
@@ -103,12 +95,8 @@ public class homeActivity extends AppCompatActivity {
         ctHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                info_lake.setVisibility(View.GONE);
-                info_egHall.setVisibility(View.GONE);
-                info_lbHall.setVisibility(View.GONE);
-                info_stHall.setVisibility(View.GONE);
-                info_foodHall.setVisibility(View.GONE);
-                info_ctHall.setVisibility(View.VISIBLE);
+                explain_Text.setVisibility(View.VISIBLE);
+                explain_Text.setText(ex_Texts[0]);
 
                 ct_location_red.setVisibility(View.VISIBLE);
                 eg_location_red.setVisibility(View.INVISIBLE);
@@ -128,12 +116,8 @@ public class homeActivity extends AppCompatActivity {
         lbHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                info_lake.setVisibility(View.GONE);
-                info_egHall.setVisibility(View.GONE);
-                info_ctHall.setVisibility(View.GONE);
-                info_stHall.setVisibility(View.GONE);
-                info_foodHall.setVisibility(View.GONE);
-                info_lbHall.setVisibility(View.VISIBLE);
+                explain_Text.setVisibility(View.VISIBLE);
+                explain_Text.setText(ex_Texts[5]);
 
                 lb_location_red.setVisibility(View.VISIBLE);
                 ct_location_red.setVisibility(View.INVISIBLE);
@@ -157,12 +141,8 @@ public class homeActivity extends AppCompatActivity {
         stHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                info_lake.setVisibility(View.GONE);
-                info_egHall.setVisibility(View.GONE);
-                info_lbHall.setVisibility(View.GONE);
-                info_ctHall.setVisibility(View.GONE);
-                info_foodHall.setVisibility(View.GONE);
-                info_stHall.setVisibility(View.VISIBLE);
+                explain_Text.setVisibility(View.VISIBLE);
+                explain_Text.setText(ex_Texts[4]);
 
                 st_location_red.setVisibility(View.VISIBLE);
                 ct_location_red.setVisibility(View.INVISIBLE);
@@ -184,12 +164,8 @@ public class homeActivity extends AppCompatActivity {
         foodHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                info_lake.setVisibility(View.GONE);
-                info_egHall.setVisibility(View.GONE);
-                info_lbHall.setVisibility(View.GONE);
-                info_ctHall.setVisibility(View.GONE);
-                info_foodHall.setVisibility(View.VISIBLE);
-                info_stHall.setVisibility(View.GONE);
+                explain_Text.setVisibility(View.VISIBLE);
+                explain_Text.setText(ex_Texts[2]);
 
                 st_location_red.setVisibility(View.INVISIBLE);
                 ct_location_red.setVisibility(View.INVISIBLE);

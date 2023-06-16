@@ -124,7 +124,7 @@ public class foodhall_talk2Activity extends AppCompatActivity {
         }else if (story == 2) {
             if (!quizFinished) {
                 saveLayout(story);
-                Intent intent = new Intent(getApplicationContext(), fd_quiz_2.class);
+                Intent intent = new Intent(getApplicationContext(), fd_quiz_4.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
 
             } else {

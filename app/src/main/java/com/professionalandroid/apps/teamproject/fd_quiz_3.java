@@ -143,7 +143,7 @@ public class fd_quiz_3 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(fd_quiz_3.this, stHallActivity.class);
+            Intent intent = new Intent(fd_quiz_3.this, homeActivity.class);
             startActivity(intent);
             finish();
         });

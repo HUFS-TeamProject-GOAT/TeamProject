@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="egHall_explain">Engineer Hall Detail</string>
+    <string name="ctHall_explain">Centinal Hall Detail</string>
+    <string name="lbHall_explain">Liberal Hall Detail</string>
+    <string name="lgHall_explain">Student Hall Detail</string>
+    <string name="lake_explain">life of pie </string>
+    <string name="foodhall_explain">distributing station</string>
+    <string name="centtinalHall">centtinalHall</string>
+    <string name="liberalHall">liberalHall</string>
+    <string name="languageHall">languageHall</string>
+    <string name="engineeringHall">engineeringHall</string>
+    <string name="ans">answer</string>
+    <string name="language_Setting">Language Setting</string>
+    <string name="korean">Korean</string>
+    <string name="english">English</string>
+    <string name="hint">hint</string>
+    <string name="submit">submit</string>
+    <string name="later">later</string>
+    <string name="answer">answer</string>
+
+    <string name="ct_quiz_1_1">-2 points for each wrong question\nIf you look at the hint, you\'ll get -1 points (you\'ll continue to see it without deducting points afterwards).)\nYou can solve the problem later by pressing the button next time.\nEnter your answer and press Submit to save your score temporarily\nIf the answer is wrong, it comes back to the question.\nIf you\'re ready, click Submit to complete the tutorial.</string>
+    <string name="ct_quiz_1_1_title">a tutorial</string>
+    <string name="ct_quiz_1_1_hint">This is the hint section!</string>
+
+    <string name="ct_quiz_1_2">There\'s a snowstorm coming up!\nIt looks like fuel is in this basement for the duration of that blizzard, but it\'s locked.\nHow many times a large triangle is a small triangle?</string>
+    <string name="ct_quiz_1_2_title">a cellar lock</string>
+    <string name="ct_quiz_1_2_hint">Why don\'t we turn the triangle inside 180 degrees?</string>
+
+    <string name="ct_quiz_1_3">I received a note from Camelot that seemed to suggest the location of the accommodation.\nCouples face each other or sit next to each other.\n* There is a couple 1 in the hallway.\n* Next to the man in the hat is the wife of couple 3.\n* Couple 2 is a position facing each other.\nThe wife of the remaining couple is the location of our house. Where is it?</string>
+    <string name="ct_quiz_1_3_title">Location and note of accommodation</string>
+    <string name="ct_quiz_1_3_hint">First of all, the man wearing the hat is B.\n+\nC and F are men by all accounts, so the wife must be A.\n+\nCouple 1 will sit facing each other because it is an aisle seat. Since B is husband and wife 3, couple 2 becomes C and G.\n+\nSo where are the rest of the couple? Provided quite a few hints!</string>
+
+    <string name="ct_quiz_1_4">After the expedition, they piled up their loot.\nHowever, it seems that some group used a trick in the eye.\nIt\'s a structure that can\'t be placed in a container full of physical.\nWhich group cheated?</string>
+    <string name="ct_quiz_1_4_title">Find the culprit!</string>
+    <string name="ct_quiz_1_4_hint">There is one design that is possible in two-dimensional paintings, but is not possible when you actually stack paper cups.\nLet\'s find it!</string>
+
+    <string name="eg_quiz_2_1">I can see a window with a curved design.\nIf a curved surface must be colored differently, how many colors would be required?\nYou can use the used color again as long as it is not on the side that touches it.</string>
+    <string name="eg_quiz_2_1_title">Window design</string>
+    <string name="eg_quiz_2_1_hint">Let\'s mark the corners first.\nMost of the sides can be painted without any problems using only two colors.\nBut the fact that you need one more color on the lower left side!</string>
+
+    <string name="eg_quiz_2_2">Of these four boxes, the box with the picture No. 1 with the light and dark inverted is the box containing Kane\'s wallet.\nWhich box contained Kane\'s wallet?</string>
+    <string name="eg_quiz_2_2_title">Where is Kane\'s wallet?</string>
+    <string name="eg_quiz_2_2_hint">Take a closer look at the handle of the locker, the trophy!\nIf you look closely, it\'s a little different!</string>
+
+    <string name="eg_quiz_2_3">Some weird little guy locked our accommodation!\nThe ratio of white to blue seems to be a clue.\nWhat\'s the password for this lock?</string>
+    <string name="eg_quiz_2_3_title">a wind-nosed lock</string>
+    <string name="eg_quiz_2_3_hint">Let\'s think about the screws on the window frame.\nIf you draw a line horizontally and vertically based on the screw on the window frame, you can equalize the picture into 10.\nIt would be easier to think now.</string>
+
+    <string name="eg_quiz_2_4">If Camelot finds more than four people wearing red hats, he will give them high-end chocolate or special tickets.\nSome of the 10 people who participated received high-end chocolate, how many would some of them be?</string>
+    <string name="eg_quiz_2_4_title">Game of Camelot</string>
+    <string name="eg_quiz_2_4_hint">Some said they received high-quality chocolate. In other words, there were more than four children wearing red hats.\n+\nIt also means that there are some participants who have not received it. If all the students were wearing red hats, everyone would have seen more than four participants wearing red hats.</string>
+
+    <string name="fd_quiz_3_1">hold off</string>
+    <string name="fd_quiz_3_1_title">hold off</string>
+    <string name="fd_quiz_3_1_hint">-</string>
+
+    <string name="fd_quiz_3_2">One day, 12 residents gather to play board games.\nThere are six citizen cards and six villain cards mixed.\nAfter designating himself as the first and excluding the sixth person several times, only six citizens remained.\nWho started counting? The direction can be counted in only one direction.</string>
+    <string name="fd_quiz_3_2_title">So that only citizens remain</string>
+    <string name="fd_quiz_3_2_hint">The first person to choose is one of the citizens.\nLet\'s count counterclockwise.\nThe first person to fall out is the villain in the 5 o\'clock direction.</string>
+
+    <string name="fd_quiz_3_3">There are eight chains of seven rings.\nIt costs a loaf of bread to open and close a ring.\nOf course you need eight to connect eight places as shown, but there\'s actually a way to make it cheaper.\nHow much would it cost according to that method?</string>
+    <string name="fd_quiz_3_3_title">Roxy\'s necklace</string>
+    <string name="fd_quiz_3_3_hint">The number of rings that make up one chain should be noted.\n+\nMiscalculated if you think you should only open both ends of the chain.\n+\nPick one of the chains, open all the rings, and then connect the remaining seven chains.</string>
+
+    <string name="fd_quiz_3_4">Transfer the pancakes from the left plate to the red plate on the right.\nThey say you can move one pancake at a time, so let\'s move it well.</string>
+    <string name="fd_quiz_3_4_title">Moving Pancakes</string>
+    <string name="fd_quiz_3_4_hint">Let\'s put the smallest pancake on a red plate and a medium pancake on a middle plate.\nAnd if you put the smallest pancake on a medium-sized pancake, you can put the largest pancake on a red plate.</string>
+
+    <string name="st_quiz_4_1">Let\'s put the smallest pancake on a red plate and a medium pancake on a middle plate.\nAnd if you put the smallest pancake on a medium-sized pancake, you can put the largest pancake on a red plate.</string>
+    <string name="st_quiz_4_1_title">a mysterious lottery</string>
+    <string name="st_quiz_4_1_hint">Will the more you pick, the lower the probability? Will it be high?\nLet\'s think of it as easy.</string>
+
+    <string name="st_quiz_4_2">There is a box locked with two dials.\nYou can\'t turn the blue dial directly, but if you turn the red dial, it turns the same amount.\nI turned it around a few times and it turned out to be like this.\nHow do I turn the red dial to get the blue dial back to the \'3, 6, 4, 1\'</string>
+    <string name="st_quiz_4_2_title">Suspicious Dial Box</string>
+    <string name="st_quiz_4_2_hint">Red and blue dials are spinning the same amount, but one side is getting bigger and the other is getting smaller.</string>
+
+    <string name="st_quiz_4_3">The receiver asks to bet on the appraised value of the necklace.\nEach gem has a different price, and if you cut three places, the emotional sum of the three lines is the same.\nWhere should I cut it?</string>
+    <string name="st_quiz_4_3_title">The Jewelry of a receiver</string>
+    <string name="st_quiz_4_3_hint">First, let\'s add up the price of all the jewels. +\n\nThe value added to every gem is 7800. +\n\nSince it has to be divided into three lines, the sum of each line will be 2600. +\n\nEach of the three gems with a value of more than 1000 belongs to a different line. It is also placed at the end of each line. +\n\nNow all you have to think about is which direction you\'re going to go further!</string>
+
+    <string name="st_quiz_4_4">It seems that something that looks like a generator is locked with a door lock and cannot be used.\nI press it here and there, and the lamp next to it reacts.\nWhat is the password for this door lock?</string>
+    <string name="st_quiz_4_4_title">an old door lock</string>
+    <string name="st_quiz_4_4_hint">Let\'s think about which numbers will be used first, leaving aside the places where they will be put. +\n\nThe first line shows that the four numbers are 4150. +\n\nAmong them, there are two numbers that fit the location, so let\'s think about it carefully.</string>
+
+    <string name="back">BACK</string>
+    <string name="enterName">Enter your name</string>
+    <string name="start">START</string>
+    <string name="gameTitle">Game Title</string>
+    <string name="skipButtonText">SKIP</string>
+    <string name="getinText">ENTER</string>
+    <string name="rank">%s survivla rank is</string>
+    <string name="app_name">TeamProject</string>
+    <string name="storyLine1">A severe cold of minus 40 degrees Celsius came, freezing the whole world.\nCivilizations all over the world were frozen hard by the freezing cold, and me and Kane, who survived, formed a group.\nBut we were almost out of supplies, and we had to do something to survive.</string>
+    <string name="storyLine2">It\'s so cold. You\'re going to die!\nI\'m almost out of coal and almost all the firewood is wet, so I can\'t use it.\nWhat should I do?</string>
+    <string name="storyLine3">If you stay like this, you\'ll freeze to death on the street.\nFirst, let\'s gather the resources around here as much as possible.\nAnd there may still be survivors here.</string>
+    <string name="storyLine4">Yeah. I can see the town over there, so let\'s build a base over there.\nSince it\'s a village, it\'ll be much more stable than the street.\nAlso there will be things left to use.</string>
+    <string name="storyLine5">We need to hurry up, I see a snowstorm coming in the distance!\nLet\'s go in and see. Let\'s go!</string>
+    <string name="storyLine6">Kane and I ran towards a town with a chilly atmosphere.</string>
+    <string name="storyLine7">Let\'s get ready for the snowstorm that\'s coming in the distance.\nEven if we\'re in town, it\'ll take a long time for that snowstorm to pass.\nWe\'ll survive no matter what happen.</string>
+
+    <string name="ct_storyLine1_1">Kane and I arrived at Sully Snowman Village together. \nI felt again that I was still alive when I saw the falling houses and many fuselages.\nKane and I entered a house and started a search.</string>
+    <string name="ct_storyLine1_2">Let\'s see... there\'s something I can use... \n(Searching closely inside the house with Kane)</string>
+    <string name="ct_storyLine1_3">Who are you! Where and how did you get in!\nJust the two of you? What\'s the purpose?</string>
+    <string name="ct_storyLine1_4">(It looks like she\'s the survived...)\nNo! We are not suspicious people. I\'m just here because there\'s a village in the distance.\nThere\'s a snowstorm coming from far away. We have to be prepared for that!</string>
+    <string name="ct_storyLine1_5">Snowstorm...! That\'s quite a big deal. I saw it at first glance and it took more than 30 minutes to pass by.\nAnyway, you guys seem to have survived, so avoid the snowstorm here first.\nCall me Roxy. I\'m sure you brought some firewood, huh?</string>
+    <string name="ct_storyLine1_6">We\'re just running out of firewood.\nIs there anything we can use here?</string>
+    <string name="ct_storyLine1_7_">There was a hidden door on the floor. There might be something useful there.\nBut there\'s a lock for entering numbers. I think we should open this.</string>
+    <string name="ct_storyLine1_8">It\'s open! There\'s a coal box in here. Come on, get this thing up there!\nAnd hurry up and lock the door!\nIf there\'s any wind leakage, the house will sink down.</string>
+    <string name="ct_storyLine1_9">All right, Kane, put more boards on the window there!\nThe snowstorm is about to arrive!</string>
+    <string name="ct_storyLine1_10">(Snowstorm storms. The house is shaking with the momentum of leaving, but thanks to good preparation, it endured storm.\nFinally it seems to have overcome it well.)</string>
+    <string name="ct_storyLine1_11_">It is over... We are over the biggest obstacle.</string>
+
+    <string name="ct_storyLine2_1">A snowstorm passed and we went to the town square. There were quite a few survivors there.\nI saw a man who seemed to be a leader, and I talked to him.</string>
+    <string name="ct_storyLine2_2">Hello, sir, there are quite a few survivors here in town. Is there anything we can do for you here?\nWhy don\'t we live here and survive together?</string>
+    <string name="ct_storyLine2_3_">All right, the more people we have, the smoother the expedition will be.\nMy name is Camelot. I look forward to your kind cooperation.\nYou can live in the house with this note here.</string>
+    <string name="ct_storyLine2_4">I guess this is the house we\'re assigned to.\nThere\'s a housemate already.</string>
+    <string name="ct_storyLine2_5">Hi, my name is Big Boy.\nLet\'s survive together.</string>
+    <string name="ct_storyLine2_6_">We are %s, Kane.\nGood to see you.</string>
+
+    <string name="ct_storyLine3_1">Now, let\'s explore the environment and collect resources that we can use.\nI\'ll give you these containers for each group, so please bring all the items that look useful.</string>
+    <string name="ct_storyLine3_2">(All the groups returned with five full barrels.)\nHow do we stack this up? I think I\'ve collected quite a lot.\nThis radio might be a big harvest.</string>
+    <string name="ct_storyLine3_3">All the trunks were arranged, and Camelot identified the capture that each trawler had been harvesting.</string>
+    <string name="ct_storyLine3_4_">It is no shame that there are fewer snatches than others.\nBut if you inflate like this to look better than others, it causes trust problems.</string>
+    <string name="ct_storyLine3_5">It is said that sometimes they cheat like that to get more distribution than others.\nThose who cheated on their quotas are taken to the punishment room.</string>
+    <string name="ct_storyLine3_6">Trust is really important in a society that has barely survived.\nTrust is important while we\'re here, too.</string>
+    <string name="ct_storyLine3_7_">Don\'t try to cover me up after doing something! (laugh)</string>
+
+    <string name="eg_storyLine1_1">Today, I went on an expedition to a new place. It is a little far from the village, where there is a large building.\nMe, Kane, and Roxy entered the building in groups.</string>
+    <string name="eg_storyLine1_2">When I see such a curved window, I miss it.\nIt reminds me of the past, you know what I\'m saying?</string>
+    <string name="eg_storyLine1_3">Oh, that\'s what you\'re thinking?\nSometimes I miss my normal daily life when nothing happens.</string>
+    <string name="eg_storyLine1_4_">That\'s an interesting design.But it\'s not colored, so it\'s very plain. What about we color it like this?</string>
+    <string name="eg_storyLine1_5">There\'s such a loophole!\n %s, You have a good eye!</string>
+    <string name="eg_storyLine1_6">No, it just happened to be a hit! (laugh)</string>
+    <string name="eg_storyLine1_7_">(...Don\'t you two are close strangely?)</string>
+
+    <string name="eg_storyLine2_1">It\'s already been a month since We\'ve been in distress.\nWe move the room to another one according to the rules.\nIt happened while I was moving my luggage to the new room I was assigned to.</string>
+    <string name="eg_storyLine2_2">Hey, Kane! What\'s all this, dude!</string>
+    <string name="eg_storyLine2_3">Damn, Kane has left all his luggage all over the place!\nThere are several boxes of luggage on the ground.\nRoxy, who just stopped by our accommodation, doesn\'t seem to understand the situation.</string>
+    <string name="eg_storyLine2_4">Hey, %s! Please help me!\nPlease help me find my wallet!</string>
+    <string name="eg_storyLine2_5">What\'s in there that\'s why you put everything in there!\nDid you pick up and hide some jewelry?</string>
+    <string name="eg_storyLine2_6">No! There must be a box with a wallet in these boxes.\nThere\'s an ID picture of my family in it!\nHelp me and I\'ll give you my dinner later!</string>
+    <string name="eg_storyLine2_7_">Seriously... I\'ll help you. Open the box all!</string>
+    <string name="eg_storyLine2_8">I found it! It was in this box!</string>
+    <string name="eg_storyLine2_9">I\'m so glad I found it...\nWithout this, I have no reason to live.\nThank you so much for your help, %s!</string>
+    <string name="eg_storyLine2_10">But when are you going to move all these boxes?</string>
+    <string name="eg_storyLine2_11">Why? The sun is still up?</string>
+    <string name="eg_storyLine2_12">...Why don\'t you want to take a look outside now?</string>
+    <string name="eg_storyLine2_13">What\'s the problem? It\'s still around 8 p.m...</string>
+    <string name="eg_storyLine2_14">Is 8 p.m. day or night?</string>
+    <string name="eg_storyLine2_15">It\'s night... right...?</string>
+    <string name="eg_storyLine2_16_">What should I do with you...</string>
+
+    <string name="eg_storyLine3_1">We found Kane\'s precious things and helped each other to move our luggage.\nBut the lock I saw for the first time was hung on the door of our room!</string>
+    <string name="eg_storyLine3_2">What the hack?\nI\'ve never locked a lock like this?</string>
+    <string name="eg_storyLine3_3">There was a kid who looked at us with a runny nose and a very simple gaze.</string>
+    <string name="eg_storyLine3_4">I hung it up! I picked up something interesting, but I was playing with it and got locked in it!\nPlease release that!</string>
+    <string name="eg_storyLine3_5">Who are you? You didn\'t know what a lock is?\nDo you know the password for this?</string>
+    <string name="eg_storyLine3_6">I\'m Fonco! I don\'t know how to touch that!\nRelease that, I wanna play with that more!</string>
+    <string name="eg_storyLine3_7">What\'s this picture? It was on this lock?</string>
+    <string name="eg_storyLine3_8">Oh, who\'s he? Do you know him?</string>
+    <string name="eg_storyLine3_9">I think he\'s just a kid.\nThere\'s nothing to worry about.</string>
+    <string name="eg_storyLine3_10_">Anyway, let\'s pick the lock first.</string>
+    <string name="eg_storyLine3_11">I solved it! It\'s nothing.\nHere, take this.</string>
+    <string name="eg_storyLine3_12">Is that the one who was in this town?</string>
+    <string name="eg_storyLine3_13">Well? I haven\'t seen him in a month?</string>
+    <string name="eg_storyLine3_14_">Who was he after all.\nI suddenly feel a chill in my spine.</string>
+
+    <string name="eg_storyLine4_1">Who was he after all. I suddenly feel a chill in my spine.Gather in front of building a to check the number of people and crops.\nThe harvest is more than I thought, so it\'s like a festival.</string>
+    <string name="eg_storyLine4_2">Great! The harvest is pretty big today.\nOn a day like this, it would be nice to do something fun!</string>
+    <string name="eg_storyLine4_3_">Oh, I think Camelot is up to something funny.</string>
+    <string name="eg_storyLine4_4_">I\'m happy to receive something, but... Do I really need this?\nI can\'t even drink it because it\'s frozen...</string>
+
+    <string name="food_storyLine1_1">I arrived at the distribution center to get the food.\nI could see Bigboy already getting food rationed and going back.</string>
+    <string name="food_storyLine1_2">Isn\'t that a Bigboy?</string>
+    <string name="food_storyLine1_3">I think it\'s right. He\'s wearing a cap in a wired way.</string>
+    <string name="food_storyLine1_4">He looked like a freak.</string>
+    <string name="food_storyLine1_5">What? Why?</string>
+    <string name="food_storyLine1_6_">There are some rules for wearing a cap.\nI watched it carefully.</string>
+    <string name="food_storyLine1_7">It\'s little bit wired, but isn\'t it like his own belief?</string>
+    <string name="food_storyLine1_8">I think you\'re a nerd, too, analyzing things like that. (laugh)</string>
+    <string name="food_storyLine1_9_">Bigboy... Does he really like caps...</string>
+
+    <string name="food_storyLine2_1">It seems like they\'re giving out specials today.\nGo with me, Kane, and Roxy and line up for rationing.</string>
+    <string name="food_storyLine2_2_">Guys! You must have been running for a special meal!\nYou should eat a lot because you\'re young!\nSolve this riddle and I\'ll only give you guys some extra milk and some sugar!</string>
+    <string name="food_storyLine2_3">The pancakes were really delicious.\nKane stuck his nose in a plate and ate as if he were drinking pancakes.\nWhy I feel shameful?</string>
+    <string name="food_storyLine2_4">Since a long time ago it\'s told that we\'re not playing with food.\nBut if there\'s a reward, it\'s a different story!</string>
+    <string name="food_storyLine2_5">Your eyes turn around in front of the reward...</string>
+    <string name="food_storyLine2_6">Oh! Won\'t they give me that pancake if I go back?\nIf you forgot our faces, you might give it to us again!</string>
+    <string name="food_storyLine2_7_">Come on...</string>
+
+    <string name="food_storyLine3_1">After being served with Roxy and Kane, I went to the room because I had some time left until my work.</string>
+    <string name="food_storyLine3_2">Ta-da! I gathered some ingredients to make a chain necklace!</string>
+    <string name="food_storyLine3_3">Oh, it\'ll look good on you?</string>
+    <string name="food_storyLine3_4">If you go to Bigboy, they\'ll put you in a chain!\nHe must be good with his hands.</string>
+    <string name="food_storyLine3_5_">Really? Then let\'s ask them to make it right away!</string>
+    <string name="food_storyLine3_6">What do you think? Do you think it\'s well-made?</string>
+    <string name="food_storyLine3_7">Yes! It suits you as expected!</string>
+    <string name="food_storyLine3_8_">I\'m surprised you connected it in a such way!\nI didn\'t think you\' I still don\'t know how you saved a loaf of bread.</string>
+
+    <string name="lake_storyLine1_1">One day, after all the work, the residents decided to gather and have a campfire.</string>
+    <string name="lake_storyLine1_2">Everyone, let\'s play a board game!\nI picked it up from the building over there!</string>
+    <string name="lake_storyLine1_3">Board games are good! Isn\'t that \'Avalon\'?\nI was really good at that long time ago!</string>
+    <string name="lake_storyLine1_4">Oh, if it\'s a game you knew, it shouldn\'t be unfair.</string>
+    <string name="lake_storyLine1_5_">Then let\'s change the rules!</string>
+    <string name="lake_storyLine1_6">No way!! Then who the f**k is a Percival!!!</string>
+    <string name="lake_storyLine1_7">Hey, Kane, calm down. It\'s just a game (laugh)</string>
+    <string name="lake_storyLine1_8">It\'s so funny that he\'s playing the game seriously... (laugh)</string>
+    <string name="lake_storyLine1_9_">Kane seems to be serious about winning... Why am I ashamed?</string>
+
+    <string name="st_storyLine1_1">One day, I went on a quest with Roxy and Kane.\nI arrived at a building called Frozen Heart, and there was a strange merchant-like man.</string>
+    <string name="st_storyLine1_2">Hey guys! I heard he wants to gamble! It\'s a bit unique!\nLet\'s try it!</string>
+    <string name="st_storyLine1_3">Your eyes go round whenever who gives you anything, right?</string>
+    <string name="st_storyLine1_4_">Should we try it anyway!\nMaybe we can get something useful.</string>
+    <string name="st_storyLine1_5_">The man\'s face turned blue. Because the swallow left in the box was X.\nI\'ll quietly give you 20 coals, so I asked if you could just take this with you.\nNo, we took the risk and won.</string>
+
+    <string name="st_storyLine2_1">I was about to enter the Ice Heart building, but the entrance was locked.\nNext to the entrance was a box with two dials.</string>
+    <string name="st_storyLine2_2">I don\'t know why, but I feel like there\'s a key here to open this door...</string>
+    <string name="st_storyLine2_3">Really? How do you know that?</string>
+    <string name="st_storyLine2_4">If you look at it, it looks like it\'s going to happen...</string>
+    <string name="st_storyLine2_5">Don\'t crave it too much, he\'s stupid, but nice one.</string>
+    <string name="st_storyLine2_6_">What! Who\'s stupid!</string>
+    <string name="st_storyLine2_7">There was really a key in the box.\nI don\'t know why, who did this for what...</string>
+    <string name="st_storyLine2_8">But when we were competing with guy earlier, it seemed like Fonco was going into this building.</string>
+    <string name="st_storyLine2_9_">...who is he sincerely?</string>
+
+    <string name="st_storyLine3_1">While searching the Frozen Heart building, I found a jewelry necklace.\nI took this necklace and went to the thief to get an appraisal.</string>
+    <string name="st_storyLine3_2">What do you think? How much do you think it\'s worth?</string>
+    <string name="st_storyLine3_3">Well, that\'s a pretty good thing.\nHowever, I think we should pay differently for each gem.</string>
+    <string name="st_storyLine3_4">Okay, please be objective and evaluate it!</string>
+    <string name="st_storyLine3_5_">Hmm... I\'ll make a bet.\nIf you get this question right, add more, and if you get it wrong, take it without opinion.</string>
+    <string name="st_storyLine3_6_">The thief handed the coin with a face of resentment.\nWho do you think we are!</string>
+
+    <string name="st_storyLine4_1">Roxy comes running with a very flustered face!</string>
+    <string name="st_storyLine4_2">What? Is something wrong?</string>
+    <string name="st_storyLine4_3">Come with me. Come on! Come on!</string>
+    <string name="st_storyLine4_4">We headed to the basement of the Frozen heart building.\nAn object, like a generator, was placed, and the repairman Ikenas looked around the object.</string>
+    <string name="st_storyLine4_5">It looks like a generator?\nThere\'s a compartment down here where you can put some fuel or something like that.\nBut there\'s something like a lock here.</string>
+    <string name="st_storyLine4_6">When I looked closely, it had a lock like a digital door lock.\nThis device seems to work only when this one is released.</string>
+    <string name="st_storyLine4_7">There\'s a history of trying passwords next to this...\nI think there\'s some kind of rule.</string>
+    <string name="st_storyLine4_8">Oh? I pressed this and the lamp turned on?\nIs there really some kind of rule?</string>
+    <string name="st_storyLine4_9_">Hmm... I think I know what it is? I\'ll try it.</string>
+    <string name="st_storyLine4_10">The doorlock opened with a familiar melody.\nTemporary generators were activated with the roar, and electricity came to the ice heart building and the village!\nThe villagers cheered.</string>
+    <string name="st_storyLine4_11">Hey, %s! How did you get this right? You\'re so smart!\nWhen I get back to town, can I report to Camelot this?</string>
+    <string name="st_storyLine4_12">Everyone worked together, and most importantly, it was Roxy who discovered this!\nI was just helping.</string>
+    <string name="st_storyLine4_13">You really solve everything...\nI\'m starting to get a little scared now. (laugh)</string>
+    <string name="st_storyLine4_14">What are you? I don\'t think it\'s human intelligence!</string>
+    <string name="st_storyLine4_15_">At Kane\'s last word, everyone there laughed.</string>
+
+    <string name="lb_storyLine1_1">Camelot says he found me.\nI entered Camelot\'s room with a nervous heart.</string>
+    <string name="lb_storyLine1_2">Hey %s, that\'s you.\nThis was a great achievement.</string>
+    <string name="lb_storyLine1_3">No, sir.\nIt was possible because you took me and Kane to this town.</string>
+    <string name="lb_storyLine1_4">I believe you can lead my town after me.\nAn old man like me could stand down now.</string>
+    <string name="lb_storyLine1_5">No, I\'m still lacking a lot.\nBut if I have to succeed your role, I will.</string>
+    <string name="lb_storyLine1_6_">Haha! What a great and polite guy.\nI am so grateful that you have contributed to our community.\nTake this paper and go to Telia.\nDepending on the rank written there, your ration will vary.\nI look forward to your continued support.</string>
+</resources>

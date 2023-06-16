@@ -141,7 +141,7 @@ public class st_quiz_2 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(st_quiz_2.this, stHallActivity.class);
+            Intent intent = new Intent(st_quiz_2.this, homeActivity.class);
             startActivity(intent);
             finish();
         });

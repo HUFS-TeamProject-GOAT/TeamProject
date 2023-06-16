@@ -72,11 +72,13 @@ public class eghall_talk1Activity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-        // 초기화
-//        SharedPreferences.Editor editor = settings1.edit();
-//        editor.remove(STORY_STATUS_KEY);
-//        editor.putInt(STORY_STATUS_KEY, 0);
-//        editor.apply();
+
+        //초기화
+        SharedPreferences.Editor editor = settings1.edit();
+        editor.remove(STORY_STATUS_KEY);
+        editor.putInt(STORY_STATUS_KEY, 0);
+        editor.apply();
+        //초기화
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
@@ -140,7 +142,10 @@ public class eghall_talk1Activity extends AppCompatActivity {
                 System.out.println("storyStatus2_1_quiz: " + story);
             }
         }else if (story == 5) {
-            eg_storyText.setText(storyTexts[story-1]);
+            SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+            String user_Name = settings.getString("user_Name", "");
+            String storyText = getString(R.string.eg_storyLine1_5, user_Name);
+            eg_storyText.setText(storyText);
             dark_character(eg_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(eg_imageView2,imageResources[3],subName,textResources[3]);
             story++;

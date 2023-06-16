@@ -67,81 +67,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_more" />
 
-    <TextView
-        android:id="@+id/info_egHall"
-        android:layout_width="416dp"
-        android:layout_height="160dp"
-        android:text="@string/egHall_explain"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/info_ctHall"
+        android:id="@+id/explain_text"
         android:layout_width="416dp"
         android:layout_height="160dp"
-        android:text="@string/ctHall_explain"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/info_lbHall"
-        android:layout_width="416dp"
-        android:layout_height="160dp"
-        android:text="@string/lbHall_explain"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/info_lake"
-        android:layout_width="416dp"
-        android:layout_height="160dp"
-        android:text="@string/info_lake"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/info_stHall"
-        android:layout_width="416dp"
-        android:layout_height="160dp"
-        android:text="@string/lgHall_explain"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/campus_Image"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/info_foodHall"
-        android:layout_width="416dp"
-        android:layout_height="160dp"
-        android:text="후생관 설명"
+        android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
