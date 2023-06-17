@@ -18,6 +18,7 @@ import android.media.MediaPlayer;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatDelegate;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, R.raw.bgm);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
 
         userName = (EditText)findViewById(R.id.userName);
 
