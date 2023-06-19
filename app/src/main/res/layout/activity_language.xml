@@ -11,6 +11,8 @@
         android:layout_width="183dp"
         android:layout_height="71dp"
         android:text="@string/language_Setting"
+        android:textStyle="bold"
+        android:textSize="30sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,29 +24,34 @@
         android:id="@+id/koreanButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="312dp"
+        app:layout_constraintVertical_bias="0.1"
+        android:backgroundTint="@color/black"
         android:text="@string/korean"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/englishButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/languageTitle" />
 
     <Button
         android:id="@+id/englishButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="312dp"
+        app:layout_constraintVertical_bias="0.1"
+        android:backgroundTint="@color/black"
         android:text="@string/english"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/koreanButton"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/languageTitle" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginEnd="32sp"
+        android:layout_marginBottom="32sp"
         android:text="@string/back"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

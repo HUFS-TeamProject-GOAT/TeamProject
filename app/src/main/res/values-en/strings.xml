@@ -11,7 +11,7 @@
     <string name="languageHall">languageHall</string>
     <string name="engineeringHall">engineeringHall</string>
     <string name="ans">answer</string>
-    <string name="language_Setting">Language Setting</string>
+    <string name="language_Setting">Setting</string>
     <string name="korean">Korean</string>
     <string name="english">English</string>
     <string name="hint">hint</string>
@@ -84,7 +84,7 @@
     <string name="st_quiz_4_4_hint">Let\'s think about which numbers will be used first, leaving aside the places where they will be put. +\n\nThe first line shows that the four numbers are 4150. +\n\nAmong them, there are two numbers that fit the location, so let\'s think about it carefully.</string>
 
     <string name="back">BACK</string>
-    <string name="enterName">Enter your name</string>
+    <string name="enterName">Enter your name in 7 characters</string>
     <string name="start">START</string>
     <string name="gameTitle">Game Title</string>
     <string name="skipButtonText">SKIP</string>
@@ -253,4 +253,7 @@
     <string name="lb_storyLine1_4">I believe you can lead my town after me.\nAn old man like me could stand down now.</string>
     <string name="lb_storyLine1_5">No, I\'m still lacking a lot.\nBut if I have to succeed your role, I will.</string>
     <string name="lb_storyLine1_6_">Haha! What a great and polite guy.\nI am so grateful that you have contributed to our community.\nTake this paper and go to Telia.\nDepending on the rank written there, your ration will vary.\nI look forward to your continued support.</string>
+    <string name="go_home">MENU</string>
+    <string name="see_detail">Details</string>
+    <string name="nameError">Enter your name.</string>
 </resources>
