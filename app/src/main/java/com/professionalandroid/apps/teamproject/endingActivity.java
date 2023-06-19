@@ -123,13 +123,13 @@ public class endingActivity extends AppCompatActivity {
 
     }
     private String calculateScore(int n){
-        if(n>6){
+        if(n>380){
             return "A";
         }
-        if(n>4){
+        if(n>360){
             return "B";
         }
-        if(n>2){
+        if(n>340){
             return"C";
         }
         else{
