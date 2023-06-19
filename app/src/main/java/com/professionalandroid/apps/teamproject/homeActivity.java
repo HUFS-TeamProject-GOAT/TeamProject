@@ -199,19 +199,9 @@ public class homeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 
-                SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-                boolean bool1 = settings.getString("storyStatus4", "").equals("17");
-                boolean bool2 = settings.getString("storyStatus5", "").equals("8");
-                boolean bool3 = settings.getString("storyStatus6", "").equals("15");
-                boolean bool4 = settings.getString("storyStatus7", "").equals("5");
 
-                // 백년관 --> storyStatus1
-                if (!(bool1 && bool2 && bool3 && bool4))
-                    Log.d("homeActivity","food_stop");
-                else {
-                    Intent intent =new Intent(getApplicationContext(),foodHallActivity.class);
-                    startActivity(intent);
-                }
+                Intent intent =new Intent(getApplicationContext(),foodHallActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -229,19 +219,10 @@ public class homeActivity extends AppCompatActivity {
            @Override
            public void onClick(View v){
 
-               SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-               boolean bool1 = settings.getString("storyStatus1", "").equals("12");
-               boolean bool2 = settings.getString("storyStatus2", "").equals("7");
-               boolean bool3 = settings.getString("storyStatus3", "").equals("8");
-
                // 백년관 --> storyStatus end
-               if (!(bool1 && bool2 && bool3))
-                   Log.d("homeActivity","eg_stop");
-               else {
-                   Intent intent =new Intent(getApplicationContext(),ctHallActivity.class);
-                   startActivity(intent);
-               }
 
+                   Intent intent =new Intent(getApplicationContext(),egHallActivity.class);
+                   startActivity(intent);
 //               Intent intent =new Intent(getApplicationContext(),egHallActivity.class);
 //               startActivity(intent);
            }
