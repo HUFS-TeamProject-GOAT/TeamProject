@@ -23,16 +23,16 @@
     <string name="ikinas">이케나스</string>
 
 
-    <string name="language_Setting">Language Setting</string>
+    <string name="language_Setting">설정</string>
     <string name="korean">한국어</string>
     <string name="english">영어</string>
 
     <string name="back">뒤로가기</string>
-    <string name="enterName">이름을 입력하세요</string>
+    <string name="enterName">7자 이내의 이름을 입력하세요</string>
     <string name="start">시작하기</string>
     <string name="gameTitle">게임제목</string>
     <string name="homeImage" translatable="false">homeImage</string>
-    <string name="skipButtonText">Skip\n</string>
+    <string name="skipButtonText">Skip</string>
     <string name="getinText">입장하기</string>
     <string name="rank">%s의 계급은</string>
 
@@ -316,6 +316,8 @@
     <string name="st_quiz_4_4_hint">숫자가 들어갈 자리는 제쳐 두고 어떤 숫자가 사용될 지 먼저 생각해보자." +
                     "\n 첫 번째 줄에서 알 수 있는 사실은 4개의 숫자가 4150이라는 사실." +
                     "\n 그 중 위치까지 맞는 숫자는 2개, 잘 생각해 보자.</string>
-    <string name="go_home" translatable="false">Home</string>
+    <string name="go_home">처음으로</string>
+    <string name="see_detail">자세히</string>
+    <string name="nameError">닉네임을 입력해주세요.</string>
 
 </resources>

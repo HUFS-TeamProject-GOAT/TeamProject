@@ -18,6 +18,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,7 @@ public class endingActivity extends AppCompatActivity {
     int [] values = new int[16];
     private Button back_btn;
     private static final String SHARED_PREFS_KEY = "quiz_score";
+    private static final String STORY_STATUS_KEY = "storyStatus";
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
         setContentView(R.layout.activity_ending);
@@ -79,6 +81,9 @@ public class endingActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
+
+                                cleandata();
+                                Toast.makeText(endingActivity.this, "점수와 스토리가 초기화 됐습니다..", Toast.LENGTH_SHORT).show();
                                 Intent intent =new Intent(getApplicationContext(),MainActivity.class);
                                 startActivity(intent);
                             }
@@ -136,4 +141,28 @@ public class endingActivity extends AppCompatActivity {
             return "D";
         }
     }
+
+    private void cleandata(){
+        SharedPreferences preferences,preferences1;
+        SharedPreferences.Editor editor,editor1;
+
+        preferences = getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
+        for (int i = 0; i <= 16; i++) {
+            String shared_prefs_key = "score" + i;
+            preferences = getSharedPreferences(shared_prefs_key, Context.MODE_PRIVATE);
+            editor = preferences.edit();
+            editor.clear();
+            editor.apply();
+        }
+
+        preferences1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
+        for (int i = 0; i <= 16; i++) {
+            String storyStatusKey = "storyStatus" + i;
+            preferences1 = getSharedPreferences(storyStatusKey, Context.MODE_PRIVATE);
+            editor1 = preferences1.edit();
+            editor1.clear();
+            editor1.apply();
+        }
+    }
 }
+
