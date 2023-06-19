@@ -45,6 +45,8 @@ public class ct_quiz_2 extends AppCompatActivity {
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
         count = sharedPreferences.getInt(COUNT_KEY, COUNT_DEFAULT);
 
+
+
         System.out.println("Saved Score: " + score);
         System.out.println("Saved Count: " + count);
         updateScoreText();
