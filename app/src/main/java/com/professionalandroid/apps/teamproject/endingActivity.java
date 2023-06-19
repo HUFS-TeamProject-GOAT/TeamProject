@@ -15,6 +15,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -27,12 +28,14 @@ public class endingActivity extends AppCompatActivity {
 
     int [] values = new int[16];
     private static final String SHARED_PREFS_KEY = "quiz_score";
+    public MediaPlayer clickPlay;
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
         setContentView(R.layout.activity_ending);
         Button MainButton = (Button) findViewById(R.id.MainButton);
         Button detailButton =(Button) findViewById(R.id.show_detail_button);
         TextView rankText=(TextView) findViewById(R.id.rankText);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
@@ -65,6 +68,7 @@ public class endingActivity extends AppCompatActivity {
         MainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
             }
@@ -72,6 +76,7 @@ public class endingActivity extends AppCompatActivity {
         detailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 listView.setVisibility(View.VISIBLE);
 
                 MainButton.setVisibility(View.INVISIBLE);
@@ -90,7 +95,7 @@ public class endingActivity extends AppCompatActivity {
             return "B";
         }
         if(n>2){
-            return"C";
+            return "C";
         }
         else{
             return "D";

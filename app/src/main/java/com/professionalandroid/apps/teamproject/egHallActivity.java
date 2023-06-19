@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,9 +14,12 @@ public class egHallActivity extends AppCompatActivity {
     private final int[] imageBackground = {R.drawable.eghall1, R.drawable.eghall2, R.drawable.eghall3, R.drawable.eghall4, R.drawable.eghall5};
 
     private ImageView eg_Background;
+    public MediaPlayer clickPlay;
+
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.eghall);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         eg_Background = findViewById(R.id.eg_Background);
         ImageButton go_home_btn = (ImageButton) findViewById(R.id.go_home_btn);
@@ -31,6 +35,7 @@ public class egHallActivity extends AppCompatActivity {
         go_home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
                 finish();
@@ -39,6 +44,7 @@ public class egHallActivity extends AppCompatActivity {
         go_egHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -57,6 +63,7 @@ public class egHallActivity extends AppCompatActivity {
         go_egHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -71,6 +78,7 @@ public class egHallActivity extends AppCompatActivity {
         go_egHall4btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -88,6 +96,7 @@ public class egHallActivity extends AppCompatActivity {
         go_egHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -105,6 +114,7 @@ public class egHallActivity extends AppCompatActivity {
         egHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 

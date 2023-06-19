@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 public class st_quiz_2 extends AppCompatActivity {
     private ConstraintLayout layout1, layout2;
@@ -26,12 +27,14 @@ public class st_quiz_2 extends AppCompatActivity {
     private static final int SCORE_DEFAULT = 30;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
+    public MediaPlayer clickPlay;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_st_quiz2);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         scoreTextView = findViewById(R.id.scoreTextView);
         layout1 = findViewById(R.id.st_quiz2_frontLayout);
@@ -50,11 +53,13 @@ public class st_quiz_2 extends AppCompatActivity {
         updateScoreText();
 
         layout1.setOnClickListener(view -> {
+            clickPlay.start();
             layout1.setVisibility(View.INVISIBLE);
             layout2.setVisibility(View.VISIBLE);
         });
 
         submitButton.setOnClickListener(v -> {
+            clickPlay.start();
             String userAnswer = answerEditText.getText().toString();
             String correctAnswer = "2714";
             boolean isCorrect = userAnswer.equals(correctAnswer);
@@ -103,6 +108,7 @@ public class st_quiz_2 extends AppCompatActivity {
         });
 
         hintButton.setOnClickListener(v -> {
+            clickPlay.start();
             if (count == 0) {
                 score -= 1;
                 if (score <= 0) {
@@ -133,6 +139,7 @@ public class st_quiz_2 extends AppCompatActivity {
         });
 
         laterButton.setOnClickListener(v -> {
+            clickPlay.start();
             saveScore(score);
             saveCount(count);
 
