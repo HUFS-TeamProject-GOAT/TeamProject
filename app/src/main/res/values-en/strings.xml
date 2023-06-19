@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="egHall_explain">Engineer Hall Detail</string>
-    <string name="ctHall_explain">Centinal Hall Detail</string>
-    <string name="lbHall_explain">Liberal Hall Detail</string>
-    <string name="lgHall_explain">Student Hall Detail</string>
+    <string name="egHall_explain">Engineer Hall</string>
+    <string name="ctHall_explain">Centinal Hall</string>
+    <string name="lbHall_explain">Liberal Hall</string>
+    <string name="lgHall_explain">Student Hall</string>
     <string name="lake_explain">life of pie </string>
     <string name="foodhall_explain">distributing station</string>
     <string name="centtinalHall">centtinalHall</string>

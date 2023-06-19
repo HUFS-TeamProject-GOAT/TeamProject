@@ -31,6 +31,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:autoSizeTextType="uniform"
         android:id="@+id/userName"
         android:layout_width="122dp"
         android:layout_height="59dp"
@@ -42,6 +43,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:autoSizeTextType="uniform"
         android:id="@+id/name_hyerim"
         android:layout_width="122dp"
         android:layout_height="59dp"
