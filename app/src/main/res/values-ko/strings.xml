@@ -19,6 +19,16 @@
     <string name="korean">한국어</string>
     <string name="english">영어</string>
 
+    <string name="roksi">록시</string>
+    <string name="kane">케인</string>
+    <string name="kamelot">카멜롯</string>
+    <string name="bigboy">빅보이</string>
+    <string name="fungco">풍코</string>
+    <string name="windy">윈디</string>
+    <string name="tellia">텔리아</string>
+    <string name="ikinas">이케나스</string>
+
+
     <string name="back">뒤로가기</string>
     <string name="enterName">이름을 입력하세요</string>
     <string name="start">시작하기</string>
