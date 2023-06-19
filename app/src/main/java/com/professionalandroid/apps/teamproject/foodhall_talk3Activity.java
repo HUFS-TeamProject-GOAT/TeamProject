@@ -152,6 +152,9 @@ public class foodhall_talk3Activity extends AppCompatActivity {
             if (!quizFinished) {
                 saveLayout(story);
                 Intent intent = new Intent(getApplicationContext(), fd_quiz_3.class);
+                dark_character(food_imageView2,imageResources[3],subName,textResources[3]);
+                clear_character(food_imageView1,imageResources[1],userName,textResources[1]);
+                food_storyText.setText(storyTexts[story-1]);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
 
             } else {

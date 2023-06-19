@@ -148,6 +148,8 @@ public class lake_talkActivity extends AppCompatActivity {
         }else if (story == 5) {
             if (!quizFinished) {
                 saveLayout(story);
+                dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
+                clear_character(lake_imageView2,imageResources[3],subName,textResources[3]);
                 Intent intent = new Intent(getApplicationContext(), fd_quiz_4.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
 

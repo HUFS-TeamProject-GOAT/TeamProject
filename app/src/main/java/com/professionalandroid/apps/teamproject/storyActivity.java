@@ -141,6 +141,8 @@ public class storyActivity extends AppCompatActivity {
         }else if (story == 7) {  // quiz
             if (!quizFinished) {
                 saveLayout(story);
+                clear_character(ct_imageView1,imageResources[1],userName,textResources[1]);
+                ct_storyText.setText(storyTexts[story-1]);
                 Intent intent = new Intent(getApplicationContext(), ct_quiz_1.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {

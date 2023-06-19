@@ -29,7 +29,6 @@ public class lbhall_talkActivity extends AppCompatActivity {
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.president};
     private final int[] textResources = {R.layout.activity_lbhall_talk, R.id.userName, R.id.name_president};
 
-    private boolean quizFinished = false;
     private TextView lb_storyText;
 
     private TextView userName;
@@ -63,6 +62,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent =new Intent(getApplicationContext(),endingActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         findViewById(R.id.skipButton).setOnClickListener(new View.OnClickListener() {
@@ -142,6 +142,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
             dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             findViewById(R.id.nextButton).setVisibility(View.GONE);
+            findViewById(R.id.skipButton).setVisibility(View.INVISIBLE);
             findViewById(R.id.endingButton).setVisibility(View.VISIBLE);
             story++;
         }
@@ -188,17 +189,6 @@ public class lbhall_talkActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         story = savedInstanceState.getInt(STORY_STATUS_KEY);
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == YOUR_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            quizFinished = data.getBooleanExtra("quizFinished", false);
-            if (quizFinished) {
-                showNextStoryText();
-            }
-        }
     }
 
 }

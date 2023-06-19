@@ -133,6 +133,9 @@ public class eghall_talk1Activity extends AppCompatActivity {
         }else if (story == 4) {
             if (!quizFinished) {
                 saveLayout(story);
+                clear_character(eg_imageView2,imageResources[3],subName,textResources[3]);
+                dark_character(eg_imageView1,imageResources[1],userName,textResources[1]);
+                eg_storyText.setText(storyTexts[story-1]);
                 Intent intent = new Intent(getApplicationContext(), eg_quiz_1.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {
