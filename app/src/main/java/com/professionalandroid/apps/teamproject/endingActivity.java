@@ -3,8 +3,11 @@ package com.professionalandroid.apps.teamproject;
 import static com.professionalandroid.apps.teamproject.MainActivity.PREFS_NAME;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +19,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -26,6 +30,7 @@ import java.util.List;
 public class endingActivity extends AppCompatActivity {
 
     int [] values = new int[16];
+    private Button back_btn;
     private static final String SHARED_PREFS_KEY = "quiz_score";
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
@@ -33,6 +38,7 @@ public class endingActivity extends AppCompatActivity {
         Button MainButton = (Button) findViewById(R.id.MainButton);
         Button detailButton =(Button) findViewById(R.id.show_detail_button);
         TextView rankText=(TextView) findViewById(R.id.rankText);
+        Button back_btn = findViewById(R.id.back_btn);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
@@ -65,19 +71,53 @@ public class endingActivity extends AppCompatActivity {
         MainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent intent =new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(endingActivity.this);
+                builder.setTitle("게임 초기화")
+                        .setMessage("확인 버튼 누르시면 게임이 초기화 됩니다.")
+                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("취소", null);
+
+                AlertDialog dialog = builder.create();
+
+                dialog.setOnShowListener(dialogInterface -> getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#70FFFFFF"))));
+
+                dialog.show();
+
+
+
             }
         });
         detailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 listView.setVisibility(View.VISIBLE);
+                back_btn.setVisibility(View.VISIBLE);
 
                 MainButton.setVisibility(View.INVISIBLE);
                 detailButton.setVisibility(View.INVISIBLE);
                 Rank.setVisibility(View.INVISIBLE);
                 rankText.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listView.setVisibility(View.INVISIBLE);
+                back_btn.setVisibility(View.INVISIBLE);
+
+                MainButton.setVisibility(View.VISIBLE);
+                detailButton.setVisibility(View.VISIBLE);
+                Rank.setVisibility(View.VISIBLE);
+                rankText.setVisibility(View.VISIBLE);
             }
         });
 
