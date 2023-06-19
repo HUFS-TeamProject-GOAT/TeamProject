@@ -19,8 +19,9 @@
     <string name="later">later</string>
     <string name="answer">answer</string>
 
+
     <string name="ct_quiz_1_1">-2 points for each wrong question\nIf you look at the hint, you\'ll get -1 points (you\'ll continue to see it without deducting points afterwards).)\nYou can solve the problem later by pressing the button next time.\nEnter your answer and press Submit to save your score temporarily\nIf the answer is wrong, it comes back to the question.\nIf you\'re ready, click Submit to complete the tutorial.</string>
-    <string name="ct_quiz_1_1_title">a tutorial</string>
+    <string name="ct_quiz_1_1_title">Tutorial</string>
     <string name="ct_quiz_1_1_hint">This is the hint section!</string>
 
     <string name="ct_quiz_1_2">There\'s a snowstorm coming up!\nIt looks like fuel is in this basement for the duration of that blizzard, but it\'s locked.\nHow many times a large triangle is a small triangle?</string>
@@ -82,6 +83,16 @@
     <string name="st_quiz_4_4">It seems that something that looks like a generator is locked with a door lock and cannot be used.\nI press it here and there, and the lamp next to it reacts.\nWhat is the password for this door lock?</string>
     <string name="st_quiz_4_4_title">an old door lock</string>
     <string name="st_quiz_4_4_hint">Let\'s think about which numbers will be used first, leaving aside the places where they will be put. +\n\nThe first line shows that the four numbers are 4150. +\n\nAmong them, there are two numbers that fit the location, so let\'s think about it carefully.</string>
+
+    <string name="roksi">roksi</string>
+    <string name="kane">kane</string>
+    <string name="kamelot">kamelot</string>
+    <string name="bigboy">bigboy</string>
+    <string name="fungco">fungco</string>
+    <string name="windy">windy</string>
+    <string name="tellia">tellia</string>
+    <string name="ikinas">ikinas</string>
+
 
     <string name="back">BACK</string>
     <string name="enterName">Enter your name</string>

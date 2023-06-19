@@ -191,9 +191,9 @@ public class cthall_talk1Activity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText("케인");
+            name.setText(getText(R.string.kane));
         } else if (textResources == R.id.name_hyerim) {
-            name.setText("록시");
+            name.setText(getText(R.string.roksi));
         }
         name.setTextColor(Color.GRAY);
     }
@@ -205,9 +205,9 @@ public class cthall_talk1Activity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText("케인");
+            name.setText(getText(R.string.kane));
         } else if (textResources == R.id.name_hyerim) {
-            name.setText("록시");
+            name.setText(getText(R.string.roksi));
         }
         name.setTextColor(Color.BLACK);
     }
