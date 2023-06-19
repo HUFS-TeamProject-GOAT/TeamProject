@@ -73,10 +73,10 @@ public class eghall_talk3Activity extends AppCompatActivity {
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
         // 초기화
-//        SharedPreferences.Editor editor = settings1.edit();
-//        editor.remove(STORY_STATUS_KEY);
-//        editor.putInt(STORY_STATUS_KEY, 0);
-//        editor.apply();
+        SharedPreferences.Editor editor = settings1.edit();
+        editor.remove(STORY_STATUS_KEY);
+        editor.putInt(STORY_STATUS_KEY, 0);
+        editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
@@ -164,6 +164,9 @@ public class eghall_talk3Activity extends AppCompatActivity {
         else if (story == 10) {
             if (!quizFinished) {
                 saveLayout(story);
+                clear_character(eg_imageView1,imageResources[1],userName,textResources[1]);
+                dark_character(eg_imageView2,imageResources[3],subName,textResources[3]);
+                eg_storyText.setText(storyTexts[story-1]);
                 Intent intent = new Intent(getApplicationContext(), eg_quiz_3.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {

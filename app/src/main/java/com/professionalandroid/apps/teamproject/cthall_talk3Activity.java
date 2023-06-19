@@ -125,6 +125,8 @@ public class cthall_talk3Activity extends AppCompatActivity {
             if (!quizFinished) {
                 saveLayout(story);
                 Intent intent = new Intent(getApplicationContext(), ct_quiz_4.class);
+                clear_character(ct_imageView2,imageResources[3],subName,textResources[3]);
+                ct_storyText.setText(storyTexts[story-1]);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {
                 story++;
