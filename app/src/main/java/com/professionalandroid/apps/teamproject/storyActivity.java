@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.os.Bundle;
@@ -143,7 +142,7 @@ public class storyActivity extends AppCompatActivity {
                 saveLayout(story);
                 clear_character(ct_imageView1,imageResources[1],userName,textResources[1]);
                 ct_storyText.setText(storyTexts[story-1]);
-                Intent intent = new Intent(getApplicationContext(), ct_quiz_1.class);
+                Intent intent = new Intent(getApplicationContext(), Tutorial.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
             } else {
                 story++;
@@ -167,7 +166,7 @@ public class storyActivity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText("케인");
+            name.setText(getText(R.string.kane));
         }
         name.setTextColor(Color.GRAY);
     }
@@ -179,7 +178,7 @@ public class storyActivity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText("케인");
+            name.setText(getText(R.string.kane));
         }
         name.setTextColor(Color.BLACK);
     }

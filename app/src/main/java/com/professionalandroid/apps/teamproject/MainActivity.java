@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 user_Name = userName.getText().toString();
                 if (user_Name.isEmpty()) { // 닉네임이 비어있는 경우
-                    showAlertDialog("닉네임을 입력해주세요");
+                    showAlertDialog(getString(R.string.nameError));
                 } else {
                     SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = settings.edit();
