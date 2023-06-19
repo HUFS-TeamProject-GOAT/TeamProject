@@ -10,7 +10,6 @@
         android:id="@+id/campus_Image"
         android:layout_width="700dp"
         android:layout_height="550dp"
-
         android:contentDescription="@string/cpsImage"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +72,6 @@
         android:layout_width="307dp"
         android:layout_height="43dp"
         android:autoSizeTextType="uniform"
-
         android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:visibility="invisible"
@@ -113,6 +111,7 @@
         android:layout_width="114dp"
         android:layout_height="67dp"
         android:text="@string/getinText"
+        android:backgroundTint="@color/black"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -122,6 +121,7 @@
         android:layout_width="114dp"
         android:layout_height="67dp"
         android:text="@string/getinText"
+        android:backgroundTint="@color/black"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -131,6 +131,7 @@
         android:layout_width="114dp"
         android:layout_height="67dp"
         android:text="@string/getinText"
+        android:backgroundTint="@color/black"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -140,6 +141,7 @@
         android:layout_width="114dp"
         android:layout_height="67dp"
         android:text="@string/getinText"
+        android:backgroundTint="@color/black"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -149,6 +151,7 @@
         android:layout_width="114dp"
         android:layout_height="67dp"
         android:text="@string/getinText"
+        android:backgroundTint="@color/black"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -158,6 +161,7 @@
         android:layout_width="114dp"
         android:layout_height="67dp"
         android:text="@string/getinText"
+        android:backgroundTint="@color/black"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
