@@ -57,10 +57,9 @@
     <string name="eg_quiz_2_4_title">Game of Camelot</string>
     <string name="eg_quiz_2_4_hint">Some said they received high-quality chocolate. In other words, there were more than four children wearing red hats.\n+\nIt also means that there are some participants who have not received it. If all the students were wearing red hats, everyone would have seen more than four participants wearing red hats.</string>
 
-    <string name="fd_quiz_3_1">hold off</string>
-    <string name="fd_quiz_3_1_title">hold off</string>
-    <string name="fd_quiz_3_1_hint">-</string>
-
+    <string name="fd_quiz_3_1">There were several passengers on the bus. At the first stop, one-sixth of the total passengers got off, then one-fifth at the next stop, then one-fourth, one-third, and one-half in the same way, and at the last stop all passengers got off. If no passengers were on board during the operation, how many passengers were on board at first? Let\'s answer the least number of people we can think of.</string>
+    <string name="fd_quiz_3_1_title">passengers on a bus</string>
+    <string name="fd_quiz_3_1_hint">Assuming that there were 30 passengers on board at the first time, 5 people because one-sixth of the passengers were getting off at the next station. The next stop is one-fifth of the remaining passengers, so five people. Also, the number of customers getting off at the next station will be a quarter, so five people.</string>
     <string name="fd_quiz_3_2">One day, 12 residents gather to play board games.\nThere are six citizen cards and six villain cards mixed.\nAfter designating himself as the first and excluding the sixth person several times, only six citizens remained.\nWho started counting? The direction can be counted in only one direction.</string>
     <string name="fd_quiz_3_2_title">So that only citizens remain</string>
     <string name="fd_quiz_3_2_hint">The first person to choose is one of the citizens.\nLet\'s count counterclockwise.\nThe first person to fall out is the villain in the 5 o\'clock direction.</string>

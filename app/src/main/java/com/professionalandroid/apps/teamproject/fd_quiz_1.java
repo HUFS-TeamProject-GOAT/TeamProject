@@ -56,7 +56,7 @@ public class fd_quiz_1 extends AppCompatActivity {
 
         submitButton.setOnClickListener(v -> {
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "3";
+            String correctAnswer = "6";
             boolean isCorrect = userAnswer.equals(correctAnswer);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_1.this);
