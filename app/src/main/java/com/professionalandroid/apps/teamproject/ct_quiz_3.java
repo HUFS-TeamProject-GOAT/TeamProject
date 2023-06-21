@@ -22,7 +22,7 @@ public class ct_quiz_3 extends AppCompatActivity {
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
     private static final String SCORE_KEY = "score"+2;
-    private static final String COUNT_KEY = "count";
+    private static final String COUNT_KEY = "count"+2;
     private static final int SCORE_DEFAULT = 20;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;

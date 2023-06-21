@@ -21,8 +21,8 @@ public class fd_quiz_4 extends AppCompatActivity {
     private TextView scoreTextView;
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String SCORE_KEY = "score"+12;
-    private static final String COUNT_KEY = "count";
+    private static final String SCORE_KEY = "score"+11;
+    private static final String COUNT_KEY = "count"+11;
     private static final int SCORE_DEFAULT = 20;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;

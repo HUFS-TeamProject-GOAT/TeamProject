@@ -24,8 +24,8 @@ public class st_quiz_3 extends AppCompatActivity {
     String combinedUserAnswer;
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String SCORE_KEY = "score"+15;
-    private static final String COUNT_KEY = "count";
+    private static final String SCORE_KEY = "score"+14;
+    private static final String COUNT_KEY = "count"+14;
     private static final int SCORE_DEFAULT = 30;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;

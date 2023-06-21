@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     public static final  String PREFS_NAME = "MyPREFS";
 
-    private Button btn;
     public MediaPlayer mediaPlayer;
     EditText userName;
     String user_Name;
@@ -91,4 +90,20 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
+            mediaPlayer.start();
+        }
+    }
+
+
+    @Override
+    protected void onPause() {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+            mediaPlayer.pause();
+        }
+        super.onPause();
+    }
 }
