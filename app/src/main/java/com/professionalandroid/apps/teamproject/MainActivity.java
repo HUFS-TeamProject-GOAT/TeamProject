@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public static final  String PREFS_NAME = "MyPREFS";
 
     private Button btn;
-    public MediaPlayer mediaPlayer;
+    public MediaPlayer mediaPlayer, clickPlay;
     EditText userName;
     String user_Name;
     @Override
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         //BGM 재생
         mediaPlayer = MediaPlayer.create(this, R.raw.bgm);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
 
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 user_Name = userName.getText().toString();
+                clickPlay.start();
                 if (user_Name.isEmpty()) { // 닉네임이 비어있는 경우
                     showAlertDialog(getString(R.string.nameError));
                 } else {
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Intent intent =new Intent(getApplicationContext(),languageActivity.class);
+                clickPlay.start();
                 startActivity(intent);
             }
         });

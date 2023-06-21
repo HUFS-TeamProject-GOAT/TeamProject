@@ -1,7 +1,5 @@
 package com.professionalandroid.apps.teamproject;
 
-
-
 import static com.professionalandroid.apps.teamproject.MainActivity.PREFS_NAME;
 
 import android.app.Activity;
@@ -16,12 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class sthall_talk4Activity extends AppCompatActivity {
-
-
 
     private static final int YOUR_REQUEST_CODE = 1;
 
@@ -44,6 +41,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
 
     private int story;
     private static final String STORY_STATUS_KEY = "storyStatus"+15; // 스토리 상태를 저장하기 위해 만든 key
+    public MediaPlayer clickPlay;
 
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
@@ -55,9 +53,12 @@ public class sthall_talk4Activity extends AppCompatActivity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_sthall_talk4);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
+
         findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 showNextStoryText();
             }
         });
@@ -88,6 +89,7 @@ public class sthall_talk4Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 if(!quizFinished) {
                     story = 9;
                 }else {

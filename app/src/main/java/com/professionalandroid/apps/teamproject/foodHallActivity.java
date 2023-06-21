@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,9 +14,11 @@ public class foodHallActivity extends AppCompatActivity {
     private int currentIndex = 0;
     private final int[] imageBackground = {R.drawable.foodhall1, R.drawable.foodhall2, R.drawable.foodhall3, R.drawable.foodhall4, R.drawable.foodhall5};
     private ImageView food_Background;
+    public MediaPlayer clickPlay;
     protected void onCreate(Bundle savedInstacestate) {
         super.onCreate(savedInstacestate);
         setContentView(R.layout.foodhall);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         food_Background = findViewById(R.id.food_Background);
         ImageButton go_home_btn = (ImageButton) findViewById(R.id.go_home_btn);
@@ -30,6 +33,7 @@ public class foodHallActivity extends AppCompatActivity {
         go_home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
                 finish();
@@ -38,6 +42,7 @@ public class foodHallActivity extends AppCompatActivity {
         go_foodHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -52,6 +57,7 @@ public class foodHallActivity extends AppCompatActivity {
         go_foodHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -71,6 +77,7 @@ public class foodHallActivity extends AppCompatActivity {
         go_foodHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -88,6 +95,7 @@ public class foodHallActivity extends AppCompatActivity {
         foodHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
                 Intent intent1 =new Intent(getApplicationContext(),foodhall_talk3Activity.class);

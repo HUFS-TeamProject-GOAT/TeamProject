@@ -13,13 +13,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import android.widget.ListView;
+
+import android.widget.TextView;
+import android.media.MediaPlayer;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -34,12 +32,16 @@ public class endingActivity extends AppCompatActivity {
     private Button back_btn;
     private static final String SHARED_PREFS_KEY = "quiz_score";
     private static final String STORY_STATUS_KEY = "storyStatus";
+    public MediaPlayer clickPlay;
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
         setContentView(R.layout.activity_ending);
+
+        clickPlay = MediaPlayer.create(this, R.raw.click);
         Button MainButton = (Button) findViewById(R.id.MainButton);
         Button detailButton =(Button) findViewById(R.id.show_detail_button);
         TextView rankText=(TextView) findViewById(R.id.rankText);
+
         Button back_btn = findViewById(R.id.back_btn);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -74,6 +76,8 @@ public class endingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
 
+                clickPlay.start();
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(endingActivity.this);
                 builder.setTitle("게임 초기화")
                         .setMessage("확인 버튼 누르시면 게임이 초기화 됩니다.")
@@ -98,11 +102,15 @@ public class endingActivity extends AppCompatActivity {
 
 
 
+
+                Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
             }
         });
         detailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 listView.setVisibility(View.VISIBLE);
                 back_btn.setVisibility(View.VISIBLE);
 
@@ -165,4 +173,3 @@ public class endingActivity extends AppCompatActivity {
         }
     }
 }
-
