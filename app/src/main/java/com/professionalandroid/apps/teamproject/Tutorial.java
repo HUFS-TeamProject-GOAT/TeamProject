@@ -22,7 +22,7 @@ public class Tutorial extends AppCompatActivity {
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
     private static final String SCORE_KEY = "score"+0;
-    private static final String COUNT_KEY = "count";
+    private static final String COUNT_KEY = "count"+0;
     private static final int SCORE_DEFAULT = 10;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
