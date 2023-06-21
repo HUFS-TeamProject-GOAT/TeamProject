@@ -68,6 +68,10 @@ public class lbhall_talkActivity extends AppCompatActivity {
         findViewById(R.id.skipButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
+                story = settings1.getInt(STORY_STATUS_KEY, 6);
+                saveLayout(story);
+
                 Intent intent =new Intent(getApplicationContext(),endingActivity.class);
                 startActivity(intent);
                 finish();
@@ -84,10 +88,10 @@ public class lbhall_talkActivity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = settings1.edit();
-        editor.remove(STORY_STATUS_KEY);
-        editor.putInt(STORY_STATUS_KEY, 0);
-        editor.apply();
+//        SharedPreferences.Editor editor = settings1.edit();
+//        editor.remove(STORY_STATUS_KEY);
+//        editor.putInt(STORY_STATUS_KEY, 0);
+//        editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
