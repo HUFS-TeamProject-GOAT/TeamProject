@@ -13,6 +13,7 @@
     <string name="engineeringHall">engineeringHall</string>
     <string name="ans">정답</string>
 
+    <string name="language_Setting">설정</string>
     <string name="roksi">록시</string>
     <string name="kane">케인</string>
     <string name="kamelot">카멜롯</string>
@@ -318,7 +319,6 @@
     <string name="st_quiz_4_4_hint">숫자가 들어갈 자리는 제쳐 두고 어떤 숫자가 사용될 지 먼저 생각해보자." +
                     "\n 첫 번째 줄에서 알 수 있는 사실은 4개의 숫자가 4150이라는 사실." +
                     "\n 그 중 위치까지 맞는 숫자는 2개, 잘 생각해 보자.</string>
-
     <string name="go_home">처음으로</string>
     <string name="see_detail">자세히</string>
     <string name="nameError">닉네임을 입력해주세요.</string>

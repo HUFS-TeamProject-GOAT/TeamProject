@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,6 +35,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
     private TextView subName;
     private ImageView ct_imageView1;
     private ImageView ct_imageView2;
+    public MediaPlayer clickPlay;
 
     private int story;
 
@@ -49,11 +51,12 @@ public class cthall_talk2Activity extends AppCompatActivity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_cthall_talk2);
-
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 showNextStoryText();
             }
         });
@@ -85,6 +88,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 if(!quizFinished) {
                     story = 3;
                 }else {

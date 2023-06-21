@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 public class eg_quiz_1 extends AppCompatActivity {
     private ConstraintLayout layout1, layout2;
@@ -26,6 +27,7 @@ public class eg_quiz_1 extends AppCompatActivity {
 
     private static final int SCORE_DEFAULT = 15;
     private static final int COUNT_DEFAULT = 0;
+    public MediaPlayer clickPlay;
 
     // 점수 저장 객체와 의 key 값 지정
     // SCORE_KEY: score 점수 저장하는 preference 객체
@@ -38,6 +40,7 @@ public class eg_quiz_1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eg_quiz1);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         scoreTextView = findViewById(R.id.scoreTextView);
         layout1 = findViewById(R.id.eg_quiz1_frontLayout);
@@ -60,6 +63,7 @@ public class eg_quiz_1 extends AppCompatActivity {
         updateScoreText();
 
         layout1.setOnClickListener(view -> {
+            clickPlay.start();
             layout1.setVisibility(View.INVISIBLE);
             layout2.setVisibility(View.VISIBLE);
         });
@@ -68,7 +72,7 @@ public class eg_quiz_1 extends AppCompatActivity {
 
         //제출버튼
         submitButton.setOnClickListener(v -> {
-
+            clickPlay.start();
             String userAnswer = answerEditText.getText().toString(); //  User가 EditText에 입력한 값 로드.
             String correctAnswer = "3"; // 문제 정답.
             boolean isCorrect = userAnswer.equals(correctAnswer); // 정답여부 판별.
@@ -123,7 +127,7 @@ public class eg_quiz_1 extends AppCompatActivity {
 
         // hint button
         hintButton.setOnClickListener(v -> {
-
+            clickPlay.start();
             if (count == 0) {
                 score -= 1;
 
@@ -155,6 +159,7 @@ public class eg_quiz_1 extends AppCompatActivity {
         });
 
         laterButton.setOnClickListener(v -> {
+            clickPlay.start();
             saveScore(score);
             saveCount(count);
 
