@@ -10,14 +10,19 @@
     <string name="liberalHall">liberalHall</string>
     <string name="languageHall">languageHall</string>
     <string name="engineeringHall">engineeringHall</string>
+
     <string name="ans">answer</string>
-    <string name="language_Setting">Setting</string>
+    <string name="language_Setting">Language Setting</string>
     <string name="korean">Korean</string>
     <string name="english">English</string>
+
     <string name="hint">hint</string>
     <string name="submit">submit</string>
     <string name="later">later</string>
     <string name="answer">answer</string>
+    <string name="right"> You are right! Let\'s go next step </string>
+    <string name="wrong"> You are wrong. Do it again </string>
+
 
 
     <string name="ct_quiz_1_1">-2 points for each wrong question\nIf you look at the hint, you\'ll get -1 points (you\'ll continue to see it without deducting points afterwards).)\nYou can solve the problem later by pressing the button next time.\nEnter your answer and press Submit to save your score temporarily\nIf the answer is wrong, it comes back to the question.\nIf you\'re ready, click Submit to complete the tutorial.</string>
@@ -100,7 +105,7 @@
     <string name="gameTitle">Game Title</string>
     <string name="skipButtonText">SKIP</string>
     <string name="getinText">ENTER</string>
-    <string name="rank">%s survivla rank is</string>
+    <string name="rank">%s survival rank </string>
     <string name="app_name">TeamProject</string>
     <string name="storyLine1">A severe cold of minus 40 degrees Celsius came, freezing the whole world.\nCivilizations all over the world were frozen hard by the freezing cold, and me and Kane, who survived, formed a group.\nBut we were almost out of supplies, and we had to do something to survive.</string>
     <string name="storyLine2">It\'s so cold. You\'re going to die!\nI\'m almost out of coal and almost all the firewood is wet, so I can\'t use it.\nWhat should I do?</string>
@@ -264,7 +269,9 @@
     <string name="lb_storyLine1_4">I believe you can lead my town after me.\nAn old man like me could stand down now.</string>
     <string name="lb_storyLine1_5">No, I\'m still lacking a lot.\nBut if I have to succeed your role, I will.</string>
     <string name="lb_storyLine1_6_">Haha! What a great and polite guy.\nI am so grateful that you have contributed to our community.\nTake this paper and go to Telia.\nDepending on the rank written there, your ration will vary.\nI look forward to your continued support.</string>
-    <string name="go_home">MENU</string>
+    <string name="go_home">Reset</string>
     <string name="see_detail">Details</string>
     <string name="nameError">Enter your name.</string>
+    <string name="show_rank">Rank</string>
+    <string name="resetdialog">Scores and stories have been initialized..</string>
 </resources>

@@ -9,33 +9,27 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.media.MediaPlayer;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class endingActivity extends AppCompatActivity {
 
-    int [] values = new int[16];
-    private Button back_btn;
+    int [] score_values = new int[17];
+
     private static final String SHARED_PREFS_KEY = "quiz_score";
+    private static final String STORY_STATUS_KEY= "storyStatus";
     public MediaPlayer clickPlay;
-    private static final String STORY_STATUS_KEY = "storyStatus";
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
         setContentView(R.layout.activity_ending);
@@ -44,6 +38,7 @@ public class endingActivity extends AppCompatActivity {
         TextView rankText=(TextView) findViewById(R.id.rankText);
         Button back_btn = findViewById(R.id.back_btn);
         clickPlay = MediaPlayer.create(this, R.raw.click);
+        TextView show_Rank = (TextView)findViewById(R.id.showRank);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
@@ -51,13 +46,13 @@ public class endingActivity extends AppCompatActivity {
         rankText.setText(rankString);
 
 
-        for (int i = 0; i < values.length; i++) {
+        for (int i = 0; i < score_values.length; i++) {
             SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
-            values[i] = sharedPreferences.getInt("score"+i, 0);
+            score_values[i] = sharedPreferences.getInt("score"+i, 0);
         }
         int totalScore=0;
-        for (int i = 0; i < values.length; i++) {
-            totalScore +=values[i];
+        for (int i = 0; i < score_values.length; i++) {
+            totalScore += score_values[i];
         }
 
         String rank = calculateScore(totalScore);
@@ -65,8 +60,8 @@ public class endingActivity extends AppCompatActivity {
         Rank.setText(rank);
 
         List<String> itemList = new ArrayList<>();
-        for (int i = 0; i < values.length; i++) {
-            itemList.add("퀴즈" + i + ": " + values[i]);
+        for (int i = 0; i < score_values.length; i++) {
+            itemList.add("퀴즈" + i + ": " + score_values[i]);
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, itemList);
@@ -114,6 +109,8 @@ public class endingActivity extends AppCompatActivity {
                 detailButton.setVisibility(View.INVISIBLE);
                 Rank.setVisibility(View.INVISIBLE);
                 rankText.setVisibility(View.INVISIBLE);
+                show_Rank.setVisibility(View.INVISIBLE);
+
             }
         });
 
@@ -127,6 +124,7 @@ public class endingActivity extends AppCompatActivity {
                 detailButton.setVisibility(View.VISIBLE);
                 Rank.setVisibility(View.VISIBLE);
                 rankText.setVisibility(View.VISIBLE);
+                show_Rank.setVisibility(View.VISIBLE);
             }
         });
 
@@ -147,19 +145,15 @@ public class endingActivity extends AppCompatActivity {
     }
 
     private void cleandata(){
-        SharedPreferences preferences,preferences1;
-        SharedPreferences.Editor editor,editor1;
+        SharedPreferences preferences1;
+        SharedPreferences.Editor editor1;
 
-        preferences = getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
-        for (int i = 0; i <= 16; i++) {
-            String shared_prefs_key = "score" + i;
-            preferences = getSharedPreferences(shared_prefs_key, Context.MODE_PRIVATE);
-            editor = preferences.edit();
-            editor.clear();
-            editor.apply();
-        }
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
 
-        preferences1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
+
         for (int i = 0; i <= 16; i++) {
             String storyStatusKey = "storyStatus" + i;
             preferences1 = getSharedPreferences(storyStatusKey, Context.MODE_PRIVATE);

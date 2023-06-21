@@ -47,7 +47,7 @@
             android:name=".ct_quiz_2"
             android:exported="false" />
         <activity
-            android:name=".ct_quiz_1"
+            android:name=".Tutorial"
             android:exported="false" />
         <activity
             android:name=".st_quiz_4"

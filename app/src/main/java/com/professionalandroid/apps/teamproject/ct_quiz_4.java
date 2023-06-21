@@ -23,7 +23,7 @@ public class ct_quiz_4 extends AppCompatActivity {
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
     private static final String SCORE_KEY = "score"+3;
-    private static final String COUNT_KEY = "count";
+    private static final String COUNT_KEY = "count"+3;
     private static final int SCORE_DEFAULT = 10;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
@@ -72,10 +72,10 @@ public class ct_quiz_4 extends AppCompatActivity {
 
             if (isCorrect) {
                 dialog.setTitle("정답");
-                dialog.setMessage("정답입니다!");
+                dialog.setMessage(getText(R.string.right));
             } else {
                 dialog.setTitle("실패");
-                dialog.setMessage("틀렸습니다! 다시 한 번 생각해 보세요");
+                dialog.setMessage(getText(R.string.wrong));
             }
 
             dialog.setOnShowListener(dialogInterface -> getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#70FFFFFF"))));
@@ -150,7 +150,7 @@ public class ct_quiz_4 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(ct_quiz_4.this, stHallActivity.class);
+            Intent intent = new Intent(ct_quiz_4.this, ctHallActivity.class);
             startActivity(intent);
             finish();
         });

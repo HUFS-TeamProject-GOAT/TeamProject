@@ -38,6 +38,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
     public MediaPlayer clickPlay;
 
     private int story;
+
     private static final String STORY_STATUS_KEY = "storyStatus"+2; // 스토리 상태를 저장하기 위해 만든 key
 
 //    protected void onPause() { //앱 pause -> 상태 저장
