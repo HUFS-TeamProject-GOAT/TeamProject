@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), storyActivity.class);
                     intent.putExtra("userName", user_Name);
                     startActivity(intent);
+//                    mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.bgm2);
+//                    mediaPlayer.setLooping(true);
+//                    mediaPlayer.start();
                 }
             }
         });
@@ -76,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent =new Intent(getApplicationContext(),languageActivity.class);
                 clickPlay.start();
                 startActivity(intent);
+                finish();
             }
         });
 

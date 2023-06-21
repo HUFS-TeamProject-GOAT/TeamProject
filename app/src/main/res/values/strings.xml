@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TeamProject</string>
+    <string name="app_name">HUFSTOPIA</string>
     <string name="lake_explain">생명의 샘</string>
     <string name="egHall_explain"> 진눈개비 마을</string>
     <string name="ctHall_explain"> 서리눈사람 마을</string>
@@ -13,7 +13,6 @@
     <string name="engineeringHall">engineeringHall</string>
     <string name="ans">정답</string>
 
-    <string name="language_Setting">설정</string>
     <string name="roksi">록시</string>
     <string name="kane">케인</string>
     <string name="kamelot">카멜롯</string>
