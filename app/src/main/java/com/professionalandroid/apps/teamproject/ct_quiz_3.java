@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 public class ct_quiz_3 extends AppCompatActivity {
     private ConstraintLayout layout1, layout2;
@@ -22,16 +23,18 @@ public class ct_quiz_3 extends AppCompatActivity {
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
     private static final String SCORE_KEY = "score"+2;
-    private static final String COUNT_KEY = "count";
+    private static final String COUNT_KEY = "count"+2;
     private static final int SCORE_DEFAULT = 20;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
+    public MediaPlayer clickPlay;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ct_quiz3);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         scoreTextView = findViewById(R.id.scoreTextView);
         layout1 = findViewById(R.id.ct_quiz3_frontLayout);
@@ -51,11 +54,13 @@ public class ct_quiz_3 extends AppCompatActivity {
         updateScoreText();
 
         layout1.setOnClickListener(view -> {
+            clickPlay.start();
             layout1.setVisibility(View.INVISIBLE);
             layout2.setVisibility(View.VISIBLE);
         });
 
         submitButton.setOnClickListener(v -> {
+            clickPlay.start();
             String userAnswer = answerEditText.getText().toString();
             String correctAnswer = "E";
             boolean isCorrect;
@@ -111,6 +116,7 @@ public class ct_quiz_3 extends AppCompatActivity {
         });
 
         hintButton.setOnClickListener(v -> {
+            clickPlay.start();
             if (count == 0) {
                 score -= 1;
                 if (score <= 0) {
@@ -141,6 +147,7 @@ public class ct_quiz_3 extends AppCompatActivity {
         });
 
         laterButton.setOnClickListener(v -> {
+            clickPlay.start();
             saveScore(score);
             saveCount(count);
 

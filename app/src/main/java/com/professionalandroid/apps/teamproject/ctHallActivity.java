@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,8 +15,10 @@ public class ctHallActivity extends AppCompatActivity {
     private final int[] imageBackground = {R.drawable.cthall1, R.drawable.cthall2, R.drawable.cthall3, R.drawable.cthall4, R.drawable.cthall5};
 
     private ImageView ct_Background;
+    public MediaPlayer clickPlay;
 
     protected void onCreate(Bundle savedInstacestate) {
+        clickPlay = MediaPlayer.create(this, R.raw.click);
         super.onCreate(savedInstacestate);
         setContentView(R.layout.cthall);
 
@@ -32,6 +35,7 @@ public class ctHallActivity extends AppCompatActivity {
         go_home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 Intent intent = new Intent(getApplicationContext(), homeActivity.class);
                 startActivity(intent);
                 finish();
@@ -40,6 +44,7 @@ public class ctHallActivity extends AppCompatActivity {
         go_ctHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -54,6 +59,7 @@ public class ctHallActivity extends AppCompatActivity {
         go_ctHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -73,6 +79,7 @@ public class ctHallActivity extends AppCompatActivity {
         go_ctHall4btn.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -87,6 +94,7 @@ public class ctHallActivity extends AppCompatActivity {
         go_ctHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -104,6 +112,7 @@ public class ctHallActivity extends AppCompatActivity {
         ctHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TeamProject</string>
+    <string name="app_name">HUFSTOPIA</string>
     <string name="lake_explain">생명의 샘</string>
     <string name="egHall_explain"> 진눈개비 마을</string>
     <string name="ctHall_explain"> 서리눈사람 마을</string>
@@ -34,7 +34,7 @@
     <string name="homeImage" translatable="false">homeImage</string>
     <string name="skipButtonText">Skip</string>
     <string name="getinText">입장하기</string>
-    <string name="rank">%s의 계급은</string>
+    <string name="rank">%s의 랭크</string>
 
 
     <string name="lakeButton" translatable="false">lakeButton\n</string>
@@ -219,7 +219,6 @@
     <string name="lb_storyLine1_6_">하하! 정말 대단하고 공손한 친구로구만.\n자네가 우리 공동체에 공헌해준 것이 너무 고맙네.\n이 종이를 가지고 텔리아에게 가보게.\n거기 써있는 계급에 따라 자네에게 주어지는 배급량이 달라질걸세.\n앞으로도 잘 부탁하네.</string>
 
 
-    // 동규 작성 quizLayout
     <string name="hint"> 힌트 </string>
     <string name="submit"> 제출 </string>
     <string name="later"> 다음에 </string>
@@ -323,5 +322,6 @@
     <string name="see_detail">자세히</string>
     <string name="nameError">닉네임을 입력해주세요.</string>
     <string name="show_rank">랭크</string>
+    <string name="resetdialog">점수와 스토리가 초기화 되었습니다..</string>
 
 </resources>

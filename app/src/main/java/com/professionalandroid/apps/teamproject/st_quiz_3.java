@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 import java.util.Arrays;
 
@@ -24,17 +25,19 @@ public class st_quiz_3 extends AppCompatActivity {
     String combinedUserAnswer;
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String SCORE_KEY = "score"+15;
-    private static final String COUNT_KEY = "count";
+    private static final String SCORE_KEY = "score"+14;
+    private static final String COUNT_KEY = "count"+14;
     private static final int SCORE_DEFAULT = 30;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
+    public MediaPlayer clickPlay;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_st_quiz3);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         scoreTextView = findViewById(R.id.scoreTextView);
         layout1 = findViewById(R.id.st_quiz3_frontLayout);
@@ -53,11 +56,13 @@ public class st_quiz_3 extends AppCompatActivity {
         updateScoreText();
 
         layout1.setOnClickListener(view -> {
+            clickPlay.start();
             layout1.setVisibility(View.INVISIBLE);
             layout2.setVisibility(View.VISIBLE);
         });
 
         submitButton.setOnClickListener(v -> {
+            clickPlay.start();
             String userAnswer = answerEditText.getText().toString();
             String correctAnswer = "1510";
             if (userAnswer.equals("1,5,10")) {
@@ -114,6 +119,7 @@ public class st_quiz_3 extends AppCompatActivity {
         });
 
         hintButton.setOnClickListener(v -> {
+            clickPlay.start();
             if (count == 0) {
                 score -= 1;
                 if (score <= 0) {
@@ -140,6 +146,7 @@ public class st_quiz_3 extends AppCompatActivity {
         });
 
         laterButton.setOnClickListener(v -> {
+            clickPlay.start();
             saveScore(score);
             saveCount(count);
 

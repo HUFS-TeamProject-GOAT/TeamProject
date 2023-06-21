@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,6 +40,8 @@ public class lbhall_talkActivity extends AppCompatActivity {
     private int story;
     private static final String STORY_STATUS_KEY = "storyStatus"+16; // 스토리 상태를 저장하기 위해 만든 key
 
+    public MediaPlayer clickPlay;
+
 //    protected void onPause() { //앱 pause -> 상태 저장
 //        super.onPause();
 //        saveLayout(story);
@@ -49,17 +52,19 @@ public class lbhall_talkActivity extends AppCompatActivity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_lbhall_talk);
-
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 showNextStoryText();
             }
         });
         findViewById(R.id.endingButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),endingActivity.class);
                 startActivity(intent);
                 finish();
@@ -68,6 +73,11 @@ public class lbhall_talkActivity extends AppCompatActivity {
         findViewById(R.id.skipButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
+                SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
+                story = settings1.getInt(STORY_STATUS_KEY, 6);
+                saveLayout(story);
+
                 Intent intent =new Intent(getApplicationContext(),endingActivity.class);
                 startActivity(intent);
                 finish();
@@ -84,10 +94,10 @@ public class lbhall_talkActivity extends AppCompatActivity {
         userName.setText(user_Name);
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = settings1.edit();
-        editor.remove(STORY_STATUS_KEY);
-        editor.putInt(STORY_STATUS_KEY, 0);
-        editor.apply();
+//        SharedPreferences.Editor editor = settings1.edit();
+//        editor.remove(STORY_STATUS_KEY);
+//        editor.putInt(STORY_STATUS_KEY, 0);
+//        editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 

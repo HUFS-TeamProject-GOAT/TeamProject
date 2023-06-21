@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 
 public class st_quiz_4 extends AppCompatActivity {
@@ -22,17 +23,19 @@ public class st_quiz_4 extends AppCompatActivity {
     private TextView scoreTextView;
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String SCORE_KEY = "score"+16;
-    private static final String COUNT_KEY = "count";
+    private static final String SCORE_KEY = "score"+15;
+    private static final String COUNT_KEY = "count"+15;
     private static final int SCORE_DEFAULT = 50;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
+    public MediaPlayer clickPlay;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_st_quiz4);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         scoreTextView = findViewById(R.id.scoreTextView);
         layout1 = findViewById(R.id.st_quiz4_frontLayout);
@@ -55,11 +58,13 @@ public class st_quiz_4 extends AppCompatActivity {
         updateScoreText();
 
         layout1.setOnClickListener(view -> {
+            clickPlay.start();
             layout1.setVisibility(View.INVISIBLE);
             layout2.setVisibility(View.VISIBLE);
         });
 
         submitButton.setOnClickListener(v -> {
+            clickPlay.start();
             String userAnswer = answerEditText.getText().toString();
             String correctAnswer = "0154";
             boolean isCorrect = userAnswer.equals(correctAnswer);
@@ -107,6 +112,7 @@ public class st_quiz_4 extends AppCompatActivity {
         });
 
         hintButton.setOnClickListener(v -> {
+            clickPlay.start();
             if (count == 0) {
                 score -= 1;
                 if (score <= 0) {
@@ -138,6 +144,7 @@ public class st_quiz_4 extends AppCompatActivity {
         });
 
         laterButton.setOnClickListener(v -> {
+            clickPlay.start();
             saveScore(score);
             saveCount(count);
 
