@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +23,7 @@ import org.w3c.dom.Text;
 public class homeActivity extends AppCompatActivity {
 
     private final int[] ex_Texts = {R.string.ctHall_explain, R.string.egHall_explain, R.string.foodhall_explain, R.string.lake_explain, R.string.lgHall_explain, R.string.lbHall_explain};
+    public MediaPlayer clickPlay;
 
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -51,11 +53,12 @@ public class homeActivity extends AppCompatActivity {
         ImageButton lakeButton = (ImageButton) findViewById(R.id.lakeButton);
         Button in_lakeButton =(Button) findViewById(R.id.in_lakeButton);
         ImageView lake_location_red = (ImageView) findViewById(R.id.lake_location_red);
-        
+        clickPlay = MediaPlayer.create(this, R.raw.click);
         
         egHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 explain_Text.setVisibility(View.VISIBLE);
                 explain_Text.setText(ex_Texts[1]);
 
@@ -78,6 +81,7 @@ public class homeActivity extends AppCompatActivity {
         lakeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 explain_Text.setVisibility(View.VISIBLE);
                 explain_Text.setText(ex_Texts[3]);
 
@@ -100,6 +104,7 @@ public class homeActivity extends AppCompatActivity {
         ctHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 explain_Text.setVisibility(View.VISIBLE);
                 explain_Text.setText(ex_Texts[0]);
 
@@ -121,6 +126,7 @@ public class homeActivity extends AppCompatActivity {
         lbHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 explain_Text.setVisibility(View.VISIBLE);
                 explain_Text.setText(ex_Texts[5]);
 
@@ -146,6 +152,7 @@ public class homeActivity extends AppCompatActivity {
         stHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 explain_Text.setVisibility(View.VISIBLE);
                 explain_Text.setText(ex_Texts[4]);
 
@@ -169,6 +176,7 @@ public class homeActivity extends AppCompatActivity {
         foodHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 explain_Text.setVisibility(View.VISIBLE);
                 explain_Text.setText(ex_Texts[2]);
 
@@ -191,6 +199,7 @@ public class homeActivity extends AppCompatActivity {
         in_lbHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),lbhall_talkActivity.class);
                 startActivity(intent);
             }
@@ -198,8 +207,7 @@ public class homeActivity extends AppCompatActivity {
         in_foodHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-
-
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),foodHallActivity.class);
                 startActivity(intent);
 
@@ -208,17 +216,15 @@ public class homeActivity extends AppCompatActivity {
         in_ctHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),ctHallActivity.class);
                 startActivity(intent);
-
             }
         });
        in_egHallButton.setOnClickListener(new View.OnClickListener() {
-
            @Override
            public void onClick(View v){
-
+               clickPlay.start();
                // 백년관 --> storyStatus end
 
                    Intent intent =new Intent(getApplicationContext(),egHallActivity.class);
@@ -230,6 +236,7 @@ public class homeActivity extends AppCompatActivity {
         in_stHallButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),stHallActivity.class);
                startActivity(intent);
             }
@@ -238,6 +245,7 @@ public class homeActivity extends AppCompatActivity {
         in_lakeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),lakeActivity.class);
                 startActivity(intent);
             }

@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 public class fd_quiz_3 extends AppCompatActivity {
     private ConstraintLayout layout1, layout2;
@@ -26,12 +27,14 @@ public class fd_quiz_3 extends AppCompatActivity {
     private static final int SCORE_DEFAULT = 25;
     private static final int COUNT_DEFAULT = 0;
     private EditText answerEditText;
+    public MediaPlayer clickPlay;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fd_quiz3);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         scoreTextView = findViewById(R.id.scoreTextView);
         layout1 = findViewById(R.id.fd_quiz3_frontLayout);
@@ -55,6 +58,7 @@ public class fd_quiz_3 extends AppCompatActivity {
         });
 
         submitButton.setOnClickListener(v -> {
+            clickPlay.start();
             String userAnswer = answerEditText.getText().toString();
             String correctAnswer = "14";
             boolean isCorrect = userAnswer.equals(correctAnswer);
@@ -104,6 +108,7 @@ public class fd_quiz_3 extends AppCompatActivity {
         });
 
         hintButton.setOnClickListener(v -> {
+            clickPlay.start();
             if (count == 0) {
                 score -= 1;
                 if (score <= 0) {
@@ -135,6 +140,7 @@ public class fd_quiz_3 extends AppCompatActivity {
         });
 
         laterButton.setOnClickListener(v -> {
+            clickPlay.start();
             saveScore(score);
             saveCount(count);
 

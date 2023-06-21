@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,9 +17,12 @@ public class stHallActivity extends AppCompatActivity {
     private final int[] imageBackground = {R.drawable.sthall1, R.drawable.sthall2, R.drawable.sthall3, R.drawable.sthall4, R.drawable.sthall5};
 
     private ImageView st_Background;
+    public MediaPlayer clickPlay;
+
     protected void onCreate(Bundle savedInstacestate) {
         super.onCreate(savedInstacestate);
         setContentView(R.layout.sthall);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
         st_Background = findViewById(R.id.st_Background);
         ImageButton go_home_btn = (ImageButton) findViewById(R.id.go_home_btn);
@@ -33,6 +37,7 @@ public class stHallActivity extends AppCompatActivity {
         go_home_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),homeActivity.class);
                 startActivity(intent);
                 finish();
@@ -41,6 +46,7 @@ public class stHallActivity extends AppCompatActivity {
         go_stHall2btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -59,6 +65,7 @@ public class stHallActivity extends AppCompatActivity {
         go_stHall3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -77,6 +84,7 @@ public class stHallActivity extends AppCompatActivity {
         go_stHall4btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -95,6 +103,7 @@ public class stHallActivity extends AppCompatActivity {
         go_stHall5btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
 
@@ -110,6 +119,7 @@ public class stHallActivity extends AppCompatActivity {
         stHall_last_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 currentIndex++;
                 showNextBackground();
                 Intent intent1 =new Intent(getApplicationContext(),sthall_talk4Activity.class);

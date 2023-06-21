@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.media.MediaPlayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,17 +40,20 @@ public class foodhall_talk3Activity extends AppCompatActivity {
 
     private int story;
     private static final String STORY_STATUS_KEY = "storyStatus"+10; // 스토리 상태를 저장하기 위해 만든 key
+    public MediaPlayer clickPlay;
 
 
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_foodhall_talk3);
+        clickPlay = MediaPlayer.create(this, R.raw.click);
 
 
         findViewById(R.id.nextButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 showNextStoryText();
             }
         });
@@ -88,6 +92,7 @@ public class foodhall_talk3Activity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickPlay.start();
                 if(!quizFinished) {
                     story = 5;
                 }else {
