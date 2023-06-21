@@ -25,10 +25,9 @@ import java.util.List;
 public class endingActivity extends AppCompatActivity {
 
     int [] score_values = new int[17];
-    int [] story_values = new int[17];
-    private Button back_btn;
+
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String STORY_STATUS_KEY= "story_save";
+    private static final String STORY_STATUS_KEY= "storyStatus";
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
         setContentView(R.layout.activity_ending);
@@ -36,6 +35,7 @@ public class endingActivity extends AppCompatActivity {
         Button detailButton =(Button) findViewById(R.id.show_detail_button);
         TextView rankText=(TextView) findViewById(R.id.rankText);
         Button back_btn = findViewById(R.id.back_btn);
+        TextView show_Rank = (TextView)findViewById(R.id.showRank);
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
@@ -105,6 +105,8 @@ public class endingActivity extends AppCompatActivity {
                 detailButton.setVisibility(View.INVISIBLE);
                 Rank.setVisibility(View.INVISIBLE);
                 rankText.setVisibility(View.INVISIBLE);
+                show_Rank.setVisibility(View.INVISIBLE);
+
             }
         });
 
@@ -118,6 +120,7 @@ public class endingActivity extends AppCompatActivity {
                 detailButton.setVisibility(View.VISIBLE);
                 Rank.setVisibility(View.VISIBLE);
                 rankText.setVisibility(View.VISIBLE);
+                show_Rank.setVisibility(View.VISIBLE);
             }
         });
 
@@ -138,24 +141,22 @@ public class endingActivity extends AppCompatActivity {
     }
 
     private void cleandata(){
-        SharedPreferences preferences, preferences1;
-        SharedPreferences.Editor editor, editor1;
+        SharedPreferences preferences1;
+        SharedPreferences.Editor editor1;
 
-        preferences = getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
-        editor = preferences.edit();
-        for (int i = 0; i <= score_values.length; i++) {
-            String shared_prefs_key = "score" + i;
-            editor.remove(shared_prefs_key);
-        }
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
         editor.apply();
 
-        preferences1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-        editor1 = preferences1.edit();
-        for (int i = 0; i <= story_values.length; i++) {
+
+        for (int i = 0; i <= 16; i++) {
             String storyStatusKey = "storyStatus" + i;
-            editor1.remove(storyStatusKey);
+            preferences1 = getSharedPreferences(storyStatusKey, Context.MODE_PRIVATE);
+            editor1 = preferences1.edit();
+            editor1.clear();
+            editor1.apply();
         }
-        editor1.apply();
     }
 }
 
