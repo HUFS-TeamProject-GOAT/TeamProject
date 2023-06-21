@@ -9,31 +9,25 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class endingActivity extends AppCompatActivity {
 
-    int [] values = new int[16];
+    int [] score_values = new int[17];
     private Button back_btn;
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String STORY_STATUS_KEY = "storyStatus";
+    private static final String STORY_STATUS_KEY= "storyStatus";
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
         setContentView(R.layout.activity_ending);
@@ -48,13 +42,13 @@ public class endingActivity extends AppCompatActivity {
         rankText.setText(rankString);
 
 
-        for (int i = 0; i < values.length; i++) {
+        for (int i = 0; i < score_values.length; i++) {
             SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
-            values[i] = sharedPreferences.getInt("score"+i, 0);
+            score_values[i] = sharedPreferences.getInt("score"+i, 0);
         }
         int totalScore=0;
-        for (int i = 0; i < values.length; i++) {
-            totalScore +=values[i];
+        for (int i = 0; i < score_values.length; i++) {
+            totalScore += score_values[i];
         }
 
         String rank = calculateScore(totalScore);
@@ -62,8 +56,8 @@ public class endingActivity extends AppCompatActivity {
         Rank.setText(rank);
 
         List<String> itemList = new ArrayList<>();
-        for (int i = 0; i < values.length; i++) {
-            itemList.add("퀴즈" + i + ": " + values[i]);
+        for (int i = 0; i < score_values.length; i++) {
+            itemList.add("퀴즈" + i + ": " + score_values[i]);
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, itemList);

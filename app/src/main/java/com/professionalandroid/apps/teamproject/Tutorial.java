@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class ct_quiz_1 extends AppCompatActivity {
+public class Tutorial extends AppCompatActivity {
     private ConstraintLayout layout1, layout2;
     private int score,count;
     private TextView scoreTextView;
@@ -59,17 +59,17 @@ public class ct_quiz_1 extends AppCompatActivity {
 //            String correctAnswer = "1";
             boolean isCorrect = true;
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_1.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(Tutorial.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
             builder.setPositiveButton("확인", null);
             AlertDialog dialog = builder.create();
 
             if (isCorrect) {
                 dialog.setTitle("정답");
-                dialog.setMessage("정답입니다! 이제 문제 풀러 가봅시다!");
+                dialog.setMessage(getText(R.string.right));
             } else {
                 dialog.setTitle("실패");
-                dialog.setMessage("틀렸습니다! 다시 한 번 생각해 보세요");
+                dialog.setMessage(getText(R.string.wrong));
             }
 
             dialog.setOnShowListener(dialogInterface -> getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#70FFFFFF"))));
@@ -121,7 +121,7 @@ public class ct_quiz_1 extends AppCompatActivity {
                 setResult(RESULT_CANCELED, resultIntent);
             }
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_1.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(Tutorial.this);
             builder.setTitle(getString(R.string.hint));
             builder.setMessage(getString(R.string.ct_quiz_1_1_hint));
             builder.setPositiveButton("확인", null);
@@ -143,7 +143,7 @@ public class ct_quiz_1 extends AppCompatActivity {
             resultIntent.putExtra("count", count);
             setResult(RESULT_CANCELED, resultIntent);
 
-            Intent intent = new Intent(ct_quiz_1.this, homeActivity.class);
+            Intent intent = new Intent(Tutorial.this, homeActivity.class);
             startActivity(intent);
             finish();
         });
