@@ -78,6 +78,7 @@
 
 
         <TextView
+            android:autoSizeTextType="uniform"
             android:id="@+id/quiz_1_4"
             android:layout_width="358dp"
             android:layout_height="106dp"
@@ -174,6 +175,7 @@
             android:layout_marginBottom="8dp"
             android:text="@string/later"
             android:textSize="20sp"
+            android:backgroundTint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 

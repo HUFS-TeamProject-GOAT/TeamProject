@@ -76,10 +76,10 @@ public class eghall_talk1Activity extends AppCompatActivity {
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
 
         //초기화
-        SharedPreferences.Editor editor = settings1.edit();
-        editor.remove(STORY_STATUS_KEY);
-        editor.putInt(STORY_STATUS_KEY, 0);
-        editor.apply();
+//        SharedPreferences.Editor editor = settings1.edit();
+//        editor.remove(STORY_STATUS_KEY);
+//        editor.putInt(STORY_STATUS_KEY, 0);
+//        editor.apply();
         //초기화
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
@@ -182,9 +182,9 @@ public class eghall_talk1Activity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText("케인");
+            name.setText(getText(R.string.kane));
         } else if (textResources == R.id.name_hyerim) {
-            name.setText("록시");
+            name.setText(getText(R.string.roksi));
         }
         name.setTextColor(Color.GRAY);
     }
@@ -196,9 +196,9 @@ public class eghall_talk1Activity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText("케인");
+            name.setText(getText(R.string.kane));
         } else if (textResources == R.id.name_hyerim) {
-            name.setText("록시");
+            name.setText(getText(R.string.roksi));
         }
         name.setTextColor(Color.BLACK);
     }

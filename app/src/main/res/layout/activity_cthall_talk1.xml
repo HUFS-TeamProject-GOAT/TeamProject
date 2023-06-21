@@ -14,6 +14,7 @@
         android:layout_marginBottom="16dp"
         android:text="next"
         android:textSize="18sp"
+        android:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -31,6 +32,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:autoSizeTextType="uniform"
         android:id="@+id/userName"
         android:layout_width="122dp"
         android:layout_height="59dp"
@@ -42,6 +44,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:autoSizeTextType="uniform"
         android:id="@+id/name_hyerim"
         android:layout_width="122dp"
         android:layout_height="59dp"
@@ -88,6 +91,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="@string/skipButtonText"
+        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

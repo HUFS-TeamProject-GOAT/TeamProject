@@ -45,7 +45,6 @@ public class ct_quiz_1 extends AppCompatActivity {
         Button laterButton = findViewById(R.id.ct_1_nextTime);
 
         answerEditText = findViewById(R.id.ct_1_answer);
-
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
         count = sharedPreferences.getInt(COUNT_KEY, COUNT_DEFAULT);

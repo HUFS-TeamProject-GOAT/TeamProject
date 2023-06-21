@@ -78,6 +78,7 @@
 
 
         <TextView
+            android:autoSizeTextType="uniform"
             android:id="@+id/quiz_1_3"
             android:layout_width="356dp"
             android:layout_height="88dp"
@@ -150,6 +151,7 @@
             android:layout_marginBottom="8dp"
             android:textSize="20sp"
             android:text="@string/hint"
+            android:backgroundTint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -162,6 +164,7 @@
             android:layout_marginBottom="8dp"
             android:text="@string/submit"
             android:textSize="20sp"
+            android:backgroundTint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ct_3_hint"
             app:layout_constraintStart_toEndOf="@+id/ct_3_nextTime" />
@@ -174,6 +177,7 @@
             android:layout_marginBottom="8dp"
             android:text="@string/later"
             android:textSize="20sp"
+            android:backgroundTint="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
