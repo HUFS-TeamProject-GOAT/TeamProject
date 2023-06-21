@@ -323,6 +323,7 @@
     <string name="go_home">처음으로</string>
     <string name="see_detail">자세히</string>
     <string name="nameError">닉네임을 입력해주세요.</string>
+    <string name="show_rank">랭크</string>
     <string name="resetdialog">점수와 스토리가 초기화 되었습니다..</string>
 
 </resources>

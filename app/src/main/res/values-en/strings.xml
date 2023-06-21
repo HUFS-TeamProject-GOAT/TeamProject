@@ -272,5 +272,6 @@
     <string name="go_home">Reset</string>
     <string name="see_detail">Details</string>
     <string name="nameError">Enter your name.</string>
+    <string name="show_rank">Rank</string>
     <string name="resetdialog">Scores and stories have been initialized..</string>
 </resources>
