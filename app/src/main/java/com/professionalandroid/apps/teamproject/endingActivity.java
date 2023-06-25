@@ -25,10 +25,10 @@ import java.util.List;
 
 public class endingActivity extends AppCompatActivity {
 
-    int [] score_values = new int[17];
+    int [] score_values = new int[16];
+    int totalScore=0;
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String STORY_STATUS_KEY= "storyStatus";
     public MediaPlayer clickPlay;
     protected void onCreate(Bundle bundle){
         super.onCreate(bundle);
@@ -46,22 +46,23 @@ public class endingActivity extends AppCompatActivity {
         rankText.setText(rankString);
 
 
-        for (int i = 0; i < score_values.length; i++) {
+        for (int i = 0; i < score_values.length ; i++) {
             SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
             score_values[i] = sharedPreferences.getInt("score"+i, 0);
         }
-        int totalScore=0;
-        for (int i = 0; i < score_values.length; i++) {
+        for (int i = 0; i < score_values.length ; i++) {
             totalScore += score_values[i];
         }
 
         String rank = calculateScore(totalScore);
         TextView Rank = (TextView) findViewById(R.id.rank);
+        TextView totalScoreTextView = findViewById(R.id.total_score);
+        totalScoreTextView.setText(String.valueOf(totalScore));
         Rank.setText(rank);
 
         List<String> itemList = new ArrayList<>();
-        for (int i = 0; i < score_values.length; i++) {
-            itemList.add("퀴즈" + i + ": " + score_values[i]);
+        for (int i = 0; i < score_values.length ; i++) {
+            itemList.add(getString(R.string.quiz) + i + ": " + score_values[i]);
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, itemList);
@@ -73,20 +74,21 @@ public class endingActivity extends AppCompatActivity {
             public void onClick(View v){
                 clickPlay.start();
                 AlertDialog.Builder builder = new AlertDialog.Builder(endingActivity.this);
-                builder.setTitle("게임 초기화")
-                        .setMessage("확인 버튼 누르시면 게임이 초기화 됩니다.")
-                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                builder.setTitle(getString(R.string.restart))
+                        .setMessage(getString(R.string.beforereset))
+                        .setPositiveButton(getString(R.string.check), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
 
 
                                 cleandata();
-                                Toast.makeText(endingActivity.this, "점수와 스토리가 초기화 됐습니다..", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(endingActivity.this, getString(R.string.resetdialog), Toast.LENGTH_SHORT).show();
                                 Intent intent =new Intent(getApplicationContext(),MainActivity.class);
                                 startActivity(intent);
+                                finish();
                             }
                         })
-                        .setNegativeButton("취소", null);
+                        .setNegativeButton(getString(R.string.notcheck), null);
 
                 AlertDialog dialog = builder.create();
 
@@ -130,13 +132,13 @@ public class endingActivity extends AppCompatActivity {
 
     }
     private String calculateScore(int n){
-        if(n>380){
+        if(n>=360){
             return "A";
         }
-        if(n>360){
+        if(n>=340){
             return "B";
         }
-        if(n>340){
+        if(n>=320){
             return "C";
         }
         else{
@@ -154,7 +156,7 @@ public class endingActivity extends AppCompatActivity {
         editor.apply();
 
 
-        for (int i = 0; i <= 16; i++) {
+        for (int i = 0; i < 16; i++) {
             String storyStatusKey = "storyStatus" + i;
             preferences1 = getSharedPreferences(storyStatusKey, Context.MODE_PRIVATE);
             editor1 = preferences1.edit();

@@ -20,6 +20,7 @@
 
     <TextView
         android:id="@+id/st_storyText"
+        android:autoSizeTextType="uniform"
         android:layout_width="333dp"
         android:layout_height="207dp"
         android:layout_alignParentBottom="true"
@@ -33,6 +34,7 @@
 
     <TextView
         android:id="@+id/userName"
+        android:autoSizeTextType="uniform"
         android:layout_width="122dp"
         android:layout_height="59dp"
         android:layout_marginStart="16dp"
@@ -43,6 +45,7 @@
         app:layout_constraintStart_toStartOf="parent" />
     <TextView
         android:id="@+id/name_hyerim"
+        android:autoSizeTextType="uniform"
         android:layout_width="122dp"
         android:layout_height="59dp"
         android:layout_marginEnd="12dp"
@@ -53,6 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
     <TextView
         android:id="@+id/name_minsu"
+        android:autoSizeTextType="uniform"
         android:layout_width="122dp"
         android:layout_height="59dp"
         android:layout_marginEnd="16dp"

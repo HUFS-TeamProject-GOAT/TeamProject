@@ -249,7 +249,7 @@
     <string name="score_format_4_3" translatable="false"> %d/30 </string>
     <string name="score_format_4_4" translatable="false"> %d/50 </string>
 
-    <string name="ct_quiz_1_1">문제를 틀릴 때 마다 -2점 \n힌트를 보게 되면 -1점(이후 감점 없이 계속 볼 수 있다.)\n 다음에 버튼을 누르면 나중에 문제를 풀 수 있다.\n 답을 입력하고 제출을 누르면 정답일시 점수 저장\n 답이 오답일 시 다시 문제로 돌아온다. \n 준비가 되었으면 제출을 눌러서 튜토리얼을 완료하자.</string>
+    <string name="ct_quiz_1_1">문제를 틀릴 때 마다 -2점 \n힌트를 보게 되면 -1점(이후 감점 없이 계속 볼 수 있다.)\n 다음에 버튼을 누르면 나중에 문제를 풀 수 있다.\n 답을 입력하고 제출을 누르면 정답일시 점수 저장\n 답이 오답일 시 다시 문제로 돌아온다. 총점 380점 만점 중 \n 360 이상 A \n 340 이상 B\n 320 이상 C \n 300 이상 D \n 준비가 되었으면 제출을 눌러서 튜토리얼을 완료하자.</string>
     <string name="ct_quiz_1_1_title">튜토리얼 </string>
     <string name="ct_quiz_1_1_hint">여기는 힌트 칸 입니다!</string>
 
@@ -323,5 +323,14 @@
     <string name="nameError">닉네임을 입력해주세요.</string>
     <string name="show_rank">랭크</string>
     <string name="resetdialog">점수와 스토리가 초기화 되었습니다..</string>
+    <string name="beforereset">"확인 버튼 누르시면 게임이 초기화 됩니다."</string>
+    <string name="correct">정답</string>
+    <string name="notcorrect">실패</string>
+    <string name="check">확인</string>
+    <string name="notcheck">취소</string>
+    <string name="restart">초기화</string>
+    <string name="quiz" >퀴즈</string>
+
+    <string name="in_last"><string name="입장하시려면 모든 스테이지를 클리어 해야합니다."></string></string>
 
 </resources>

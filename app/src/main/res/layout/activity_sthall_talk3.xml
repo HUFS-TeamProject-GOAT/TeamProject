@@ -6,6 +6,7 @@
 
     <TextView
         android:id="@+id/st_storyText"
+        android:autoSizeTextType="uniform"
         android:layout_width="333dp"
         android:layout_height="207dp"
         android:layout_alignParentBottom="true"
@@ -24,6 +25,7 @@
         android:layout_marginStart="16dp"
         android:autofillHints="name"
         android:background="@null"
+        android:autoSizeTextType="uniform"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/st_storyText"
         app:layout_constraintStart_toStartOf="parent" />
@@ -34,6 +36,7 @@
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
         android:gravity="right"
+        android:autoSizeTextType="uniform"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/st_storyText"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -44,6 +47,7 @@
         android:layout_marginEnd="16dp"
         android:autofillHints="name"
         android:gravity="right"
+        android:autoSizeTextType="uniform"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/st_storyText"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -52,6 +56,7 @@
         android:id="@+id/st_imageView2"
         android:layout_width="208dp"
         android:layout_height="210dp"
+        android:autoSizeTextType="uniform"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/name_professor2"
         app:layout_constraintEnd_toEndOf="parent" />

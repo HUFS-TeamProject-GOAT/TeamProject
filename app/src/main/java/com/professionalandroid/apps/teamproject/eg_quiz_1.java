@@ -80,14 +80,14 @@ public class eg_quiz_1 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(eg_quiz_1.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
-            builder.setPositiveButton("확인", null);  // // AlertDialog에 "확인" 버튼을 추가합니다.
+            builder.setPositiveButton(getString(R.string.check), null);  // // AlertDialog에 "확인" 버튼을 추가합니다.
             AlertDialog dialog = builder.create();
 
             if (isCorrect) {
-                dialog.setTitle("정답");
+                dialog.setTitle(getString(R.string.correct));
                 dialog.setMessage(getText(R.string.right));
             } else {
-                dialog.setTitle("실패");
+                dialog.setTitle(getString(R.string.notcorrect));
                 dialog.setMessage(getText(R.string.wrong));
             }
 
@@ -178,14 +178,14 @@ public class eg_quiz_1 extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt(SCORE_KEY, score);
-        outState.putInt("count", count);
+        outState.putInt(COUNT_KEY, count);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         score = savedInstanceState.getInt(SCORE_KEY);
-        count = savedInstanceState.getInt("count");
+        count = savedInstanceState.getInt(COUNT_KEY);
         updateScoreText();
     }
 

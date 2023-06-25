@@ -21,6 +21,7 @@ public class ct_quiz_2 extends AppCompatActivity {
     private int score,count;
     private TextView scoreTextView;
 
+    // SharedPreferences 관련 상수 선언
     private static final String SHARED_PREFS_KEY = "quiz_score";
     private static final String SCORE_KEY = "score"+1;
     private static final String COUNT_KEY = "count"+1;
@@ -44,6 +45,8 @@ public class ct_quiz_2 extends AppCompatActivity {
         Button submitButton = findViewById(R.id.ct_2_submitButton);
         Button hintButton = findViewById(R.id.ct_2_hint);
         Button laterButton = findViewById(R.id.ct_2_nextTime);
+
+
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
@@ -69,14 +72,14 @@ public class ct_quiz_2 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_2.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
-            builder.setPositiveButton("확인", null);
+            builder.setPositiveButton(getString(R.string.check), null);
             AlertDialog dialog = builder.create();
 
             if (isCorrect) {
-                dialog.setTitle("정답");
+                dialog.setTitle(getString(R.string.correct));
                 dialog.setMessage(getText(R.string.right));
             } else {
-                dialog.setTitle("실패");
+                dialog.setTitle(getString(R.string.notcorrect));
                 dialog.setMessage(getText(R.string.wrong));
             }
 
@@ -143,7 +146,7 @@ public class ct_quiz_2 extends AppCompatActivity {
             dialog.show();
         });
 
-        laterButton.setOnClickListener(v -> {
+        laterButton.setOnClickListener(v -> { // 점수 저장 후 돌아감
             clickPlay.start();
             saveScore(score);
             saveCount(count);

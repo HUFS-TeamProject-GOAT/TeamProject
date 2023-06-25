@@ -34,6 +34,7 @@
     <TextView
         android:id="@+id/lb_storyText"
         android:layout_width="333dp"
+        android:autoSizeTextType="uniform"
         android:layout_height="207dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="68dp"
@@ -49,6 +50,7 @@
         android:layout_width="122dp"
         android:layout_height="59dp"
         android:layout_marginStart="16dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="name"
         android:background="@null"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -59,6 +61,7 @@
         android:id="@+id/name_president"
         android:layout_width="122dp"
         android:layout_height="59dp"
+        android:autoSizeTextType="uniform"
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
         android:gravity="right"

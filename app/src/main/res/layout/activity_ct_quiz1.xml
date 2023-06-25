@@ -78,13 +78,13 @@
 
 
         <TextView
-            android:autoSizeTextType="uniform"
             android:id="@+id/quiz_1_1"
-            android:layout_width="353dp"
-            android:layout_height="142dp"
+            android:layout_width="360dp"
+            android:layout_height="319dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
+            android:autoSizeTextType="uniform"
             android:gravity="center_horizontal"
             android:text="@string/ct_quiz_1_1"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
