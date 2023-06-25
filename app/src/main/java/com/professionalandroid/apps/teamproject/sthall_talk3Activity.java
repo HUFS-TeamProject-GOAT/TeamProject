@@ -25,10 +25,10 @@ public class sthall_talk3Activity extends AppCompatActivity {
     //스토리 내용을 스트링 리소스 파일에서 참조하는 배열
     private final int[] storyTexts = {R.string.st_storyLine3_1, R.string.st_storyLine3_2, R.string.st_storyLine3_3, R.string.st_storyLine3_4, R.string.st_storyLine3_5_,R.string.st_storyLine3_6_};
 
-    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyerim, R.drawable.professor2};
+    private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyerim, R.drawable.hyungchan};
 
     // 스트링 리소스 파일의 각각의 이름을 참조하는 배열
-    private final int[] textResources = {R.layout.activity_sthall_talk3, R.id.userName, R.id.name_minsu, R.id.name_hyerim, R.id.name_professor2};
+    private final int[] textResources = {R.layout.activity_sthall_talk3, R.id.userName, R.id.name_minsu, R.id.name_hyerim, R.id.name_hyungchan};
 
 
     private boolean quizFinished = false; //퀴즈를 풀었는지에 대한 bool타입의 변수
@@ -176,8 +176,8 @@ public class sthall_talk3Activity extends AppCompatActivity {
         } else if (textResources == R.id.name_hyerim) {
             name.setText(getText(R.string.roksi));
         }
-        else if (textResources == R.id.name_professor2) {
-            name.setText(getText(R.string.kamelot));
+        else if (textResources == R.id.name_hyungchan) {
+            name.setText(getString(R.string.hyungchan));
         }
         name.setTextColor(Color.GRAY);
     }
@@ -193,8 +193,8 @@ public class sthall_talk3Activity extends AppCompatActivity {
         } else if (textResources == R.id.name_hyerim) {
             name.setText(getText(R.string.roksi));
         }
-        else if (textResources == R.id.name_professor2) {
-            name.setText(getText(R.string.kamelot));
+        else if (textResources == R.id.name_hyungchan) {
+            name.setText(getString(R.string.hyungchan));
         }
         name.setTextColor(Color.BLACK);
     }

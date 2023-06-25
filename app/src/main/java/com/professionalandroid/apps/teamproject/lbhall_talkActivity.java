@@ -180,7 +180,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_president) {
-            name.setText("솔론");
+            name.setText(getString(R.string.sollon));
         }
         name.setTextColor(Color.BLACK);
     }

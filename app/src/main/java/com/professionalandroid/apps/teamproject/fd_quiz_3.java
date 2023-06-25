@@ -59,7 +59,7 @@ public class fd_quiz_3 extends AppCompatActivity {
         submitButton.setOnClickListener(v -> {
             clickPlay.start();
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "14";
+            String correctAnswer = "7";
             boolean isCorrect = userAnswer.equals(correctAnswer); // 문제의 정답 유무를 위한 bool타입의 변수
 
             AlertDialog.Builder builder = new AlertDialog.Builder(fd_quiz_3.this);

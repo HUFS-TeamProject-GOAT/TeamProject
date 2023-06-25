@@ -22,8 +22,8 @@ public class fd_quiz_2 extends AppCompatActivity {
     private TextView scoreTextView;
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String SCORE_KEY = "score"+9; //점수저장 키 값
-    private static final String COUNT_KEY = "count"+9; // 힌트 사용유무의 저장
+    private static final String SCORE_KEY = "score"+11;
+    private static final String COUNT_KEY = "count"+11;
     private static final int SCORE_DEFAULT = 30; // 얻을수 있는 최대 점수 값
     private static final int COUNT_DEFAULT = 0; // 처음 입장시 힌트를 본적이 없기에 0으로 설정
     private EditText answerEditText; // 정답을 입력받을 곳

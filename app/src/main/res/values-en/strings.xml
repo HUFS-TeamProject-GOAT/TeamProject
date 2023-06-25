@@ -68,7 +68,7 @@
     <string name="fd_quiz_3_3_title">Roxy\'s necklace</string>
     <string name="fd_quiz_3_3_hint">The number of rings that make up one chain should be noted.\n+\nMiscalculated if you think you should only open both ends of the chain.\n+\nPick one of the chains, open all the rings, and then connect the remaining seven chains.</string>
 
-    <string name="fd_quiz_3_4">Transfer the pancakes from the left plate to the red plate on the right.\nThey say you can move one pancake at a time, so let\'s move it well.</string>
+    <string name="fd_quiz_3_4">Transfer the pancakes from the left plate to the red plate on the right.\nThey say you can move one pancake at a time, so let\'s move it well.\n How many pancakes should I move at least?</string>
     <string name="fd_quiz_3_4_title">Moving Pancakes</string>
     <string name="fd_quiz_3_4_hint">Let\'s put the smallest pancake on a red plate and a medium pancake on a middle plate.\nAnd if you put the smallest pancake on a medium-sized pancake, you can put the largest pancake on a red plate.</string>
 
@@ -88,14 +88,16 @@
     <string name="st_quiz_4_4_title">an old door lock</string>
     <string name="st_quiz_4_4_hint">Let\'s think about which numbers will be used first, leaving aside the places where they will be put. +\n\nThe first line shows that the four numbers are 4150. +\n\nAmong them, there are two numbers that fit the location, so let\'s think about it carefully.</string>
 
-    <string name="roksi">roksi</string>
-    <string name="kane">kane</string>
-    <string name="kamelot">kamelot</string>
-    <string name="bigboy">fungco</string>
-    <string name="fungco">fungco</string>
-    <string name="windy">windy</string>
-    <string name="tellia">tellia</string>
-    <string name="ikinas">ikinas</string>
+    <string name="roksi">Roksi</string>
+    <string name="kane">Kane</string>
+    <string name="kamelot">Kamelot</string>
+    <string name="hyungchan">riceiver</string>
+    <string name="bigboy">Fungco</string>
+    <string name="fungco">Fungco</string>
+    <string name="windy">Windy</string>
+    <string name="tellia">Tellia</string>
+    <string name="ikinas">Ikinas</string>
+    <string name="sollon">Sollon</string>
 
 
     <string name="back">BACK</string>
@@ -187,15 +189,15 @@
     <string name="eg_storyLine4_3_">Oh, I think Camelot is up to something funny.</string>
     <string name="eg_storyLine4_4_">I\'m happy to receive something, but... Do I really need this?\nI can\'t even drink it because it\'s frozen...</string>
 
-    <string name="food_storyLine1_1">I arrived at the distribution center to get the food.\nI could see Bigboy already getting food rationed and going back.</string>
-    <string name="food_storyLine1_2">Isn\'t that a Bigboy?</string>
-    <string name="food_storyLine1_3">I think it\'s right. He\'s wearing a cap in a wired way.</string>
-    <string name="food_storyLine1_4">He looked like a freak.</string>
-    <string name="food_storyLine1_5">What? Why?</string>
-    <string name="food_storyLine1_6_">There are some rules for wearing a cap.\nI watched it carefully.</string>
-    <string name="food_storyLine1_7">It\'s little bit wired, but isn\'t it like his own belief?</string>
-    <string name="food_storyLine1_8">I think you\'re a nerd, too, analyzing things like that. (laugh)</string>
-    <string name="food_storyLine1_9_">Bigboy... Does he really like caps...</string>
+    <string name="food_storyLine1_1">I was on my way to the distribution center to get food.\nA big boy was seen getting off the transport vehicle.</string>
+    <string name="food_storyLine1_2"> Is not that the big boy who just passed by?</string>
+    <string name="food_storyLine1_3">Is not it? I guess he is already back.</string>
+    <string name="food_storyLine1_4">I just remembered something really funny.</string>
+    <string name="food_storyLine1_5">Huh? What is it?</string>
+    <string name="food_storyLine1_6_">How many people were on this bus? Are not you curious?</string>
+    <string name="food_storyLine1_7">How clever of you to give a question.. He is a safety freak!</string>
+    <string name="food_storyLine1_8">You are a nerd because you are a nerd [Laughing]</string>
+    <string name="food_storyLine1_9_">It is just dizzy..</string>
 
     <string name="food_storyLine2_1">It seems like they\'re giving out specials today.\nGo with me, Kane, and Roxy and line up for rationing.</string>
     <string name="food_storyLine2_2_">Guys! You must have been running for a special meal!\nYou should eat a lot because you\'re young!\nSolve this riddle and I\'ll only give you guys some extra milk and some sugar!</string>
