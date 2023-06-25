@@ -272,20 +272,22 @@ public class homeActivity extends AppCompatActivity {
 //               startActivity(intent);
            }
        });
-        in_stHallButton.setOnClickListener(new View.OnClickListener() {
+        in_stHallButton.setOnClickListener(new View.OnClickListener() { //학생회관 입장 버튼
             @Override
             public void onClick(View v){
                 clickPlay.start();
+                //intent를 사용하여 해당 스테이지 입장
                 Intent intent =new Intent(getApplicationContext(),stHallActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        in_lakeButton.setOnClickListener(new View.OnClickListener() {
+        in_lakeButton.setOnClickListener(new View.OnClickListener() { //라이프 오브 파이 입장
             @Override
             public void onClick(View v){
                 clickPlay.start();
+                //intent를 사용하여 해당 스테이지 입장
                 Intent intent =new Intent(getApplicationContext(),lakeActivity.class);
                 startActivity(intent);
                 finish();

@@ -26,11 +26,14 @@ public class lbhall_talkActivity extends AppCompatActivity {
 
     private static final int YOUR_REQUEST_CODE = 1;
 
+    //스토리 내용을 스트링 리소스 파일에서 참조하는 배열
     private final int[] storyTexts = {R.string.lb_storyLine1_1, R.string.lb_storyLine1_2, R.string.lb_storyLine1_3, R.string.lb_storyLine1_4, R.string.lb_storyLine1_5,R.string.lb_storyLine1_6_ };
+    //drawable 파일의 인물 이미지를 참조 받는 배열
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.president};
+    // 스트링 리소스 파일의 각각의 이름을 참조하는 배열
     private final int[] textResources = {R.layout.activity_lbhall_talk, R.id.userName, R.id.name_president};
 
-    private TextView lb_storyText;
+    private TextView lb_storyText; // 대화가 표시될 텍스트
 
     private TextView userName;
     private TextView subName;
@@ -42,10 +45,6 @@ public class lbhall_talkActivity extends AppCompatActivity {
 
     public MediaPlayer clickPlay;
 
-//    protected void onPause() { //앱 pause -> 상태 저장
-//        super.onPause();
-//        saveLayout(story);
-//    }
 
 
     @Override
@@ -93,11 +92,8 @@ public class lbhall_talkActivity extends AppCompatActivity {
         subName = (TextView) findViewById(R.id.name_president);
         userName.setText(user_Name);
 
+        //스토리 진행상황을 저장하는 변수 'story'
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = settings1.edit();
-//        editor.remove(STORY_STATUS_KEY);
-//        editor.putInt(STORY_STATUS_KEY, 0);
-//        editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
@@ -105,7 +101,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
 
         showNextStoryText();
     }
-    public void saveLayout(int story){
+    public void saveLayout(int story){ // 스토리 진행상황을 공유 프리퍼런스에 저장
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = settings1.edit();
         editor.putInt(STORY_STATUS_KEY, story);
@@ -114,7 +110,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
 
 
 
-        private void showNextStoryText() {
+        private void showNextStoryText() { //story변수와 배열의 인덱스 값을 비교하여 화면을 구현
 
         if (story == 0) {
             saveLayout(story);
@@ -147,7 +143,7 @@ public class lbhall_talkActivity extends AppCompatActivity {
             dark_character(lb_imageView2,imageResources[2],subName,textResources[2]);
             story++;
         }
-        else if (story == 5) {
+        else if (story == 5) { //quizFinished의  값을 보고 풀었는지에 대한 사실 파악
             lb_storyText.setText(storyTexts[story]);
             dark_character(lb_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(lb_imageView2,imageResources[2],subName,textResources[2]);

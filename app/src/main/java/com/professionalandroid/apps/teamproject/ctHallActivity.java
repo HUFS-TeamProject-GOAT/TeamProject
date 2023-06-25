@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ctHallActivity extends AppCompatActivity {
 
+    //이미지를 바꿔줄 변수, 값을 바꿔가며 배열의 인덱스값을 참조해서 이미지를 변화시킴
     private int currentIndex = 0;
+    //화면에 보여질 이미지들을 담은 배열
     private final int[] imageBackground = {R.drawable.cthall1, R.drawable.cthall2, R.drawable.cthall3, R.drawable.cthall4, R.drawable.cthall5};
 
     private ImageView ct_Background;
@@ -22,7 +24,7 @@ public class ctHallActivity extends AppCompatActivity {
         super.onCreate(savedInstacestate);
         setContentView(R.layout.cthall);
 
-        ct_Background = findViewById(R.id.ct_Background);
+        ct_Background = findViewById(R.id.ct_Background); // 이미지가 추가될 이미지 뷰
         ImageButton go_home_btn = (ImageButton) findViewById(R.id.go_home_btn);
         ImageButton go_ctHall2btn = (ImageButton) findViewById(R.id.go_ctHall2btn);
         ImageButton go_ctHall3btn = (ImageButton) findViewById(R.id.go_ctHall3btn);
@@ -36,6 +38,7 @@ public class ctHallActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 clickPlay.start();
+                //클릭시 월드맵이 있는 곳으로 돌아감
                 Intent intent = new Intent(getApplicationContext(), homeActivity.class);
                 startActivity(intent);
                 finish();
@@ -46,7 +49,7 @@ public class ctHallActivity extends AppCompatActivity {
             public void onClick(View v) {
                 clickPlay.start();
                 currentIndex++;
-                showNextBackground();
+                showNextBackground(); // 다음 이미지를 보여줌
 
                 go_ctHall3btn.setVisibility(View.VISIBLE);
                 go_ctHall4btn.setVisibility(View.GONE);

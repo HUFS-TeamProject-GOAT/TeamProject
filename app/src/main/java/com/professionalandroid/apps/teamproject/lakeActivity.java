@@ -11,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class lakeActivity extends AppCompatActivity {
 
+    //이미지를 바꿔줄 변수, 값을 바꿔가며 배열의 인덱스값을 참조해서 이미지를 변화시킴
     private int currentIndex = 0;
+    //화면에 보여질 이미지들을 담은 배열
     private final int[] imageBackground = {R.drawable.lake1, R.drawable.lake2, R.drawable.lake3};
     private ImageView lake_Background;
     public MediaPlayer clickPlay;

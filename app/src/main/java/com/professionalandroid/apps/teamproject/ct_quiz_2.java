@@ -23,40 +23,36 @@ public class ct_quiz_2 extends AppCompatActivity {
 
     // SharedPreferences 관련 상수 선언
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String SCORE_KEY = "score"+1;
-    private static final String COUNT_KEY = "count"+1;
-    private static final int SCORE_DEFAULT = 20;
-    private static final int COUNT_DEFAULT = 0;
-    private EditText answerEditText;
+    private static final String SCORE_KEY = "score"+1; //점수저장 키 값
+    private static final String COUNT_KEY = "count"+1; // 힌트 사용유무의 저장
+    private static final int SCORE_DEFAULT = 20; // 얻을수 있는 최대 점수 값
+    private static final int COUNT_DEFAULT = 0;  // 처음 입장시 힌트를 본적이 없기에 0으로 설정
+    private EditText answerEditText; // 정답을 입력받을 곳
 
-    public MediaPlayer clickPlay;
+    public MediaPlayer clickPlay; //클릭시 사운드 나오게 구현
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ct_quiz2);
+        setContentView(R.layout.activity_ct_quiz2); //ct_quiz2의 레이아웃을 사용
         clickPlay = MediaPlayer.create(this, R.raw.click);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.ct_quiz2_frontLayout);
-        layout2 = findViewById(R.id.ct_quiz2_backLayout);
+        layout1 = findViewById(R.id.ct_quiz2_frontLayout);  // 퀴즈 레이아웃의 초기화면 최대 받을 수 있는 값과 현재 받을 수 있는 값이 나옴
+        layout2 = findViewById(R.id.ct_quiz2_backLayout); // 퀴즈 레이아웃의 두번째 화면으로 퀴즈 내용과 각종 버튼이 구현됨
         answerEditText = findViewById(R.id.ct_2_answer);
         Button submitButton = findViewById(R.id.ct_2_submitButton);
         Button hintButton = findViewById(R.id.ct_2_hint);
-        Button laterButton = findViewById(R.id.ct_2_nextTime);
+        Button laterButton = findViewById(R.id.ct_2_nextTime); //나중에 풀기
 
 
-
+        //공유프리퍼런스를 이용한 점수값과 힌트의 저장
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
         count = sharedPreferences.getInt(COUNT_KEY, COUNT_DEFAULT);
 
-
-
-        System.out.println("Saved Score: " + score);
-        System.out.println("Saved Count: " + count);
-        updateScoreText();
+        updateScoreText();// 스코어 값의 업데이트
 
         layout1.setOnClickListener(view -> {
             clickPlay.start();
@@ -67,18 +63,19 @@ public class ct_quiz_2 extends AppCompatActivity {
         submitButton.setOnClickListener(v -> {
             clickPlay.start();
             String userAnswer = answerEditText.getText().toString();
-            String correctAnswer = "4";
-            boolean isCorrect = userAnswer.equals(correctAnswer);
+            String correctAnswer = "4"; //문제의 답이 4
+            boolean isCorrect = userAnswer.equals(correctAnswer); // 문제의 정답 유무를 위한 bool타입의 변수
 
+            //AlertDialog를 통해 보여줌
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_2.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
             builder.setPositiveButton(getString(R.string.check), null);
             AlertDialog dialog = builder.create();
 
-            if (isCorrect) {
+            if (isCorrect) { // 정답이 맞는경우
                 dialog.setTitle(getString(R.string.correct));
-                dialog.setMessage(getText(R.string.right));
-            } else {
+                dialog.setMessage(getText(R.string.right)); //메세지를 뛰움
+            } else { //틀린경우
                 dialog.setTitle(getString(R.string.notcorrect));
                 dialog.setMessage(getText(R.string.wrong));
             }
@@ -88,24 +85,25 @@ public class ct_quiz_2 extends AppCompatActivity {
             dialog.setOnDismissListener(dialogInterface -> {
                 getWindow().setBackgroundDrawable(new ColorDrawable(Color.WHITE));
 
-                if (isCorrect) {
-                    saveScore(score);
-                    saveCount(count);
+                if (isCorrect) { //정답이 맞는경우
+                    saveScore(score); //값을 저장
+                    saveCount(count); //힌트 값을 저장
 
+                    //인텐트로 대화액티비티에 정답을 맞췄음을 전달
                     Intent intent = new Intent();
                     intent.putExtra("quizFinished",true);
                     setResult(Activity.RESULT_OK,intent);
                     finish();
 
-                } else {
-                    score -= 2;
+                } else { //정답이 틀린 경우
+                    score -= 2; //점수 값을 -2한다
                     if (score < 0) {
                         score = 0;
                     }
                     saveCount(count);
                     saveScore(score);
                     updateScoreText();
-                    layout1.setVisibility(View.VISIBLE);
+                    layout1.setVisibility(View.VISIBLE); //초기화면을 다시 보여줌
                     layout2.setVisibility(View.INVISIBLE);
 
 
@@ -115,6 +113,7 @@ public class ct_quiz_2 extends AppCompatActivity {
             dialog.show();
         });
 
+        //힌트를 눌렀을 경우
         hintButton.setOnClickListener(v -> {
             clickPlay.start();
             if (count == 0) {
@@ -127,12 +126,14 @@ public class ct_quiz_2 extends AppCompatActivity {
                 saveScore(score);
                 saveCount(count);
 
+                //쉐어드프리퍼런스에 각 값을 저장
                 Intent resultIntent = new Intent();
                 resultIntent.putExtra("score", score);
                 resultIntent.putExtra("count", count);
                 setResult(RESULT_CANCELED, resultIntent);
             }
 
+            //작은 대화창에 힌트 내용을 보여줌
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_2.this);
             builder.setTitle(getString(R.string.hint));
             builder.setMessage(getString(R.string.ct_quiz_1_2_hint));
@@ -151,6 +152,7 @@ public class ct_quiz_2 extends AppCompatActivity {
             saveScore(score);
             saveCount(count);
 
+            //결과값을  공유 프리퍼런스에 저장
             Intent resultIntent = new Intent();
             resultIntent.putExtra("score", score);
             resultIntent.putExtra("count", count);
@@ -177,21 +179,21 @@ public class ct_quiz_2 extends AppCompatActivity {
         updateScoreText();
     }
 
-    private void saveScore(int score) {
+    private void saveScore(int score) { //공유 프리퍼런스에 저장
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(SCORE_KEY, score);
         editor.apply();
     }
 
-    private void saveCount(int count) {
+    private void saveCount(int count) { // 공유 프리퍼런스에 저장
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(COUNT_KEY, count);
         editor.apply();
     }
 
-    private void updateScoreText() {
+    private void updateScoreText() { //초기화면에 보여줄 값을 저장
         scoreTextView.setText(getString(R.string.score_format_1_2, score));
     }
 }

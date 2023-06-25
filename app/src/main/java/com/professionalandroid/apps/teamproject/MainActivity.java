@@ -22,9 +22,9 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final  String PREFS_NAME = "MyPREFS";
+    public static final  String PREFS_NAME = "MyPREFS"; // 사용자가 입력한 이름을 저장하기위한 키 값
 
-    public MediaPlayer mediaPlayer, clickPlay;
+    public MediaPlayer mediaPlayer, clickPlay; //사운드 구현을 위한 변수
     EditText userName;
     String user_Name;
     @Override
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Button startButton = (Button) findViewById(R.id.startButton);
         ImageButton languageButton = (ImageButton) findViewById(R.id.globalImage);
 
+        //사용자의 이름을 저장
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         user_Name = settings.getString("user_Name","");
 
@@ -59,11 +60,13 @@ public class MainActivity extends AppCompatActivity {
                 clickPlay.start();
                 if (user_Name.isEmpty()) { // 닉네임이 비어있는 경우
                     showAlertDialog(getString(R.string.nameError));
-                } else {
+                } else {//유저 이름의 저장
                     SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = settings.edit();
                     editor.putString("user_Name", user_Name);
                     editor.apply();
+
+                    //인텐트를 통해 다음 액티비티로 넘어감
                     Intent intent = new Intent(getApplicationContext(), storyActivity.class);
                     intent.putExtra("userName", user_Name);
                     startActivity(intent);

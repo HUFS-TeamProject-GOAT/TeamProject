@@ -24,12 +24,15 @@ public class cthall_talk2Activity extends AppCompatActivity {
 
     private static final int YOUR_REQUEST_CODE = 1;
 
+    //스토리 내용을 스트링 리소스 파일에서 참조하는 배열
     private final int[] storyTexts = {R.string.ct_storyLine2_1, R.string.ct_storyLine2_2, R.string.ct_storyLine2_3_, R.string.ct_storyLine2_4, R.string.ct_storyLine2_5, R.string.ct_storyLine2_6_};
+    //drawable 파일의 인물 이미지를 참조 받는 배열
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyunggu,R.drawable.professor2};
+    // 스트링 리소스 파일의 각각의 이름을 참조하는 배열
     private final int[] textResources = {R.layout.activity_cthall_talk2, R.id.userName, R.id.name_minsu, R.id.name_hyunggu, R.id.name_professor2};
 
-    private boolean quizFinished = false;
-    private TextView ct_storyText;
+    private boolean quizFinished = false; //퀴즈를 풀었는지에 대한 bool타입의 변수
+    private TextView ct_storyText; // 대화가 표시될 텍스트
 
     private TextView userName;
     private TextView subName;
@@ -74,11 +77,8 @@ public class cthall_talk2Activity extends AppCompatActivity {
         subName = (TextView) findViewById(R.id.name_hyunggu); // subName으로 변경
         userName.setText(user_Name);
 
+        //스토리 진행상황을 저장하는 변수 'story'
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
-//        SharedPreferences.Editor editor = settings1.edit();
-//        editor.remove(STORY_STATUS_KEY);
-//        editor.putInt(STORY_STATUS_KEY, 0);
-//        editor.apply();
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
 
@@ -100,18 +100,18 @@ public class cthall_talk2Activity extends AppCompatActivity {
             }
         });
     }
-    public void saveLayout(int story){
+    public void saveLayout(int story){ // 스토리 진행상황을 공유 프리퍼런스에 저장
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = settings1.edit();
         editor.putInt(STORY_STATUS_KEY, story);
         editor.apply();
     }
 
-    private void showNextStoryText() {
+    private void showNextStoryText() { //story변수와 배열의 인덱스 값을 비교하여 화면을 구현
         if (story == 0) {
             saveLayout(story);
-            ct_storyText.setText(storyTexts[story]);
-            dark_character(ct_imageView1,imageResources[1],userName,textResources[1]);
+            ct_storyText.setText(storyTexts[story]);//
+            dark_character(ct_imageView1,imageResources[1],userName,textResources[1]); //비 발화자를 어둡게
             story++;
         }
         else if (story == 1) {
@@ -124,7 +124,7 @@ public class cthall_talk2Activity extends AppCompatActivity {
             clear_character(ct_imageView2,imageResources[4],subName,textResources[4]);
             story++;
         }else if (story == 3) {
-            if (!quizFinished) {
+            if (!quizFinished)  { //quizFinished의  값을 보고 풀었는지에 대한 사실 파악
                 saveLayout(story);
                 dark_character(ct_imageView1,imageResources[1],userName,textResources[1]);
                 clear_character(ct_imageView2,imageResources[4],subName,textResources[4]);

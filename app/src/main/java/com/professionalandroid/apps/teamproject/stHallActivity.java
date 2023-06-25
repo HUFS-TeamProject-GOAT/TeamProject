@@ -13,7 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class stHallActivity extends AppCompatActivity {
 
+    //이미지를 바꿔줄 변수, 값을 바꿔가며 배열의 인덱스값을 참조해서 이미지를 변화시킴
     private int currentIndex = 0;
+    //화면에 보여질 이미지들을 담은 배열
     private final int[] imageBackground = {R.drawable.sthall1, R.drawable.sthall2, R.drawable.sthall3, R.drawable.sthall4, R.drawable.sthall5};
 
     private ImageView st_Background;

@@ -22,18 +22,17 @@ public class eg_quiz_1 extends AppCompatActivity {
     private TextView scoreTextView;
 
     private static final String SHARED_PREFS_KEY = "quiz_score";
-    private static final String SCORE_KEY = "score"+4;
-    private static final String COUNT_KEY = "count"+4;
-
-    private static final int SCORE_DEFAULT = 15;
-    private static final int COUNT_DEFAULT = 0;
-    public MediaPlayer clickPlay;
+    private static final String SCORE_KEY = "score"+4; //점수저장 키 값
+    private static final String COUNT_KEY = "count"+4; // 힌트 사용유무의 저장
+    private static final int SCORE_DEFAULT = 15; // 얻을수 있는 최대 점수 값
+    private static final int COUNT_DEFAULT = 0; // 처음 입장시 힌트를 본적이 없기에 0으로 설정
+    public MediaPlayer clickPlay; //클릭시 사운드 나오게 구현
 
     // 점수 저장 객체와 의 key 값 지정
     // SCORE_KEY: score 점수 저장하는 preference 객체
     // COUNT_KEY: hint 사용 여부를 확인하는 preference 객체
     // 이 문제의 score 총점 20점
-    private EditText answerEditText;
+    private EditText answerEditText; // 정답을 입력받을 곳
 
 
     @Override
@@ -43,24 +42,20 @@ public class eg_quiz_1 extends AppCompatActivity {
         clickPlay = MediaPlayer.create(this, R.raw.click);
 
         scoreTextView = findViewById(R.id.scoreTextView);
-        layout1 = findViewById(R.id.eg_quiz1_frontLayout);
-        layout2 = findViewById(R.id.eg_quiz1_backLayout);
+        layout1 = findViewById(R.id.eg_quiz1_frontLayout);  // 퀴즈 레이아웃의 초기화면 최대 받을 수 있는 값과 현재 받을 수 있는 값이 나옴
+        layout2 = findViewById(R.id.eg_quiz1_backLayout); // 퀴즈 레이아웃의 두번째 화면으로 퀴즈 내용과 각종 버튼이 구현됨
         answerEditText = findViewById(R.id.eg_1_answer);
         Button submitButton = findViewById(R.id.eg_1_submitButton);
         Button hintButton = findViewById(R.id.eg_1_hint);
-        Button laterButton = findViewById(R.id.eg_1_nextTime);
+        Button laterButton = findViewById(R.id.eg_1_nextTime); //나중에 풀기
 
+        //공유프리퍼런스를 이용한 점수값과 힌트의 저장
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         score = sharedPreferences.getInt(SCORE_KEY, SCORE_DEFAULT);
         count = sharedPreferences.getInt(COUNT_KEY, COUNT_DEFAULT);
 
 
-
-
-
-        System.out.println("Saved Score: " + score);
-        System.out.println("Saved Count: " + count);
-        updateScoreText();
+        updateScoreText(); // 스코어 값의 업데이트
 
         layout1.setOnClickListener(view -> {
             clickPlay.start();
@@ -189,14 +184,14 @@ public class eg_quiz_1 extends AppCompatActivity {
         updateScoreText();
     }
 
-    private void saveScore(int score) {
+    private void saveScore(int score) { // 공유 프리퍼런스에 저장
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(SCORE_KEY, score);
         editor.apply();
     }
 
-    private void saveCount(int count) {
+    private void saveCount(int count) { // 공유 프리퍼런스에 저장
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(COUNT_KEY, count);

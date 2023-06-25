@@ -10,7 +10,9 @@ import android.media.MediaPlayer;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class egHallActivity extends AppCompatActivity {
+    //이미지를 바꿔줄 변수, 값을 바꿔가며 배열의 인덱스값을 참조해서 이미지를 변화시킴
     private int currentIndex = 0;
+    //화면에 보여질 이미지들을 담은 배열
     private final int[] imageBackground = {R.drawable.eghall1, R.drawable.eghall2, R.drawable.eghall3, R.drawable.eghall4, R.drawable.eghall5};
 
     private ImageView eg_Background;

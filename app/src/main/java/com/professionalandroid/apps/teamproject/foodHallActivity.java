@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class foodHallActivity extends AppCompatActivity {
 
     private int currentIndex = 0;
+    //화면에 보여질 이미지들을 담은 배열
     private final int[] imageBackground = {R.drawable.foodhall1, R.drawable.foodhall2, R.drawable.foodhall3, R.drawable.foodhall4, R.drawable.foodhall5};
     private ImageView food_Background;
     public MediaPlayer clickPlay;
