@@ -136,7 +136,6 @@
             android:hint="@string/answer"
             android:inputType="text"
             android:textSize="20sp"
-            android:maxLength="4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"

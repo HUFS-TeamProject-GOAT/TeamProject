@@ -152,7 +152,7 @@ public class lake_talkActivity extends AppCompatActivity {
                 saveLayout(story);
                 dark_character(lake_imageView1,imageResources[1],userName,textResources[1]);
                 clear_character(lake_imageView2,imageResources[3],subName,textResources[3]);
-                Intent intent = new Intent(getApplicationContext(), fd_quiz_4.class);
+                Intent intent = new Intent(getApplicationContext(), fd_quiz_2.class);
                 startActivityForResult(intent, YOUR_REQUEST_CODE);
 
             } else {
@@ -213,9 +213,9 @@ public class lake_talkActivity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText("케인");
+            name.setText(getString(R.string.kane));
         } else if (textResources == R.id.name_hyerim) {
-            name.setText("록시");
+            name.setText(getString(R.string.roksi));
         }
         name.setTextColor(Color.GRAY);
     }
@@ -227,9 +227,9 @@ public class lake_talkActivity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText("케인");
+            name.setText(getString(R.string.kane));
         } else if (textResources == R.id.name_hyerim) {
-            name.setText("록시");
+            name.setText(getString(R.string.roksi));
         }
         name.setTextColor(Color.BLACK);
     }
