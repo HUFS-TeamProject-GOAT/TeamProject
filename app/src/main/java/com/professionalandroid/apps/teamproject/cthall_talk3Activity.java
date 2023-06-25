@@ -151,11 +151,14 @@ public class cthall_talk3Activity extends AppCompatActivity {
             story++;
         }else if (story == 7) {
             ct_storyText.setText(storyTexts[story-1]);
+            dark_character(ct_imageView1,imageResources[1],userName,textResources[1]);
             clear_character(ct_imageView2,imageResources[2],subName,textResources[2]);
             story++;
         }else {
             saveLayout(story);
             findViewById(R.id.nextButton).setVisibility(View.GONE);
+            Intent intent = new Intent(getApplicationContext(), homeActivity.class);
+            startActivity(intent);
             finish();
         }
     }
@@ -183,7 +186,7 @@ public class cthall_talk3Activity extends AppCompatActivity {
         if (textResources == R.id.userName) {
             name.setText(user_Name);
         } else if (textResources == R.id.name_minsu) {
-            name.setText(getText(R.string.bigboy));
+            name.setText(getText(R.string.kane));
         } else if (textResources == R.id.name_professor2) {
             name.setText(getText(R.string.kamelot));
         }

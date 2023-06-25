@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     private void showAlertDialog(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(message)
-                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                .setPositiveButton(getString(R.string.check), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.dismiss();
                     }
@@ -96,21 +96,21 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
-            mediaPlayer.start();
-        }
+//
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
+//            mediaPlayer.start();
+//        }
     }
-
-
-    @Override
-    protected void onPause() {
-        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            mediaPlayer.pause();
-        }
-        super.onPause();
-    }
-}
+//
+//
+//    @Override
+//    protected void onPause() {
+//        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
+//            mediaPlayer.pause();
+//        }
+//        super.onPause();
+//    }
+//}

@@ -199,6 +199,8 @@ public class foodhall_talk3Activity extends AppCompatActivity {
         }else {
             saveLayout(story);
             findViewById(R.id.nextButton).setVisibility(View.GONE);
+            Intent intent = new Intent(getApplicationContext(), homeActivity.class);
+            startActivity(intent);
             finish();
         }
     }

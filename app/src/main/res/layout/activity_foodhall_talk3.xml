@@ -25,10 +25,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="68dp"
         android:layout_marginEnd="69dp"
-        android:layout_marginBottom="16dp"
+        android:autoSizeTextType="uniform"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -38,6 +39,7 @@
         android:layout_marginStart="16dp"
         android:autofillHints="name"
         android:background="@null"
+        android:autoSizeTextType="uniform"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/food_storyText"
         app:layout_constraintStart_toStartOf="parent" />
@@ -49,6 +51,7 @@
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
         android:gravity="right"
+        android:autoSizeTextType="uniform"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/food_storyText"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -60,6 +63,7 @@
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
         android:gravity="right"
+        android:autoSizeTextType="uniform"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toTopOf="@+id/food_storyText"
         app:layout_constraintEnd_toEndOf="parent" />

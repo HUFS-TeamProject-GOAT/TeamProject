@@ -29,6 +29,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
 
     private boolean quizFinished = false;
     private TextView eg_storyText;
+    String storyText;
 
     private TextView userName;
     private TextView subName;
@@ -69,6 +70,7 @@ public class eghall_talk2Activity extends AppCompatActivity {
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
+        storyText = getString(R.string.eg_storyLine2_4, user_Name);
         userName = (TextView) findViewById(R.id.userName);
         subName = (TextView) findViewById(R.id.name_hyerim); // subName으로 변경
         userName.setText(user_Name);
@@ -85,7 +87,6 @@ public class eghall_talk2Activity extends AppCompatActivity {
         saveLayout(story);
 
         showNextStoryText();
-
 
 
 
@@ -129,14 +130,11 @@ public class eghall_talk2Activity extends AppCompatActivity {
             dark_character(eg_imageView1,imageResources[1],userName,textResources[1]);
             story++;
         }else if (story == 3) {
-            eg_storyText.setText(storyTexts[story]);
+            eg_storyText.setText(storyText);
             clear_character(eg_imageView2,imageResources[2],subName,textResources[2]);
             story++;
         }else if (story == 4) {
-            SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-            String user_Name = settings.getString("user_Name", "");
-            String storyText = getString(R.string.eg_storyLine2_4, user_Name);
-            eg_storyText.setText(storyText);
+            eg_storyText.setText(storyTexts[story]);
             clear_character(eg_imageView1,imageResources[1],userName,textResources[1]);
             dark_character(eg_imageView2,imageResources[2],subName,textResources[2]);
             story++;

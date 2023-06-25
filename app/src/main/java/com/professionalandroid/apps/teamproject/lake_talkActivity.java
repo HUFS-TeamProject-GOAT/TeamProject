@@ -76,10 +76,10 @@ public class lake_talkActivity extends AppCompatActivity {
 
         SharedPreferences settings1 = getSharedPreferences(STORY_STATUS_KEY, Context.MODE_PRIVATE);
         // 초기화
-        SharedPreferences.Editor editor = settings1.edit();
-        editor.remove(STORY_STATUS_KEY);
-        editor.putInt(STORY_STATUS_KEY, 0);
-        editor.apply();
+//        SharedPreferences.Editor editor = settings1.edit();
+//        editor.remove(STORY_STATUS_KEY);
+//        editor.putInt(STORY_STATUS_KEY, 0);
+//        editor.apply();
 
         story = settings1.getInt(STORY_STATUS_KEY, 0);
         saveLayout(story);
@@ -199,6 +199,8 @@ public class lake_talkActivity extends AppCompatActivity {
         else {
             saveLayout(story);
             findViewById(R.id.nextButton).setVisibility(View.GONE);
+            Intent intent = new Intent(getApplicationContext(), homeActivity.class);
+            startActivity(intent);
             finish();
         }
     }

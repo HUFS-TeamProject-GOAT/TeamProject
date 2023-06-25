@@ -67,14 +67,14 @@ public class ct_quiz_4 extends AppCompatActivity {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(ct_quiz_4.this);
             builder.setIcon(R.mipmap.ic_launcher_round);
-            builder.setPositiveButton("확인", null);
+            builder.setPositiveButton(getString(R.string.check), null);
             AlertDialog dialog = builder.create();
 
             if (isCorrect) {
-                dialog.setTitle("정답");
+                dialog.setTitle(getString(R.string.correct));
                 dialog.setMessage(getText(R.string.right));
             } else {
-                dialog.setTitle("실패");
+                dialog.setTitle(getString(R.string.notcorrect));
                 dialog.setMessage(getText(R.string.wrong));
             }
 

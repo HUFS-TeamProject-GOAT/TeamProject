@@ -25,16 +25,18 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="68dp"
         android:layout_marginEnd="69dp"
-        android:layout_marginBottom="16dp"
+        android:autoSizeTextType="uniform"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/userName"
         android:layout_width="122dp"
         android:layout_height="59dp"
+        android:autoSizeTextType="uniform"
         android:layout_marginStart="16dp"
         android:autofillHints="name"
         android:background="@null"
@@ -44,6 +46,7 @@
 
     <TextView
         android:id="@+id/name_hyerim"
+        android:autoSizeTextType="uniform"
         android:layout_width="122dp"
         android:layout_height="59dp"
         android:layout_marginEnd="12dp"
@@ -56,6 +59,7 @@
     <TextView
         android:id="@+id/name_nutrician"
         android:layout_width="122dp"
+        android:autoSizeTextType="uniform"
         android:layout_height="59dp"
         android:layout_marginEnd="12dp"
         android:autofillHints="name"
