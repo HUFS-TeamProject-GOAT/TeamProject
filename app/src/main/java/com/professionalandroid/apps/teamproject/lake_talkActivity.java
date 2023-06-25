@@ -199,6 +199,8 @@ public class lake_talkActivity extends AppCompatActivity {
         else {
             saveLayout(story);
             findViewById(R.id.nextButton).setVisibility(View.GONE);
+            Intent intent = new Intent(getApplicationContext(), homeActivity.class);
+            startActivity(intent);
             finish();
         }
     }

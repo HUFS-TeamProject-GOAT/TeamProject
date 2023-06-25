@@ -152,6 +152,7 @@ public class storyActivity extends AppCompatActivity {
                 System.out.println("storyStatus1_1_quiz: " + story);
             }
         } else {
+            saveLayout(story);
             Intent intent = new Intent(getApplicationContext(), homeActivity.class);
             startActivity(intent);
             finish();

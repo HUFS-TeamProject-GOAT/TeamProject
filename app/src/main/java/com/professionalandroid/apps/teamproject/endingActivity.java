@@ -37,6 +37,7 @@ public class endingActivity extends AppCompatActivity {
         Button detailButton =(Button) findViewById(R.id.show_detail_button);
         TextView rankText=(TextView) findViewById(R.id.rankText);
         Button back_btn = findViewById(R.id.back_btn);
+        Button back_btn_go_home = findViewById(R.id.back_btn_go_home);
         clickPlay = MediaPlayer.create(this, R.raw.click);
         TextView show_Rank = (TextView)findViewById(R.id.showRank);
 
@@ -57,7 +58,7 @@ public class endingActivity extends AppCompatActivity {
         String rank = calculateScore(totalScore);
         TextView Rank = (TextView) findViewById(R.id.rank);
         TextView totalScoreTextView = findViewById(R.id.total_score);
-        totalScoreTextView.setText(String.valueOf(totalScore));
+        totalScoreTextView.setText(String.valueOf(totalScore+" / 380"));
         Rank.setText(rank);
 
         List<String> itemList = new ArrayList<>();
@@ -107,11 +108,13 @@ public class endingActivity extends AppCompatActivity {
                 listView.setVisibility(View.VISIBLE);
                 back_btn.setVisibility(View.VISIBLE);
 
+                totalScoreTextView.setVisibility(View.INVISIBLE);
                 MainButton.setVisibility(View.INVISIBLE);
                 detailButton.setVisibility(View.INVISIBLE);
                 Rank.setVisibility(View.INVISIBLE);
                 rankText.setVisibility(View.INVISIBLE);
                 show_Rank.setVisibility(View.INVISIBLE);
+                back_btn_go_home.setVisibility(View.INVISIBLE);
 
             }
         });
@@ -122,11 +125,22 @@ public class endingActivity extends AppCompatActivity {
                 listView.setVisibility(View.INVISIBLE);
                 back_btn.setVisibility(View.INVISIBLE);
 
+                totalScoreTextView.setVisibility(View.VISIBLE);
                 MainButton.setVisibility(View.VISIBLE);
                 detailButton.setVisibility(View.VISIBLE);
                 Rank.setVisibility(View.VISIBLE);
                 rankText.setVisibility(View.VISIBLE);
                 show_Rank.setVisibility(View.VISIBLE);
+                back_btn_go_home.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        back_btn_go_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), homeActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

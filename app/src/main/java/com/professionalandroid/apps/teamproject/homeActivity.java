@@ -39,6 +39,7 @@ public class homeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         Button restart = findViewById(R.id.restart);
+        Button back_main = findViewById(R.id.back_main);
 
         TextView explain_Text = (TextView) findViewById(R.id.explain_text);
         ImageButton egHallButton = (ImageButton) findViewById(R.id.egHallButton);
@@ -224,15 +225,18 @@ public class homeActivity extends AppCompatActivity {
             }
         });
         in_lbHallButton.setOnClickListener(new View.OnClickListener() {
+            String toast;
             @Override
             public void onClick(View v) {
                 clickPlay.start();
+                toast = getString(R.string.in_last);
 
                 if (stage1 == 8 && stage2 == 5 && stage3 == 10 && stage4 == 16) { // 스테이지를 모두 클리어 하게 되면 저장되는 sharedpreference 값)
                     Intent intent = new Intent(getApplicationContext(), lbhall_talkActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
-                    Toast.makeText(getApplicationContext(), getString(R.string.in_last), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),toast, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -242,6 +246,7 @@ public class homeActivity extends AppCompatActivity {
                 clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),foodHallActivity.class);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -251,6 +256,7 @@ public class homeActivity extends AppCompatActivity {
                 clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),ctHallActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
        in_egHallButton.setOnClickListener(new View.OnClickListener() {
@@ -261,6 +267,7 @@ public class homeActivity extends AppCompatActivity {
 
                    Intent intent =new Intent(getApplicationContext(),egHallActivity.class);
                    startActivity(intent);
+                   finish();
 //               Intent intent =new Intent(getApplicationContext(),egHallActivity.class);
 //               startActivity(intent);
            }
@@ -270,7 +277,8 @@ public class homeActivity extends AppCompatActivity {
             public void onClick(View v){
                 clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),stHallActivity.class);
-               startActivity(intent);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -280,6 +288,7 @@ public class homeActivity extends AppCompatActivity {
                 clickPlay.start();
                 Intent intent =new Intent(getApplicationContext(),lakeActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -309,6 +318,17 @@ public class homeActivity extends AppCompatActivity {
                 dialog.setOnShowListener(dialogInterface -> getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#70FFFFFF"))));
 
                 dialog.show();
+
+            }
+        });
+
+        back_main.setOnClickListener(new View.OnClickListener() { // 초기화 버튼입니다
+            @Override
+            public void onClick(View v) {
+                clickPlay.start();
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                finish();
 
             }
         });

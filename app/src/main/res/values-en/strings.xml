@@ -91,7 +91,7 @@
     <string name="roksi">roksi</string>
     <string name="kane">kane</string>
     <string name="kamelot">kamelot</string>
-    <string name="bigboy">bigboy</string>
+    <string name="bigboy">fungco</string>
     <string name="fungco">fungco</string>
     <string name="windy">windy</string>
     <string name="tellia">tellia</string>
@@ -281,5 +281,5 @@
     <string name="restart">Reset</string>
     <string name="notcheck">close</string>
     <string name="quiz">quiz</string>
-    <string name="in_last"><string name="All stages must be cleared to enter."></string></string>
+    <string name="in_last">All stages must be cleared to enter.</string>
 </resources>

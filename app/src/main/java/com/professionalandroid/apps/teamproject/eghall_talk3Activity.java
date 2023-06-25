@@ -25,7 +25,7 @@ public class eghall_talk3Activity extends AppCompatActivity {
 
     private final int[] storyTexts = {R.string.eg_storyLine3_1, R.string.eg_storyLine3_2, R.string.eg_storyLine3_3, R.string.eg_storyLine3_4,R.string.eg_storyLine3_5, R.string.eg_storyLine3_6, R.string.eg_storyLine3_7, R.string.eg_storyLine3_8, R.string.eg_storyLine3_9, R.string.eg_storyLine3_10_, R.string.eg_storyLine3_11, R.string.eg_storyLine3_12, R.string.eg_storyLine3_13, R.string.eg_storyLine3_14_};
     private final int[] imageResources = {android.R.color.transparent, R.drawable.maincharacter,R.drawable.minsu, R.drawable.hyerim, R.drawable.hyunggu};
-    private final int[] textResources = {R.layout.activity_eghall_talk1, R.id.userName, R.id.name_minsu, R.id.name_hyerim, R.drawable.hyunggu};
+    private final int[] textResources = {R.layout.activity_eghall_talk3, R.id.userName, R.id.name_minsu, R.id.name_hyerim, R.id.name_hyunggu};
 
     private boolean quizFinished = false;
     private TextView eg_storyText;
