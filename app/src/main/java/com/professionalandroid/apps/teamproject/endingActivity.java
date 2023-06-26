@@ -135,7 +135,7 @@ public class endingActivity extends AppCompatActivity {
                 Rank.setVisibility(View.VISIBLE);
                 rankText.setVisibility(View.VISIBLE);
                 show_Rank.setVisibility(View.VISIBLE);
-                back_btn_go_home.setVisibility(View.INVISIBLE);
+                back_btn_go_home.setVisibility(View.VISIBLE);
             }
         });
 

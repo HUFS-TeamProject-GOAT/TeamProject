@@ -69,7 +69,7 @@ public class sthall_talk3Activity extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String user_Name = settings.getString("user_Name", "");
         userName = (TextView) findViewById(R.id.userName);
-        subName = (TextView) findViewById(R.id.name_professor2);
+        subName = (TextView) findViewById(R.id.name_hyungchan);
         userName.setText(user_Name);
 
         //스토리 진행상황을 저장하는 변수 'story'

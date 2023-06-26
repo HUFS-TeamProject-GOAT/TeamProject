@@ -62,17 +62,22 @@ public class st_quiz_3 extends AppCompatActivity {
         });
 
         submitButton.setOnClickListener(v -> {
-            clickPlay.start();
             String userAnswer = answerEditText.getText().toString();
             String correctAnswer = "1510";
+            boolean isCorrect;
+
             if (userAnswer.equals("1,5,10")) {
-                String[] userAnswerArray = userAnswer.split(",");
-                Arrays.sort(userAnswerArray);
-                combinedUserAnswer = String.join("", userAnswerArray);
+                isCorrect = true;
             } else {
-                combinedUserAnswer = userAnswer;
+                String[] userAnswerArray = userAnswer.split(",");
+                StringBuilder builder = new StringBuilder();
+                for (String s : userAnswerArray) {
+                    if (s.trim().isEmpty()) continue; // 공백은 무시
+                    builder.append(s.trim());
+                }
+                String combinedUserAnswer = builder.toString();
+                isCorrect = correctAnswer.equals(combinedUserAnswer);
             }
-            boolean isCorrect = correctAnswer.equals(combinedUserAnswer); // 문제의 정답 유무를 위한 bool타입의 변수
 
             AlertDialog.Builder builder = new AlertDialog.Builder(st_quiz_3.this);
             builder.setIcon(R.mipmap.ic_launcher_round);

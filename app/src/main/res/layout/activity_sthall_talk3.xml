@@ -58,7 +58,7 @@
         android:layout_height="210dp"
         android:autoSizeTextType="uniform"
         android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/name_professor2"
+        app:layout_constraintBottom_toTopOf="@+id/name_hyungchan"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
